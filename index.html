@@ -1,192 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lawsuits Center | Active Lawsuits and Legal Case Information</title>
-
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f5f5f5;
-    color:#222;
-}
-
-header {
-    background:#111;
-    color:white;
-    padding:20px;
-    text-align:center;
-}
-
-nav {
-    background:#222;
-    padding:10px;
-    text-align:center;
-}
-
-nav a {
-    color:white;
-    margin:0 15px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.hero {
-    padding:60px 20px;
-    text-align:center;
-    background:white;
-}
-
-.hero h1 {
-    font-size:36px;
-}
-
-.section {
-    padding:40px 20px;
-    max-width:1000px;
-    margin:auto;
-}
-
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card {
-    background:white;
-    padding:20px;
-    border-radius:8px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
-}
-
-.card a {
-    text-decoration:none;
-    font-weight:bold;
-}
-    .all-lawsuits-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.all-lawsuits-link {
-  display: inline-block;
-  margin-top: 10px;
-  font-weight: 500;
-}
-
-footer {
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawsuits.center</title>
+  <meta
+    name="description"
+    content="Browse major lawsuits involving toxic exposure, contaminated water, dangerous products, dangerous drugs, and defective medical devices."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">Lawsuits.center</a>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#featured">Featured</a>
+        <a href="#exposure">Exposure</a>
+        <a href="https://lawsuitinformer.com">Legal Guides</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-<h1>Lawsuits Center</h1>
-<p>Information about active lawsuits and legal claims</p>
-</header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Directory of Major Lawsuits and Legal Cases</h1>
+        <p>
+          Browse lawsuits involving toxic exposure, contaminated water, dangerous
+          products, dangerous drugs, and defective medical devices.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn" href="#categories">Browse Lawsuits</a>
+          <a class="btn btn-secondary" href="https://lawsuitinformer.com">Visit Legal Guides</a>
+        </div>
+      </div>
+    </section>
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Active Lawsuits</a>
-<a href="#">Mass Torts</a>
-<a href="#">Class Actions</a>
-<a href="#">Legal Information</a>
-</nav>
+    <section id="categories" class="section">
+      <div class="container">
+        <h2>Browse Lawsuits by Category</h2>
+        <p class="section-intro">
+          Explore major categories of lawsuits and legal claims.
+        </p>
 
-<section class="hero">
-<h1>Active Lawsuits and Legal Case Information</h1>
-<p>Learn about ongoing litigation involving pharmaceuticals, consumer products, environmental exposure, and other complex legal claims.</p>
-</section>
+        <div class="grid">
+          <a class="card" href="#">
+            <h3>Toxic Chemical Exposure</h3>
+            <p>Cases involving asbestos, PFAS, industrial chemicals, and environmental contamination.</p>
+          </a>
 
-<section class="section">
-<h2>Featured Lawsuits</h2>
+          <a class="card" href="#">
+            <h3>Pesticides &amp; Herbicides</h3>
+            <p>Cases involving products such as Roundup and Paraquat.</p>
+          </a>
 
-<div class="grid">
+          <a class="card" href="#">
+            <h3>Contaminated Water</h3>
+            <p>Claims involving polluted drinking water, PFAS, and water system contamination.</p>
+          </a>
 
-<div class="card">
-<h3>Hair Relaxer Lawsuit</h3>
-<p>Claims involving chemical hair relaxer products and cancer risk.</p>
-<a href="hair-relaxer-lawsuit.html">View lawsuit →</a>
-</div>
+          <a class="card" href="#">
+            <h3>Consumer Products</h3>
+            <p>Cases involving products linked to health risks, including talc and hair relaxers.</p>
+          </a>
 
-<div class="card">
-<h3>PFAS Water Contamination</h3>
-<p>Lawsuits involving PFAS chemicals contaminating water supplies.</p>
-<a href="pfas-lawsuit.html">View lawsuit →</a>
-</div>
+          <a class="card" href="#">
+            <h3>Dangerous Drugs</h3>
+            <p>Cases involving medications alleged to cause serious side effects or injuries.</p>
+          </a>
 
-<div class="card">
-<h3>Roundup Lawsuit</h3>
-<a href="roundup-lawsuit.html">View lawsuit →</a>
+          <a class="card" href="#">
+            <h3>Medical Devices</h3>
+            <p>Claims involving implants, recalled devices, and device-related complications.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section id="featured" class="section alt">
+      <div class="container">
+        <h2>Featured Lawsuits</h2>
+        <p class="section-intro">
+          These are some of the most commonly searched lawsuits and legal topics.
+        </p>
 
-<div class="card">
-<h3>Ozempic / GLP-1 Lawsuits</h3>
-<p>Litigation involving GLP-1 medications and reported injuries.</p>
-<a href="ozempic-lawsuit.html">View lawsuit →</a>
-</div>
+        <div class="grid">
+          <a class="card" href="#">
+            <h3>PFAS Water Contamination</h3>
+            <p>Information about lawsuits involving PFAS chemicals and contaminated water systems.</p>
+          </a>
 
-</div>
-</section>
+          <a class="card" href="#">
+            <h3>Roundup Cancer Lawsuit</h3>
+            <p>Learn about litigation involving glyphosate herbicide and cancer claims.</p>
+          </a>
 
-<section class="section">
-<h2>Lawsuit Categories</h2>
+          <a class="card" href="#">
+            <h3>Paraquat Parkinson’s Lawsuit</h3>
+            <p>Cases involving pesticide exposure and Parkinson’s disease allegations.</p>
+          </a>
 
-<div class="grid">
+          <a class="card" href="#">
+            <h3>Hair Relaxer Cancer Lawsuit</h3>
+            <p>Claims involving chemical hair products and serious health concerns.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Drug Injury Lawsuits</h3>
-<p>Claims involving pharmaceutical medications and side effects.</p>
-</div>
+    <section id="exposure" class="section">
+      <div class="container">
+        <h2>Explore by Exposure</h2>
+        <p class="section-intro">
+          Some people begin by researching where exposure may have happened before they discover related lawsuits.
+        </p>
 
-<div class="card">
-<h3>Product Liability</h3>
-<p>Defective consumer products and related litigation.</p>
-</div>
+        <div class="grid">
+          <a class="card" href="#">
+            <h3>Contaminated Drinking Water</h3>
+            <p>Explore lawsuits related to PFAS, industrial pollution, and water contamination.</p>
+          </a>
 
-<div class="card">
-<h3>Environmental Exposure</h3>
-<p>Toxic contamination cases involving water, soil, and chemicals.</p>
-</div>
+          <a class="card" href="#">
+            <h3>Pesticide Exposure</h3>
+            <p>Read about lawsuits involving herbicides, agricultural chemicals, and long-term exposure.</p>
+          </a>
 
-<div class="card">
-<h3>Medical Devices</h3>
-<p>Claims involving defective implants and medical equipment.</p>
-</div>
+          <a class="card" href="#">
+            <h3>Asbestos Exposure</h3>
+            <p>Learn about lawsuits involving asbestos exposure, mesothelioma, and lung disease.</p>
+          </a>
 
-</div>
-<section class="all-lawsuits-section">
-  <h2>Explore All Lawsuits</h2>
-  <a href="lawsuits.html" class="all-lawsuits-link">View All Active Lawsuits</a>
-</section>
+          <a class="card" href="#">
+            <h3>Consumer Chemical Products</h3>
+            <p>See lawsuits involving personal care products and other consumer chemical exposures.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<section class="section">
-<h2>How Lawsuits Work</h2>
-<p>Many lawsuits involve complex litigation such as mass torts or class actions. Individuals who may have been harmed by defective products, medications, or environmental exposure may have legal options depending on the circumstances of their case.</p>
-</section>
+    <section class="section cta">
+      <div class="container">
+        <h2>Learn About Lawsuits</h2>
+        <p>
+          Visit Lawsuit Informer for legal guides, educational articles, and explanations
+          about how lawsuits work.
+        </p>
+        <a class="btn" href="https://lawsuitinformer.com">Visit Lawsuit Informer</a>
+      </div>
+    </section>
+  </main>
 
-<section class="section">
-<h2>See If You May Qualify</h2>
-<p>If you believe you may have been affected by one of these lawsuits, you may request a review of your situation.</p>
-<a href="#">Check eligibility →</a>
-</section>
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <h3>Lawsuits.center</h3>
+        <p>Directory of major lawsuits and legal cases.</p>
+      </div>
 
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#categories">Browse Categories</a></li>
+          <li><a href="#featured">Featured Lawsuits</a></li>
+          <li><a href="#exposure">Explore by Exposure</a></li>
+        </ul>
+      </div>
 
+      <div>
+        <h3>Network</h3>
+        <ul>
+          <li><a href="https://lawsuitinformer.com">Lawsuit Informer</a></li>
+        </ul>
+      </div>
+    </div>
 
-<footer>
-<p>© Lawsuits.center</p>
-<p>This website provides general legal information.</p>
-</footer>
+    <div class="container footer-bottom">
+      <p>© 2026 Lawsuits.center. Information is provided for educational purposes only and does not constitute legal advice.</p>
+    </div>
+  </footer>
 </body>
 </html>
