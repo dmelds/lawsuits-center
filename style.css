@@ -332,12 +332,7 @@ background: #1d4ed8;
 
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 16px;
-}
+
 }
 
 .logo {
