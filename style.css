@@ -114,10 +114,10 @@ text-decoration: underline;
   flex-wrap: wrap;
 }
 .hero-links {
-  margin-top: 20px;
+  margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 18px;
   justify-content: center;
 }
 
@@ -132,10 +132,9 @@ text-decoration: underline;
 }
 
 .hero-links a:hover {
-  color: white;
-  border-bottom: 1px solid #2563eb;
+  color: #60a5fa;
+  border-bottom: 1px solid #60a5fa;
 }
-
 .btn {
   display: inline-block;
   background: #ffffff;
