@@ -97,6 +97,16 @@ nav a:hover {
   border-radius: 8px;
   font-weight: 700;
 }
+section.container {
+background: rgba(255,255,255,0.02);
+padding: 30px;
+border-radius: 12px;
+margin-bottom: 40px;
+}
+
+section.container:hover {
+background: rgba(255,255,255,0.04);
+}
 
 .btn:hover {
   opacity: 0.92;
