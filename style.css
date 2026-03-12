@@ -44,7 +44,8 @@ header {
   border-bottom: 1px solid #222;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 150;
+}
 }
 
 .nav {
@@ -318,17 +319,32 @@ font-weight: 500;
     cursor: pointer;
   }
 
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    margin-top: 12px;
-    padding: 14px 0 6px;
-  }
+ .menu {
+  display: none;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: #111;
+  padding: 16px 20px;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid #222;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+  z-index: 200;
+}
+
+.menu.open {
+  display: flex;
+}
 
   .menu.open {
     display: flex;
+     }
+  .menu a {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
   }
 }
   }
