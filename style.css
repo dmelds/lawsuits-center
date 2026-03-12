@@ -252,6 +252,19 @@ footer {
   color: #aaa;
   font-size: 0.95rem;
 }
+.hero-buttons a {
+display: inline-block;
+margin: 10px;
+padding: 10px 18px;
+background: #2563eb;
+color: white;
+text-decoration: none;
+border-radius: 6px;
+font-weight: 500;
+}
+
+.hero-buttons a:hover {
+background: #1d4ed8;
 
 @media (max-width: 700px) {
   .nav {
@@ -270,18 +283,6 @@ footer {
   .footer-content {
     grid-template-columns: 1fr;
   }
-  .hero-buttons a {
-display: inline-block;
-margin: 10px;
-padding: 10px 18px;
-background: #2563eb;
-color: white;
-text-decoration: none;
-border-radius: 6px;
-font-weight: 500;
-}
-
-.hero-buttons a:hover {
-background: #1d4ed8;
+  
 }
 }
