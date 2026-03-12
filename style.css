@@ -331,43 +331,6 @@ background: #1d4ed8;
   }
 
 }
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    @media (max-width: 700px) 
-    .nav {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 14px;
-      .nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-        .logo a {
-  font-size: 1.35rem;
-}
-        .menu-toggle {
-  display: block;
-}
-
-.menu {
-  display: none;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.menu.open {
-  display: flex;
-}
-        
-}
-
-.logo {
-  text-align: center;
-}
 
 nav {
   display: flex;
