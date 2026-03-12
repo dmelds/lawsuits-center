@@ -305,6 +305,9 @@ background: #1d4ed8;
   flex-direction: column;
   align-items: center;
   gap: 12px;
+        .logo a {
+  font-size: 1.35rem;
+}
 }
 
 .logo {
