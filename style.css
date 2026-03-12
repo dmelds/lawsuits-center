@@ -113,6 +113,26 @@ text-decoration: underline;
   gap: 14px;
   flex-wrap: wrap;
 }
+.hero-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero-links a {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  text-decoration: none;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 2px;
+}
+
+.hero-links a:hover {
+  color: white;
+  border-bottom: 1px solid #2563eb;
+}
 
 .btn {
   display: inline-block;
