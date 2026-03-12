@@ -296,14 +296,13 @@ font-weight: 500;
 }
 
 .hero-buttons a:hover {
-background: #1d4ed8;
 @media (max-width: 700px) {
-
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
   }
 
   .logo {
@@ -322,14 +321,16 @@ background: #1d4ed8;
   .menu {
     display: none;
     flex-direction: column;
+    gap: 12px;
     width: 100%;
-    margin-top: 14px;
+    margin-top: 12px;
+    padding: 14px 0 6px;
   }
 
   .menu.open {
     display: flex;
   }
-
+}
 }
 
 
