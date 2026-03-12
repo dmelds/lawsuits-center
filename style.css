@@ -127,6 +127,8 @@ text-decoration: underline;
   text-decoration: none;
   border-bottom: 1px solid #374151;
   padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
 }
 
 .hero-links a:hover {
