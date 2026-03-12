@@ -114,13 +114,12 @@ text-decoration: underline;
   flex-wrap: wrap;
 }
 .hero-links {
-  margin-top: 22px;
+  margin-top: 18px;
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 24px;
   justify-content: center;
 }
-
 .hero-links a {
   font-size: 0.9rem;
   color: #9ca3af;
@@ -128,7 +127,6 @@ text-decoration: underline;
   border-bottom: 1px solid #374151;
   padding-bottom: 2px;
   transition: color 0.2s ease;
-}
 }
 
 .hero-links a:hover {
@@ -282,6 +280,11 @@ color: white;
 text-decoration: none;
 border-radius: 6px;
 font-weight: 500;
+}
+.hero-explore-label {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-right: 12px;
 }
 
 .hero-buttons a:hover {
