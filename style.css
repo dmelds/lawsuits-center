@@ -298,7 +298,36 @@ font-weight: 500;
 .hero-buttons a:hover {
 background: #1d4ed8;
 
-@media (max-width: 700px) {
+@media (max-width: 700px)
+  .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.3rem;
+}
+
+.menu-toggle {
+  display: block;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 14px;
+}
+
+.menu.open {
+  display: flex;
+}{
   .nav {
     flex-direction: column;
     align-items: flex-start;
