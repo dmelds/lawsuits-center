@@ -65,6 +65,28 @@ nav a {
 nav a:hover {
   color: #fff;
 }
+.network-bar {
+background: #111;
+border-bottom: 1px solid #222;
+font-size: 14px;
+}
+
+.network-bar .container {
+display: flex;
+justify-content: center;
+gap: 10px;
+padding: 6px 0;
+color: #aaa;
+}
+
+.network-bar a {
+color: #4f8cff;
+text-decoration: none;
+}
+
+.network-bar a:hover {
+text-decoration: underline;
+}
 
 .hero {
   padding: 90px 0 70px;
