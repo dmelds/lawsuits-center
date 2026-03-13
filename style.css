@@ -296,59 +296,28 @@ font-weight: 500;
   margin-right: 12px;
 }
 
-.hero-buttons a:hover {
-  .menu-toggle {
+.menu-toggle {
   display: none;
 }
-@media (max-width: 700px) {
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-  }
+@media (max-width:700px){
 
-  .logo a {
-    font-size: 1.3rem;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    z-index: 1101;
-  }
-
-  .menu {
-    display: none !important;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: #111;
-    padding: 16px 20px;
-    flex-direction: column;
-    gap: 14px;
-    border-top: 1px solid #222;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-    z-index: 1100;
-  }
-
-  .menu.open {
-    display: flex !important;
-  }
-
-  .menu a {
-    display: block;
-    width: 100%;
-    padding: 8px 0;
-  }
+.menu-toggle {
+  display:block;
+  font-size:24px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
 }
 
+.menu {
+  display:none !important;
 }
+
+.menu.open {
+  display:flex !important;
+}
+
 
 
 
