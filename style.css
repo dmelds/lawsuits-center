@@ -300,6 +300,10 @@ font-weight: 500;
   display: none;
 }
 @media (max-width:700px){
+  .nav {
+    padding: 14px 0;
+  }
+}
 
 .menu-toggle {
   display:block;
