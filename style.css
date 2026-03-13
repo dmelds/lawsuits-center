@@ -297,6 +297,9 @@ font-weight: 500;
 }
 
 .hero-buttons a:hover {
+  .menu-toggle {
+  display: none;
+}
 @media (max-width: 700px) {
   .nav {
     display: flex;
@@ -343,8 +346,6 @@ font-weight: 500;
     width: 100%;
     padding: 8px 0;
   }
-.menu-toggle {
-  display: none;
 }
 
 }
