@@ -316,24 +316,41 @@ header {
   .nav {
     background: #111;
     padding: 14px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
   }
 
-  .logo,
-  .logo a,
   .menu-toggle {
-    position: relative;
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
     z-index: 1201;
   }
 
+  .menu {
+    display: none !important;
+    position: fixed;
+    top: 92px;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 14px;
+    border-top: 1px solid #222;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    z-index: 1200;
+  }
 
-.menu {
-  display:none !important;
+  .menu.open {
+    display: flex !important;
+  }
 }
-
-.menu.open {
-  display:flex !important;
-}
-
 
 
 
