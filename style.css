@@ -296,7 +296,21 @@ font-weight: 500;
   color: #9ca3af;
   margin-right: 12px;
 }
+.network-bar,
+header {
+  background: #111;
+}
 
+header {
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+.menu-toggle {
+  display: none;
+}
 .menu-toggle {
   display: none;
 }
