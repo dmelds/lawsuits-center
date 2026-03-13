@@ -343,7 +343,7 @@ header {
   .menu {
     display: none !important;
     position: fixed;
-    top: 92px;
+    top: 88px;
     left: 0;
     right: 0;
     background: #111;
@@ -354,6 +354,9 @@ header {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
     z-index: 1200;
   }
+  .menu a {
+  padding: 12px 0;
+}
 
   .menu.open {
     display: flex !important;
