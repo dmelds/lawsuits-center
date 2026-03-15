@@ -1,171 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lawsuit Center | Browse Lawsuits by Illness, Product, and Exposure</title>
+  <meta
+    name="description"
+    content="Explore lawsuits related to toxic exposure, defective products, pharmaceuticals, and environmental contamination. Browse cases by illness, product, exposure, or legal topic."
+  />
+  <link rel="canonical" href="https://lawsuit.center/" />
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-alt: #111827;
+      --card: #172033;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --border: #243045;
+      --max-width: 1200px;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    * {
+      box-sizing: border-box;
+    }
 
-<title>Lawsuit Investigations and Toxic Exposure Claims | Lawsuit Center</title>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<meta name="description" content="Explore lawsuits involving toxic exposure, defective products, pharmaceuticals, and environmental contamination. Research active investigations and legal claims.">
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(180deg, #08101d 0%, #0b1120 100%);
+      color: var(--text);
+    }
 
-<link rel="canonical" href="https://lawsuit.center/">
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 72px;
+    }
+
+    .brand {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 5rem 0 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.35rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 60ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .btn-secondary:hover {
+      border-color: #3a4a66;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(59, 130, 246, 0.1), rgba(23, 32, 51, 0.92));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--muted);
+    }
+
+    .hero-card li + li {
+      margin-top: 0.55rem;
+    }
+
+    section {
+      padding: 1.25rem 0 3.25rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.3rem;
+    }
+
+    .section-header h2 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 68ch;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #35507b;
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .list-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .list-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .list-card h3 {
+      margin: 0 0 0.9rem;
+      font-size: 1.08rem;
+    }
+
+    .link-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .link-list li + li {
+      margin-top: 0.7rem;
+    }
+
+    .link-list a {
+      color: var(--text);
+    }
+
+    .link-list a:hover {
+      color: #bfdbfe;
+    }
+
+    .feature-band {
+      background: rgba(255, 255, 255, 0.02);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cta-panel {
+      background: linear-gradient(180deg, rgba(59, 130, 246, 0.12), rgba(23, 32, 51, 0.95));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-panel h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-panel p {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      max-width: 65ch;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .card-grid,
+      .list-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        padding: 0.9rem 0;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 0.85rem;
+      }
+
+      .hero {
+        padding-top: 3.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 1.2rem, var(--max-width));
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="brand">Lawsuit Center</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/browse-lawsuits.html">Browse Lawsuits</a>
+        <a href="/featured-lawsuits.html">Featured</a>
+        <a href="/chemical-exposure-lawsuits.html">Exposure</a>
+        <a href="/legal-guides.html">Legal Guides</a>
+        <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Legal research and lawsuit discovery</span>
+          <h1>The Center for Understanding Lawsuits</h1>
+          <p>
+            Explore lawsuits by illness, product, chemical exposure, environmental contamination,
+            and legal topic. Lawsuit Center helps visitors investigate potential case categories
+            and learn where different claims may fit.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/browse-lawsuits.html">Browse Lawsuits</a>
+            <a class="btn btn-secondary" href="#illness-lawsuits">Find Lawsuits by Illness</a>
+          </div>
+        </div>
 
-<h1>Lawsuit Center</h1>
+        <aside class="hero-card">
+          <h2>Explore by what people are actually dealing with</h2>
+          <ul>
+            <li>Illnesses linked to toxic exposure or defective products</li>
+            <li>Chemical and environmental exposure claims</li>
+            <li>Pharmaceutical and medical device lawsuits</li>
+            <li>Product liability and consumer safety investigations</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-<nav>
-<a href="/">Home</a>
-<a href="/browse-lawsuits.html">Categories</a>
-<a href="/featured-lawsuits.html">Featured</a>
-<a href="/chemical-exposure-lawsuits.html">Exposure</a>
-<a href="https://lawsuitinformer.com">Lawsuit Informer</a>
-</nav>
+    <section>
+      <div class="container">
+        <div class="section-header">
+          <h2>Browse Lawsuits by Category</h2>
+          <p>
+            Start with the type of issue involved. This section is the core of the site and helps
+            visitors move quickly from a broad concern to a more specific lawsuit category.
+          </p>
+        </div>
 
-</header>
+        <div class="card-grid">
+          <a class="card" href="/browse-lawsuits.html">
+            <h3>Illness Lawsuits</h3>
+            <p>Browse lawsuits connected to cancers, chronic disease, neurological injury, and more.</p>
+          </a>
 
+          <a class="card" href="/chemical-exposure-lawsuits.html">
+            <h3>Chemical Exposure Lawsuits</h3>
+            <p>Explore claims involving PFAS, paraquat, asbestos, solvents, and toxic substances.</p>
+          </a>
 
-<section>
+          <a class="card" href="/product-liability-lawsuits.html">
+            <h3>Product Liability Lawsuits</h3>
+            <p>Review cases tied to dangerous products, contamination, design defects, and failures.</p>
+          </a>
 
-<h2>Explore Lawsuits and Legal Investigations</h2>
+          <a class="card" href="/environmental-exposure-lawsuits.html">
+            <h3>Environmental Exposure Lawsuits</h3>
+            <p>Find claims involving polluted water, contaminated property, industrial emissions, and more.</p>
+          </a>
 
-<p>
-Browse lawsuits related to toxic exposure, environmental contamination, defective products, and serious illness.
-</p>
+          <a class="card" href="/pharmaceutical-lawsuits.html">
+            <h3>Pharmaceutical Lawsuits</h3>
+            <p>Browse medication-related claims involving side effects, injuries, and failure-to-warn issues.</p>
+          </a>
 
-<a href="/browse-lawsuits.html">Explore Lawsuits</a>
-<a href="/chemical-exposure-lawsuits.html">Chemical Exposure</a>
-<a href="/browse-by-state.html">Browse by State</a>
-<a href="/legal-guides.html">Legal Guides</a>
+          <a class="card" href="/medical-device-lawsuits.html">
+            <h3>Medical Device Lawsuits</h3>
+            <p>Explore lawsuits involving implants, recalled devices, surgical tools, and device complications.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="feature-band">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Lawsuits</h2>
+          <p>
+            Highlight major and highly searched lawsuit categories so visitors can quickly explore
+            widely recognized litigation.
+          </p>
+        </div>
 
+        <div class="card-grid">
+          <a class="card" href="/pfas-water-contamination-lawsuit.html">
+            <h3>PFAS Water Contamination</h3>
+            <p>Claims involving “forever chemicals,” contaminated drinking water, and public exposure concerns.</p>
+          </a>
 
-<section>
+          <a class="card" href="/roundup-lawsuit.html">
+            <h3>Roundup Cancer Lawsuit</h3>
+            <p>Litigation involving glyphosate exposure and cancer allegations tied to Roundup products.</p>
+          </a>
 
-<h2>Browse Lawsuits by Category</h2>
+          <a class="card" href="/camp-lejeune-lawsuit.html">
+            <h3>Camp Lejeune Water Lawsuit</h3>
+            <p>Claims related to toxic water exposure affecting service members, families, and civilians.</p>
+          </a>
 
-<ul>
+          <a class="card" href="/paraquat-lawsuit.html">
+            <h3>Paraquat Parkinson’s Lawsuit</h3>
+            <p>Cases involving herbicide exposure and alleged links to Parkinson’s disease.</p>
+          </a>
 
-<li>
-<a href="/chemical-exposure-lawsuits.html">
-Chemical Exposure Lawsuits
-</a>
-</li>
+          <a class="card" href="/asbestos-lawsuit.html">
+            <h3>Asbestos Mesothelioma</h3>
+            <p>Cases involving asbestos exposure, mesothelioma, lung cancer, and related disease claims.</p>
+          </a>
 
-<li>
-<a href="/environmental-contamination-lawsuits.html">
-Environmental Contamination
-</a>
-</li>
+          <a class="card" href="/hair-relaxer-lawsuit.html">
+            <h3>Hair Relaxer Lawsuit</h3>
+            <p>Claims involving chemical hair products and allegations of reproductive and cancer-related harm.</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-<li>
-<a href="/product-liability-lawsuits.html">
-Product Liability Lawsuits
-</a>
-</li>
+    <section id="illness-lawsuits">
+      <div class="container">
+        <div class="section-header">
+          <h2>Find Lawsuits Related to an Illness</h2>
+          <p>
+            Many people start by asking what may have caused a diagnosis or injury. Browsing by
+            illness helps match that search behavior and can guide visitors toward relevant categories.
+          </p>
+        </div>
 
-<li>
-<a href="/pharmaceutical-lawsuits.html">
-Pharmaceutical Lawsuits
-</a>
-</li>
+        <div class="list-grid">
+          <div class="list-card">
+            <h3>Common illness categories</h3>
+            <ul class="link-list">
+              <li><a href="/kidney-cancer-lawsuits.html">Kidney Cancer</a></li>
+              <li><a href="/parkinsons-lawsuits.html">Parkinson’s Disease</a></li>
+              <li><a href="/mesothelioma-lawsuits.html">Mesothelioma</a></li>
+              <li><a href="/ovarian-cancer-lawsuits.html">Ovarian Cancer</a></li>
+              <li><a href="/non-hodgkins-lymphoma-lawsuits.html">Non-Hodgkin’s Lymphoma</a></li>
+            </ul>
+          </div>
 
-<li>
-<a href="/medical-device-lawsuits.html">
-Medical Device Lawsuits
-</a>
-</li>
+          <div class="list-card">
+            <h3>More ways to explore</h3>
+            <ul class="link-list">
+              <li><a href="/illnesses-linked-to-lawsuits.html">Browse by Illness</a></li>
+              <li><a href="/chemical-exposure-lawsuits.html">Chemical Exposure Categories</a></li>
+              <li><a href="/browse-by-state.html">Browse by State</a></li>
+              <li><a href="/legal-guides.html">Legal Guides</a></li>
+              <li><a href="/featured-lawsuits.html">View Featured Lawsuits</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</ul>
+    <section>
+      <div class="container">
+        <div class="cta-panel">
+          <h2>Learn About Lawsuits</h2>
+          <p>
+            New to lawsuits? Visit Lawsuit Informer for guides that explain how lawsuits work,
+            how cases develop, what evidence may matter, and how different legal categories are
+            commonly understood.
+          </p>
+          <a class="btn btn-primary" href="https://lawsuitinformer.com/">Visit Lawsuit Informer</a>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section>
+      <div class="container">
+        <div class="cta-panel">
+          <h2>Explore the Full Directory</h2>
+          <p>
+            Continue browsing lawsuit categories, featured investigations, illness pages, and legal
+            topics across the site.
+          </p>
+          <a class="btn btn-secondary" href="/browse-lawsuits.html">Explore All Lawsuits</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-
-<section>
-
-<h2>Popular Lawsuit Investigations</h2>
-
-<ul>
-
-<li>
-
-<h3>
-<a href="/pfas-water-contamination.html">
-PFAS Water Contamination Lawsuits
-</a>
-</h3>
-
-<p>
-Investigate lawsuits involving PFAS chemicals contaminating drinking water and groundwater.
-</p>
-
-</li>
-
-<li>
-
-<h3>
-<a href="/roundup-cancer-lawsuits.html">
-Roundup Cancer Lawsuits
-</a>
-</h3>
-
-<p>
-Explore claims linking glyphosate exposure to lymphoma and other cancers.
-</p>
-
-</li>
-
-<li>
-
-<h3>
-<a href="/paraquat-parkinsons-lawsuits.html">
-Paraquat Parkinson’s Lawsuits
-</a>
-</h3>
-
-<p>
-Research lawsuits alleging that paraquat pesticide exposure may cause Parkinson’s disease.
-</p>
-
-</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Illnesses Linked to Lawsuits</h2>
-
-<ul>
-
-<li><a href="/kidney-cancer-lawsuits.html">Kidney Cancer</a></li>
-<li><a href="/liver-cancer-lawsuits.html">Liver Cancer</a></li>
-<li><a href="/non-hodgkins-lymphoma-lawsuits.html">Non-Hodgkin’s Lymphoma</a></li>
-<li><a href="/parkinsons-disease-lawsuits.html">Parkinson’s Disease</a></li>
-<li><a href="/mesothelioma-lawsuits.html">Mesothelioma</a></li>
-
-</ul>
-
-</section>
-
-
-<footer>
-
-<p>
-Part of the Lawsuit Information Network:
-<a href="https://lawsuitinformer.com">Lawsuit Informer</a> |
-<a href="https://lawsuit.center">Lawsuit Center</a>
-</p>
-
-</footer>
-
+  <footer>
+    <div class="container">
+      <strong>Lawsuit Center</strong>
+      <p>
+        Browse lawsuits by category, illness, product, exposure, and legal topic.
+      </p>
+      <div class="footer-links">
+        <a href="/browse-lawsuits.html">Browse Lawsuits</a>
+        <a href="/featured-lawsuits.html">Featured Lawsuits</a>
+        <a href="/legal-guides.html">Legal Guides</a>
+        <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
