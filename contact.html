@@ -15,38 +15,50 @@
 <header>
   <div class="container nav">
     <div class="logo">
-  <a href="index.html">Lawsuit Center</a>
-</div>
+      <a href="index.html">Lawsuit Center</a>
+    </div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="lawsuits.html">Browse Lawsuits</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-</nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lawsuits.html">Browse Lawsuits</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </div>
 </header>
 
 <main>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="container narrow">
       <h1>Contact Lawsuit Center</h1>
       <p>
-        Share your situation, ask a question, or reach out to learn more about possible next steps.
+        Share your situation, ask a question, or take the first step toward understanding whether your experience may be relevant to a lawsuit.
       </p>
     </div>
   </section>
 
+  <!-- INTRO -->
   <section class="section">
     <div class="container narrow">
 
       <h2>Tell Us About Your Situation</h2>
 
       <p>
-        You do not need to know exactly what kind of case you may have. A short summary is enough to start.
+        You do not need to know exactly what kind of case you may have. Many people start with a general description of what happened, and that is enough to begin.
       </p>
+
+      <p>
+        Lawsuits often follow patterns — exposure over time, a diagnosis, or similar experiences reported by others. If something feels relevant, it may be worth sharing.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <section class="section alt">
+    <div class="container narrow">
 
       <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
         <input type="hidden" name="form-name" value="contact" />
@@ -62,7 +74,7 @@
         </p>
 
         <p>
-          <label for="phone">Phone</label><br />
+          <label for="phone">Phone (optional)</label><br />
           <input type="tel" id="phone" name="phone" />
         </p>
 
@@ -70,10 +82,10 @@
           <label for="topic">What best describes your situation?</label><br />
           <select id="topic" name="topic">
             <option value="">Select one</option>
-            <option value="toxic-exposure">Toxic exposure</option>
+            <option value="chemical-exposure">Chemical or toxic exposure</option>
             <option value="water-contamination">Water contamination</option>
             <option value="defective-product">Defective product</option>
-            <option value="pharmaceutical">Pharmaceutical</option>
+            <option value="pharmaceutical">Pharmaceutical or medication</option>
             <option value="injury-or-illness">Injury or illness</option>
             <option value="not-sure">I am not sure</option>
           </select>
@@ -92,12 +104,57 @@
     </div>
   </section>
 
+  <!-- GUIDANCE -->
+  <section class="section">
+    <div class="container narrow">
+
+      <h2>What Information Helps</h2>
+
+      <ul>
+        <li>What you were exposed to, used, or experienced</li>
+        <li>When it happened or how long it occurred</li>
+        <li>Any diagnosis or symptoms you received</li>
+        <li>Where the exposure or event took place</li>
+      </ul>
+
+      <p>
+        Even if you only know part of this information, you can still submit your message.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- EXPECTATIONS -->
   <section class="section alt">
     <div class="container narrow">
-      <h2>Before You Submit</h2>
+
+      <h2>What Happens Next</h2>
+
       <p>
-        Include whatever details you know, such as the product, exposure, diagnosis, time frame, or location involved. Even a short message can help identify the right next step.
+        After you submit your information, your message is reviewed to better understand your situation and whether it may relate to existing legal claims or patterns.
       </p>
+
+      <p>
+        Not every submission will result in follow-up, but each message helps determine whether additional steps may be appropriate.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- TRUST / DISCLAIMER -->
+  <section class="section">
+    <div class="container narrow">
+
+      <h2>Important Information</h2>
+
+      <p>
+        Lawsuit Center is not a law firm and does not provide legal advice. The information you submit is used for general informational purposes and to better understand your situation.
+      </p>
+
+      <p>
+        Submitting this form does not create an attorney-client relationship.
+      </p>
+
     </div>
   </section>
 
@@ -106,6 +163,7 @@
 <footer>
   <div class="container narrow">
     <p>&copy; 2026 Lawsuit Center</p>
+    <p><a href="david-meldofsky.html">About the Author</a></p>
   </div>
 </footer>
 
