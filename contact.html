@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Lawsuit Center</title>
+  <meta name="description" content="Contact Lawsuit Center to share your situation, ask a question, or learn more about possible next steps." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="canonical" href="https://lawsuit.center/contact.html" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      <a href="/">Lawsuit Center</a>
+    </div>
+
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/lawsuits.html">Browse Lawsuits</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container narrow">
+      <h1>Contact Lawsuit Center</h1>
+      <p>
+        Share your situation, ask a question, or reach out to learn more about possible next steps.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+
+      <h2>Tell Us About Your Situation</h2>
+
+      <p>
+        You do not need to know exactly what kind of case you may have. A short summary is enough to start.
+      </p>
+
+      <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p>
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" required />
+        </p>
+
+        <p>
+          <label for="email">Email</label><br />
+          <input type="email" id="email" name="email" required />
+        </p>
+
+        <p>
+          <label for="phone">Phone</label><br />
+          <input type="tel" id="phone" name="phone" />
+        </p>
+
+        <p>
+          <label for="topic">What best describes your situation?</label><br />
+          <select id="topic" name="topic">
+            <option value="">Select one</option>
+            <option value="toxic-exposure">Toxic exposure</option>
+            <option value="water-contamination">Water contamination</option>
+            <option value="defective-product">Defective product</option>
+            <option value="pharmaceutical">Pharmaceutical</option>
+            <option value="injury-or-illness">Injury or illness</option>
+            <option value="not-sure">I am not sure</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="message">Briefly describe what happened</label><br />
+          <textarea id="message" name="message" rows="8" required></textarea>
+        </p>
+
+        <p>
+          <button type="submit" class="btn-primary">Submit</button>
+        </p>
+      </form>
+
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container narrow">
+      <h2>Before You Submit</h2>
+      <p>
+        Include whatever details you know, such as the product, exposure, diagnosis, time frame, or location involved. Even a short message can help identify the right next step.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container narrow">
+    <p>&copy; 2026 Lawsuit Center</p>
+  </div>
+</footer>
+
+</body>
+</html>
