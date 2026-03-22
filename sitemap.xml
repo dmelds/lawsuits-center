@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://lawsuit.center/</loc>
-<lastmod>2026-03-09</lastmod>
-</url>
+  <url>
+    <loc>https://lawsuit.center/</loc>
+  </url>
 
-<url>
-<loc>https://lawsuit.center/roundup-lawsuit.html</loc>
-<lastmod>2026-03-09</lastmod>
-</url>
+  <url>
+    <loc>https://lawsuit.center/lawsuits.html</loc>
+  </url>
 
-<url>
-<loc>https://lawsuit.center/pfas-lawsuit.html</loc>
-<lastmod>2026-03-09</lastmod>
-</url>
+  <url>
+    <loc>https://lawsuit.center/contact.html</loc>
+  </url>
 
-<url>
-<loc>https://lawsuit.center/ozempic-lawsuit.html</loc>
-<lastmod>2026-03-09</lastmod>
-</url>
+  <url>
+    <loc>https://lawsuit.center/pfas-water-contamination-lawsuits.html</loc>
+  </url>
 
-<url>
-<loc>https://lawsuit.center/hair-relaxer-lawsuit.html</loc>
-<lastmod>2026-03-09</lastmod>
-</url>
-<url>
-<loc>https://lawsuit.center/lawsuits.html</loc>
-</url>
+  <url>
+    <loc>https://lawsuit.center/roundup-lawsuit.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/ozempic-lawsuit.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/hair-relaxer-lawsuit.html</loc>
+  </url>
+
 </urlset>
