@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact | Lawsuit Center</title>
-  <meta name="description" content="Contact Lawsuit Center to share your situation, ask a question, or learn more about possible next steps." />
+  <meta
+    name="description"
+    content="Contact Lawsuit Center to share your situation, ask a question, or learn more about possible next steps."
+  />
 
   <link rel="stylesheet" href="style.css" />
   <link rel="canonical" href="https://lawsuit.center/contact.html" />
@@ -29,7 +32,6 @@
 
 <main>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container narrow">
       <h1>Contact Lawsuit Center</h1>
@@ -39,25 +41,33 @@
     </div>
   </section>
 
-  <!-- INTRO -->
   <section class="section">
     <div class="container narrow">
-
       <h2>Tell Us About Your Situation</h2>
-
       <p>
         Many lawsuits begin with patterns — exposure over time, a diagnosis, or similar experiences reported by others. A short description is enough to start.
       </p>
-
     </div>
   </section>
 
-  <!-- FORM -->
   <section class="section alt">
     <div class="container narrow">
 
-      <form name="contact" method="POST" data-netlify="true" action="thank-you.html">
-        <input type="hidden" name="form-name" value="contact" />
+      <form
+        name="site-contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="thank-you.html"
+      >
+        <input type="hidden" name="form-name" value="site-contact" />
+
+        <p hidden>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field" />
+          </label>
+        </p>
 
         <p>
           <label for="name">Name</label><br />
@@ -100,10 +110,8 @@
     </div>
   </section>
 
-  <!-- GUIDANCE -->
   <section class="section">
     <div class="container narrow">
-
       <h2>What Information Helps</h2>
 
       <ul>
@@ -116,14 +124,11 @@
       <p>
         Even if you only know part of this information, you can still submit your message.
       </p>
-
     </div>
   </section>
 
-  <!-- EXPECTATIONS -->
   <section class="section alt">
     <div class="container narrow">
-
       <h2>What Happens Next</h2>
 
       <p>
@@ -133,14 +138,11 @@
       <p>
         Not every submission will result in follow-up, but each message helps determine whether additional steps may be appropriate.
       </p>
-
     </div>
   </section>
 
-  <!-- DISCLAIMER -->
   <section class="section">
     <div class="container narrow">
-
       <h2>Important Information</h2>
 
       <p>
@@ -150,7 +152,6 @@
       <p>
         Submitting this form does not create an attorney-client relationship.
       </p>
-
     </div>
   </section>
 
@@ -167,5 +168,6 @@
     </p>
   </div>
 </footer>
+
 </body>
 </html>
