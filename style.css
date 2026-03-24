@@ -57,34 +57,40 @@ header {
 
 .nav {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
+  justify-content: center;
+  gap: 16px;
   padding: 18px 0;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .logo {
-  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .logo a {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 
 .logo img {
-  height: 84px;
+  height: 72px;
   width: auto;
   display: block;
+  margin: 0 auto;
 }
 
 nav {
   display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 nav a {
@@ -315,25 +321,12 @@ footer p {
 }
 
 @media (max-width: 640px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
-
   .logo img {
     height: 60px;
-    margin: 0 auto;
   }
 
   nav {
-    width: 100%;
-    justify-content: center;
+    gap: 12px 18px;
   }
 
   .hero h1 {
