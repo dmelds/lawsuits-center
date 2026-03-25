@@ -858,6 +858,29 @@ footer p {
   .thank-you-actions .btn {
     text-align: center;
   }
+  .section-label {
+  color: #6b7280 !important;
+}
+
+.section h2,
+.section-light h2 {
+  color: #111827 !important;
+}
+
+@media (max-width: 640px) {
+  .section,
+  .section-light {
+    padding: 42px 0 !important;
+  }
+
+  .form-card,
+  .fit-box,
+  .info-card,
+  .step-card,
+  .faq-item {
+    padding: 20px !important;
+  }
+}
 }
 }
 }
