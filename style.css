@@ -418,9 +418,34 @@ footer p {
 .thank-you-card,
 .status-box {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #dcdfe4;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.fit-box h2,
+.form-card h2,
+.info-card h3,
+.step-card h3,
+.faq-item h3,
+.check-card h3,
+.status-box h2,
+.thank-you-card h1 {
+  color: #111827;
+}
+
+.fit-box p,
+.form-card p,
+.info-card p,
+.step-card p,
+.faq-item p,
+.check-card p,
+.status-box p,
+.fit-box li,
+.info-card li,
+.check-card li,
+.status-box li {
+  color: #374151;
 }
 
 .fit-box {
@@ -430,13 +455,11 @@ footer p {
 .fit-box h2 {
   font-size: 1.1rem;
   margin: 0 0 14px;
-  color: #111827;
 }
 
 .fit-box ul {
   margin: 0;
   padding-left: 20px;
-  color: #374151;
   line-height: 1.8;
 }
 
@@ -448,11 +471,9 @@ footer p {
 
 .form-card h2 {
   margin: 0 0 10px;
-  color: #111827;
 }
 
 .form-card p {
-  color: #4b5563;
   margin-bottom: 18px;
 }
 
@@ -492,7 +513,7 @@ footer p {
   margin-top: 6px;
 }
 
-/* Landing Sections */
+/* Landing Section Color System */
 
 .section-light {
   background: #f3f4f6;
@@ -502,28 +523,36 @@ footer p {
   color: #6b7280;
 }
 
-.section-light h2,
-.section-light h3 {
+.section-light > .container > h2,
+.section-light .narrow > h2 {
   color: #111827;
 }
 
-.section-light p,
-.section-light li {
+.section-light > .container > p,
+.section-light .narrow > p,
+.section-light > .container > ul li,
+.section-light .narrow > ul li {
   color: #374151;
 }
 
-.section:not(.section-light) .section-label {
-  color: #6b7280;
+.section:not(.section-light):not(.cta-strip) {
+  background: #000000;
 }
 
-.section:not(.section-light) h2,
-.section:not(.section-light) h3 {
-  color: #f5f5f5;
+.section:not(.section-light):not(.cta-strip) .section-label {
+  color: #9ca3af;
 }
 
-.section:not(.section-light) p,
-.section:not(.section-light) li {
-  color: #d7d7d7;
+.section:not(.section-light):not(.cta-strip) > .container > h2,
+.section:not(.section-light):not(.cta-strip) .narrow > h2 {
+  color: #f9fafb;
+}
+
+.section:not(.section-light):not(.cta-strip) > .container > p,
+.section:not(.section-light):not(.cta-strip) .narrow > p,
+.section:not(.section-light):not(.cta-strip) > .container > ul li,
+.section:not(.section-light):not(.cta-strip) .narrow > ul li {
+  color: #e5e7eb;
 }
 
 /* Landing Info Cards */
@@ -607,6 +636,10 @@ footer p {
   background: #eff6ff;
 }
 
+.cta-strip .section-label {
+  color: #6b7280;
+}
+
 .cta-strip h2 {
   color: #111827;
   margin-bottom: 12px;
@@ -632,13 +665,11 @@ footer p {
 
 .check-card h3 {
   margin: 0 0 12px;
-  color: #111827;
 }
 
 .check-card ul {
   margin: 0;
   padding-left: 18px;
-  color: #374151;
   line-height: 1.8;
 }
 
@@ -659,7 +690,6 @@ footer p {
 .thank-you-card h1 {
   font-size: 2.4rem;
   line-height: 1.1;
-  color: #111827;
   margin: 0 0 16px;
 }
 
@@ -685,12 +715,10 @@ footer p {
 .status-box h2 {
   margin: 0 0 12px;
   font-size: 1.15rem;
-  color: #111827;
 }
 
 .status-box p,
 .status-box li {
-  color: #374151;
   line-height: 1.75;
 }
 
@@ -710,8 +738,8 @@ footer p {
 /* Landing Footer */
 
 .site-footer {
-  background: #111827;
-  color: #d1d5db;
+  background: #0f172a;
+  color: #cbd5e1;
   padding: 36px 0;
   text-align: left;
 }
@@ -719,6 +747,7 @@ footer p {
 .site-footer p {
   margin: 0 0 12px;
   line-height: 1.7;
+  color: #cbd5e1;
 }
 
 /* Landing Button Overrides */
@@ -829,6 +858,7 @@ footer p {
 
   .section h2 {
     font-size: 1.6rem;
+    line-height: 1.2;
   }
 
   .landing-header .header-inner {
