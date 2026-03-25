@@ -880,6 +880,18 @@ footer p {
   .faq-item {
     padding: 20px !important;
   }
+  .section .section-label {
+  color: #9ca3af !important;
+}
+
+.section h2 {
+  color: #f9fafb !important;
+}
+
+.section p,
+.section li {
+  color: #e5e7eb !important;
+}
 }
 }
 }
