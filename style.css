@@ -101,6 +101,7 @@ nav a:hover {
 }
 
 /* Optional mobile adjustment */
+
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
@@ -118,6 +119,7 @@ nav a:hover {
     height: 64px;
   }
 }
+
 /* Alternate header pattern used on some pages */
 
 .header-inner {
@@ -521,6 +523,60 @@ footer p {
   color: #1d4ed8;
   font-size: 0.88rem;
   font-weight: 600;
+}
+
+/* Extra landing trust elements */
+
+.mini-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 18px;
+}
+
+.mini-trust span {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.landing-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border: 1px solid #dcdfe4;
+  border-radius: 14px;
+  color: #4b5563;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.what-next-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #dcdfe4;
+  border-radius: 16px;
+}
+
+.what-next-box h3 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 1.05rem;
+}
+
+.what-next-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.what-next-box li {
+  color: #374151;
+  line-height: 1.7;
 }
 
 /* Landing Cards */
@@ -1006,7 +1062,9 @@ footer p {
   }
 
   .hero-actions,
-  .thank-you-actions {
+  .thank-you-actions,
+  .trust-row,
+  .mini-trust {
     flex-direction: column;
     align-items: stretch;
   }
@@ -1024,7 +1082,8 @@ footer p {
   .info-card,
   .step-card,
   .faq-item,
-  .check-card {
+  .check-card,
+  .what-next-box {
     padding: 20px;
   }
 
@@ -1044,55 +1103,4 @@ footer p {
   .thank-you-lead {
     margin: 0 0 24px;
   }
-  .mini-trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 16px 0 18px;
-}
-
-.mini-trust span {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #eff6ff;
-  color: #1d4ed8;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-.what-next-box {
-  margin-top: 20px;
-  padding: 20px;
-  background: #f8fafc;
-  border: 1px solid #dcdfe4;
-  border-radius: 16px;
-}
-
-.what-next-box h3 {
-  margin: 0 0 10px;
-  color: #111827;
-  font-size: 1.05rem;
-}
-
-.what-next-box ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.what-next-box li {
-  color: #374151;
-  line-height: 1.7;
-}
-
-.landing-note {
-  margin-top: 18px;
-  padding: 14px 16px;
-  background: #f8fafc;
-  border: 1px solid #dcdfe4;
-  border-radius: 14px;
-  color: #4b5563;
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
 }
