@@ -16,12 +16,13 @@
 </head>
 <body>
 
-  <header>
-  <div class="container nav">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo-center.jpeg" alt="Lawsuit Center" />
-      </a>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo-center.jpeg" alt="Lawsuit Center" />
+        </a>
+      </div>
     </div>
   </header>
 
@@ -32,15 +33,16 @@
         <div class="hero-copy">
           <p class="eyebrow">Possible Asbestos-Related Claim</p>
           <h1>Diagnosed With Lung Cancer After Possible Asbestos Exposure?</h1>
+
           <p class="hero-text">
-            If you worked in construction, industrial settings, shipyards,
-            insulation, mechanical trades, military environments, or around
-            older asbestos-containing materials, your history may be worth reviewing.
+            If you worked around insulation, shipyards, demolition, refineries, factories,
+            military sites, brake dust, boiler rooms, or older asbestos-containing materials,
+            your history may be worth reviewing.
           </p>
 
           <div class="hero-actions">
-            <a href="#review-form" class="btn btn-primary">Start Your Review</a>
-            <a href="#exposure-check" class="btn btn-secondary">Check Exposure History</a>
+            <a href="#review-form" class="btn btn-primary">Request a Review</a>
+            <a href="#quick-check" class="btn btn-secondary">See Common Exposure Settings</a>
           </div>
 
           <div class="trust-row">
@@ -48,20 +50,26 @@
             <span>General legal information</span>
             <span>Mobile-friendly review form</span>
           </div>
+
+          <div class="info-box landing-note">
+            <strong>Important:</strong> This page provides general legal information only.
+            Submission does not create an attorney-client relationship.
+          </div>
         </div>
 
         <aside class="form-card" id="review-form">
-          <h2>See Whether Your History May Qualify</h2>
+          <h2>Request a Free Exposure Review</h2>
           <p>
-            Tell us about your diagnosis and where exposure may have happened.
+            Tell us where exposure may have happened and whether you have been diagnosed.
           </p>
 
-         <form name="lung-cancer-asbestos-review-v2" method="POST" action="/thank-you-asbestos-review.html" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="lung-cancer-asbestos-review-v2" />
+          <form name="lung-cancer-asbestos-review-v3" method="POST" action="/thank-you-asbestos-review.html" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="lung-cancer-asbestos-review-v3" />
 
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
             <label for="full-name">Full Name</label>
             <input type="text" id="full-name" name="full_name" required />
 
@@ -69,13 +77,13 @@
             <input type="tel" id="phone" name="phone" required />
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" />
 
             <label for="state">State</label>
-            <input type="text" id="state" name="state" />
+            <input type="text" id="state" name="state" placeholder="e.g. California" />
 
             <label for="diagnosed">Have you been diagnosed with lung cancer?</label>
-            <select id="diagnosed" name="diagnosed">
+            <select id="diagnosed" name="diagnosed" required>
               <option value="">Select one</option>
               <option>Yes</option>
               <option>No</option>
@@ -83,7 +91,7 @@
             </select>
 
             <label for="work-setting">Where did exposure most likely happen?</label>
-            <select id="work-setting" name="work_setting">
+            <select id="work-setting" name="work_setting" required>
               <option value="">Select one</option>
               <option>Construction</option>
               <option>Shipyard</option>
@@ -99,26 +107,26 @@
             <textarea
               id="details"
               name="details"
-              rows="5"
-              placeholder="Example: Pipefitter in refinery, insulation exposure, shipyard work, brake work, boiler room, demolition, or secondhand household exposure."
+              rows="4"
+              placeholder="Example: Pipefitter in refinery, insulation exposure, shipyard work, brake work, demolition, or secondhand household exposure."
             ></textarea>
 
             <button type="submit" class="btn btn-primary btn-full">
-              Request Review
+              Submit for Review
             </button>
 
             <p class="form-note">
-              Submission does not create an attorney-client relationship.
+              No obligation. Submission does not create an attorney-client relationship.
             </p>
           </form>
         </aside>
       </div>
     </section>
 
-    <section class="section section-light" id="exposure-check">
+    <section class="section section-light" id="quick-check">
       <div class="container narrow">
-        <p class="section-label">Quick Exposure Check</p>
-        <h2>Your history may be worth reviewing if exposure may have happened in places like these:</h2>
+        <p class="section-label">Quick Check</p>
+        <h2>This page may be relevant if exposure may have happened in settings like these:</h2>
 
         <div class="check-grid">
           <div class="check-card">
@@ -138,7 +146,7 @@
               <li>insulation materials</li>
               <li>pipes and mechanical systems</li>
               <li>brake and clutch components</li>
-              <li>old building materials</li>
+              <li>older building materials</li>
               <li>demolition or renovation dust</li>
             </ul>
           </div>
@@ -159,18 +167,18 @@
 
     <section class="section">
       <div class="container narrow">
-        <p class="section-label">Plain-English Overview</p>
-        <h2>Why people look into lung cancer and asbestos claims</h2>
+        <p class="section-label">Why People Request Review</p>
+        <h2>Why lung cancer and asbestos history may be reviewed together</h2>
         <p>
-          Some people diagnosed with lung cancer later begin looking at whether
-          past asbestos exposure may have played a role in their work or living environment.
-          In many situations, exposure may have happened years earlier in industrial,
-          commercial, military, or construction settings.
+          Some people diagnosed with lung cancer later begin looking at whether past asbestos
+          exposure may have played a role in their work or living environment. In many situations,
+          the exposure may have happened years earlier in construction, industrial, military,
+          maintenance, or shipyard settings.
         </p>
         <p>
-          A review often starts with a few basic questions: what the diagnosis is,
-          where exposure may have happened, when it may have occurred, and whether
-          there are records, work history details, or family knowledge that help explain it.
+          A review often starts with a few basic questions: whether there is a diagnosis,
+          where exposure may have happened, when it may have occurred, and whether records,
+          work history, or family knowledge help explain it.
         </p>
       </div>
     </section>
@@ -184,32 +192,28 @@
           <div class="info-card">
             <h3>Diagnosis details</h3>
             <p>
-              A confirmed diagnosis and related medical records may be important
-              starting points in a review.
+              A confirmed diagnosis and related medical records may be important starting points.
             </p>
           </div>
 
           <div class="info-card">
             <h3>Work history</h3>
             <p>
-              Trades, job sites, industrial settings, and military service may
-              help explain where exposure could have happened.
+              Trades, job sites, industrial settings, and military service may help explain possible exposure.
             </p>
           </div>
 
           <div class="info-card">
             <h3>Timing of exposure</h3>
             <p>
-              Exposure may have occurred many years earlier, which makes job
-              history and family recollection important in some cases.
+              Exposure may have occurred many years earlier, which can make job history especially important.
             </p>
           </div>
 
           <div class="info-card">
             <h3>Supporting records</h3>
             <p>
-              Employment records, military records, pathology reports, and other
-              documentation may help support review.
+              Employment records, military records, pathology reports, and other documentation may help.
             </p>
           </div>
         </div>
@@ -218,8 +222,8 @@
 
     <section class="section">
       <div class="container narrow">
-        <p class="section-label">What Happens Next</p>
-        <h2>Simple next steps</h2>
+        <p class="section-label">Simple Next Steps</p>
+        <h2>What usually happens next</h2>
 
         <div class="steps-grid">
           <div class="step-card">
@@ -234,7 +238,7 @@
             <span class="step-number">2</span>
             <h3>Exposure history is reviewed</h3>
             <p>
-              The facts you provide may help determine whether further follow-up makes sense.
+              The information provided may help determine whether further follow-up makes sense.
             </p>
           </div>
 
@@ -258,15 +262,15 @@
           <div class="faq-item">
             <h3>What if I do not know exactly where I was exposed?</h3>
             <p>
-              Many people do not know exact products or dates. Job history,
-              industry, location, and family recollection may still matter.
+              Many people do not know exact products or dates. Job history, industry, location,
+              and family recollection may still matter.
             </p>
           </div>
 
           <div class="faq-item">
             <h3>What if exposure happened many years ago?</h3>
             <p>
-              Exposure may have occurred decades before diagnosis in some situations.
+              In some situations, exposure may have occurred decades before diagnosis.
             </p>
           </div>
 
@@ -274,12 +278,12 @@
             <h3>Can secondhand asbestos exposure matter?</h3>
             <p>
               Some people may have been exposed through dust brought home on clothing
-              or through repeated household contact.
+              or repeated household contact.
             </p>
           </div>
 
           <div class="faq-item">
-            <h3>Does this page give legal advice?</h3>
+            <h3>Does this page provide legal advice?</h3>
             <p>
               No. This page provides general information only and is not legal advice.
             </p>
@@ -294,7 +298,7 @@
         <p>
           Start with a short form and see whether your situation may be worth reviewing.
         </p>
-        <a href="#review-form" class="btn btn-primary">Start a Review</a>
+        <a href="#review-form" class="btn btn-primary">Start Your Review</a>
       </div>
     </section>
 
@@ -303,12 +307,15 @@
   <footer class="site-footer">
     <div class="container narrow">
       <p>
-        Lawsuit Center provides general legal information only. This page does not
-        provide medical advice or legal advice. Viewing this page or submitting a form
-        does not create an attorney-client relationship. Possible claims depend on
-        individual facts, available records, and applicable law.
+        Lawsuit Center provides general legal information only. This page does not provide
+        medical advice or legal advice. Viewing this page or submitting a form does not create
+        an attorney-client relationship. Possible claims depend on individual facts, available
+        records, and applicable law.
       </p>
-      <p>© Lawsuit Center</p>
+      <p>
+        Contact: <a href="mailto:hello@lawsuit.center">hello@lawsuit.center</a>
+      </p>
+      <p>© 2026 Lawsuit Center</p>
     </div>
   </footer>
 
