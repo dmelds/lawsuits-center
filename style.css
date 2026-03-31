@@ -1103,4 +1103,9 @@ footer p {
   .thank-you-lead {
     margin: 0 0 24px;
   }
+  .small-text {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 12px;
+}
 }
