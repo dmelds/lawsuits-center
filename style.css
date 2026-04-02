@@ -1141,4 +1141,193 @@ footer p {
     margin: 0 0 24px;
   }
 }
+/* Lawsuit Funding Page */
+
+.disclaimer {
+  margin: 0;
+  padding: 18px 20px;
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  color: #dbeafe;
+  line-height: 1.75;
+}
+
+.disclaimer strong {
+  color: #ffffff;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto 10px;
+  text-align: center;
+  color: #d7d7d7;
+}
+
+.checklist-box {
+  margin-top: 24px;
+  padding: 24px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 16px;
+}
+
+.checklist-box h3 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  color: #f5f5f5;
+}
+
+.checklist-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.checklist-box li {
+  color: #d7d7d7;
+  line-height: 1.75;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* Support .button classes used in the funding page */
+
+.button,
+.button-secondary {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.button {
+  background: #7cc4ff;
+  color: #0b0b0b;
+  border: 1px solid #7cc4ff;
+}
+
+.button:hover {
+  text-decoration: none;
+  opacity: 0.92;
+}
+
+.button-secondary {
+  background: transparent;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+
+.button-secondary:hover {
+  text-decoration: none;
+  border-color: #7cc4ff;
+  color: #7cc4ff;
+}
+
+/* Provider cards */
+
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid.three-col .card p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.card-grid.three-col .card p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.card-grid.three-col .button {
+  margin-top: 4px;
+}
+
+.small-note {
+  max-width: 760px;
+  margin: 20px auto 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Footer layout used by the funding page */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 28px;
+  text-align: left;
+}
+
+.footer-grid h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #f5f5f5;
+}
+
+.footer-grid p,
+.footer-grid li,
+.footer-grid a {
+  color: #bdbdbd;
+  line-height: 1.75;
+}
+
+.footer-grid ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.footer-grid a:hover {
+  color: #7cc4ff;
+  text-decoration: none;
+}
+
+/* Funding page spacing improvements */
+
+.section .card-grid + .small-note {
+  margin-top: 24px;
+}
+
+.section.alt ul li,
+.section ul li {
+  line-height: 1.75;
+}
+
+/* Responsive adjustments for funding page */
+
+@media (max-width: 900px) {
+  .three-col,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button,
+  .button-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .disclaimer,
+  .checklist-box {
+    padding: 20px;
+  }
+}
 
