@@ -1576,6 +1576,10 @@ footer p {
   color: #1d4ed8 !important;
   text-decoration: none;
 }
+    .landing-header {
+  background: #ffffff;
+  border-bottom: 1px solid #d1d5db;
+}
 }
 }
 }
