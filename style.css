@@ -1,4 +1,4 @@
-/* Reset */
+w/* Reset */
 
 *,
 *::before,
@@ -1565,8 +1565,17 @@ footer p {
   }
 
   .hero h1 {
-    font-size: 1.9rem;
-  }
+    f
+      .landing-header nav a {
+  color: #111827 !important;
+  font-weight: 700;
+}
+
+.landing-header nav a:hover,
+.landing-header nav a:focus {
+  color: #1d4ed8 !important;
+  text-decoration: none;
+}
 }
 }
 }
