@@ -61,6 +61,16 @@ a:hover {
   margin-top: 14px;
 }
 
+.hero-disclaimer {
+  max-width: 480px;
+  margin: 28px auto 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.42);
+  text-align: center;
+  font-weight: 400;
+}
+
 .eyebrow,
 .section-label {
   display: inline-block;
@@ -272,7 +282,23 @@ nav a:hover {
   gap: 40px;
   align-items: start;
 }
+/* =========================
+   HERO LEGAL NOTE
+   ========================= */
 
+.hero-legal-note {
+  padding: 14px 0 22px;
+  background: #0b0b0b;
+}
+
+.hero-legal-note p {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 0.74rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.44);
+  text-align: center;
+}
 /* =========================
    BUTTONS
    ========================= */
@@ -933,6 +959,12 @@ footer p {
   .packages-hero {
     padding-top: 64px;
   }
+
+   .hero-legal-note p {
+  max-width: 78%;
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
 }
 
 @media (max-width: 768px) {
@@ -1064,5 +1096,12 @@ footer p {
 
   .thank-you-card h1 {
     font-size: 2rem;
+  }
+
+  .hero-disclaimer {
+    max-width: 82%;
+    margin: 22px auto 0;
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 }
