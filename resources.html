@@ -7,7 +7,7 @@
   <title>Legal Resources | Lawsuit Center</title>
   <meta
     name="description"
-    content="Browse legal resources related to lawsuit research, case review, funding options, personal injury claims, chemical exposure claims, and practical next steps."
+    content="Browse legal resources related to lawsuit research, case review, funding options, claim categories, and practical next steps."
   />
   <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="stylesheet" href="style.css" />
@@ -20,7 +20,7 @@
     "@type": "CollectionPage",
     "name": "Legal Resources",
     "url": "https://lawsuit.center/resources.html",
-    "description": "Browse legal resources related to lawsuit research, case review, funding options, personal injury claims, chemical exposure claims, and practical next steps.",
+    "description": "Browse legal resources related to lawsuit research, case review, funding options, claim categories, and practical next steps.",
     "publisher": {
       "@type": "Organization",
       "name": "Lawsuit Center",
@@ -32,190 +32,231 @@
 
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo-center.jpeg" alt="Lawsuit Center" />
-      </a>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo-center.jpeg" alt="Lawsuit Center" />
+        </a>
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="lawsuits.html">Browse Lawsuits</a>
+        <a href="resources.html" aria-current="page">Resources</a>
+        <a href="for-law-firms.html">For Law Firms</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="lawsuits.html">Browse Lawsuits</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main>
 
-<main>
+    <section class="hero">
+      <div class="container narrow">
+        <p class="eyebrow">Practical help and next steps</p>
+        <h1>Legal Resources</h1>
 
-  <section class="hero">
+        <p>
+          Explore practical resources related to lawsuit research, case review, funding options,
+          claim categories, and common next-step questions. This page is designed to help visitors
+          find useful starting points while learning more about possible options.
+        </p>
+
+        <div class="hero-actions">
+          <a href="contact.html" class="btn-primary">Request a Case Review</a>
+          <a href="lawsuits.html" class="btn-secondary">Browse Lawsuits</a>
+        </div>
+
+        <p class="small-text">
+          Lawsuit Center is not a law firm and does not provide legal advice. The information on this
+          page is for general educational purposes only.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Practical Resources</h2>
+
+        <div class="card-grid">
+          <a href="lawsuit-funding-options.html" class="card">
+            <h3>Lawsuit Funding Options</h3>
+            <p>Learn how lawsuit funding works, what questions to ask, and how to compare providers carefully before deciding.</p>
+          </a>
+
+          <a href="contact.html" class="card">
+            <h3>Request a Case Review</h3>
+            <p>Share basic information about your situation if you want to explore whether it may fit a broader claim pattern.</p>
+          </a>
+
+          <a href="for-law-firms.html" class="card">
+            <h3>For Law Firms</h3>
+            <p>Learn about featured placement, category sponsorship, and sponsored visibility opportunities on Lawsuit Center.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>Research and Support Areas</h2>
+
+        <p style="max-width: 780px; margin: 0 auto 32px; text-align: center;">
+          Lawsuit Center may continue expanding its resource coverage over time to include more practical
+          support topics and research guidance.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Post-Settlement Issues</h3>
+            <p>Future coverage may include lien resolution, settlement support, disbursement questions, and related next-step topics.</p>
+          </div>
+
+          <div class="card">
+            <h3>Claim Documentation</h3>
+            <p>Additional resource pages may address records retrieval, document organization, and why supporting materials often matter.</p>
+          </div>
+
+          <div class="card">
+            <h3>Location-Based Resources</h3>
+            <p>Future state-specific resource pages may help readers navigate lawsuit research in a more localized way.</p>
+          </div>
+
+          <div class="card">
+            <h3>Attorney Search Support</h3>
+            <p>Future guidance may help visitors compare legal options, understand fit, and prepare for further review.</p>
+          </div>
+
+          <div class="card">
+            <h3>Support Services Directory</h3>
+            <p>A future directory may organize practical support resources in one place for easier comparison.</p>
+          </div>
+
+          <div class="card">
+            <h3>Expanded Case Support</h3>
+            <p>This area may eventually include practical pages connected to pending claims, records, funding, and post-resolution steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Browse by Claim Area</h2>
+
+        <div class="card-grid">
+          <a href="personal-injury-lawsuits.html" class="card">
+            <h3>Personal Injury Lawsuits</h3>
+            <p>Explore claims involving accidents, negligence, serious injuries, disputed fault, and possible compensation issues.</p>
+          </a>
+
+          <a href="chemical-exposure-lawsuits.html" class="card">
+            <h3>Chemical Exposure Lawsuits</h3>
+            <p>Browse claims involving contamination, toxic exposure, long-term contact, occupational risk, and related illnesses.</p>
+          </a>
+
+          <a href="roundup-lawsuit.html" class="card">
+            <h3>Roundup Lawsuit</h3>
+            <p>Learn about claims involving glyphosate exposure and allegations linking repeated exposure to certain cancers.</p>
+          </a>
+
+          <a href="ozempic-lawsuit.html" class="card">
+            <h3>Ozempic / GLP-1 Lawsuits</h3>
+            <p>Review claim pages involving certain medications and reported gastrointestinal injuries or related complications.</p>
+          </a>
+
+          <a href="lung-cancer-from-asbestos-exposure.html" class="card">
+            <h3>Lung Cancer From Asbestos Exposure</h3>
+            <p>Explore how asbestos exposure history may be evaluated in possible lung cancer-related legal claims.</p>
+          </a>
+
+          <a href="lawsuits.html" class="card">
+            <h3>Browse All Lawsuits</h3>
+            <p>View broader lawsuit categories by exposure, product, condition, injury type, and other claim groupings.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
+        <h2>Looking for Broader Legal Education?</h2>
+
+        <p>
+          For broader educational guides about how lawsuits work, common legal process questions,
+          and related explainer content, visit Lawsuit Informer.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://lawsuitinformer.com" class="btn-secondary">Visit Lawsuit Informer</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container narrow">
+        <h2>Still Not Sure Where to Start?</h2>
+
+        <p>
+          Start by browsing lawsuit categories or requesting a case review if you think your
+          situation may fit a broader claim pattern.
+        </p>
+
+        <div class="hero-actions">
+          <a href="lawsuits.html" class="btn-primary">Browse Lawsuits</a>
+          <a href="contact.html" class="btn-secondary">Request a Case Review</a>
+        </div>
+
+        <p class="small-text">
+          Reviewing this site or submitting information does not create an attorney-client relationship.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
     <div class="container narrow">
-      <h1>Legal Resources</h1>
-
+      <p>&copy; 2026 Lawsuit Center</p>
+      <p>Educational information only. Not legal advice. No attorney-client relationship is formed.</p>
       <p>
-        Explore practical resources related to lawsuit research, case review, funding options, and common claim categories. This page is designed to help readers find useful starting points while learning more about possible next steps.
-      </p>
-
-      <p class="small-text">
-        Lawsuit Center is not a law firm and does not provide legal advice. The information on this page is for general educational purposes only.
-      </p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Support Resources</h2>
-
-      <div class="card-grid">
-
-        <a href="lawsuit-funding-options.html" class="card">
-          <h3>Lawsuit Funding Options</h3>
-          <p>Learn how lawsuit funding works, what questions to ask, and how to compare providers carefully before deciding.</p>
-        </a>
-
-        <a href="contact.html" class="card">
-          <h3>Request a Case Review</h3>
-          <p>Share basic information about your situation if you want to explore whether it may fit a broader claim pattern.</p>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-  <div class="container">
-    <h2>Planned Resource Areas</h2>
-
-   <p style="max-width: 780px; margin: 0 auto 32px; text-align: center;">
-  Lawsuit Center may expand to include more practical support topics and resource categories over time.
-</p>
-
-    <div class="card-grid">
-
-      <div class="card">
-        <h3>Post-Settlement Issues</h3>
-        <p>Potential future coverage of lien resolution, settlement support, disbursement questions, and related next-step topics.</p>
-      </div>
-
-      <div class="card">
-        <h3>Claim Documentation</h3>
-        <p>Possible future pages on medical records retrieval, document organization, and why supporting records often matter.</p>
-      </div>
-
-      <div class="card">
-        <h3>Location-Based Resources</h3>
-        <p>Future state-specific resource pages may help readers navigate lawsuit research in a more localized way.</p>
-      </div>
-
-      <div class="card">
-        <h3>Attorney Search Support</h3>
-        <p>Possible future guidance related to comparing legal options, understanding fit, and requesting further review.</p>
-      </div>
-
-      <div class="card">
-        <h3>Support Services Directory</h3>
-        <p>A future directory may organize practical support resources in one place for easier comparison.</p>
-      </div>
-
-      <div class="card">
-        <h3>Expanded Case Support</h3>
-        <p>This area may eventually include practical pages connected to pending claims, records, funding, and post-resolution steps.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <section class="section alt">
-    <div class="container">
-      <h2>Browse by Claim Area</h2>
-
-      <div class="card-grid">
-
-        <a href="personal-injury-lawsuits.html" class="card">
-          <h3>Personal Injury Lawsuits</h3>
-          <p>Explore claims involving accidents, negligence, serious injuries, disputed fault, and possible compensation issues.</p>
-        </a>
-
-        <a href="chemical-exposure-lawsuits.html" class="card">
-          <h3>Chemical Exposure Lawsuits</h3>
-          <p>Browse claims involving contamination, toxic exposure, long-term contact, occupational risk, and related illnesses.</p>
-        </a>
-
-        <a href="roundup-lawsuit.html" class="card">
-          <h3>Roundup Lawsuit</h3>
-          <p>Learn about claims involving glyphosate exposure and allegations linking repeated exposure to certain cancers.</p>
-        </a>
-
-        <a href="ozempic-lawsuit.html" class="card">
-          <h3>Ozempic / GLP-1 Lawsuits</h3>
-          <p>Review claim pages involving certain medications and reported gastrointestinal injuries or related complications.</p>
-        </a>
-
-        <a href="lung-cancer-from-asbestos-exposure.html" class="card">
-          <h3>Lung Cancer From Asbestos Exposure</h3>
-          <p>Explore how asbestos exposure history may be evaluated in possible lung cancer-related legal claims.</p>
-        </a>
-
-        <a href="lawsuits.html" class="card">
-          <h3>Browse All Lawsuits</h3>
-          <p>View broader lawsuit categories by exposure, product, condition, injury type, and other claim groupings.</p>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container narrow">
-      <h2>Looking for Broader Legal Education?</h2>
-
-      <p>
-        For broader educational guides about how lawsuits work, common mistakes, legal process questions, and related explainer content, visit Lawsuit Informer.
-      </p>
-
-      <div class="hero-actions">
-        <a href="https://lawsuitinformer.com" class="btn-secondary">Visit Lawsuit Informer</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta">
-    <div class="container narrow">
-      <h2>Still Not Sure Where to Start?</h2>
-
-      <p>
-        Start by browsing lawsuit categories or requesting a case review if you think your situation may fit a broader claim pattern.
-      </p>
-
-      <div class="hero-actions">
-        <a href="lawsuits.html" class="btn-primary">Browse Lawsuits</a>
-        <a href="contact.html" class="btn-secondary">Request a Case Review</a>
-      </div>
-
-      <p class="small-text">
-        Reviewing this site or submitting information does not create an attorney-client relationship.
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="editorial-policy.html">Editorial Policy</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
       </p>
     </div>
-  </section>
+  </footer>
 
-</main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".site-nav");
 
-<footer>
-  <div class="container narrow">
-    <p>&copy; 2026 Lawsuit Center</p>
-    <p>Educational information only. Not legal advice. No attorney-client relationship is formed.</p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="disclaimer.html">Disclaimer</a> |
-      <a href="editorial-policy.html">Editorial Policy</a>
-    </p>
-  </div>
-</footer>
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("open");
+        toggle.classList.toggle("active", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    });
+  </script>
 
 </body>
 </html>
