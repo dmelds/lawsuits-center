@@ -294,9 +294,9 @@ nav a:hover {
 .hero-legal-note p {
   max-width: 620px;
   margin: 0 auto;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.44);
   text-align: center;
 }
 /* =========================
