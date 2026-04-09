@@ -5,70 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Thank You | Lawsuit Center</title>
-  <meta name="description" content="Thank you for contacting Lawsuit Center." />
-<script async data-id="101502868" src="https://static.getclicky.com/js"></script>
+  <meta
+    name="description"
+    content="Thank you for contacting Lawsuit Center. Your message has been received."
+  />
+  <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="canonical" href="https://lawsuit.center/thank-you.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">
-      <a href="index.html">
-  <img src="logo-center.jpeg" alt="Lawsuit Center" />
-</a>
-    </div>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="lawsuits.html">Browse Lawsuits</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <section class="hero">
-    <div class="container narrow">
-      <h1>Thank You</h1>
-      <p>
-        Your message has been submitted.
-      </p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container narrow">
-
-      <h2>What Happens Next</h2>
-
-      <p>
-        Your submission has been received and can now be reviewed.
-      </p>
-
-      <p>
-        Not every message will result in follow-up, but your information helps determine whether your situation may relate to broader legal patterns or existing claims.
-      </p>
-
-      <div class="hero-actions">
-        <a href="lawsuits.html" class="btn-primary">Browse Lawsuits</a>
-        <a href="index.html" class="btn-secondary">Return Home</a>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo-center.jpeg" alt="Lawsuit Center" />
+        </a>
       </div>
 
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="lawsuits.html">Browse Lawsuits</a>
+        <a href="resources.html">Resources</a>
+        <a href="for-law-firms.html">For Law Firms</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-</main>
+  <main>
 
-<footer>
-  <div class="container narrow">
-    <p>&copy; 2026 Lawsuit Center</p>
-    <p><a href="david-meldofsky.html">About the Author</a></p>
-  </div>
-</footer>
+    <section class="hero">
+      <div class="container narrow">
+        <p class="eyebrow">Message received</p>
+        <h1>Thank You</h1>
+        <p>
+          Your message has been submitted.
+        </p>
+        <p class="small-text">
+          Lawsuit Center is not a law firm and does not provide legal advice. Submission does not create an attorney-client relationship.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>What Happens Next</h2>
+
+        <p>
+          Your submission has been received and may now be reviewed.
+        </p>
+
+        <p>
+          Depending on the nature of your message, it may be reviewed as a possible case review inquiry, a general question, or a law firm / featured placement inquiry.
+        </p>
+
+        <p>
+          Not every submission will result in follow-up, and submission does not guarantee eligibility, representation, placement, or further contact.
+        </p>
+
+        <div class="hero-actions">
+          <a href="lawsuits.html" class="btn-primary">Browse Lawsuits</a>
+          <a href="index.html" class="btn-secondary">Return Home</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
+        <h2>Keep Exploring</h2>
+
+        <p>
+          While you wait, you can continue exploring lawsuit categories, resources, and general educational content on Lawsuit Center.
+        </p>
+
+        <div class="hero-actions">
+          <a href="resources.html" class="btn-primary">Explore Resources</a>
+          <a href="for-law-firms.html" class="btn-secondary">For Law Firms</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container narrow">
+      <p>&copy; 2026 Lawsuit Center</p>
+      <p>Educational information only. Not legal advice. No attorney-client relationship is formed.</p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="editorial-policy.html">Editorial Policy</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".site-nav");
+
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("open");
+        toggle.classList.toggle("active", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    });
+  </script>
 
 </body>
 </html>

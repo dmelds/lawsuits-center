@@ -12,99 +12,161 @@
   <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="canonical" href="https://lawsuit.center/disclaimer.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Disclaimer",
+    "url": "https://lawsuit.center/disclaimer.html",
+    "description": "Read the legal disclaimer for Lawsuit Center, including important information about educational content, no legal advice, and no attorney-client relationship."
+  }
+  </script>
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo-center.jpeg" alt="Lawsuit Center" />
-      </a>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo-center.jpeg" alt="Lawsuit Center" />
+        </a>
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="lawsuits.html">Browse Lawsuits</a>
+        <a href="resources.html">Resources</a>
+        <a href="for-law-firms.html">For Law Firms</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="lawsuits.html">Browse Lawsuits</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <main>
 
-<main>
+    <section class="hero">
+      <div class="container narrow">
+        <p class="eyebrow">Important legal information</p>
+        <h1>Disclaimer</h1>
+        <p>
+          The information on Lawsuit Center is provided for general informational and educational purposes only.
+        </p>
+        <p>
+          By using this website, you acknowledge that the content is general in nature and should not be understood as legal or medical advice.
+        </p>
+      </div>
+    </section>
 
-  <section class="hero">
+    <section class="section">
+      <div class="container narrow">
+
+        <h2>No Legal Advice</h2>
+        <p>
+          Nothing on this site should be understood as legal advice. The content is intended to provide general information about lawsuits, legal issues, and related topics, not advice about any specific legal matter.
+        </p>
+
+        <h2>No Attorney-Client Relationship</h2>
+        <p>
+          Viewing this site, using this site, or submitting information through this site does not create an attorney-client relationship.
+        </p>
+
+        <h2>Not a Law Firm</h2>
+        <p>
+          Lawsuit Center is an educational and informational platform and is not a law firm.
+        </p>
+
+        <h2>No Guarantee of Outcome</h2>
+        <p>
+          Information on this site does not guarantee that any person has a claim, qualifies for a lawsuit, will be contacted, or will receive any particular legal outcome.
+        </p>
+
+        <h2>Contacting the Site</h2>
+        <p>
+          Submitting information through this site does not guarantee follow-up, case acceptance, representation, or any specific response. Information submitted may be reviewed to better understand the nature of the inquiry and whether further review may be appropriate.
+        </p>
+
+        <h2>Sponsored Visibility</h2>
+        <p>
+          Some pages may include clearly identified sponsored visibility or featured placement. Any sponsored placement should not be understood as legal advice, a guarantee of results, or a recommendation of any specific attorney.
+        </p>
+
+        <h2>No Medical Advice</h2>
+        <p>
+          Content on this site should not be understood as medical advice, diagnosis, or treatment guidance. Individuals with health concerns should consult a qualified medical professional.
+        </p>
+
+        <h2>Accuracy and Completeness</h2>
+        <p>
+          Efforts are made to provide useful and accurate information, but no representation is made that all content is complete, current, or error-free. Lawsuits, scientific research, and legal developments may change over time.
+        </p>
+
+        <h2>External Links</h2>
+        <p>
+          This site may link to other websites for additional information. Lawsuit Center is not responsible for the content, accuracy, or practices of third-party websites.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container narrow">
+        <h2>Learn More About the Platform</h2>
+        <p>
+          Explore lawsuit categories, site policies, and general educational resources on Lawsuit Center.
+        </p>
+
+        <div class="hero-actions">
+          <a href="about.html" class="btn-primary">About Lawsuit Center</a>
+          <a href="editorial-policy.html" class="btn-secondary">Editorial Policy</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
     <div class="container narrow">
-      <h1>Disclaimer</h1>
+      <p>&copy; 2026 Lawsuit Center</p>
+      <p>Educational information only. Not legal advice. No attorney-client relationship is formed.</p>
       <p>
-        The information on Lawsuit Center is provided for general informational and educational purposes only.
-      </p>
-      <p>
-        By using this website, you acknowledge that the content is general in nature and should not be understood as legal or medical advice.
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="editorial-policy.html">Editorial Policy</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
       </p>
     </div>
-  </section>
+  </footer>
 
-  <section class="section">
-    <div class="container narrow">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".site-nav");
 
-      <h2>No Legal Advice</h2>
-      <p>
-        Nothing on this site should be understood as legal advice. The content is intended to provide general information about lawsuits, legal issues, and related topics, not advice about any specific legal matter.
-      </p>
+      if (!toggle || !menu) return;
 
-      <h2>No Attorney-Client Relationship</h2>
-      <p>
-        Viewing this site, using this site, or submitting information through this site does not create an attorney-client relationship.
-      </p>
-
-      <h2>Not a Law Firm</h2>
-      <p>
-        Lawsuit Center is a legal information platform and is not a law firm.
-      </p>
-
-      <h2>No Guarantee of Outcome</h2>
-      <p>
-        Information on this site does not guarantee that any person has a claim, qualifies for a lawsuit, will be contacted, or will receive any particular legal outcome.
-      </p>
-
-      <h2>Contacting the Site</h2>
-      <p>
-        Submitting information through this site does not guarantee follow-up, case acceptance, or representation. Any information submitted may be reviewed for general informational purposes and to determine whether further evaluation may be appropriate.
-      </p>
-
-      <h2>No Medical Advice</h2>
-      <p>
-        Content on this site should not be understood as medical advice, diagnosis, or treatment guidance. Individuals with health concerns should consult a qualified medical professional.
-      </p>
-
-      <h2>Accuracy and Completeness</h2>
-      <p>
-        Efforts are made to provide useful and accurate information, but no representation is made that all content is complete, current, or error-free.
-      </p>
-
-      <h2>External Links</h2>
-      <p>
-        This site may link to other websites for additional information. Lawsuit Center is not responsible for the content, accuracy, or practices of third-party websites.
-      </p>
-
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  <div class="container narrow">
-    <p>&copy; 2026 Lawsuit Center</p>
-    <p>Educational information only. Not legal advice. No attorney-client relationship is formed.</p>
-    <p>
-      <a href="privacy-policy.html">Privacy Policy</a> |
-      <a href="disclaimer.html">Disclaimer</a> |
-      <a href="editorial-policy.html">Editorial Policy</a>
-    </p>
-  </div>
-</footer>
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("open");
+        toggle.classList.toggle("active", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    });
+  </script>
 
 </body>
 </html>
