@@ -7,15 +7,16 @@
   <title>Contact | Lawsuit Center</title>
   <meta
     name="description"
-    content="Contact Lawsuit Center to share your situation, request a case review, or learn more about possible next steps."
+    content="Contact Lawsuit Center to request a case review, ask a general question, or inquire about featured placement opportunities."
   />
   <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="stylesheet" href="style.css" />
   <link rel="canonical" href="https://lawsuit.center/contact.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
 
-<header>
+<header class="site-header">
   <div class="container nav">
     <div class="logo">
       <a href="index.html">
@@ -23,11 +24,25 @@
       </a>
     </div>
 
-    <nav>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="site-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="lawsuits.html">Browse Lawsuits</a>
+      <a href="resources.html">Resources</a>
+      <a href="for-law-firms.html">For Law Firms</a>
       <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a>
     </nav>
   </div>
 </header>
@@ -36,21 +51,44 @@
 
   <section class="hero">
     <div class="container narrow">
-      <h1>Request a Case Review</h1>
+      <p class="eyebrow">Contact Lawsuit Center</p>
+      <h1>Request a Case Review or Contact Us</h1>
       <p>
-        Share your situation to help determine whether it may relate to an active lawsuit or broader legal claim pattern.
+        Use this page to share your situation, ask a general question, or inquire about featured placement opportunities for law firms.
       </p>
-      <p>
-        You do not need to know exactly what kind of case you may have to get started.
+      <p class="small-text">
+        Lawsuit Center is not a law firm and does not provide legal advice. Submitting information does not create an attorney-client relationship.
       </p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <h2>Choose the Right Path</h2>
+
+      <div class="card-grid two-column">
+        <div class="card">
+          <h3>Case Review Inquiry</h3>
+          <p>
+            Use the form below if you want to describe a possible exposure, product issue, diagnosis, injury, or other situation that may relate to a broader claim pattern.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Law Firm or Placement Inquiry</h3>
+          <p>
+            Use the same form if you are a law firm asking about featured placement, category sponsorship, or related visibility opportunities on Lawsuit Center.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container narrow">
-      <h2>Tell Us About Your Situation</h2>
+      <h2>Send a Message</h2>
       <p>
-        Many lawsuits begin with patterns — exposure over time, product use, a diagnosis, or similar experiences reported by others. A short description is enough to begin.
+        A brief summary is enough to get started. Please choose the option that best matches why you are reaching out.
       </p>
     </div>
   </section>
@@ -75,6 +113,16 @@
         </p>
 
         <p>
+          <label for="inquiry-type">What is your inquiry about?</label><br />
+          <select id="inquiry-type" name="inquiry-type" required>
+            <option value="">Select one</option>
+            <option value="case-review">Possible case review</option>
+            <option value="general-question">General question</option>
+            <option value="law-firm-placement">Law firm / featured placement inquiry</option>
+          </select>
+        </p>
+
+        <p>
           <label for="name">Full Name</label><br />
           <input type="text" id="name" name="name" required />
         </p>
@@ -90,7 +138,7 @@
         </p>
 
         <p>
-          <label for="topic">What best describes your situation?</label><br />
+          <label for="topic">What best describes the topic?</label><br />
           <select id="topic" name="topic">
             <option value="">Select one</option>
             <option value="chemical-exposure">Chemical or toxic exposure</option>
@@ -98,12 +146,13 @@
             <option value="defective-product">Defective product</option>
             <option value="pharmaceutical">Pharmaceutical or medication</option>
             <option value="injury-or-illness">Injury or illness</option>
+            <option value="advertising-placement">Advertising or featured placement</option>
             <option value="not-sure">I am not sure</option>
           </select>
         </p>
 
         <p>
-          <label for="message">Briefly describe what happened</label><br />
+          <label for="message">Briefly describe your situation or question</label><br />
           <textarea id="message" name="message" rows="8" required></textarea>
         </p>
 
@@ -112,11 +161,11 @@
         </p>
 
         <p>
-          <button type="submit" class="btn-primary">Submit for Review</button>
+          <button type="submit" class="btn-primary">Send Message</button>
         </p>
 
         <p class="small-text">
-          Lawsuit Center is not a law firm and does not provide legal advice. Submitting this form does not create an attorney-client relationship.
+          Lawsuit Center is not a law firm and does not provide legal advice. Submitting this form does not create an attorney-client relationship. Submission does not guarantee follow-up, eligibility, or representation.
         </p>
       </form>
 
@@ -128,10 +177,11 @@
       <h2>What Information Helps</h2>
 
       <ul>
-        <li>What you were exposed to, used, or experienced</li>
+        <li>What product, exposure, injury, diagnosis, or topic is involved</li>
         <li>When it happened or how long it occurred</li>
-        <li>Any diagnosis, symptoms, or injuries involved</li>
+        <li>Any symptoms, diagnosis, or injuries involved</li>
         <li>Where the exposure or event took place</li>
+        <li>Whether you are reaching out as a consumer or as a law firm</li>
       </ul>
 
       <p>
@@ -145,7 +195,7 @@
       <h2>What Happens Next</h2>
 
       <p>
-        Your message may be reviewed to better understand your situation and whether it may relate to broader legal patterns or existing claims.
+        Messages may be reviewed to better understand the nature of the inquiry and whether it relates to a possible claim pattern, a general question, or a law firm placement discussion.
       </p>
 
       <p>
@@ -153,7 +203,7 @@
       </p>
 
       <p>
-        Not every submission will result in follow-up, and submitting information does not guarantee that you qualify for a claim or will be offered representation.
+        Not every submission will result in follow-up, and submission does not guarantee that you qualify for a claim, will be offered representation, or will be offered placement.
       </p>
     </div>
   </section>
@@ -181,10 +231,27 @@
     <p>
       <a href="privacy-policy.html">Privacy Policy</a> |
       <a href="disclaimer.html">Disclaimer</a> |
-      <a href="editorial-policy.html">Editorial Policy</a>
+      <a href="editorial-policy.html">Editorial Policy</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
     </p>
   </div>
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".site-nav");
+
+    if (!toggle || !menu) return;
+
+    toggle.addEventListener("click", function () {
+      const isOpen = menu.classList.toggle("open");
+      toggle.classList.toggle("active", isOpen);
+      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+  });
+</script>
 
 </body>
 </html>
