@@ -1,4 +1,6 @@
-/* Reset */
+/* =========================
+   RESET
+   ========================= */
 
 *,
 *::before,
@@ -33,7 +35,9 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Layout */
+/* =========================
+   LAYOUT
+   ========================= */
 
 .container {
   max-width: 1100px;
@@ -46,19 +50,21 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Small helper text */
+/* =========================
+   TEXT HELPERS
+   ========================= */
 
 .small-text {
   font-size: 0.9rem;
   line-height: 1.65;
-  opacity: 0.8;
+  color: #bdbdbd;
   margin-top: 14px;
 }
 
 .hero .small-text {
   font-size: 0.8rem;
   line-height: 1.55;
-  opacity: 0.7;
+  color: #a8a8a8;
   margin-top: 24px;
   max-width: 700px;
   margin-left: auto;
@@ -69,14 +75,43 @@ a:hover {
 .cta-section .small-text {
   font-size: 0.84rem;
   line-height: 1.6;
-  opacity: 0.74;
+  color: #b3b3b3;
   margin-top: 18px;
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Main Site Header */
+.eyebrow,
+.section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto 10px;
+  text-align: center;
+  color: #d7d7d7;
+}
+
+.small-note {
+  max-width: 760px;
+  margin: 20px auto 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* =========================
+   MAIN SITE HEADER
+   ========================= */
 
 header,
 .site-header {
@@ -109,7 +144,6 @@ header,
 .logo img {
   height: 72px;
   width: auto;
-  display: block;
 }
 
 nav {
@@ -135,7 +169,9 @@ nav a:hover {
   color: #7cc4ff;
 }
 
-/* Mobile hamburger nav */
+/* =========================
+   MOBILE MENU
+   ========================= */
 
 .menu-toggle {
   display: none;
@@ -173,7 +209,9 @@ nav a:hover {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Alternate header pattern used on some pages */
+/* =========================
+   ALTERNATE / LANDING HEADER
+   ========================= */
 
 .header-inner {
   display: flex;
@@ -191,11 +229,9 @@ nav a:hover {
 }
 
 .brand:hover {
-  text-decoration: none;
   color: #7cc4ff;
+  text-decoration: none;
 }
-
-/* Landing Page Header */
 
 .landing-header {
   background: #ffffff;
@@ -218,11 +254,10 @@ nav a:hover {
   font-size: 1.2rem;
   font-weight: 700;
   color: #111827;
-  text-decoration: none;
 }
 
 .landing-header .brand:hover {
-  text-decoration: none;
+  color: #1d4ed8;
 }
 
 .landing-header .nav {
@@ -260,7 +295,9 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* General Hero */
+/* =========================
+   HERO
+   ========================= */
 
 .hero {
   padding: 76px 0 56px;
@@ -290,19 +327,6 @@ nav a:hover {
   flex-wrap: wrap;
   margin-top: 28px;
 }
-
-.eyebrow,
-.section-label {
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #a3a3a3;
-}
-
-/* Landing Hero */
 
 .landing-hero,
 .hero-alt,
@@ -342,7 +366,9 @@ nav a:hover {
   margin-bottom: 28px;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+   ========================= */
 
 .btn,
 .btn-primary,
@@ -386,7 +412,7 @@ button:hover {
   width: 100%;
 }
 
-/* Landing Button Overrides */
+/* Landing pill buttons */
 
 .landing-header .btn,
 .landing-hero .btn,
@@ -430,7 +456,9 @@ button:hover {
   text-decoration: none;
 }
 
-/* General Sections */
+/* =========================
+   SECTIONS
+   ========================= */
 
 .section {
   padding: 64px 0;
@@ -440,6 +468,7 @@ button:hover {
   margin-top: 0;
   margin-bottom: 18px;
   font-size: 2rem;
+  color: #f5f5f5;
 }
 
 .section p,
@@ -454,8 +483,6 @@ button:hover {
 .cta {
   text-align: center;
 }
-
-/* Homepage-style content sections */
 
 .page-section {
   padding: 72px 0;
@@ -489,17 +516,7 @@ button:hover {
   margin-bottom: 24px;
 }
 
-.footer-inner {
-  padding: 32px 0 40px;
-}
-
-.footer-inner p {
-  color: #9ca3af;
-  line-height: 1.8;
-  margin: 0;
-}
-
-/* Landing Section Color System */
+/* light section variant */
 
 .section-light {
   background: #f3f4f6;
@@ -509,39 +526,20 @@ button:hover {
   color: #6b7280;
 }
 
-.section-light > .container > h2,
-.section-light .narrow > h2 {
+.section-light h2,
+.section-light p,
+.section-light li {
   color: #111827;
 }
 
-.section-light > .container > p,
-.section-light .narrow > p,
-.section-light > .container > ul li,
-.section-light .narrow > ul li {
+.section-light p,
+.section-light li {
   color: #374151;
 }
 
-.section:not(.section-light):not(.cta-strip) {
-  background: #000000;
-}
-
-.section:not(.section-light):not(.cta-strip) .section-label {
-  color: #9ca3af;
-}
-
-.section:not(.section-light):not(.cta-strip) > .container > h2,
-.section:not(.section-light):not(.cta-strip) .narrow > h2 {
-  color: #f9fafb;
-}
-
-.section:not(.section-light):not(.cta-strip) > .container > p,
-.section:not(.section-light):not(.cta-strip) .narrow > p,
-.section:not(.section-light):not(.cta-strip) > .container > ul li,
-.section:not(.section-light):not(.cta-strip) .narrow > ul li {
-  color: #e5e7eb;
-}
-
-/* Lists */
+/* =========================
+   LISTS
+   ========================= */
 
 ol,
 ul {
@@ -552,7 +550,9 @@ li + li {
   margin-top: 10px;
 }
 
-/* General Cards */
+/* =========================
+   CARDS
+   ========================= */
 
 .card-grid {
   display: grid;
@@ -592,11 +592,26 @@ li + li {
   line-height: 1.7;
 }
 
-/* Homepage info cards + related links */
-
 .two-column {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid.three-col .card p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.card-grid.three-col .card p:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   RELATED LINKS
+   ========================= */
 
 .related-links {
   display: grid;
@@ -620,7 +635,9 @@ li + li {
   text-decoration: none;
 }
 
-/* Trust strip */
+/* =========================
+   TRUST STRIPS
+   ========================= */
 
 .trust-strip {
   display: grid;
@@ -640,32 +657,19 @@ li + li {
   text-align: center;
 }
 
-/* Trust Row */
-
-.trust-row {
+.trust-row,
+.mini-trust {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 18px;
 }
 
-.trust-row span {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #eff6ff;
-  color: #1d4ed8;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
 .mini-trust {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
   margin: 16px 0 18px;
 }
 
+.trust-row span,
 .mini-trust span {
   display: inline-block;
   padding: 8px 12px;
@@ -676,45 +680,12 @@ li + li {
   font-weight: 600;
 }
 
-/* Landing notes and boxes */
+/* =========================
+   LANDING / INFO BOXES
+   ========================= */
 
-.landing-note {
-  margin-top: 18px;
-  padding: 14px 16px;
-  background: #f8fafc;
-  border: 1px solid #dcdfe4;
-  border-radius: 14px;
-  color: #4b5563;
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-.what-next-box {
-  margin-top: 20px;
-  padding: 20px;
-  background: #f8fafc;
-  border: 1px solid #dcdfe4;
-  border-radius: 16px;
-}
-
-.what-next-box h3 {
-  margin: 0 0 10px;
-  color: #111827;
-  font-size: 1.05rem;
-}
-
-.what-next-box ul {
-  margin: 0;
-  padding-left: 18px;
-}
-
-.what-next-box li {
-  color: #374151;
-  line-height: 1.7;
-}
-
-/* Landing cards */
-
+.landing-note,
+.what-next-box,
 .fit-box,
 .form-card,
 .info-card,
@@ -723,12 +694,26 @@ li + li {
 .check-card,
 .thank-you-card,
 .status-box {
-  background: #ffffff;
-  border: 1px solid #dcdfe4;
+  background: #151515;
+  border: 1px solid #2a2a2a;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+.landing-note {
+  margin-top: 18px;
+  padding: 14px 16px;
+  color: #cfcfcf;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.what-next-box {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.what-next-box h3,
 .fit-box h2,
 .form-card h2,
 .info-card h3,
@@ -737,24 +722,32 @@ li + li {
 .check-card h3,
 .status-box h2,
 .thank-you-card h1 {
-  color: #111827;
+  color: #f5f5f5;
 }
 
+.what-next-box p,
+.what-next-box li,
 .fit-box p,
+.fit-box li,
 .form-card p,
 .info-card p,
+.info-card li,
 .step-card p,
 .faq-item p,
 .check-card p,
-.status-box p,
-.fit-box li,
-.info-card li,
 .check-card li,
-.status-box li {
-  color: #374151;
+.status-box p,
+.status-box li,
+.thank-you-lead {
+  color: #d7d7d7;
 }
 
-.fit-box {
+.fit-box,
+.form-card,
+.info-card,
+.step-card,
+.faq-item,
+.check-card {
   padding: 24px;
 }
 
@@ -763,25 +756,37 @@ li + li {
   margin: 0 0 14px;
 }
 
-.fit-box ul {
+.fit-box ul,
+.info-card ul,
+.check-card ul,
+.what-next-box ul,
+.status-box ul {
   margin: 0;
   padding-left: 20px;
-  line-height: 1.8;
 }
 
-/* Landing Form */
-
-.form-card {
-  padding: 28px;
-}
-
-.form-card h2 {
+.info-card h3,
+.step-card h3,
+.check-card h3,
+.faq-item h3 {
   margin: 0 0 10px;
+  font-size: 1.2rem;
 }
 
-.form-card p {
-  margin-bottom: 18px;
+.info-card p,
+.info-card li,
+.step-card p,
+.faq-item p,
+.check-card p,
+.check-card li,
+.status-box p,
+.status-box li {
+  line-height: 1.7;
 }
+
+/* =========================
+   FORMS
+   ========================= */
 
 .form-card form {
   display: flex;
@@ -792,65 +797,66 @@ li + li {
 
 .form-card label {
   font-weight: 600;
-  color: #111827;
+  color: #f5f5f5;
   font-size: 0.95rem;
   margin-bottom: 4px;
 }
 
 .form-card input,
 .form-card select,
-.form-card textarea {
+.form-card textarea,
+input,
+select,
+textarea {
   width: 100%;
-  padding: 14px 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #111;
+  color: #f5f5f5;
   font: inherit;
-  background: #ffffff;
-  color: #111827;
 }
 
-.form-card textarea {
+.form-card textarea,
+textarea {
   min-height: 140px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7cc4ff;
 }
 
 .form-note {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #9ca3af;
   margin-top: 6px;
 }
 
-/* Landing Info Cards */
-
-.info-card {
-  padding: 24px;
+label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #f5f5f5;
 }
 
-.info-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
+button {
+  cursor: pointer;
 }
 
-.info-card p,
-.info-card li {
-  line-height: 1.7;
-}
+/* =========================
+   STEPS / FAQ / CHECKS
+   ========================= */
 
-.info-card ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-/* Steps */
-
-.steps-grid {
+.steps-grid,
+.check-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   margin-top: 28px;
-}
-
-.step-card {
-  padding: 24px;
 }
 
 .step-number {
@@ -866,24 +872,10 @@ li + li {
   margin-bottom: 14px;
 }
 
-.step-card h3 {
-  margin: 0 0 10px;
-}
-
-.step-card p {
-  line-height: 1.7;
-}
-
-/* FAQ */
-
 .faq-list {
   display: grid;
   gap: 18px;
   margin-top: 24px;
-}
-
-.faq-item {
-  padding: 24px;
 }
 
 .faq-item h3 {
@@ -895,7 +887,9 @@ li + li {
   line-height: 1.7;
 }
 
-/* CTA Strip */
+/* =========================
+   CTA STRIP
+   ========================= */
 
 .cta-strip {
   text-align: center;
@@ -916,71 +910,9 @@ li + li {
   margin-bottom: 22px;
 }
 
-/* Check Cards */
-
-.check-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 28px;
-}
-
-.check-card {
-  padding: 24px;
-}
-
-.check-card h3 {
-  margin: 0 0 12px;
-}
-
-.check-card ul {
-  margin: 0;
-  padding-left: 18px;
-  line-height: 1.8;
-}
-
-/* Forms */
-
-form {
-  margin-top: 28px;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 8px;
-  font-weight: 700;
-  color: #f5f5f5;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #333;
-  border-radius: 10px;
-  background: #111;
-  color: #f5f5f5;
-  font: inherit;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #7cc4ff;
-}
-
-textarea {
-  min-height: 180px;
-  resize: vertical;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Thank You Page */
+/* =========================
+   THANK YOU / STATUS
+   ========================= */
 
 .thank-you-hero {
   padding: 72px 0;
@@ -989,7 +921,6 @@ button {
 .thank-you-card {
   border-radius: 22px;
   padding: 40px 32px;
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
   text-align: center;
 }
 
@@ -1004,33 +935,22 @@ button {
   margin: 0 auto 28px;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #374151;
 }
 
 .status-box {
   text-align: left;
-  background: #f8fafc;
   padding: 22px;
   margin: 20px 0;
+  background: #101826;
 }
 
 .status-box.alt {
-  background: #eff6ff;
+  background: #13203a;
 }
 
 .status-box h2 {
   margin: 0 0 12px;
   font-size: 1.15rem;
-}
-
-.status-box p,
-.status-box li {
-  line-height: 1.75;
-}
-
-.status-box ul {
-  margin: 0;
-  padding-left: 20px;
 }
 
 .thank-you-actions {
@@ -1041,7 +961,9 @@ button {
   margin-top: 28px;
 }
 
-/* Lawsuit Funding Page */
+/* =========================
+   DISCLAIMERS / CHECKLISTS
+   ========================= */
 
 .disclaimer {
   margin: 0;
@@ -1055,13 +977,6 @@ button {
 
 .disclaimer strong {
   color: #ffffff;
-}
-
-.section-intro {
-  max-width: 760px;
-  margin: 0 auto 10px;
-  text-align: center;
-  color: #d7d7d7;
 }
 
 .checklist-box {
@@ -1087,6 +1002,10 @@ button {
   color: #d7d7d7;
   line-height: 1.75;
 }
+
+/* =========================
+   BUTTON ROW ALT
+   ========================= */
 
 .button-row {
   display: flex;
@@ -1130,35 +1049,9 @@ button {
   color: #7cc4ff;
 }
 
-/* Provider cards */
-
-.three-col {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.card-grid.three-col .card p {
-  margin-bottom: 12px;
-  line-height: 1.7;
-}
-
-.card-grid.three-col .card p:last-of-type {
-  margin-bottom: 20px;
-}
-
-.card-grid.three-col .button {
-  margin-top: 4px;
-}
-
-.small-note {
-  max-width: 760px;
-  margin: 20px auto 0;
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: #9ca3af;
-  text-align: center;
-}
-
-/* Footer */
+/* =========================
+   FOOTER
+   ========================= */
 
 footer {
   border-top: 1px solid #222;
@@ -1170,6 +1063,16 @@ footer {
 footer p {
   margin: 0;
   color: #bdbdbd;
+}
+
+.footer-inner {
+  padding: 32px 0 40px;
+}
+
+.footer-inner p {
+  color: #9ca3af;
+  line-height: 1.8;
+  margin: 0;
 }
 
 .site-footer {
@@ -1217,7 +1120,9 @@ footer p {
   text-decoration: none;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+   ========================= */
 
 @media (max-width: 900px) {
   .card-grid,
