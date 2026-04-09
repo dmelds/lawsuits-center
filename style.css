@@ -1301,22 +1301,28 @@ footer p {
     line-height: 1.2;
   }
 
-  .landing-header .header-inner {
+  .landing-header-inner {
     flex-direction: column;
-    justify-content: center;
+    align-items: stretch;
     gap: 10px;
-    padding: 14px 0;
-    min-height: auto;
-    text-align: center;
-  }
-
-  .landing-header .nav {
     padding: 12px 0;
-    gap: 12px;
+    min-height: auto;
   }
 
-  .landing-header nav a {
-    font-size: 0.95rem;
+  .brand {
+    justify-content: flex-start;
+  }
+
+  .brand img {
+    height: 38px;
+    width: auto;
+  }
+
+  .header-cta {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 0.98rem;
   }
 
   .hero-actions,
