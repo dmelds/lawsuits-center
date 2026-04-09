@@ -55,11 +55,18 @@ a:hover {
    ========================= */
 
 .small-text {
-  max-width: 620px;
-  margin: 18px auto 0;
-  font-size: 0.84rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #bdbdbd;
+  margin-top: 14px;
+}
+
+.hero-disclaimer {
+  max-width: 480px;
+  margin: 28px auto 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.42);
   text-align: center;
   font-weight: 400;
 }
@@ -81,6 +88,7 @@ a:hover {
   text-align: center;
   color: #d7d7d7;
 }
+
 /* =========================
    MAIN SITE HEADER
    ========================= */
@@ -935,6 +943,14 @@ footer p {
   .packages-hero {
     padding-top: 64px;
   }
+
+  .hero-disclaimer {
+    max-width: 78%;
+    margin: 24px auto 0;
+    font-size: 0.7rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.4);
+  }
 }
 
 @media (max-width: 768px) {
@@ -966,12 +982,6 @@ footer p {
     gap: 8px;
     padding: 8px 20px 0;
   }
-   .small-text {
-  max-width: 90%;
-  font-size: 0.8rem;
-  line-height: 1.55;
-  margin-top: 16px;
-}
 
   .site-nav.open {
     display: flex;
@@ -1072,5 +1082,12 @@ footer p {
 
   .thank-you-card h1 {
     font-size: 2rem;
+  }
+
+  .hero-disclaimer {
+    max-width: 82%;
+    margin: 22px auto 0;
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 }
