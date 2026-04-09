@@ -55,10 +55,13 @@ a:hover {
    ========================= */
 
 .small-text {
-  font-size: 0.9rem;
-  line-height: 1.65;
-  color: #bdbdbd;
-  margin-top: 14px;
+  max-width: 620px;
+  margin: 18px auto 0;
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.58);
+  text-align: center;
+  font-weight: 400;
 }
 
 .eyebrow,
@@ -78,7 +81,6 @@ a:hover {
   text-align: center;
   color: #d7d7d7;
 }
-
 /* =========================
    MAIN SITE HEADER
    ========================= */
@@ -964,6 +966,12 @@ footer p {
     gap: 8px;
     padding: 8px 20px 0;
   }
+   .small-text {
+  max-width: 90%;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  margin-top: 16px;
+}
 
   .site-nav.open {
     display: flex;
