@@ -1112,4 +1112,13 @@ footer p {
     font-size: 0.68rem;
     line-height: 1.4;
   }
+   .fit-box ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.fit-box li {
+  margin-top: 6px;
+  line-height: 1.55;
+}
 }
