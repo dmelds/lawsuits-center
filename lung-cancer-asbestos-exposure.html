@@ -17,15 +17,17 @@
 <body>
 
   <header class="landing-header">
-    <div class="container header-inner">
-      <a href="/" class="brand">Lawsuit Center</a>
+    <div class="container landing-header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo-center.jpeg" alt="Lawsuit Center" />
+      </a>
       <a href="#case-review" class="header-cta">See If You May Qualify</a>
     </div>
   </header>
 
   <main>
 
-    <section class="landing-hero">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Asbestos Exposure Claims</p>
@@ -39,10 +41,10 @@
 
           <div class="hero-actions">
             <a href="#case-review" class="btn btn-primary">See If You May Qualify</a>
-            <a href="#learn-more" class="btn btn-secondary">Learn About Asbestos Exposure</a>
+            <a href="asbestos-case-review.html" class="btn btn-secondary">Need a broader asbestos review?</a>
           </div>
 
-          <p class="hero-note">
+          <p class="small-text">
             No obligation. General legal information only.
           </p>
 
@@ -56,6 +58,12 @@
               <li>you want to find out whether a legal claim may exist</li>
             </ul>
           </div>
+
+          <div class="landing-note">
+            Not sure this page fits your situation exactly?
+            <a href="asbestos-case-review.html">Go to our general asbestos case review page</a>
+            for a broader review of asbestos exposure history, diagnosis, and possible claim questions.
+          </div>
         </div>
 
         <aside class="form-card" id="case-review">
@@ -64,13 +72,20 @@
             Share a few details about your diagnosis and exposure history.
           </p>
 
-       <form name="lung-cancer-asbestos-review" method="POST" action="/thank-you-asbestos-review.html" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="lung-cancer-asbestos-review" />
-  <input type="hidden" name="redirect" value="/thank-you-asbestos-review.html" />
+          <form
+            name="lung-cancer-asbestos-review"
+            method="POST"
+            action="/thank-you-asbestos-review.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="lung-cancer-asbestos-review" />
+            <input type="hidden" name="redirect" value="/thank-you-asbestos-review.html" />
 
-  <p hidden>
-    <label>Don’t fill this out: <input name="bot-field" /></label>
-  </p>
+            <p hidden>
+              <label>Don’t fill this out: <input name="bot-field" /></label>
+            </p>
+
             <label for="first-name">First Name</label>
             <input type="text" id="first-name" name="first_name" required />
 
@@ -110,7 +125,7 @@
               placeholder="Example: Construction work, insulation, shipyard, refinery, boiler room, military service, or secondhand household exposure."
             ></textarea>
 
-            <button type="submit" class="btn btn-primary btn-full">
+            <button type="submit" class="btn btn-primary">
               Request a Free Case Review
             </button>
 
@@ -122,7 +137,7 @@
       </div>
     </section>
 
-    <section class="section section-light" id="learn-more">
+    <section class="section" id="learn-more">
       <div class="container narrow">
         <p class="section-label">Exposure Overview</p>
         <h2>Common asbestos exposure settings may include:</h2>
@@ -149,7 +164,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <div class="container narrow">
         <p class="section-label">How Claims May Work</p>
         <h2>How asbestos exposure and lung cancer claims may relate</h2>
@@ -171,7 +186,7 @@
       </div>
     </section>
 
-    <section class="section section-light">
+    <section class="section">
       <div class="container narrow">
         <p class="section-label">Case Review Factors</p>
         <h2>You may have a stronger basis for review if you have:</h2>
@@ -211,7 +226,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section alt">
       <div class="container narrow">
         <p class="section-label">Next Step</p>
         <h2>What happens after you submit your information</h2>
@@ -243,7 +258,7 @@
       </div>
     </section>
 
-    <section class="section section-light">
+    <section class="section">
       <div class="container narrow">
         <p class="section-label">Questions People Often Ask</p>
         <h2>Frequently asked questions</h2>
@@ -292,19 +307,22 @@
       </div>
     </section>
 
-    <section class="section cta-strip">
-      <div class="container narrow">
+    <section class="section alt">
+      <div class="container narrow cta-section">
         <h2>Looking into a possible asbestos-related claim?</h2>
         <p>
-          Request a review based on your diagnosis and exposure history.
+          Request a review based on your diagnosis and exposure history, or use our broader asbestos review page if your situation does not fit this page exactly.
         </p>
-        <a href="#case-review" class="btn btn-primary">Start Your Case Review</a>
+        <div class="hero-actions">
+          <a href="#case-review" class="btn btn-primary">Start Your Case Review</a>
+          <a href="asbestos-case-review.html" class="btn btn-secondary">General Asbestos Review</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
+  <footer>
     <div class="container narrow">
       <p>
         Lawsuit Center provides general legal information only. This page does not
@@ -312,9 +330,7 @@
         form does not create an attorney-client relationship. Any potential claim
         depends on individual facts, available records, and applicable law.
       </p>
-      <p>
-        © Lawsuit Center
-      </p>
+      <p>© Lawsuit Center</p>
     </div>
   </footer>
 
