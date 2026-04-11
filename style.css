@@ -1121,4 +1121,7 @@ footer p {
   margin-top: 6px;
   line-height: 1.55;
 }
+   .fit-box {
+  text-align: left;
+}
 }
