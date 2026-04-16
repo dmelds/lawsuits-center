@@ -84,11 +84,22 @@ a:hover {
 
 .section-intro {
   max-width: 760px;
-  margin: 0 auto 10px;
+  margin: 0 auto;
   text-align: center;
   color: #d7d7d7;
 }
 
+.section-intro h2 {
+  margin: 0 0 18px;
+}
+
+.section-intro p {
+  margin: 0 0 16px;
+}
+
+.section-intro p:last-child {
+  margin-bottom: 0;
+}
 /* =========================
    MAIN SITE HEADER
    ========================= */
