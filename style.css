@@ -468,9 +468,13 @@ li + li {
 }
 
 .card p {
-  margin: 0;
+  margin: 0 0 10px;
   color: #d7d7d7;
   line-height: 1.7;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
 }
 
 .two-column {
@@ -505,24 +509,31 @@ li + li {
 
 .related-links {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  margin-top: 24px;
+  margin: 24px 0 28px;
 }
 
 .related-links a {
   display: block;
-  padding: 18px 22px;
-  background: #111827;
-  border: 1px solid #1f2937;
+  padding: 18px 20px;
+  background: #111;
+  border: 1px solid #222;
   border-radius: 16px;
-  color: #93c5fd;
-  font-weight: 600;
+  color: #f5f5f5;
+  font-weight: 700;
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .related-links a:hover {
-  background: #1f2937;
+  border-color: #7cc4ff;
+  color: #7cc4ff;
   text-decoration: none;
+}
+
+.card .eyebrow {
+  margin-bottom: 10px;
 }
 
 /* =========================
