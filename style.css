@@ -1027,7 +1027,8 @@ footer p {
     flex-shrink: 0;
   }
 
-  .site-nav {
+  .site-header .site-nav,
+  .landing-header .site-nav {
     display: none;
     width: 100%;
     flex-direction: column;
@@ -1036,11 +1037,13 @@ footer p {
     padding: 8px 20px 0;
   }
 
-  .site-nav.open {
+  .site-header .site-nav.open,
+  .landing-header .site-nav.open {
     display: flex;
   }
 
-  .site-nav a {
+  .site-header .site-nav a,
+  .landing-header .site-nav a {
     width: 100%;
     padding: 2px 0;
     font-size: 1.02rem;
@@ -1052,7 +1055,6 @@ footer p {
     display: none;
   }
 }
-
 @media (max-width: 640px) {
   .logo img {
     height: 34px;
