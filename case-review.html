@@ -26,7 +26,11 @@
     "publisher": {
       "@type": "Organization",
       "name": "Lawsuit Center",
-      "url": "https://lawsuit.center/"
+      "url": "https://lawsuit.center/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lawsuit.center/logo-center.jpeg"
+      }
     }
   }
   </script>
@@ -85,11 +89,19 @@
     <section class="hero">
       <div class="container narrow">
         <p class="eyebrow">Case review request</p>
+
         <h1>Request a Case Review</h1>
+
         <p>
-          Share basic information about your situation. If your information appears relevant to
-          a lawsuit category, a participating law firm or legal advertiser may contact you.
+          Share basic information about your situation. If your information appears relevant
+          to a lawsuit category, a participating law firm, legal advertiser, intake provider,
+          or other partner may contact you.
         </p>
+
+        <div class="hero-actions">
+          <a href="how-case-review-works.html" class="btn-primary">How Case Review Works</a>
+          <a href="lawsuits.html" class="btn-secondary">Browse Lawsuit Categories</a>
+        </div>
       </div>
     </section>
 
@@ -114,13 +126,19 @@
         <ul>
           <li>You do not need to know whether you have a valid legal claim.</li>
           <li>You should provide accurate information to the best of your knowledge.</li>
-          <li>A participating firm may or may not contact you.</li>
+          <li>A participating firm or legal advertiser may or may not contact you.</li>
           <li>Legal deadlines may apply and can vary by state and claim type.</li>
+          <li>No attorney-client relationship is formed unless you separately sign an agreement with a law firm.</li>
         </ul>
 
         <p>
           You can also review <a href="how-case-review-works.html">how case review works</a>
           before submitting information.
+        </p>
+
+        <p class="small-text">
+          Please do not submit confidential documents, full medical records, Social Security numbers,
+          financial account numbers, or highly sensitive information through this form.
         </p>
       </div>
     </section>
@@ -129,7 +147,14 @@
       <div class="container narrow">
         <h2>Case Review Form</h2>
 
-        <form name="case-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="contact-form">
+        <form
+          name="case-review"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+          class="contact-form"
+        >
           <input type="hidden" name="form-name" value="case-review" />
 
           <p style="display: none;">
@@ -152,17 +177,20 @@
           <input type="text" id="state" name="state" />
 
           <label for="category">Lawsuit Category</label>
-          <select id="category" name="category">
+          <select id="category" name="category" required>
             <option value="">Select a category</option>
+            <option value="Asbestos Exposure">Asbestos Exposure</option>
             <option value="Chemical Exposure">Chemical Exposure</option>
             <option value="Water Contamination">Water Contamination</option>
             <option value="PFAS Water Contamination">PFAS Water Contamination</option>
             <option value="Environmental Contamination">Environmental Contamination</option>
             <option value="Product Liability">Product Liability</option>
-            <option value="Drug Injury">Drug Injury</option>
+            <option value="Drug Injury">Drug Injury / Medication</option>
             <option value="Medical Device">Medical Device</option>
+            <option value="Social Media Addiction">Social Media Addiction Lawsuit</option>
             <option value="Personal Injury">Personal Injury</option>
-            <option value="Other">Other</option>
+            <option value="Lawsuit Funding">Lawsuit Funding</option>
+            <option value="Other">Other / Not Sure</option>
           </select>
 
           <label for="summary">Briefly describe what happened</label>
@@ -170,11 +198,18 @@
 
           <label>
             <input type="checkbox" name="consent" required />
-            I understand that submitting this form does not create an attorney-client relationship
-            and does not guarantee that I qualify for a claim or will be contacted by a law firm.
+            I understand that Lawsuit Center is not a law firm, does not provide legal advice,
+            and that submitting this form does not create an attorney-client relationship or
+            guarantee eligibility, contact, compensation, or representation.
           </label>
 
           <button type="submit" class="btn-primary">Submit Case Review Request</button>
+
+          <p class="small-text">
+            By submitting this form, you understand that your information may be reviewed by
+            participating law firms, legal advertisers, intake providers, or other partners
+            connected to the relevant lawsuit category.
+          </p>
         </form>
       </div>
     </section>
@@ -184,9 +219,13 @@
         <h2>What Happens After Submission?</h2>
 
         <p>
-          Your information may be reviewed by participating law firms, legal advertisers,
-          intake providers, or other partners connected to the relevant lawsuit category.
-          If there appears to be a possible fit, someone may contact you to ask for more information.
+          Your information may be reviewed to understand whether it relates to a lawsuit category,
+          claim pattern, sponsored case-review path, or possible law firm follow-up.
+        </p>
+
+        <p>
+          If there appears to be a possible fit, a participating law firm, legal advertiser,
+          intake provider, or other partner may contact you to ask for more information.
         </p>
 
         <p>
@@ -195,8 +234,37 @@
         </p>
 
         <div class="hero-actions">
-          <a href="advertising-disclosure.html" class="btn-secondary">Advertising Disclosure</a>
+          <a href="advertising-disclosure.html" class="btn-primary">Advertising Disclosure</a>
           <a href="privacy-policy.html" class="btn-secondary">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container narrow">
+        <h2>Related Pages</h2>
+
+        <div class="card-grid">
+          <a href="lawsuits.html" class="card">
+            <h3>Browse Lawsuit Categories</h3>
+            <p>
+              Explore lawsuit categories by exposure, product, medication, device, injury, or claim pattern.
+            </p>
+          </a>
+
+          <a href="how-case-review-works.html" class="card">
+            <h3>How Case Review Works</h3>
+            <p>
+              Learn what case review means, what may happen after submission, and what is not guaranteed.
+            </p>
+          </a>
+
+          <a href="advertising-disclosure.html" class="card">
+            <h3>Advertising Disclosure</h3>
+            <p>
+              Understand sponsored visibility, paid placements, and attorney advertising disclosures.
+            </p>
+          </a>
         </div>
       </div>
     </section>
@@ -206,10 +274,12 @@
   <footer>
     <div class="container narrow">
       <p>&copy; 2026 Lawsuit Center</p>
+
       <p>
         Educational information only. Not legal advice. No attorney-client relationship is formed.
         Some pages may include attorney advertising or sponsored law firm visibility.
       </p>
+
       <p>
         <a href="privacy-policy.html">Privacy Policy</a> |
         <a href="disclaimer.html">Disclaimer</a> |
