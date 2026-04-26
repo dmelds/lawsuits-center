@@ -1,4 +1,4 @@
-/* =========================P
+/* =========================
    RESET
    ========================= */
 
@@ -126,7 +126,9 @@ a:hover {
   color: #d7ecff;
   border-color: #7cc4ff;
   transform: translateY(-1px);
+  text-decoration: none;
 }
+
 /* =========================
    MAIN SITE HEADER
    ========================= */
@@ -145,7 +147,7 @@ header,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 20px;
   padding: 18px 0;
 }
 
@@ -164,21 +166,23 @@ header,
   width: auto;
 }
 
-nav {
+.site-nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 28px;
-  flex-wrap: wrap;
+  gap: 22px;
+  flex-wrap: nowrap;
 }
 
-nav a {
+.site-nav a {
   color: #f5f5f5;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.98rem;
 }
 
-nav a:hover {
+.site-nav a:hover {
   color: #7cc4ff;
   text-decoration: none;
 }
@@ -244,7 +248,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 20px;
   padding: 18px 0;
 }
 
@@ -267,14 +271,15 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 28px;
-  flex-wrap: wrap;
+  gap: 22px;
+  flex-wrap: nowrap;
 }
 
 .landing-header .site-nav a {
   color: #f5f5f5;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .landing-header .site-nav a:hover {
@@ -291,6 +296,25 @@ nav a:hover {
 .landing-header .site-nav a.btn-secondary:hover {
   border-color: #7cc4ff;
   color: #7cc4ff;
+}
+
+.packages-header {
+  z-index: 1000;
+}
+
+.packages-header-cta {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: opacity 0.2s ease;
+}
+
+.packages-header-cta:hover {
+  opacity: 0.9;
+  text-decoration: none;
 }
 
 /* =========================
@@ -316,6 +340,15 @@ nav a:hover {
   margin: 0 auto;
   font-size: 1.1rem;
   color: #d7d7d7;
+}
+
+.hero .small-text {
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #b8b8b8;
+  text-align: center;
 }
 
 .hero-actions {
@@ -351,15 +384,6 @@ nav a:hover {
   text-align: center;
 }
 
-.hero .small-text {
-  max-width: 760px;
-  margin: 18px auto 0;
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: #b8b8b8;
-  text-align: center;
-}
-
 /* =========================
    BUTTONS
    ========================= */
@@ -377,6 +401,7 @@ button,
   font-size: 1rem;
   text-decoration: none;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .btn-primary,
@@ -515,6 +540,10 @@ li + li {
   margin-bottom: 0;
 }
 
+.card .eyebrow {
+  margin-bottom: 10px;
+}
+
 .two-column {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -568,10 +597,6 @@ li + li {
   border-color: #7cc4ff;
   color: #7cc4ff;
   text-decoration: none;
-}
-
-.card .eyebrow {
-  margin-bottom: 10px;
 }
 
 /* =========================
@@ -659,7 +684,8 @@ li + li {
   color: #d7d7d7;
 }
 
-.form-card form {
+.form-card form,
+.contact-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -682,6 +708,9 @@ label,
 .form-card input,
 .form-card select,
 .form-card textarea,
+.contact-form input,
+.contact-form select,
+.contact-form textarea,
 input,
 select,
 textarea {
@@ -695,7 +724,8 @@ textarea {
 }
 
 textarea,
-.form-card textarea {
+.form-card textarea,
+.contact-form textarea {
   min-height: 140px;
   resize: vertical;
 }
@@ -812,43 +842,8 @@ textarea:focus {
 }
 
 /* =========================
-   FOOTER
-   ========================= */
-
-footer {
-  border-top: 1px solid #222;
-  padding: 28px 0;
-  text-align: center;
-  background: #030303;
-}
-
-footer p {
-  margin: 0;
-  color: #bdbdbd;
-}
-
-/* =========================
    MARKETING PACKAGES PAGE
    ========================= */
-
-.packages-header {
-  z-index: 1000;
-}
-
-.packages-header-cta {
-  display: inline-block;
-  background: #111;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-weight: 700;
-  transition: opacity 0.2s ease;
-}
-
-.packages-header-cta:hover {
-  opacity: 0.9;
-  text-decoration: none;
-}
 
 .packages-hero {
   padding: 84px 0 56px;
@@ -1008,8 +1003,42 @@ footer p {
 }
 
 /* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  border-top: 1px solid #222;
+  padding: 28px 0;
+  text-align: center;
+  background: #030303;
+}
+
+footer p {
+  margin: 0 0 10px;
+  color: #bdbdbd;
+}
+
+footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
    RESPONSIVE
    ========================= */
+
+@media (max-width: 1050px) {
+  .site-nav {
+    gap: 16px;
+  }
+
+  .site-nav a {
+    font-size: 0.94rem;
+  }
+
+  .logo img {
+    height: 46px;
+  }
+}
 
 @media (max-width: 900px) {
   .card-grid,
@@ -1104,6 +1133,7 @@ footer p {
     display: none;
   }
 }
+
 @media (max-width: 640px) {
   .logo img {
     height: 34px;
@@ -1177,12 +1207,13 @@ footer p {
     font-size: 0.68rem;
     line-height: 1.4;
   }
-   .inline-link-list {
-  gap: 8px;
-}
 
-.inline-link-list a {
-  font-size: 0.9rem;
-  padding: 7px 10px;
-}
+  .inline-link-list {
+    gap: 8px;
+  }
+
+  .inline-link-list a {
+    font-size: 0.9rem;
+    padding: 7px 10px;
+  }
 }
