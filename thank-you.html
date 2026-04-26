@@ -16,25 +16,6 @@
 
   <link rel="canonical" href="https://lawsuit.center/thank-you.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Case Review Request Received",
-    "url": "https://lawsuit.center/thank-you.html",
-    "description": "Your Lawsuit Center case review request has been received. Learn what may happen next and what information may be helpful to gather.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Lawsuit Center",
-      "url": "https://lawsuit.center/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://lawsuit.center/logo-center.jpeg"
-      }
-    }
-  }
-  </script>
 </head>
 
 <body>
@@ -110,20 +91,17 @@
             The information you provided may be reviewed to determine whether it appears
             to match an available lawsuit category, claim pattern, or case review path.
           </li>
-
           <li>
             <strong>You may be contacted for more information.</strong>
             If your situation appears to match an available review path, a participating
             attorney, legal advertiser, or intake partner may contact you by phone, email,
             or text message.
           </li>
-
           <li>
             <strong>Please watch for unfamiliar numbers.</strong>
             Case review calls may come from a number you do not recognize. If a voicemail is left,
             calling back promptly may help avoid delays.
           </li>
-
           <li>
             <strong>No outcome is guaranteed.</strong>
             A submission does not guarantee eligibility, compensation, representation,
@@ -180,11 +158,6 @@
             </p>
           </div>
         </div>
-
-        <p class="small-text" style="max-width: 760px; margin: 28px auto 0; text-align: center;">
-          Keep your phone nearby and check voicemail, email, and text messages.
-          A follow-up call may come from an unfamiliar number.
-        </p>
       </div>
     </section>
 
@@ -219,17 +192,17 @@
       </div>
     </section>
 
-    <section class="section alt cta">
+    <section class="section cta">
       <div class="container narrow">
-        <h2>You May Close This Page</h2>
+        <h2>Return to Lawsuit Center</h2>
 
         <p>
-          Your case review request has been submitted. You may return to Lawsuit Center
-          or continue reading while you wait for possible follow-up.
+          You may want to bookmark this page for your records. It confirms that your
+          case review request was submitted through Lawsuit Center.
         </p>
 
         <div class="hero-actions">
-          <a href="index.html" class="btn-primary">Return to Lawsuit Center</a>
+          <a href="index.html" class="btn-primary">Return Home</a>
           <a href="privacy-policy.html" class="btn-secondary">Privacy Policy</a>
         </div>
 
@@ -286,7 +259,8 @@
           "Thank You — Your " + category + " case review request has been received";
 
         lead.textContent =
-          "Your " + category + " submission has been received. A participating legal professional, legal advertiser, or intake partner may contact you at the phone number or email address you provided, typically within 1–3 business days if your submission appears to match an available review path.";
+          "Your " + category +
+          " submission has been received. A participating legal professional, legal advertiser, or intake partner may contact you at the phone number or email address you provided, typically within 1–3 business days if your submission appears to match an available review path.";
 
         sessionStorage.removeItem("lc_category");
       }
