@@ -94,14 +94,11 @@
 
     <section class="hero">
       <div class="container narrow">
-        <p class="eyebrow">Free initial case review</p>
-
         <h1 id="case-review-heading">Request a Free Case Review</h1>
 
         <p>
-          Share basic information about your situation. Your submission may be reviewed
-          by participating legal professionals, legal advertisers, or intake partners
-          connected to the relevant lawsuit category.
+          Tell us what happened. Your submission may be reviewed by participating legal
+          professionals, legal advertisers, or intake partners where available.
         </p>
 
         <div class="hero-actions">
@@ -159,28 +156,41 @@
             <option value="Water Contamination">Water Contamination</option>
             <option value="PFAS Water Contamination">PFAS Water Contamination</option>
             <option value="Environmental Contamination">Environmental Contamination</option>
-            <option value="Product Liability">Defective Product / Product Liability</option>
-            <option value="Drug Injury">Drug Injury / Medication</option>
+            <option value="Defective Product / Product Liability">Defective Product / Product Liability</option>
+            <option value="Drug Injury / Medication">Drug Injury / Medication</option>
             <option value="Medical Device">Medical Device</option>
-            <option value="Social Media Addiction">Social Media Addiction Lawsuit</option>
+            <option value="Social Media Addiction Lawsuit">Social Media Addiction Lawsuit</option>
             <option value="Personal Injury">Personal Injury</option>
             <option value="Other">Other / Not Sure</option>
           </select>
 
           <label for="summary">Briefly describe what happened</label>
-          <p class="form-note">
+          <p id="summary-note" class="form-note">
             What were you exposed to, or what product, medication, device, accident, or condition was involved?
             When did it happen? What injury, diagnosis, or loss followed? Approximate dates help.
           </p>
-          <textarea id="summary" name="summary" rows="7" required></textarea>
-          <p class="form-note">
+          <textarea
+            id="summary"
+            name="summary"
+            rows="7"
+            aria-describedby="summary-note summary-warning"
+            required
+          ></textarea>
+          <p id="summary-warning" class="form-note">
             Please do not include Social Security numbers, financial account numbers,
             full medical records, or highly sensitive personal information.
           </p>
 
           <label for="state">State</label>
-          <input type="text" id="state" name="state" autocomplete="address-level1" required />
-          <p class="form-note">
+          <input
+            type="text"
+            id="state"
+            name="state"
+            autocomplete="address-level1"
+            aria-describedby="state-note"
+            required
+          />
+          <p id="state-note" class="form-note">
             Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
           </p>
 
@@ -191,9 +201,16 @@
           <input type="email" id="email" name="email" autocomplete="email" required />
 
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" required />
-          <p class="form-note">
-            Required for follow-up about your case review request.
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            autocomplete="tel"
+            aria-describedby="phone-note"
+            required
+          />
+          <p id="phone-note" class="form-note">
+            For follow-up about your case review request.
           </p>
 
           <label>
@@ -204,8 +221,9 @@
 
           <label>
             <input type="checkbox" name="contact-consent" value="yes" required />
-            I consent to being contacted by phone, email, or text message about my case review
-            by Lawsuit Center, participating law firms, legal advertisers, or intake partners.
+            I consent to being contacted by Lawsuit Center, participating law firms,
+            legal advertisers, or intake partners by phone, email, or text message about
+            my case review request. Message and data rates may apply. Reply STOP to opt out.
           </label>
 
           <button type="submit" class="btn-primary">Submit Case Review Request</button>
@@ -334,41 +352,42 @@
       const params = new URLSearchParams(window.location.search);
       const category = params.get("category");
 
-      const categoryMap = {
+      const valueMap = {
         "asbestos": "Asbestos Exposure",
         "chemical-exposure": "Chemical Exposure",
         "water-contamination": "Water Contamination",
         "pfas": "PFAS Water Contamination",
         "environmental-contamination": "Environmental Contamination",
-        "product-liability": "Product Liability",
-        "drug-injury": "Drug Injury",
+        "product-liability": "Defective Product / Product Liability",
+        "drug-injury": "Drug Injury / Medication",
         "medical-device": "Medical Device",
-        "social-media-addiction": "Social Media Addiction",
+        "social-media-addiction": "Social Media Addiction Lawsuit",
         "personal-injury": "Personal Injury"
       };
 
       const headingMap = {
-        "Asbestos Exposure": "Request a Case Review: Asbestos Exposure",
-        "Chemical Exposure": "Request a Case Review: Chemical Exposure",
-        "Water Contamination": "Request a Case Review: Water Contamination",
-        "PFAS Water Contamination": "Request a Case Review: PFAS Water Contamination",
-        "Environmental Contamination": "Request a Case Review: Environmental Contamination",
-        "Product Liability": "Request a Case Review: Defective Products",
-        "Drug Injury": "Request a Case Review: Drug Injury or Medication",
-        "Medical Device": "Request a Case Review: Medical Device",
-        "Social Media Addiction": "Request a Case Review: Social Media Addiction",
-        "Personal Injury": "Request a Case Review: Personal Injury"
+        "asbestos": "Request a Case Review: Asbestos Exposure",
+        "chemical-exposure": "Request a Case Review: Chemical Exposure",
+        "water-contamination": "Request a Case Review: Water Contamination",
+        "pfas": "Request a Case Review: PFAS Water Contamination",
+        "environmental-contamination": "Request a Case Review: Environmental Contamination",
+        "product-liability": "Request a Case Review: Defective Products",
+        "drug-injury": "Request a Case Review: Drug Injury or Medication",
+        "medical-device": "Request a Case Review: Medical Device",
+        "social-media-addiction": "Request a Case Review: Social Media Addiction",
+        "personal-injury": "Request a Case Review: Personal Injury"
       };
 
       const select = document.getElementById("category");
       const heading = document.getElementById("case-review-heading");
 
-      if (category && categoryMap[category] && select) {
-        select.value = categoryMap[category];
+      if (category && valueMap[category] && select) {
+        select.value = valueMap[category];
+      }
 
-        if (heading && headingMap[categoryMap[category]]) {
-          heading.textContent = headingMap[categoryMap[category]];
-        }
+      if (category && headingMap[category] && heading) {
+        heading.textContent = headingMap[category];
+        document.title = headingMap[category] + " | Lawsuit Center";
       }
     });
   </script>
