@@ -605,20 +605,20 @@ li + li {
 
 .qualifier-list {
   display: grid;
-  gap: 14px;
+  gap: 12px;
   margin-top: 26px;
 }
 
 .qualifier-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   width: 100%;
   margin: 0;
-  padding: 18px 20px;
+  padding: 15px 18px;
   background: #151515;
   border: 1px solid #2a2a2a;
-  border-radius: 16px;
+  border-radius: 14px;
   color: #f5f5f5;
   cursor: pointer;
   transition:
@@ -635,18 +635,18 @@ li + li {
 }
 
 .qualifier-item input[type="checkbox"] {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  margin: 3px 0 0;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  margin: 4px 0 0;
   accent-color: #7cc4ff;
   cursor: pointer;
 }
 
 .qualifier-item span {
   display: block;
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 0.98rem;
+  line-height: 1.5;
   color: #f1f5f9;
   font-weight: 600;
 }
@@ -661,11 +661,25 @@ li + li {
   color: #ffffff;
 }
 
-#qualifier-result {
+.qualifier-action {
+  margin-top: 24px;
   padding: 22px;
   background: #101826;
   border: 1px solid rgba(124, 196, 255, 0.28);
   border-radius: 16px;
+  text-align: center;
+}
+
+.qualifier-action p {
+  margin-top: 0;
+}
+
+.qualifier-action .hero-actions {
+  margin-top: 18px;
+}
+
+.qualifier-action .small-text {
+  margin-bottom: 0;
 }
 
 /* =========================
@@ -1258,14 +1272,14 @@ footer p:last-child {
   }
 
   .qualifier-item {
-    padding: 16px;
-    gap: 13px;
+    padding: 15px;
+    gap: 12px;
   }
 
   .qualifier-item input[type="checkbox"] {
-    width: 22px;
-    height: 22px;
-    min-width: 22px;
+    width: 21px;
+    height: 21px;
+    min-width: 21px;
   }
 
   .qualifier-item span {
@@ -1273,7 +1287,7 @@ footer p:last-child {
     line-height: 1.5;
   }
 
-  #qualifier-result {
+  .qualifier-action {
     padding: 20px;
   }
 
