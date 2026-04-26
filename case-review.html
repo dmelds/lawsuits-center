@@ -135,6 +135,7 @@
           name="case-review"
           method="POST"
           data-netlify="true"
+          data-netlify-recaptcha="true"
           netlify-honeypot="bot-field"
           action="/thank-you.html"
           class="contact-form"
@@ -222,9 +223,13 @@
           <label>
             <input type="checkbox" name="contact-consent" value="yes" required />
             I consent to being contacted by Lawsuit Center, participating law firms,
-            legal advertisers, or intake partners by phone, email, or text message about
-            my case review request. Message and data rates may apply. Reply STOP to opt out.
+            legal advertisers, or intake partners by phone, including autodialed calls
+            and prerecorded voice messages, email, or text message about my case review
+            request. Consent is not a condition of any service. Message and data rates
+            may apply. Reply STOP to opt out.
           </label>
+
+          <div data-netlify-recaptcha="true"></div>
 
           <button type="submit" class="btn-primary">Submit Case Review Request</button>
 
