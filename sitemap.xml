@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core site pages -->
   <url>
     <loc>https://lawsuit.center/</loc>
   </url>
 
   <url>
     <loc>https://lawsuit.center/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/david-meldofsky.html</loc>
   </url>
 
   <url>
@@ -22,7 +27,15 @@
   </url>
 
   <url>
-    <loc>https://lawsuit.center/david-meldofsky.html</loc>
+    <loc>https://lawsuit.center/how-case-review-works.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/advertising-disclosure.html</loc>
   </url>
 
   <url>
@@ -33,12 +46,17 @@
     <loc>https://lawsuit.center/marketing-packages.html</loc>
   </url>
 
+  <!-- Toxic exposure, chemical exposure, and contamination pages -->
   <url>
     <loc>https://lawsuit.center/chemical-exposure-lawsuits.html</loc>
   </url>
 
   <url>
     <loc>https://lawsuit.center/who-may-qualify-for-a-chemical-exposure-lawsuit.html</loc>
+  </url>
+
+  <url>
+  <loc>https://lawsuit.center/asbestos-lawsuits.html</loc>
   </url>
 
   <url>
@@ -57,6 +75,19 @@
     <loc>https://lawsuit.center/roundup-lawsuit.html</loc>
   </url>
 
+  <!-- Product liability, drug injury, and medical device pages -->
+  <url>
+    <loc>https://lawsuit.center/product-liability-lawsuits.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/drug-injury-lawsuits.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/medical-device-lawsuits.html</loc>
+  </url>
+
   <url>
     <loc>https://lawsuit.center/ozempic-lawsuit.html</loc>
   </url>
@@ -65,6 +96,7 @@
     <loc>https://lawsuit.center/hair-relaxer-lawsuit.html</loc>
   </url>
 
+  <!-- Asbestos pages -->
   <url>
     <loc>https://lawsuit.center/lung-cancer-asbestos-review.html</loc>
   </url>
@@ -81,6 +113,7 @@
     <loc>https://lawsuit.center/florida-asbestos-lawyers.html</loc>
   </url>
 
+  <!-- Personal injury pages -->
   <url>
     <loc>https://lawsuit.center/personal-injury-lawsuits.html</loc>
   </url>
@@ -94,11 +127,7 @@
   </url>
 
   <url>
-    <loc>https://lawsuit.center/catastrophic-injury-lawsuits.html</loc>
-  </url>
-
-  <url>
-    <loc>https://lawsuit.center/dog-bite-lawsuits.html</loc>
+    <loc>https://lawsuit.center/truck-accident-lawsuits.html</loc>
   </url>
 
   <url>
@@ -114,13 +143,18 @@
   </url>
 
   <url>
-    <loc>https://lawsuit.center/truck-accident-lawsuits.html</loc>
+    <loc>https://lawsuit.center/dog-bite-lawsuits.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/catastrophic-injury-lawsuits.html</loc>
   </url>
 
   <url>
     <loc>https://lawsuit.center/wrongful-death-lawsuits.html</loc>
   </url>
 
+  <!-- Resources -->
   <url>
     <loc>https://lawsuit.center/lawsuit-funding-options.html</loc>
   </url>
