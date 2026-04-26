@@ -341,84 +341,277 @@
     </div>
   </footer>
 
- <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const menu = document.querySelector(".site-nav");
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    if (toggle && menu) {
-      toggle.addEventListener("click", function () {
-        const isOpen = menu.classList.toggle("open");
-        toggle.classList.toggle("active", isOpen);
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
-    }
+  <title>Case Review Request Received | Lawsuit Center</title>
+  <meta
+    name="description"
+    content="Your Lawsuit Center case review request has been received. Learn what may happen next and what information may be helpful to gather."
+  />
+  <meta name="robots" content="noindex, nofollow" />
 
-    const params = new URLSearchParams(window.location.search);
-    const category = params.get("category");
+  <link rel="stylesheet" href="style.css" />
+  <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
 
-    const valueMap = {
-      "asbestos": "Asbestos Exposure",
-      "chemical-exposure": "Chemical Exposure",
-      "water-contamination": "Water Contamination",
-      "pfas": "PFAS Water Contamination",
-      "environmental-contamination": "Environmental Contamination",
-      "product-liability": "Defective Product / Product Liability",
-      "drug-injury": "Drug Injury / Medication",
-      "medical-device": "Medical Device",
-      "social-media-addiction": "Social Media Addiction Lawsuit",
-      "personal-injury": "Personal Injury"
-    };
+  <link rel="canonical" href="https://lawsuit.center/thank-you.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
 
-    const headingMap = {
-      "asbestos": "Request a Case Review: Asbestos Exposure",
-      "chemical-exposure": "Request a Case Review: Chemical Exposure",
-      "water-contamination": "Request a Case Review: Water Contamination",
-      "pfas": "Request a Case Review: PFAS Water Contamination",
-      "environmental-contamination": "Request a Case Review: Environmental Contamination",
-      "product-liability": "Request a Case Review: Defective Products",
-      "drug-injury": "Request a Case Review: Drug Injury or Medication",
-      "medical-device": "Request a Case Review: Medical Device",
-      "social-media-addiction": "Request a Case Review: Social Media Addiction",
-      "personal-injury": "Request a Case Review: Personal Injury"
-    };
+<body>
 
-    const displayMap = {
-      "Asbestos Exposure": "asbestos exposure",
-      "Chemical Exposure": "chemical exposure",
-      "Water Contamination": "water contamination",
-      "PFAS Water Contamination": "PFAS water contamination",
-      "Environmental Contamination": "environmental contamination",
-      "Defective Product / Product Liability": "defective product",
-      "Drug Injury / Medication": "drug injury or medication",
-      "Medical Device": "medical device",
-      "Social Media Addiction Lawsuit": "social media addiction",
-      "Personal Injury": "personal injury",
-      "Other": "case review"
-    };
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo-center.jpeg" alt="Lawsuit Center" />
+        </a>
+      </div>
 
-    const select = document.getElementById("category");
-    const heading = document.getElementById("case-review-heading");
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    if (category && valueMap[category] && select) {
-      select.value = valueMap[category];
-    }
+      <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="case-review.html">Start Case Review</a>
+        <a href="lawsuits.html">Browse Lawsuits</a>
+        <a href="how-case-review-works.html">How Case Review Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    if (category && headingMap[category] && heading) {
-      heading.textContent = headingMap[category];
-      document.title = headingMap[category] + " | Lawsuit Center";
-    }
+  <main>
 
-    const form = document.querySelector('form[name="case-review"]');
+    <section class="hero">
+      <div class="container narrow">
+        <p class="eyebrow">Submission received</p>
 
-    if (form && select) {
-      form.addEventListener("submit", function () {
-        if (select.value) {
-          sessionStorage.setItem("lc_category", displayMap[select.value] || select.value.toLowerCase());
-        }
-      });
-    }
-  });
-</script>
+        <h1 id="thank-you-heading">Thank You — Your Case Review Request Has Been Received</h1>
+
+        <p id="thank-you-lead">
+          Your information has been received. A participating legal professional, legal advertiser,
+          or intake partner may contact you at the phone number or email address you provided,
+          typically within 1–3 business days if your submission appears to match an available review path.
+        </p>
+
+        <p class="small-text">
+          If you do not hear back, it does not necessarily mean your situation is not valid.
+          Not every category has an active review path at all times.
+        </p>
+      </div>
+    </section>
+
+    <section class="hero-legal-note">
+      <div class="container narrow">
+        <p>
+          Lawsuit Center is not a law firm and does not provide legal advice.
+          Submitting information does not create an attorney-client relationship.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container narrow">
+        <h2>What May Happen Next</h2>
+
+        <ol>
+          <li>
+            <strong>Your submission may be reviewed for category fit.</strong>
+            The information you provided may be reviewed to determine whether it appears
+            to match an available lawsuit category, claim pattern, or case review path.
+          </li>
+          <li>
+            <strong>You may be contacted for more information.</strong>
+            If your situation appears to match an available review path, a participating
+            attorney, legal advertiser, or intake partner may contact you by phone, email,
+            or text message.
+          </li>
+          <li>
+            <strong>Please watch for unfamiliar numbers.</strong>
+            Case review calls may come from a number you do not recognize. If a voicemail is left,
+            calling back promptly may help avoid delays.
+          </li>
+          <li>
+            <strong>No outcome is guaranteed.</strong>
+            A submission does not guarantee eligibility, compensation, representation,
+            contact, or that any law firm will accept your matter.
+          </li>
+        </ol>
+
+        <p class="small-text">
+          While you wait for follow-up, do not delay if you believe a legal deadline may apply
+          to your situation. You may also contact a licensed attorney directly.
+        </p>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <h2>What to Gather While You Wait</h2>
+
+        <p style="max-width: 760px; margin: 0 auto 32px; text-align: center;">
+          Having basic information ready may make any follow-up call more useful.
+          You do not need to have everything, but these details may help.
+        </p>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Dates and Timeline</h3>
+            <p>
+              Approximate dates of exposure, product use, medication use, diagnosis,
+              injury, accident, or other key events.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Medical or Injury Information</h3>
+            <p>
+              The name of any diagnosis, injury, symptoms, treatment, doctor visit,
+              hospitalization, or medical facility involved.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Exposure or Product Details</h3>
+            <p>
+              Product names, job sites, employers, locations, medications, devices,
+              contaminated areas, or other details connected to your situation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Documents and Records</h3>
+            <p>
+              Photos, receipts, employment records, medical summaries, product packaging,
+              bills, letters, or other records that may help explain what happened.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Helpful Resources While You Wait</h2>
+
+        <div class="card-grid">
+          <a href="how-case-review-works.html" class="card">
+            <h3>How Case Review Works</h3>
+            <p>
+              Learn what case review means, who may review information, and what is not guaranteed.
+            </p>
+          </a>
+
+          <a href="lawsuits.html" class="card">
+            <h3>Browse Lawsuit Categories</h3>
+            <p>
+              Explore lawsuit categories by exposure, product, medication, medical device,
+              contamination, or injury type.
+            </p>
+          </a>
+
+          <a href="https://lawsuitinformer.com" class="card">
+            <h3>Read More on Lawsuit Informer</h3>
+            <p>
+              Visit Lawsuit Informer for deeper educational background on lawsuits,
+              toxic exposure, product liability, and legal process topics.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container narrow">
+        <h2>Return to Lawsuit Center</h2>
+
+        <p>
+          You may want to bookmark this page for your records. It confirms that your
+          case review request was submitted through Lawsuit Center.
+        </p>
+
+        <div class="hero-actions">
+          <a href="index.html" class="btn-primary">Return Home</a>
+          <a href="privacy-policy.html" class="btn-secondary">Privacy Policy</a>
+        </div>
+
+        <p class="small-text">
+          No attorney-client relationship is formed unless you separately enter into a written
+          agreement with a law firm.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container narrow">
+      <p>&copy; 2026 Lawsuit Center</p>
+
+      <p>
+        Educational information only. Not legal advice. No attorney-client relationship is formed.
+        Some pages may include attorney advertising or sponsored law firm visibility.
+      </p>
+
+      <p>
+        <a href="privacy-policy.html">Privacy Policy</a> |
+        <a href="disclaimer.html">Disclaimer</a> |
+        <a href="advertising-disclosure.html">Advertising Disclosure</a> |
+        <a href="editorial-policy.html">Editorial Policy</a> |
+        <a href="how-case-review-works.html">How Case Review Works</a> |
+        <a href="lawsuits.html">Browse Lawsuits</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".site-nav");
+
+      if (toggle && menu) {
+        toggle.addEventListener("click", function () {
+          const isOpen = menu.classList.toggle("open");
+          toggle.classList.toggle("active", isOpen);
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      }
+
+      const category = sessionStorage.getItem("lc_category");
+      const heading = document.getElementById("thank-you-heading");
+      const lead = document.getElementById("thank-you-lead");
+
+      if (category && heading && lead) {
+        heading.textContent =
+          "Thank You — Your " + category + " case review request has been received";
+
+        lead.textContent =
+          "Your " + category +
+          " submission has been received. A participating legal professional, legal advertiser, or intake partner may contact you at the phone number or email address you provided, typically within 1–3 business days if your submission appears to match an available review path.";
+
+        sessionStorage.removeItem("lc_category");
+      }
+    });
+  </script>
+
+</body>
+</html>
+
 </body>
 </html>
