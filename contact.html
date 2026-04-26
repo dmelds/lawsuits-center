@@ -4,16 +4,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact | Lawsuit Center</title>
+  <title>Contact Lawsuit Center | Case Review and Law Firm Placement Inquiries</title>
   <meta
     name="description"
-    content="Contact Lawsuit Center to request a case review, ask a general question, or inquire about featured placement opportunities."
+    content="Contact Lawsuit Center to request a case review, ask a general question, or inquire about sponsored law firm placement opportunities."
   />
-  <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
+
   <link rel="stylesheet" href="style.css" />
+  <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
+
   <link rel="canonical" href="https://lawsuit.center/contact.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Lawsuit Center",
+    "url": "https://lawsuit.center/contact.html",
+    "description": "Contact Lawsuit Center to request a case review, ask a general question, or inquire about sponsored law firm placement opportunities.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lawsuit Center",
+      "url": "https://lawsuit.center/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://lawsuit.center/logo-center.jpeg"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://lawsuit.center/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact",
+        "item": "https://lawsuit.center/contact.html"
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
 <header class="site-header">
@@ -39,7 +82,7 @@
     <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="lawsuits.html">Browse Lawsuits</a>
-      <a href="resources.html">Resources</a>
+      <a href="how-case-review-works.html">How Case Review Works</a>
       <a href="for-law-firms.html">For Law Firms</a>
       <a href="about.html">About</a>
       <a href="contact.html" aria-current="page">Contact</a>
@@ -52,12 +95,22 @@
   <section class="hero">
     <div class="container narrow">
       <p class="eyebrow">Contact Lawsuit Center</p>
-      <h1>Request a Case Review or Contact Us</h1>
+
+      <h1>Case Review and Law Firm Placement Inquiries</h1>
+
       <p>
-        Use this page to share your situation, ask a general question, or inquire about featured placement opportunities for law firms.
+        Use this page to request a case review, ask a general question, or inquire about
+        sponsored visibility opportunities for law firms.
       </p>
+
+      <div class="hero-actions">
+        <a href="case-review.html" class="btn-primary">Request a Case Review</a>
+        <a href="for-law-firms.html" class="btn-secondary">For Law Firms</a>
+      </div>
+
       <p class="small-text">
-        Lawsuit Center is not a law firm and does not provide legal advice. Submitting information does not create an attorney-client relationship.
+        Lawsuit Center is not a law firm and does not provide legal advice.
+        Submitting information does not create an attorney-client relationship.
       </p>
     </div>
   </section>
@@ -70,15 +123,20 @@
         <div class="card">
           <h3>Case Review Inquiry</h3>
           <p>
-            Use the form below if you want to describe a possible exposure, product issue, diagnosis, injury, or other situation that may relate to a broader claim pattern.
+            Use the form if you want to describe a possible exposure, product issue,
+            diagnosis, injury, accident, medication, device, or other situation that may
+            relate to a broader claim pattern.
           </p>
+          <a href="how-case-review-works.html" class="btn-secondary">How Case Review Works</a>
         </div>
 
         <div class="card">
           <h3>Law Firm or Placement Inquiry</h3>
           <p>
-            Use the same form if you are a law firm asking about featured placement, category sponsorship, or related visibility opportunities on Lawsuit Center.
+            Use the form if you are a law firm asking about featured listings, category
+            sponsorships, landing pages, case-review participation, or other sponsored visibility.
           </p>
+          <a href="marketing-packages.html" class="btn-secondary">View Marketing Packages</a>
         </div>
       </div>
     </div>
@@ -87,8 +145,15 @@
   <section class="section">
     <div class="container narrow">
       <h2>Send a Message</h2>
+
       <p>
-        A brief summary is enough to get started. Please choose the option that best matches why you are reaching out.
+        A brief summary is enough to get started. Please choose the option that best matches
+        why you are reaching out.
+      </p>
+
+      <p class="small-text">
+        Please do not send confidential documents, full medical records, Social Security numbers,
+        financial account numbers, or highly sensitive details through this form.
       </p>
     </div>
   </section>
@@ -118,7 +183,7 @@
             <option value="">Select one</option>
             <option value="case-review">Possible case review</option>
             <option value="general-question">General question</option>
-            <option value="law-firm-placement">Law firm / featured placement inquiry</option>
+            <option value="law-firm-placement">Law firm / sponsored placement inquiry</option>
           </select>
         </p>
 
@@ -138,15 +203,24 @@
         </p>
 
         <p>
+          <label for="state">State (optional)</label><br />
+          <input type="text" id="state" name="state" />
+        </p>
+
+        <p>
           <label for="topic">What best describes the topic?</label><br />
           <select id="topic" name="topic">
             <option value="">Select one</option>
+            <option value="asbestos">Asbestos exposure</option>
             <option value="chemical-exposure">Chemical or toxic exposure</option>
             <option value="water-contamination">Water contamination</option>
-            <option value="defective-product">Defective product</option>
-            <option value="pharmaceutical">Pharmaceutical or medication</option>
-            <option value="injury-or-illness">Injury or illness</option>
-            <option value="advertising-placement">Advertising or featured placement</option>
+            <option value="pfas">PFAS water contamination</option>
+            <option value="product-liability">Product liability</option>
+            <option value="drug-injury">Drug injury / medication</option>
+            <option value="medical-device">Medical device</option>
+            <option value="social-media-addiction">Social media addiction lawsuit</option>
+            <option value="personal-injury">Personal injury</option>
+            <option value="advertising-placement">Advertising or sponsored placement</option>
             <option value="not-sure">I am not sure</option>
           </select>
         </p>
@@ -156,8 +230,12 @@
           <textarea id="message" name="message" rows="8" required></textarea>
         </p>
 
-        <p class="small-text">
-          Please do not send confidential details or documents at this stage. A brief summary is enough.
+        <p>
+          <label>
+            <input type="checkbox" name="acknowledgment" required />
+            I understand that Lawsuit Center is not a law firm, does not provide legal advice,
+            and that submitting this form does not create an attorney-client relationship.
+          </label>
         </p>
 
         <p>
@@ -165,7 +243,8 @@
         </p>
 
         <p class="small-text">
-          Lawsuit Center is not a law firm and does not provide legal advice. Submitting this form does not create an attorney-client relationship. Submission does not guarantee follow-up, eligibility, or representation.
+          Submission does not guarantee follow-up, eligibility, placement, compensation,
+          legal representation, or any particular result.
         </p>
       </form>
 
@@ -177,15 +256,15 @@
       <h2>What Information Helps</h2>
 
       <ul>
-        <li>What product, exposure, injury, diagnosis, or topic is involved</li>
+        <li>What product, exposure, accident, diagnosis, medication, device, or topic is involved</li>
         <li>When it happened or how long it occurred</li>
-        <li>Any symptoms, diagnosis, or injuries involved</li>
-        <li>Where the exposure or event took place</li>
-        <li>Whether you are reaching out as a consumer or as a law firm</li>
+        <li>Any symptoms, diagnosis, injuries, complications, or losses involved</li>
+        <li>Where the exposure, product use, accident, or event took place</li>
+        <li>Whether you are reaching out as an individual, family member, or law firm</li>
       </ul>
 
       <p>
-        Even if you only know part of this information, you can still submit your message.
+        Even if you only know part of this information, you can still submit a brief message.
       </p>
     </div>
   </section>
@@ -195,16 +274,25 @@
       <h2>What Happens Next</h2>
 
       <p>
-        Messages may be reviewed to better understand the nature of the inquiry and whether it relates to a possible claim pattern, a general question, or a law firm placement discussion.
+        Messages may be reviewed to understand whether the inquiry relates to a possible case review,
+        a general question, or a law firm placement discussion.
       </p>
 
       <p>
-        If appropriate, additional follow-up or further evaluation may be considered based on the information provided.
+        If the submission appears relevant to a lawsuit category or sponsored placement discussion,
+        additional follow-up may be considered based on the information provided.
       </p>
 
       <p>
-        Not every submission will result in follow-up, and submission does not guarantee that you qualify for a claim, will be offered representation, or will be offered placement.
+        Not every submission will result in follow-up, and submission does not guarantee that you
+        qualify for a claim, will be contacted by a law firm, will be offered representation, or
+        will be offered placement.
       </p>
+
+      <div class="hero-actions">
+        <a href="how-case-review-works.html" class="btn-primary">How Case Review Works</a>
+        <a href="advertising-disclosure.html" class="btn-secondary">Advertising Disclosure</a>
+      </div>
     </div>
   </section>
 
@@ -213,11 +301,13 @@
       <h2>Important Information</h2>
 
       <p>
-        Lawsuit Center is not a law firm and does not provide legal advice. The information on this site and information submitted through this form are for general informational purposes only.
+        Lawsuit Center is not a law firm and does not provide legal advice. The information on this
+        site and information submitted through this form are for general informational purposes only.
       </p>
 
       <p>
-        Use of this site or this form does not create an attorney-client relationship.
+        Use of this site or this form does not create an attorney-client relationship. No attorney-client
+        relationship is formed unless you separately enter into a written agreement with a law firm.
       </p>
     </div>
   </section>
@@ -227,10 +317,16 @@
 <footer>
   <div class="container narrow">
     <p>&copy; 2026 Lawsuit Center</p>
-    <p>Educational information only. Not legal advice. No attorney-client relationship is formed.</p>
+
+    <p>
+      Educational information only. Not legal advice. No attorney-client relationship is formed.
+      Some pages may include attorney advertising or sponsored law firm visibility.
+    </p>
+
     <p>
       <a href="privacy-policy.html">Privacy Policy</a> |
       <a href="disclaimer.html">Disclaimer</a> |
+      <a href="advertising-disclosure.html">Advertising Disclosure</a> |
       <a href="editorial-policy.html">Editorial Policy</a> |
       <a href="about.html">About</a> |
       <a href="contact.html">Contact</a>
