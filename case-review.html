@@ -341,61 +341,84 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".menu-toggle");
-      const menu = document.querySelector(".site-nav");
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".site-nav");
 
-      if (toggle && menu) {
-        toggle.addEventListener("click", function () {
-          const isOpen = menu.classList.toggle("open");
-          toggle.classList.toggle("active", isOpen);
-          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        });
-      }
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("open");
+        toggle.classList.toggle("active", isOpen);
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
 
-      const params = new URLSearchParams(window.location.search);
-      const category = params.get("category");
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
 
-      const valueMap = {
-        "asbestos": "Asbestos Exposure",
-        "chemical-exposure": "Chemical Exposure",
-        "water-contamination": "Water Contamination",
-        "pfas": "PFAS Water Contamination",
-        "environmental-contamination": "Environmental Contamination",
-        "product-liability": "Defective Product / Product Liability",
-        "drug-injury": "Drug Injury / Medication",
-        "medical-device": "Medical Device",
-        "social-media-addiction": "Social Media Addiction Lawsuit",
-        "personal-injury": "Personal Injury"
-      };
+    const valueMap = {
+      "asbestos": "Asbestos Exposure",
+      "chemical-exposure": "Chemical Exposure",
+      "water-contamination": "Water Contamination",
+      "pfas": "PFAS Water Contamination",
+      "environmental-contamination": "Environmental Contamination",
+      "product-liability": "Defective Product / Product Liability",
+      "drug-injury": "Drug Injury / Medication",
+      "medical-device": "Medical Device",
+      "social-media-addiction": "Social Media Addiction Lawsuit",
+      "personal-injury": "Personal Injury"
+    };
 
-      const headingMap = {
-        "asbestos": "Request a Case Review: Asbestos Exposure",
-        "chemical-exposure": "Request a Case Review: Chemical Exposure",
-        "water-contamination": "Request a Case Review: Water Contamination",
-        "pfas": "Request a Case Review: PFAS Water Contamination",
-        "environmental-contamination": "Request a Case Review: Environmental Contamination",
-        "product-liability": "Request a Case Review: Defective Products",
-        "drug-injury": "Request a Case Review: Drug Injury or Medication",
-        "medical-device": "Request a Case Review: Medical Device",
-        "social-media-addiction": "Request a Case Review: Social Media Addiction",
-        "personal-injury": "Request a Case Review: Personal Injury"
-      };
+    const headingMap = {
+      "asbestos": "Request a Case Review: Asbestos Exposure",
+      "chemical-exposure": "Request a Case Review: Chemical Exposure",
+      "water-contamination": "Request a Case Review: Water Contamination",
+      "pfas": "Request a Case Review: PFAS Water Contamination",
+      "environmental-contamination": "Request a Case Review: Environmental Contamination",
+      "product-liability": "Request a Case Review: Defective Products",
+      "drug-injury": "Request a Case Review: Drug Injury or Medication",
+      "medical-device": "Request a Case Review: Medical Device",
+      "social-media-addiction": "Request a Case Review: Social Media Addiction",
+      "personal-injury": "Request a Case Review: Personal Injury"
+    };
 
-      const select = document.getElementById("category");
-      const heading = document.getElementById("case-review-heading");
+    const displayMap = {
+      "Asbestos Exposure": "asbestos exposure",
+      "Chemical Exposure": "chemical exposure",
+      "Water Contamination": "water contamination",
+      "PFAS Water Contamination": "PFAS water contamination",
+      "Environmental Contamination": "environmental contamination",
+      "Defective Product / Product Liability": "defective product",
+      "Drug Injury / Medication": "drug injury or medication",
+      "Medical Device": "medical device",
+      "Social Media Addiction Lawsuit": "social media addiction",
+      "Personal Injury": "personal injury",
+      "Other": "case review"
+    };
 
-      if (category && valueMap[category] && select) {
-        select.value = valueMap[category];
-      }
+    const select = document.getElementById("category");
+    const heading = document.getElementById("case-review-heading");
 
-      if (category && headingMap[category] && heading) {
-        heading.textContent = headingMap[category];
-        document.title = headingMap[category] + " | Lawsuit Center";
-      }
-    });
-  </script>
+    if (category && valueMap[category] && select) {
+      select.value = valueMap[category];
+    }
 
+    if (category && headingMap[category] && heading) {
+      heading.textContent = headingMap[category];
+      document.title = headingMap[category] + " | Lawsuit Center";
+    }
+
+    const form = document.querySelector('form[name="case-review"]');
+
+    if (form && select) {
+      form.addEventListener("submit", function () {
+        if (select.value) {
+          sessionStorage.setItem("lc_category", displayMap[select.value] || select.value.toLowerCase());
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
