@@ -204,7 +204,7 @@
           <label for="phone">Phone</label>
           <input
             type="tel"
-            id="phone"
+            id=""
             name="phone"
             autocomplete="tel"
             aria-describedby="phone-note"
@@ -214,20 +214,24 @@
             For follow-up about your case review request.
           </p>
 
-          <label>
-            <input type="checkbox" name="legal-understanding" value="yes" required />
-            I understand that Lawsuit Center is not a law firm and that submitting this form
-            does not create an attorney-client relationship.
-          </label>
+          <label class="checkbox-row">
+  <input type="checkbox" name="legal-understanding" value="yes" required />
+  <span>
+    I understand that Lawsuit Center is not a law firm and that submitting this form
+    does not create an attorney-client relationship.
+  </span>
+</label>
 
-          <label>
-            <input type="checkbox" name="contact-consent" value="yes" required />
-            I consent to being contacted by Lawsuit Center, participating law firms,
-            legal advertisers, or intake partners by phone, including autodialed calls
-            and prerecorded voice messages, email, or text message about my case review
-            request. Consent is not a condition of any service. Message and data rates
-            may apply. Reply STOP to opt out.
-          </label>
+<label class="checkbox-row">
+  <input type="checkbox" name="contact-consent" value="yes" required />
+  <span>
+    I consent to being contacted by Lawsuit Center, participating law firms,
+    legal advertisers, or intake partners by phone, including autodialed calls
+    and prerecorded voice messages, email, or text message about my case review
+    request. Consent is not a condition of any service. Message and data rates
+    may apply. Reply STOP to opt out.
+  </span>
+</label>
 
           <div data-netlify-recaptcha="true"></div>
 

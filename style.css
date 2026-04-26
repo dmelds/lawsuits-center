@@ -788,6 +788,32 @@ label,
   margin-bottom: 4px;
 }
 
+/* Case review checkbox rows */
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  margin: 22px 0;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+.checkbox-row input[type="checkbox"] {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin-top: 6px;
+  accent-color: #7cc4ff;
+}
+
+.checkbox-row span {
+  display: block;
+  flex: 1;
+}
+
 .form-card input,
 .form-card select,
 .form-card textarea,
@@ -1269,6 +1295,17 @@ footer p:last-child {
   .faq-item.packages-card,
   .contact-card.packages-card {
     padding: 20px;
+  }
+
+  .checkbox-row {
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .checkbox-row input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    margin-top: 5px;
   }
 
   .qualifier-item {
