@@ -600,6 +600,75 @@ li + li {
 }
 
 /* =========================
+   QUALIFIER CHECKLIST
+   ========================= */
+
+.qualifier-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.qualifier-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 18px 20px;
+  background: #151515;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.qualifier-item:hover {
+  background: #18202a;
+  border-color: rgba(124, 196, 255, 0.55);
+  transform: translateY(-1px);
+}
+
+.qualifier-item input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  margin: 3px 0 0;
+  accent-color: #7cc4ff;
+  cursor: pointer;
+}
+
+.qualifier-item span {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.qualifier-item:has(input:checked) {
+  background: rgba(124, 196, 255, 0.12);
+  border-color: #7cc4ff;
+  box-shadow: 0 0 0 1px rgba(124, 196, 255, 0.22);
+}
+
+.qualifier-item:has(input:checked) span {
+  color: #ffffff;
+}
+
+#qualifier-result {
+  padding: 22px;
+  background: #101826;
+  border: 1px solid rgba(124, 196, 255, 0.28);
+  border-radius: 16px;
+}
+
+/* =========================
    BOXES / FORMS / FAQ
    ========================= */
 
@@ -1185,6 +1254,26 @@ footer p:last-child {
   .process-card.packages-card,
   .faq-item.packages-card,
   .contact-card.packages-card {
+    padding: 20px;
+  }
+
+  .qualifier-item {
+    padding: 16px;
+    gap: 13px;
+  }
+
+  .qualifier-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+
+  .qualifier-item span {
+    font-size: 0.96rem;
+    line-height: 1.5;
+  }
+
+  #qualifier-result {
     padding: 20px;
   }
 
