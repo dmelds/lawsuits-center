@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -40,8 +41,245 @@
     "description": "Attorney-created lawsuit research and case review platform."
   }
   </script>
+
+  <!-- Homepage-only enhancements (does not affect other pages) -->
+
+  <style>
+    /* ---------- HERO: 2-column split ---------- */
+    .hero.hero--split {
+      padding: 64px 0 48px;
+      text-align: left;
+    }
+    .hero--split .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero--split .hero-copy h1 {
+      max-width: none;
+      margin: 0 0 18px;
+      text-align: left;
+      font-size: clamp(2rem, 4.4vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+    }
+    .hero--split .hero-lede {
+      max-width: 60ch;
+      margin: 0 0 8px;
+      text-align: left;
+      color: #d7d7d7;
+      font-size: 1.08rem;
+    }
+    .hero--split .hero-actions {
+      justify-content: flex-start;
+      margin-top: 24px;
+    }
+    .hero--split .hero-meta {
+      margin: 14px 0 0;
+      text-align: left;
+      color: #b8b8b8;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .hero--split .hero-meta a { color: #a9d8ff; }
+
+    /* ---------- ACTIVE LAWSUITS PANEL ---------- */
+    .active-panel {
+      background: linear-gradient(180deg, #131313 0%, #0e0e0e 100%);
+      border: 1px solid #222;
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .active-panel__head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+    }
+    .active-panel__head::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #7cc4ff;
+      box-shadow: 0 0 0 4px rgba(124, 196, 255, 0.18);
+    }
+    .active-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .active-item {
+      display: block;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid #222;
+      border-radius: 12px;
+      color: #f5f5f5;
+      text-decoration: none;
+      transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    }
+    .active-item:hover {
+      border-color: #7cc4ff;
+      background: rgba(124, 196, 255, 0.06);
+      transform: translateX(2px);
+      text-decoration: none;
+    }
+    .active-item__title {
+      font-weight: 700;
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+    }
+    .active-item__desc {
+      font-size: 0.86rem;
+      color: #b8b8b8;
+      line-height: 1.45;
+    }
+
+    /* ---------- 5x2 CATEGORY GRID ---------- */
+    .cats-5 {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .cats-5 .card {
+      padding: 22px;
+      min-height: 184px;
+      display: flex;
+      flex-direction: column;
+    }
+    .cats-5 .card h3 {
+      font-size: 1.04rem;
+      margin: 0 0 10px;
+    }
+    .cats-5 .card p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      flex-grow: 1;
+      margin: 0;
+    }
+
+    /* ---------- NUMBERED STEP CARDS ---------- */
+    .steps-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 32px;
+      align-items: stretch;
+    }
+    .step-card-num {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 30px 26px 26px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+    .step-card-num:hover {
+      border-color: #7cc4ff;
+      transform: translateY(-2px);
+    }
+    .step-card-num .step-n {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-size: 2.5rem;
+      line-height: 1;
+      color: #7cc4ff;
+      margin-bottom: 18px;
+      letter-spacing: -0.01em;
+    }
+    .step-card-num h3 {
+      margin: 0 0 10px;
+      font-size: 1.18rem;
+      color: #f5f5f5;
+    }
+    .step-card-num p {
+      margin: 0;
+      color: #d7d7d7;
+      line-height: 1.6;
+    }
+
+    /* ---------- FOR LAW FIRMS BAND ---------- */
+    .firms-band {
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 22px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 44px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .firms-band::after {
+      content: "";
+      position: absolute;
+      right: -180px;
+      top: -180px;
+      width: 460px;
+      height: 460px;
+      background: radial-gradient(circle, rgba(124, 196, 255, 0.16) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .firms-body {
+      position: relative;
+      z-index: 1;
+    }
+    .firms-body h2 { margin: 8px 0 16px; }
+    .firms-body p { margin: 0 0 22px; color: #d7d7d7; }
+    .firms-details {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid #222;
+      border-radius: 14px;
+      padding: 24px 26px;
+      margin: 0;
+    }
+    .firms-details dt {
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7cc4ff;
+      margin-bottom: 5px;
+    }
+    .firms-details dd {
+      margin: 0 0 16px;
+      color: #d7d7d7;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .firms-details dd:last-of-type { margin-bottom: 0; }
+
+    /* ---------- HOMEPAGE RESPONSIVE ---------- */
+    @media (max-width: 1100px) {
+      .cats-5 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .hero--split .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .steps-cards { grid-template-columns: 1fr; }
+      .cats-5 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .firms-band { grid-template-columns: 1fr; padding: 32px 28px; gap: 28px; }
+    }
+    @media (max-width: 560px) {
+      .cats-5 { grid-template-columns: 1fr; }
+      .hero.hero--split { padding: 48px 0 32px; }
+    }
+  </style>
+
 </head>
 <body>
+
   <header class="site-header">
     <div class="container nav">
       <div class="logo">
@@ -70,238 +308,274 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <section class="hero">
-      <div class="container narrow">
+
+```
+<!-- ============================ HERO ============================ -->
+<section class="hero hero--split">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
         <p class="eyebrow">Attorney-created case review platform</p>
-        <h1>See Whether Your Situation May Fit an Active Lawsuit</h1>
-        <p>
+        <h1>See whether your situation may fit an active lawsuit.</h1>
+        <p class="hero-lede">
           Lawsuit Center helps visitors request a free initial case review for potential
           lawsuits involving toxic exposure, dangerous products, medications, medical devices,
           environmental contamination, and other injury-related claims.
         </p>
         <div class="hero-actions">
           <a href="case-review.html" class="btn-primary">Start Free Case Review</a>
+          <a href="lawsuits.html" class="btn-secondary">Browse All Lawsuits</a>
         </div>
-        <p class="small-text">
-          Free initial review · No obligation · Submitting information does not create an attorney-client relationship
-        </p>
-        <p class="small-text">
-          Not sure which category fits? <a href="lawsuits.html">Browse all lawsuit types</a>.
+        <p class="hero-meta">
+          Free initial review · No obligation · Submitting information does not create an
+          attorney-client relationship.
         </p>
       </div>
-    </section>
-    <section class="hero-legal-note">
-      <div class="container narrow">
+
+      <aside class="active-panel" aria-label="Active lawsuit areas">
+        <div class="active-panel__head">Active Lawsuit Areas</div>
+        <div class="active-list">
+          <a class="active-item" href="case-review.html?category=pfas">
+            <div class="active-item__title">PFAS / Forever Chemicals</div>
+            <div class="active-item__desc">Drinking water, AFFF, and consumer-product exposure.</div>
+          </a>
+          <a class="active-item" href="case-review.html?category=asbestos">
+            <div class="active-item__title">Asbestos Exposure</div>
+            <div class="active-item__desc">Occupational, residential, and product-based claims.</div>
+          </a>
+          <a class="active-item" href="case-review.html?category=chemical-exposure">
+            <div class="active-item__title">Chemical Exposure</div>
+            <div class="active-item__desc">Industrial and environmental chemical exposure claims.</div>
+          </a>
+          <a class="active-item" href="case-review.html?category=product-liability">
+            <div class="active-item__title">Defective Products</div>
+            <div class="active-item__desc">Devices, drugs, and consumer products causing harm.</div>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HERO LEGAL NOTE ============================ -->
+<section class="hero-legal-note">
+  <div class="container narrow">
+    <p>
+      Lawsuit Center is not a law firm and does not provide legal advice.
+      Information submitted through this website may be reviewed by participating legal
+      professionals, legal advertisers, or intake partners where available.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ CATEGORIES ============================ -->
+<section class="section">
+  <div class="container">
+    <h2 style="text-align: center;">What type of situation are you asking about?</h2>
+    <p style="max-width: 760px; margin: 0 auto 8px; text-align: center;">
+      Choose the category that best matches your situation. Each option can help you begin
+      a case review request or learn more about the type of claim involved.
+    </p>
+    <div class="cats-5">
+      <a href="case-review.html?category=chemical-exposure" class="card">
+        <h3>Chemical Exposure</h3>
+        <p>Toxic substances, workplace exposure, contaminated property, chemical injuries, or long-term exposure concerns.</p>
+      </a>
+      <a href="case-review.html?category=water-contamination" class="card">
+        <h3>Water Contamination</h3>
+        <p>Drinking water contamination, groundwater exposure, community contamination, or water-related health concerns.</p>
+      </a>
+      <a href="case-review.html?category=pfas" class="card">
+        <h3>PFAS / Forever Chemicals</h3>
+        <p>Potential exposure to PFAS through drinking water, firefighting foam, industrial contamination, or other sources.</p>
+      </a>
+      <a href="case-review.html?category=environmental-contamination" class="card">
+        <h3>Environmental Contamination</h3>
+        <p>Air, soil, groundwater, industrial sites, toxic releases, or contamination affecting nearby communities.</p>
+      </a>
+      <a href="case-review.html?category=asbestos" class="card">
+        <h3>Asbestos Exposure</h3>
+        <p>Asbestos exposure, mesothelioma, lung cancer, asbestosis, jobsite exposure, or state-specific asbestos review options.</p>
+      </a>
+      <a href="case-review.html?category=personal-injury" class="card">
+        <h3>Personal Injury</h3>
+        <p>Serious injuries, accidents, unsafe conditions, negligence, or wrongful death situations.</p>
+      </a>
+      <a href="case-review.html?category=product-liability" class="card">
+        <h3>Defective Products</h3>
+        <p>Unsafe consumer products, defective devices, mislabeled products, recalls, or product-related injuries.</p>
+      </a>
+      <a href="case-review.html?category=drug-injury" class="card">
+        <h3>Drug Injury</h3>
+        <p>Prescription medications, reported side effects, warning issues, or alleged drug-related injuries.</p>
+      </a>
+      <a href="case-review.html?category=social-media-addiction" class="card">
+        <h3>Social Media Addiction</h3>
+        <p>Claims involving allegations that certain platforms contributed to compulsive use or youth mental-health harms.</p>
+      </a>
+      <a href="case-review.html?category=medical-device" class="card">
+        <h3>Medical Devices</h3>
+        <p>Implanted or external medical devices, complications, recalls, alleged defects, or device-related injuries.</p>
+      </a>
+    </div>
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="case-review.html" class="btn-primary">Start General Case Review</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUALIFIER CHECKLIST ============================ -->
+<section class="section alt">
+  <div class="container narrow">
+    <h2>Do you recognize your situation?</h2>
+    <p>
+      Many lawsuit reviews begin with a pattern: a person used a product, took a medication,
+      worked around a substance, lived near contamination, or experienced an injury — and later
+      learned that others reported similar issues.
+    </p>
+    <p>
+      Select any statements that sound like your situation, then continue to a free initial case review.
+    </p>
+    <div class="qualifier-list">
+      <label class="qualifier-item">
+        <input type="checkbox" class="qualifier-check" />
+        <span>I used a product, took a medication, or was around a substance that I now have concerns about.</span>
+      </label>
+      <label class="qualifier-item">
+        <input type="checkbox" class="qualifier-check" />
+        <span>I have been diagnosed with a condition or experienced an injury since then.</span>
+      </label>
+      <label class="qualifier-item">
+        <input type="checkbox" class="qualifier-check" />
+        <span>I have seen news, ads, lawsuits, or other people describing similar situations.</span>
+      </label>
+      <label class="qualifier-item">
+        <input type="checkbox" class="qualifier-check" />
+        <span>I have records, dates, photos, medical information, or other documentation from around that time.</span>
+      </label>
+    </div>
+    <div class="qualifier-action">
+      <p>If one or more of these sounds familiar, you can submit basic information for review.</p>
+      <div class="hero-actions">
+        <a href="case-review.html" class="btn-primary">Continue to Free Case Review</a>
+      </div>
+      <p class="small-text">
+        A case review request does not guarantee eligibility, compensation, or representation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HOW IT WORKS ============================ -->
+<section class="section">
+  <div class="container">
+    <h2 style="text-align: center;">How case review works</h2>
+    <p style="max-width: 720px; margin: 0 auto; text-align: center;">
+      A simple path from research to review.
+    </p>
+    <div class="steps-cards">
+      <article class="step-card-num">
+        <div class="step-n">01</div>
+        <h3>Share basic information</h3>
+        <p>Tell us what happened, what category may be involved, and how you may have been affected.</p>
+      </article>
+      <article class="step-card-num">
+        <div class="step-n">02</div>
+        <h3>Your submission is reviewed</h3>
+        <p>Information may be reviewed by participating legal professionals, legal advertisers, or intake partners where available.</p>
+      </article>
+      <article class="step-card-num">
+        <div class="step-n">03</div>
+        <h3>You may be contacted</h3>
+        <p>If your situation appears to match an available review category, someone may contact you to discuss possible next steps.</p>
+      </article>
+    </div>
+    <div class="hero-actions" style="justify-content: center; margin-top: 32px;">
+      <a href="case-review.html" class="btn-primary">Start Free Case Review</a>
+      <a href="how-case-review-works.html" class="btn-secondary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ IMPORTANT INFO / TRUST STRIP ============================ -->
+<section class="section alt">
+  <div class="container narrow">
+    <h2>Important information before you submit</h2>
+    <div class="trust-strip">
+      <p><strong>Attorney-created platform</strong></p>
+      <p><strong>Free initial review</strong></p>
+      <p><strong>No obligation</strong></p>
+      <p><strong>Time limits may apply</strong></p>
+    </div>
+    <p>
+      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
+      through this website does not create an attorney-client relationship and does not guarantee
+      that you qualify for a claim, that compensation will be available, or that any attorney or
+      law firm will offer representation.
+    </p>
+    <p>
+      Some pages may include attorney advertising, sponsored listings, paid law firm visibility,
+      or referral-related opportunities. Sponsored visibility is advertising and should not be
+      treated as a recommendation or endorsement of any attorney or law firm.
+    </p>
+    <p class="small-text">
+      Legal deadlines can be short. If you believe you may have a claim, consider speaking with
+      a licensed attorney as soon as possible.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ FOR LAW FIRMS ============================ -->
+<section class="section">
+  <div class="container">
+    <div class="firms-band">
+      <div class="firms-body">
+        <p class="eyebrow">For Law Firms &amp; Legal Advertisers</p>
+        <h2>Reach readers researching specific lawsuit categories.</h2>
         <p>
-          Lawsuit Center is not a law firm and does not provide legal advice.
-          Information submitted through this website may be reviewed by participating legal
-          professionals, legal advertisers, or intake partners where available.
+          Lawsuit Center offers featured listings, category sponsorship opportunities, and
+          dedicated visibility for firms and legal advertisers interested in mass tort, toxic
+          exposure, and product liability case categories.
         </p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <h2>What Type of Situation Are You Asking About?</h2>
-        <p style="max-width: 760px; margin: 0 auto 32px; text-align: center;">
-          Choose the category that best matches your situation. Each option can help you begin
-          a case review request or learn more about the type of claim involved.
-        </p>
-        <div class="card-grid">
-          <a href="case-review.html?category=chemical-exposure" class="card">
-            <h3>Chemical Exposure</h3>
-            <p>
-              Toxic substances, workplace exposure, contaminated property, chemical injuries,
-              or long-term exposure concerns.
-            </p>
-          </a>
-          <a href="case-review.html?category=water-contamination" class="card">
-            <h3>Water Contamination</h3>
-            <p>
-              Drinking water contamination, groundwater exposure, community contamination,
-              or water-related health concerns.
-            </p>
-          </a>
-          <a href="case-review.html?category=pfas" class="card">
-            <h3>PFAS / Forever Chemicals</h3>
-            <p>
-              Potential exposure to PFAS through drinking water, firefighting foam,
-              industrial contamination, or other sources.
-            </p>
-          </a>
-          <a href="case-review.html?category=environmental-contamination" class="card">
-            <h3>Environmental Contamination</h3>
-            <p>
-              Air, soil, groundwater, industrial sites, toxic releases, or contamination
-              affecting nearby communities.
-            </p>
-          </a>
-          <a href="case-review.html?category=asbestos" class="card">
-            <h3>Asbestos Exposure</h3>
-            <p>
-              Asbestos exposure, mesothelioma, lung cancer, asbestosis, jobsite exposure,
-              or state-specific asbestos review options.
-            </p>
-          </a>
-          <a href="case-review.html?category=personal-injury" class="card">
-            <h3>Personal Injury</h3>
-            <p>
-              Serious injuries, accidents, unsafe conditions, negligence, or wrongful death
-              situations.
-            </p>
-          </a>
-          <a href="case-review.html?category=product-liability" class="card">
-            <h3>Defective Products</h3>
-            <p>
-              Unsafe consumer products, defective devices, mislabeled products, recalls,
-              or product-related injuries.
-            </p>
-          </a>
-          <a href="case-review.html?category=drug-injury" class="card">
-            <h3>Drug Injury</h3>
-            <p>
-              Prescription medications, reported side effects, warning issues, or alleged
-              drug-related injuries.
-            </p>
-          </a>
-          <a href="case-review.html?category=social-media-addiction" class="card">
-            <h3>Social Media Addiction</h3>
-            <p>
-              Claims involving allegations that certain platforms contributed to compulsive
-              use or youth mental-health harms.
-            </p>
-          </a>
-          <a href="case-review.html?category=medical-device" class="card">
-            <h3>Medical Devices</h3>
-            <p>
-              Implanted or external medical devices, complications, recalls, alleged defects,
-              or device-related injuries.
-            </p>
-          </a>
-        </div>
-        <div style="text-align: center; margin-top: 28px;">
-          <a href="case-review.html" class="btn-primary">Start General Case Review</a>
+        <div class="hero-actions" style="justify-content: flex-start; margin-top: 0;">
+          <a href="for-law-firms.html" class="btn-primary">Inquire About Listings</a>
         </div>
       </div>
-    </section>
-    <section class="section alt">
-      <div class="container narrow">
-        <h2>Do You Recognize Your Situation?</h2>
-        <p>
-          Many lawsuit reviews begin with a pattern: a person used a product, took a medication,
-          worked around a substance, lived near contamination, or experienced an injury — and later
-          learned that others reported similar issues.
-        </p>
-        <p>
-          Select any statements that sound like your situation, then continue to a free initial case review.
-        </p>
-        <div class="qualifier-list">
-          <label class="qualifier-item">
-            <input type="checkbox" class="qualifier-check" />
-            <span>
-              I used a product, took a medication, or was around a substance that I now have concerns about.
-            </span>
-          </label>
-          <label class="qualifier-item">
-            <input type="checkbox" class="qualifier-check" />
-            <span>
-              I have been diagnosed with a condition or experienced an injury since then.
-            </span>
-          </label>
-          <label class="qualifier-item">
-            <input type="checkbox" class="qualifier-check" />
-            <span>
-              I have seen news, ads, lawsuits, or other people describing similar situations.
-            </span>
-          </label>
-          <label class="qualifier-item">
-            <input type="checkbox" class="qualifier-check" />
-            <span>
-              I have records, dates, photos, medical information, or other documentation from around that time.
-            </span>
-          </label>
-        </div>
-        <div class="qualifier-action">
-          <p>
-            If one or more of these sounds familiar, you can submit basic information for review.
-          </p>
-          <div class="hero-actions">
-            <a href="case-review.html" class="btn-primary">Continue to Free Case Review</a>
-          </div>
-          <p class="small-text">
-            A case review request does not guarantee eligibility, compensation, or representation.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container narrow">
-        <h2>How Case Review Works</h2>
-        <ol>
-          <li>
-            <strong>Share basic information.</strong>
-            Tell us what happened, what category may be involved, and how you may have been affected.
-          </li>
-          <li>
-            <strong>Your submission is reviewed.</strong>
-            Your information may be reviewed by participating legal professionals, legal advertisers,
-            or intake partners where available.
-          </li>
-          <li>
-            <strong>You may be contacted if there appears to be a fit.</strong>
-            If your situation appears to match an available review category, someone may contact you
-            to discuss possible next steps.
-          </li>
-        </ol>
-        <div class="hero-actions">
-          <a href="case-review.html" class="btn-primary">Start Free Case Review</a>
-          <a href="how-case-review-works.html" class="btn-secondary">Learn More</a>
-        </div>
-      </div>
-    </section>
-    <section class="section alt">
-      <div class="container narrow">
-        <h2>Important Information Before You Submit</h2>
-        <div class="trust-strip">
-          <p><strong>Attorney-created platform</strong></p>
-          <p><strong>Free initial review</strong></p>
-          <p><strong>No obligation</strong></p>
-          <p><strong>Time limits may apply</strong></p>
-        </div>
-        <p>
-          Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
-          through this website does not create an attorney-client relationship and does not guarantee
-          that you qualify for a claim, that compensation will be available, or that any attorney or
-          law firm will offer representation.
-        </p>
-        <p>
-          Some pages may include attorney advertising, sponsored listings, paid law firm visibility,
-          or referral-related opportunities. Sponsored visibility is advertising and should not be
-          treated as a recommendation or endorsement of any attorney or law firm.
-        </p>
-        <p class="small-text">
-          Legal deadlines can be short. If you believe you may have a claim, consider speaking with
-          a licensed attorney as soon as possible.
-        </p>
-      </div>
-    </section>
-    <section class="section cta">
-      <div class="container narrow">
-        <h2>Ready to See Whether Your Situation May Be Reviewed?</h2>
-        <p>
-          You do not need to have every answer before taking the next step. Start with the category
-          that best matches your situation and submit basic information for review.
-        </p>
-        <div class="hero-actions">
-          <a href="case-review.html" class="btn-primary">Start Free Case Review</a>
-          <a href="lawsuits.html" class="btn-secondary">View All Categories</a>
-        </div>
-        <p class="small-text">
-          No attorney-client relationship is formed unless and until you sign an agreement with a law firm.
-        </p>
-      </div>
-    </section>
+      <dl class="firms-details">
+        <dt>Focus Areas</dt>
+        <dd>Toxic exposure, asbestos, PFAS, product liability, mass torts.</dd>
+        <dt>Availability</dt>
+        <dd>Case review requests may be available depending on category and participating firm.</dd>
+        <dt>Disclosure</dt>
+        <dd>Sponsored placements are clearly identified to readers.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FINAL CTA ============================ -->
+<section class="section cta alt">
+  <div class="container narrow">
+    <h2>Ready to see whether your situation may be reviewed?</h2>
+    <p>
+      You do not need to have every answer before taking the next step. Start with the category
+      that best matches your situation and submit basic information for review.
+    </p>
+    <div class="hero-actions">
+      <a href="case-review.html" class="btn-primary">Start Free Case Review</a>
+      <a href="lawsuits.html" class="btn-secondary">View All Categories</a>
+    </div>
+    <p class="small-text">
+      No attorney-client relationship is formed unless and until you sign an agreement with a law firm.
+    </p>
+  </div>
+</section>
+```
+
   </main>
+
   <footer>
     <div class="container narrow">
       <p>&copy; 2026 Lawsuit Center</p>
@@ -323,6 +597,7 @@
       </p>
     </div>
   </footer>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const toggle = document.querySelector(".menu-toggle");
@@ -336,5 +611,6 @@
       }
     });
   </script>
+
 </body>
 </html>
