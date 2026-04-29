@@ -72,31 +72,27 @@
 <body>
 
   <header class="site-header">
-    <div class="container nav">
-      <div class="logo">
-        <a href="index.html">
-          </a><a href="index.html" class="brand" aria-label="Lawsuit Center home">
-  <img src="logo-center-new.png" alt="Lawsuit Center" />
-  <span class="brand__tag">Attorney-Created</span>
-</a>
-      </div>
-
-      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="site-menu" class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="lawsuits.html">Browse Lawsuits</a>
-        <a href="how-case-review-works.html">How Case Review Works</a>
-        <a href="for-law-firms.html">For Law Firms</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand" aria-label="Lawsuit Center home">
+      <img src="logo-center-new.png" alt="Lawsuit Center" />
+      <span class="brand__tag">Attorney-Created</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links" id="site-menu">
+        <a href="index.html">Home</a>
+        <a href="case-review.html">Start Case Review</a>
+        <a href="lawsuits.html">Browse Lawsuits</a>
+        <a href="how-case-review-works.html">How It Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="case-review.html" class="btn btn--amber">Start Case Review</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
 
   <main>
 

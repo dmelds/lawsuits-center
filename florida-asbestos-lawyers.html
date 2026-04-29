@@ -81,8 +81,8 @@
   .section p { color: var(--ink-muted); line-height: 1.65; margin-bottom: 14px; }
   .section ul { color: var(--ink-muted); line-height: 1.7; padding-left: 20px; margin: 12px 0 14px; }
   .section ul li { margin-bottom: 8px; }
-  .section a { color: var(--amber); border-bottom: 1px solid rgba(212,162,78,.4); transition: border-color .2s var(--ease); }
-  .section a:hover { border-bottom-color: var(--amber); }
+  .section a:not(.btn) { color: var(--amber); border-bottom: 1px solid rgba(212,162,78,.4); transition: border-color .2s var(--ease); }
+  .section a:not(.btn):hover { border-bottom-color: var(--amber); }
   .section .small-text { font-size: 13px; color: var(--ink-soft); margin-top: 14px; }
   .section__eyebrow { display: inline-block; margin-bottom: 14px; }
   .section-intro { color: var(--ink-muted); line-height: 1.65; margin: 0 0 32px; max-width: 70ch; }
