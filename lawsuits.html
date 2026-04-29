@@ -33,7 +33,7 @@
   </script>
 
   <style>
-    /* Sticky jump menu — sits below the site header */
+    /* Page-specific: sticky jump menu under site header */
     .jump-nav {
       position: sticky;
       top: 88px;
@@ -68,7 +68,6 @@
       color: var(--ink);
       text-decoration: none;
     }
-    /* Scroll offset so anchor jumps land below sticky header + jump nav */
     .cat-section { scroll-margin-top: 160px; }
     @media (max-width: 760px) {
       .jump-nav { top: 76px; }
@@ -76,7 +75,6 @@
     }
   </style>
 </head>
-
 <body>
 
 <header class="site-header">
@@ -106,7 +104,7 @@
 
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Browse Lawsuits</span>
+    <span class="eyebrow section__eyebrow">Browse Lawsuits</span>
     <h1>Find the lawsuit category that <em>matches your situation.</em></h1>
     <p class="lede">
       Lawsuit categories organized by topic. Jump to the area closest to what you're dealing with —
@@ -116,7 +114,7 @@
       <a href="case-review.html" class="btn btn--amber btn--lg">Start Free Case Review</a>
       <a href="how-case-review-works.html" class="btn btn--ghost btn--lg">How Case Review Works</a>
     </div>
-    <p class="meta">
+    <p class="small-text">
       Lawsuit Center is not a law firm. Submitting information does not create an attorney-client relationship.
     </p>
   </div>
@@ -309,15 +307,15 @@
       <li>Review how case review works before submitting information.</li>
       <li>Look for advertising disclosures where sponsored law firm visibility appears.</li>
     </ul>
-    <p style="color: var(--ink-muted); margin-top: 18px;">
-      Not every topic will apply to every situation, and not every inquiry will qualify for further review.
-    </p>
+    <p>Not every topic will apply to every situation, and not every inquiry will qualify for further review.</p>
     <div class="hero-actions">
       <a href="how-case-review-works.html" class="btn btn--amber">How Case Review Works</a>
       <a href="advertising-disclosure.html" class="btn btn--ghost">Advertising Disclosure</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <section class="final">
   <div class="container">
@@ -330,22 +328,23 @@
       <a href="case-review.html" class="btn btn--dark btn--lg">Start Free Case Review</a>
       <a href="how-case-review-works.html" class="btn btn--outline btn--lg">How Case Review Works</a>
     </div>
-    <p class="small-text" style="margin-top: 22px;">
+    <p class="small-text">
       Lawsuit Center is not a law firm and does not provide legal advice. Submitting information does not create an attorney-client relationship.
     </p>
   </div>
 </section>
-
-</main>
 
 <footer class="site-footer">
   <div class="container">
     <div class="site-footer__brand">Lawsuit Center</div>
     <p class="site-footer__tag">Attorney-created lawsuit research and case review platform.</p>
     <div class="site-footer__legal">
-      Educational information only. Not legal advice. No attorney-client relationship is formed by using this website.
-      Some pages may include attorney advertising or sponsored law firm visibility. Lawsuit Center is not a law firm
-      and does not provide legal advice.
+      Educational information only. Not legal advice. No attorney-client relationship is formed
+      by using this website. Some pages may include attorney advertising or sponsored law firm visibility.
+      Lawsuit Center is not a law firm and does not provide legal advice. Use of this site does not
+      create an attorney-client relationship. Information submitted through this site may be reviewed
+      by participating law firms, legal advertisers, or third-party intake providers, depending on the
+      claim category and availability.
     </div>
     <div class="site-footer__links">
       <a href="privacy-policy.html">Privacy Policy</a> ·
