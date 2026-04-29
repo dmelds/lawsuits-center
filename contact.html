@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,10 +8,7 @@
   <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="canonical" href="https://lawsuit.center/contact.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 
   <script type="application/ld+json">
   {
@@ -25,7 +21,7 @@
       "@type": "Organization",
       "name": "Lawsuit Center",
       "url": "https://lawsuit.center/",
-      "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center.jpeg" }
+      "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" }
     }
   }
   </script>
@@ -40,162 +36,15 @@
     ]
   }
   </script>
-
-<style>
-  :root {
-    --bg: #111111;
-    --surface: #181818;
-    --surface-2: #1f1f1f;
-    --border: #262626;
-    --border-strong: #333333;
-    --ink: #f5f5f4;
-    --ink-muted: #a8a29e;
-    --ink-soft: #78716c;
-    --amber: #d4a24e;
-    --amber-bright: #e7b961;
-    --display: "Fraunces", "Times New Roman", serif;
-    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --container: 1280px;
-    --gutter: clamp(20px, 4vw, 72px);
-    --radius: 14px;
-    --radius-lg: 22px;
-    --ease: cubic-bezier(.2,.8,.2,1);
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
-  img, svg { display: block; max-width: 100%; }
-  a { color: inherit; text-decoration: none; }
-  button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
-  h1, h2, h3, h4, p { margin: 0; }
-  ::selection { background: var(--amber); color: #111; }
-
-  .container { width: 100%; max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
-  .container--narrow { max-width: 820px; }
-  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); }
-
-  /* HEADER */
-  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(17,17,17,.85); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid var(--border); }
-  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; }
-  .brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
-.brand img { height: 60px; width: auto; }
-.brand__tag { font-size: 12.5px; color: var(--ink-muted); letter-spacing: .04em; white-space: nowrap; }
-  .nav { display: flex; align-items: center; gap: 28px; }
-  .nav__links { display: flex; gap: 26px; }
-  .nav__links a { font-size: 14.5px; color: var(--ink-muted); transition: color .2s var(--ease); }
-  .nav__links a:hover, .nav__links a[aria-current="page"] { color: var(--ink); }
-  .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 14.5px; transition: transform .15s var(--ease), background .2s var(--ease); white-space: nowrap; }
-  .btn--amber { background: var(--amber); color: #1a1306; }
-  .btn--amber:hover { background: var(--amber-bright); transform: translateY(-1px); }
-  .btn--ghost { border: 1px solid var(--border-strong); color: var(--ink); }
-  .btn--ghost:hover { background: var(--surface); }
-  .btn--lg { padding: 16px 30px; font-size: 15.5px; }
-  .nav__toggle { display: none; width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border-strong); align-items: center; justify-content: center; }
-
-  /* HERO */
-  .page-hero { padding: clamp(56px, 8vw, 96px) 0 clamp(40px, 5vw, 64px); border-bottom: 1px solid var(--border); }
-  .page-hero h1 { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 5.2vw, 60px); line-height: 1.05; letter-spacing: -.022em; color: var(--ink); margin-bottom: 18px; }
-  .page-hero h1 em { font-style: italic; font-weight: 400; color: var(--amber); }
-  .page-hero p.lede { font-size: clamp(16.5px, 1.3vw, 18.5px); line-height: 1.55; color: var(--ink-muted); max-width: 60ch; margin-bottom: 24px; }
-  .page-hero .meta { font-size: 13px; color: var(--ink-soft); margin-top: 14px; }
-
-  /* SECTIONS */
-  .section { padding: clamp(56px, 7vw, 88px) 0; }
-  .section--surface { background: var(--surface); border-block: 1px solid var(--border); }
-  .section h2 { font-family: var(--display); font-weight: 500; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.1; letter-spacing: -.018em; color: var(--ink); margin-bottom: 14px; }
-  .section h2 + p, .section p { color: var(--ink-muted); line-height: 1.65; margin-bottom: 14px; }
-  .section ul { color: var(--ink-muted); line-height: 1.7; padding-left: 20px; margin: 12px 0 0; }
-  .section ul li { margin-bottom: 8px; }
-  .section .small-text { font-size: 13px; color: var(--ink-soft); margin-top: 14px; }
-  .section__eyebrow { display: inline-block; margin-bottom: 14px; }
-
-  /* PATH CARDS */
-  .paths { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 28px; }
-  .path-card { background: rgba(0,0,0,.35); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 30px; display: flex; flex-direction: column; gap: 12px; transition: border-color .25s var(--ease), transform .25s var(--ease); }
-  .path-card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-  .path-card h3 { font-family: var(--display); font-weight: 600; font-size: 22px; line-height: 1.2; color: var(--ink); margin: 0; letter-spacing: -.005em; }
-  .path-card p { color: var(--ink-muted); font-size: 15px; line-height: 1.6; flex-grow: 1; margin: 0; }
-  .path-card a { display: inline-flex; align-self: flex-start; padding: 10px 18px; border-radius: 999px; font-size: 13.5px; font-weight: 600; border: 1px solid var(--border-strong); color: var(--ink); margin-top: 8px; transition: background .2s var(--ease); }
-  .path-card a:hover { background: var(--surface-2); }
-
-  /* FORM */
-  .form-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: clamp(28px, 4vw, 48px); margin-top: 28px; }
-  .form { display: flex; flex-direction: column; gap: 18px; }
-  .form .field-label { font-size: 13px; font-weight: 600; letter-spacing: .04em; color: var(--ink); margin-bottom: 4px; display: block; }
-  .form .field { display: flex; flex-direction: column; gap: 6px; margin: 0; }
-  .form input[type="text"],
-  .form input[type="email"],
-  .form input[type="tel"],
-  .form select,
-  .form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    background: rgba(0,0,0,.35);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--ink);
-    font: inherit;
-    font-size: 16px;
-    transition: border-color .2s var(--ease), background .2s var(--ease);
-  }
-  .form select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%23a8a29e' stroke-width='1.7'><path d='M3 5l4 4 4-4'/></svg>"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 44px; }
-  .form textarea { min-height: 160px; resize: vertical; line-height: 1.55; }
-  .form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--amber); background: rgba(0,0,0,.5); }
-  .form .form-note { font-size: 13px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
-
-  .checkbox-row { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; background: rgba(0,0,0,.3); border: 1px solid var(--border); border-radius: 12px; cursor: pointer; transition: border-color .2s var(--ease), background .2s var(--ease); margin: 0; }
-  .checkbox-row:hover { border-color: var(--border-strong); }
-  .checkbox-row input[type="checkbox"] { width: 20px; height: 20px; min-width: 20px; margin: 2px 0 0; accent-color: var(--amber); cursor: pointer; }
-  .checkbox-row span { font-size: 14.5px; line-height: 1.55; color: var(--ink); }
-  .checkbox-row:has(input:checked) { background: rgba(212,162,78,.08); border-color: var(--amber); }
-
-  .form button[type="submit"] { background: var(--amber); color: #1a1306; padding: 16px 30px; border-radius: 999px; font-weight: 600; font-size: 15.5px; cursor: pointer; transition: background .2s var(--ease), transform .15s var(--ease); align-self: flex-start; }
-  .form button[type="submit"]:hover { background: var(--amber-bright); transform: translateY(-1px); }
-
-  .form-fineprint { font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; margin-top: 8px; }
-
-  /* ACTIONS */
-  .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 22px; }
-
-  /* FOOTER */
-  .site-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 0 36px; }
-  .site-footer__brand { font-family: var(--display); font-weight: 600; font-size: 20px; margin-bottom: 8px; }
-  .site-footer__tag { color: var(--ink-muted); font-size: 14px; line-height: 1.5; max-width: 50ch; margin-bottom: 28px; }
-  .site-footer__legal { font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--border); }
-  .site-footer__links { margin-top: 14px; font-size: 13px; color: var(--ink-soft); line-height: 1.9; }
-  .site-footer__links a { color: var(--ink-muted); transition: color .2s var(--ease); }
-  .site-footer__links a:hover { color: var(--ink); }
-  .site-footer__copy { margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); }
-
-  /* RESPONSIVE */
- @media (max-width: 760px) {
-    .site-header__inner { height: 76px; }
-    .brand img { height: 52px; }
-    .brand { gap: 12px; }
-    .nav__links, .nav .btn--amber { display: none; }
-    .nav__toggle { display: inline-flex; }
-    .nav__links.is-open { display: flex; position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; background: rgba(17,17,17,.97); padding: 24px var(--gutter); border-bottom: 1px solid var(--border); gap: 18px; }
-    .paths { grid-template-columns: 1fr; }
-    .actions { flex-direction: column; align-items: stretch; }
-    .actions .btn { width: 100%; }
-  }
-  @media (max-width: 480px) {
-    .brand img { height: 46px; }
-    .brand__tag { display: none; }
-  }
-
-</style>
-
 </head>
 <body>
 
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="index.html" class="brand" aria-label="Lawsuit Center home">
-  <img src="logo-center-new.png" alt="Lawsuit Center" />
-  <span class="brand__tag">Attorney-Created</span>
-</a>
+      <img src="logo-center-new.png" alt="Lawsuit Center" />
+      <span class="brand__tag">Attorney-Created</span>
+    </a>
     <nav class="nav" aria-label="Primary">
       <div class="nav__links" id="site-menu">
         <a href="index.html">Home</a>
@@ -215,28 +64,24 @@
 
 <main>
 
-<!-- HERO -->
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Contact</span>
+    <span class="eyebrow section__eyebrow">Contact</span>
     <h1>Case review and <em>law firm placement</em> inquiries.</h1>
     <p class="lede">
       Use this page to request a case review, ask a general question, or inquire about sponsored
       visibility opportunities for law firms.
     </p>
-    <div class="actions">
+    <div class="hero-actions">
       <a href="case-review.html" class="btn btn--amber btn--lg">Request a Case Review</a>
       <a href="for-law-firms.html" class="btn btn--ghost btn--lg">For Law Firms</a>
     </div>
-    <p class="meta">
+    <p class="small-text">
       Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
       does not create an attorney-client relationship.
     </p>
   </div>
 </section>
-
-<!-- CHOOSE YOUR PATH -->
 
 <section class="section section--surface">
   <div class="container container--narrow">
@@ -258,8 +103,6 @@
   </div>
 </section>
 
-<!-- FORM -->
-
 <section class="section">
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Send a Message</span>
@@ -270,87 +113,82 @@
       financial account numbers, or highly sensitive details through this form.
     </p>
 
+    <div class="form-card">
+      <form name="site-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html" class="form">
+        <input type="hidden" name="form-name" value="site-contact" />
+        <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
 
-<div class="form-card">
-  <form name="site-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html" class="form">
-    <input type="hidden" name="form-name" value="site-contact" />
-    <p hidden><label>Don't fill this out: <input name="bot-field" /></label></p>
+        <div class="field">
+          <label for="inquiry-type" class="field-label">What is your inquiry about?</label>
+          <select id="inquiry-type" name="inquiry-type" required>
+            <option value="">Select one</option>
+            <option value="case-review">Possible case review</option>
+            <option value="general-question">General question</option>
+            <option value="law-firm-placement">Law firm / sponsored placement inquiry</option>
+          </select>
+        </div>
 
-    <div class="field">
-      <label for="inquiry-type" class="field-label">What is your inquiry about?</label>
-      <select id="inquiry-type" name="inquiry-type" required>
-        <option value="">Select one</option>
-        <option value="case-review">Possible case review</option>
-        <option value="general-question">General question</option>
-        <option value="law-firm-placement">Law firm / sponsored placement inquiry</option>
-      </select>
+        <div class="field">
+          <label for="name" class="field-label">Full name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+        </div>
+
+        <div class="field">
+          <label for="email" class="field-label">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label for="phone" class="field-label">Phone number (optional)</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" />
+        </div>
+
+        <div class="field">
+          <label for="state" class="field-label">State (optional)</label>
+          <input type="text" id="state" name="state" autocomplete="address-level1" />
+        </div>
+
+        <div class="field">
+          <label for="topic" class="field-label">What best describes the topic?</label>
+          <select id="topic" name="topic">
+            <option value="">Select one</option>
+            <option value="asbestos">Asbestos exposure</option>
+            <option value="chemical-exposure">Chemical or toxic exposure</option>
+            <option value="water-contamination">Water contamination</option>
+            <option value="pfas">PFAS water contamination</option>
+            <option value="product-liability">Product liability</option>
+            <option value="drug-injury">Drug injury / medication</option>
+            <option value="medical-device">Medical device</option>
+            <option value="social-media-addiction">Social media addiction lawsuit</option>
+            <option value="personal-injury">Personal injury</option>
+            <option value="advertising-placement">Advertising or sponsored placement</option>
+            <option value="not-sure">I am not sure</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message" class="field-label">Briefly describe your situation or question</label>
+          <textarea id="message" name="message" rows="8" required></textarea>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="acknowledgment" required />
+          <span>
+            I understand that Lawsuit Center is not a law firm, does not provide legal advice,
+            and that submitting this form does not create an attorney-client relationship.
+          </span>
+        </label>
+
+        <button type="submit">Send Message</button>
+
+        <p class="form-fineprint">
+          Submission does not guarantee follow-up, eligibility, placement, compensation, legal
+          representation, or any particular result.
+        </p>
+      </form>
     </div>
-
-    <div class="field">
-      <label for="name" class="field-label">Full name</label>
-      <input type="text" id="name" name="name" autocomplete="name" required />
-    </div>
-
-    <div class="field">
-      <label for="email" class="field-label">Email address</label>
-      <input type="email" id="email" name="email" autocomplete="email" required />
-    </div>
-
-    <div class="field">
-      <label for="phone" class="field-label">Phone number (optional)</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel" />
-    </div>
-
-    <div class="field">
-      <label for="state" class="field-label">State (optional)</label>
-      <input type="text" id="state" name="state" autocomplete="address-level1" />
-    </div>
-
-    <div class="field">
-      <label for="topic" class="field-label">What best describes the topic?</label>
-      <select id="topic" name="topic">
-        <option value="">Select one</option>
-        <option value="asbestos">Asbestos exposure</option>
-        <option value="chemical-exposure">Chemical or toxic exposure</option>
-        <option value="water-contamination">Water contamination</option>
-        <option value="pfas">PFAS water contamination</option>
-        <option value="product-liability">Product liability</option>
-        <option value="drug-injury">Drug injury / medication</option>
-        <option value="medical-device">Medical device</option>
-        <option value="social-media-addiction">Social media addiction lawsuit</option>
-        <option value="personal-injury">Personal injury</option>
-        <option value="advertising-placement">Advertising or sponsored placement</option>
-        <option value="not-sure">I am not sure</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label for="message" class="field-label">Briefly describe your situation or question</label>
-      <textarea id="message" name="message" rows="8" required></textarea>
-    </div>
-
-    <label class="checkbox-row">
-      <input type="checkbox" name="acknowledgment" required />
-      <span>
-        I understand that Lawsuit Center is not a law firm, does not provide legal advice,
-        and that submitting this form does not create an attorney-client relationship.
-      </span>
-    </label>
-
-    <button type="submit">Send Message</button>
-
-    <p class="form-fineprint">
-      Submission does not guarantee follow-up, eligibility, placement, compensation, legal
-      representation, or any particular result.
-    </p>
-  </form>
-</div>
-
-
   </div>
 </section>
-
-<!-- WHAT INFO HELPS -->
 
 <section class="section section--surface">
   <div class="container container--narrow">
@@ -363,11 +201,9 @@
       <li>Where the exposure, product use, accident, or event took place</li>
       <li>Whether you are reaching out as an individual, family member, or law firm</li>
     </ul>
-    <p style="margin-top: 18px;">Even if you only know part of this information, you can still submit a brief message.</p>
+    <p>Even if you only know part of this information, you can still submit a brief message.</p>
   </div>
 </section>
-
-<!-- WHAT HAPPENS NEXT -->
 
 <section class="section">
   <div class="container container--narrow">
@@ -386,14 +222,12 @@
       qualify for a claim, will be contacted by a law firm, will be offered representation, or
       will be offered placement.
     </p>
-    <div class="actions">
+    <div class="hero-actions">
       <a href="how-case-review-works.html" class="btn btn--amber">How Case Review Works</a>
       <a href="advertising-disclosure.html" class="btn btn--ghost">Advertising Disclosure</a>
     </div>
   </div>
 </section>
-
-<!-- IMPORTANT INFORMATION -->
 
 <section class="section section--surface">
   <div class="container container--narrow">
