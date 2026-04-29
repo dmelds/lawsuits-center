@@ -339,8 +339,7 @@
       if (!toggle || !menu) return;
 
       toggle.addEventListener("click", function () {
-        const isOpen = menu.classList.toggle("open");
-        toggle.classList.toggle("active", isOpen);
+        const isOpen = menu.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
     });
