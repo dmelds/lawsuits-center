@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Browse Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Browse all lawsuit categories on Lawsuit Center, alphabetically. Find pages on exposure, products, medications, devices, asbestos, contamination, and injury claims." />
+  <meta name="description" content="Browse all lawsuit categories on Lawsuit Center. Find pages on toxic exposure, asbestos, products, medications, devices, contamination, and personal injury." />
   <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="canonical" href="https://lawsuit.center/lawsuits.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -16,7 +16,7 @@
     "@type": "CollectionPage",
     "name": "Browse Lawsuits",
     "url": "https://lawsuit.center/lawsuits.html",
-    "description": "Browse all lawsuit categories on Lawsuit Center, alphabetically.",
+    "description": "Browse lawsuit categories on Lawsuit Center, organized by topic.",
     "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/" }
   }
   </script>
@@ -31,6 +31,50 @@
     ]
   }
   </script>
+
+  <style>
+    /* Sticky jump menu — sits below the site header */
+    .jump-nav {
+      position: sticky;
+      top: 88px;
+      z-index: 40;
+      background: rgba(17,17,17,.92);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .jump-nav__inner {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 14px 0;
+      scrollbar-width: none;
+    }
+    .jump-nav__inner::-webkit-scrollbar { display: none; }
+    .jump-nav a {
+      flex-shrink: 0;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      transition: border-color .2s var(--ease), background .2s var(--ease), color .2s var(--ease);
+      white-space: nowrap;
+    }
+    .jump-nav a:hover {
+      border-color: var(--amber);
+      background: rgba(212,162,78,.08);
+      color: var(--ink);
+      text-decoration: none;
+    }
+    /* Scroll offset so anchor jumps land below sticky header + jump nav */
+    .cat-section { scroll-margin-top: 160px; }
+    @media (max-width: 760px) {
+      .jump-nav { top: 76px; }
+      .cat-section { scroll-margin-top: 140px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -65,9 +109,8 @@
     <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Browse Lawsuits</span>
     <h1>Find the lawsuit category that <em>matches your situation.</em></h1>
     <p class="lede">
-      Every lawsuit category on Lawsuit Center, in alphabetical order. Start with the topic
-      closest to what you're dealing with — an exposure, a product, a medication, a device,
-      an injury, or a diagnosis.
+      Lawsuit categories organized by topic. Jump to the area closest to what you're dealing with —
+      toxic exposure, asbestos, products and medications, contamination, or personal injury.
     </p>
     <div class="hero-actions">
       <a href="case-review.html" class="btn btn--amber btn--lg">Start Free Case Review</a>
@@ -79,135 +122,195 @@
   </div>
 </section>
 
-<section class="section">
+<nav class="jump-nav" aria-label="Jump to category">
+  <div class="container">
+    <div class="jump-nav__inner">
+      <a href="#toxic-exposure">Toxic Exposure</a>
+      <a href="#contamination">Contamination</a>
+      <a href="#asbestos">Asbestos</a>
+      <a href="#products-drugs-devices">Products, Drugs &amp; Devices</a>
+      <a href="#personal-injury">Personal Injury</a>
+      <a href="#state-lawyers">State Lawyer Pages</a>
+    </div>
+  </div>
+</nav>
+
+<section id="toxic-exposure" class="section cat-section">
   <div class="container">
     <div class="section__head section__head--left">
-      <span class="eyebrow section__eyebrow">All Lawsuits A–Z</span>
-      <h2>Browse every category alphabetically.</h2>
+      <span class="eyebrow section__eyebrow">Toxic Exposure</span>
+      <h2>Chemical and product exposure claims.</h2>
       <p class="section__lede">
-        Each card links to a dedicated page with claim patterns, who may qualify, common situations, and case review options.
+        Lawsuits involving long-term exposure to chemicals, herbicides, or consumer products with alleged health risks.
       </p>
     </div>
-
     <div class="dir-grid">
-
-      <a class="dir-card" href="asbestos-lawsuits.html">
-        <h3>Asbestos Lawsuits</h3>
-        <p>Asbestos exposure, lung cancer, mesothelioma, state-specific lawyer pages, and case review options.</p>
-      </a>
-
-      <a class="dir-card" href="california-asbestos-lawyers.html">
-        <h3>California Asbestos Lawyers</h3>
-        <p>Asbestos lawyer information for California-related exposure, illness, or claim review.</p>
-      </a>
-
-      <a class="dir-card" href="california-personal-injury-lawyers.html">
-        <h3>California Personal Injury Lawyers</h3>
-        <p>California injury lawyer information, sponsored visibility, and questions to ask before hiring.</p>
-      </a>
-
       <a class="dir-card" href="chemical-exposure-lawsuits.html">
         <h3>Chemical Exposure Lawsuits</h3>
         <p>Toxic substances, repeated exposure, contaminated property, workplace exposure, or consumer products.</p>
       </a>
-
-      <a class="dir-card" href="drug-injury-lawsuits.html">
-        <h3>Drug Injury Lawsuits</h3>
-        <p>Prescription medications, reported side effects, warning issues, and alleged medication-related injuries.</p>
-      </a>
-
-      <a class="dir-card" href="environmental-contamination-lawsuits.html">
-        <h3>Environmental Contamination Lawsuits</h3>
-        <p>Exposure through air, soil, groundwater, industrial sites, or surrounding community conditions.</p>
-      </a>
-
-      <a class="dir-card" href="florida-asbestos-lawyers.html">
-        <h3>Florida Asbestos Lawyers</h3>
-        <p>Asbestos lawyer information for Florida-related exposure, illness, or claim review.</p>
-      </a>
-
-      <a class="dir-card" href="hair-relaxer-lawsuit.html">
-        <h3>Hair Relaxer Lawsuit</h3>
-        <p>Chemical hair relaxer products and alleged long-term reproductive health risks.</p>
-      </a>
-
-      <a class="dir-card" href="hernia-mesh-lawsuit.html">
-        <h3>Hernia Mesh Lawsuit</h3>
-        <p>Surgical mesh used in hernia repair and reported complications after surgery.</p>
-      </a>
-
-      <a class="dir-card" href="lung-cancer-asbestos-review.html">
-        <h3>Lung Cancer Asbestos Case Review</h3>
-        <p>Submit basic information about asbestos exposure and lung cancer for possible case review.</p>
-      </a>
-
-      <a class="dir-card" href="lung-cancer-from-asbestos-exposure.html">
-        <h3>Lung Cancer From Asbestos Exposure</h3>
-        <p>Lung cancer claims involving asbestos exposure history and possible legal review.</p>
-      </a>
-
-      <a class="dir-card" href="medical-device-lawsuits.html">
-        <h3>Medical Device Lawsuits</h3>
-        <p>Implants, surgical mesh, joint replacements, complications, recalls, revision surgeries, or alleged defects.</p>
-      </a>
-
-      <a class="dir-card" href="ozempic-lawsuit.html">
-        <h3>Ozempic / GLP-1 Lawsuits</h3>
-        <p>Certain GLP-1 medications and reported gastrointestinal complications or related injuries.</p>
-      </a>
-
-      <a class="dir-card" href="personal-injury-lawsuits.html">
-        <h3>Personal Injury Lawsuits</h3>
-        <p>Accidents, negligence, unsafe conditions, serious injuries, wrongful death, and other injury-related events.</p>
-      </a>
-
-      <a class="dir-card" href="pfas-water-contamination-lawsuits.html">
-        <h3>PFAS Water Contamination</h3>
-        <p>Forever chemicals in drinking water near military bases, airports, or industrial facilities.</p>
-      </a>
-
-      <a class="dir-card" href="product-liability-lawsuits.html">
-        <h3>Product Liability Lawsuits</h3>
-        <p>Allegedly defective, unsafe, mislabeled, contaminated, or harmful consumer products and devices.</p>
-      </a>
-
-      <a class="dir-card" href="roundup-lawsuit.html">
-        <h3>Roundup Lawsuit</h3>
-        <p>Glyphosate-based herbicides and alleged links to certain cancers.</p>
-      </a>
-
-      <a class="dir-card" href="social-media-addiction-lawsuit.html">
-        <h3>Social Media Addiction Lawsuit</h3>
-        <p>Allegations that platforms used addictive design features and contributed to youth mental-health harms.</p>
-      </a>
-
-      <a class="dir-card" href="water-contamination-lawsuits.html">
-        <h3>Water Contamination Lawsuits</h3>
-        <p>Contaminated drinking water, groundwater, and long-term community water exposure.</p>
-      </a>
-
       <a class="dir-card" href="who-may-qualify-for-a-chemical-exposure-lawsuit.html">
         <h3>Who May Qualify for a Chemical Exposure Lawsuit</h3>
         <p>Common qualification factors, exposure patterns, and information people often gather first.</p>
       </a>
-
+      <a class="dir-card" href="roundup-lawsuit.html">
+        <h3>Roundup Lawsuit</h3>
+        <p>Glyphosate-based herbicides and alleged links to certain cancers including non-Hodgkin lymphoma.</p>
+      </a>
+      <a class="dir-card" href="hair-relaxer-lawsuit.html">
+        <h3>Hair Relaxer Lawsuit</h3>
+        <p>Chemical hair relaxer products and alleged long-term reproductive health risks.</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="section section--surface">
+<section id="contamination" class="section section--surface cat-section">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">Contamination</span>
+      <h2>Water and environmental contamination.</h2>
+      <p class="section__lede">
+        Claims involving contaminated drinking water, groundwater, soil, or community-wide environmental exposure.
+      </p>
+    </div>
+    <div class="dir-grid">
+      <a class="dir-card" href="water-contamination-lawsuits.html">
+        <h3>Water Contamination Lawsuits</h3>
+        <p>Contaminated drinking water, groundwater, and long-term community water exposure.</p>
+      </a>
+      <a class="dir-card" href="pfas-water-contamination-lawsuits.html">
+        <h3>PFAS Water Contamination</h3>
+        <p>Forever chemicals in drinking water near military bases, airports, or industrial facilities.</p>
+      </a>
+      <a class="dir-card" href="environmental-contamination-lawsuits.html">
+        <h3>Environmental Contamination Lawsuits</h3>
+        <p>Exposure through air, soil, groundwater, industrial sites, or surrounding community conditions.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="asbestos" class="section cat-section">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">Asbestos</span>
+      <h2>Asbestos exposure and related illness.</h2>
+      <p class="section__lede">
+        Asbestos claims often depend on exposure history, diagnosis, job sites, military service, and state deadlines.
+      </p>
+    </div>
+    <div class="dir-grid">
+      <a class="dir-card" href="asbestos-lawsuits.html">
+        <h3>Asbestos Lawsuits</h3>
+        <p>Main asbestos hub: exposure history, illnesses, and case review options.</p>
+      </a>
+      <a class="dir-card" href="lung-cancer-from-asbestos-exposure.html">
+        <h3>Lung Cancer From Asbestos Exposure</h3>
+        <p>Lung cancer claims involving asbestos exposure history and possible legal review.</p>
+      </a>
+      <a class="dir-card" href="lung-cancer-asbestos-review.html">
+        <h3>Lung Cancer Asbestos Case Review</h3>
+        <p>Submit basic information about asbestos exposure and lung cancer for possible case review.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="products-drugs-devices" class="section section--surface cat-section">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">Products, Drugs &amp; Devices</span>
+      <h2>Product liability, medications, and medical devices.</h2>
+      <p class="section__lede">
+        Claims involving products, prescription medications, medical devices, warnings, recalls, and side effects.
+      </p>
+    </div>
+    <div class="dir-grid">
+      <a class="dir-card" href="product-liability-lawsuits.html">
+        <h3>Product Liability Lawsuits</h3>
+        <p>Allegedly defective, unsafe, mislabeled, contaminated, or harmful consumer products and devices.</p>
+      </a>
+      <a class="dir-card" href="drug-injury-lawsuits.html">
+        <h3>Drug Injury Lawsuits</h3>
+        <p>Prescription medications, reported side effects, warning issues, and alleged medication-related injuries.</p>
+      </a>
+      <a class="dir-card" href="medical-device-lawsuits.html">
+        <h3>Medical Device Lawsuits</h3>
+        <p>Implants, surgical mesh, joint replacements, complications, recalls, revision surgeries, or alleged defects.</p>
+      </a>
+      <a class="dir-card" href="ozempic-lawsuit.html">
+        <h3>Ozempic / GLP-1 Lawsuits</h3>
+        <p>Certain GLP-1 medications and reported gastrointestinal complications or related injuries.</p>
+      </a>
+      <a class="dir-card" href="hernia-mesh-lawsuit.html">
+        <h3>Hernia Mesh Lawsuit</h3>
+        <p>Surgical mesh used in hernia repair and reported complications after surgery.</p>
+      </a>
+      <a class="dir-card" href="social-media-addiction-lawsuit.html">
+        <h3>Social Media Addiction Lawsuit</h3>
+        <p>Allegations that platforms used addictive design features and contributed to youth mental-health harms.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="personal-injury" class="section cat-section">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">Personal Injury</span>
+      <h2>Accidents, negligence, and serious harm.</h2>
+      <p class="section__lede">
+        Claims involving accidents, unsafe conditions, negligence, insurance issues, or serious injuries.
+      </p>
+    </div>
+    <div class="dir-grid">
+      <a class="dir-card" href="personal-injury-lawsuits.html">
+        <h3>Personal Injury Lawsuits</h3>
+        <p>Accident, negligence, unsafe condition, and injury-related claim categories.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="state-lawyers" class="section section--surface cat-section">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">State Lawyer Pages</span>
+      <h2>State-specific lawyer information.</h2>
+      <p class="section__lede">
+        Reader-focused information about lawyers in specific states, including questions to ask before hiring.
+      </p>
+    </div>
+    <div class="dir-grid">
+      <a class="dir-card" href="california-personal-injury-lawyers.html">
+        <h3>California Personal Injury Lawyers</h3>
+        <p>California injury lawyer information, sponsored visibility, and questions to ask before hiring.</p>
+      </a>
+      <a class="dir-card" href="california-asbestos-lawyers.html">
+        <h3>California Asbestos Lawyers</h3>
+        <p>Asbestos lawyer information for California-related exposure, illness, or claim review.</p>
+      </a>
+      <a class="dir-card" href="florida-asbestos-lawyers.html">
+        <h3>Florida Asbestos Lawyers</h3>
+        <p>Asbestos lawyer information for Florida-related exposure, illness, or claim review.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Using This Directory</span>
     <h2>How to navigate.</h2>
     <ul>
-      <li>Start with the topic closest to your situation — exposure, product, medication, device, or injury.</li>
-      <li>Each page covers claim patterns, who may qualify, and what information may help.</li>
+      <li>Use the jump menu to skip to the area closest to your situation.</li>
+      <li>Each category page covers claim patterns, who may qualify, and what information may help.</li>
       <li>Review how case review works before submitting information.</li>
       <li>Look for advertising disclosures where sponsored law firm visibility appears.</li>
     </ul>
     <p style="color: var(--ink-muted); margin-top: 18px;">
-      Not every topic will apply to every situation, and not every inquiry will qualify for further
-      review. The goal is to help you find a relevant starting point.
+      Not every topic will apply to every situation, and not every inquiry will qualify for further review.
     </p>
     <div class="hero-actions">
       <a href="how-case-review-works.html" class="btn btn--amber">How Case Review Works</a>
