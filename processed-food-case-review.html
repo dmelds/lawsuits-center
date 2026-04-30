@@ -53,10 +53,9 @@
   .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);}
   .site-header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.85);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--border);}
   .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px;}
-  .brand{display:flex;align-items:center;gap:10px;flex-shrink:0;line-height:1.05;}
-.brand img{height:36px;width:auto;display:block;}
-.brand__name{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--ink);white-space:nowrap;}
-.brand__tag{font-size:11px;color:var(--ink-soft);letter-spacing:.04em;}
+  .brand{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .brand img{height:60px;width:auto;}
+  .brand__tag{font-size:12.5px;color:var(--ink-muted);letter-spacing:.04em;white-space:nowrap;}
   .nav{display:flex;align-items:center;gap:28px;}
   .nav__links{display:flex;gap:26px;}
   .nav__links a{font-size:14.5px;color:var(--ink-muted);transition:color .2s var(--ease);}
@@ -121,10 +120,17 @@
   .site-footer__copy{margin-top:18px;font-size:12.5px;color:var(--ink-soft);}
 
   @media(max-width:760px){
+    .site-header__inner{height:76px;}
+    .brand img{height:52px;}
+    .brand{gap:12px;}
     .nav__links,.nav .btn--amber{display:none;}
     .nav__toggle{display:inline-flex;}
     .nav__links.is-open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:rgba(17,17,17,.97);padding:24px var(--gutter);border-bottom:1px solid var(--border);gap:18px;}
     .actions{flex-direction:column;align-items:stretch;}.actions .btn{width:100%;}
+  }
+  @media(max-width:480px){
+    .brand img{height:46px;}
+    .brand__tag{display:none;}
   }
 </style>
 
@@ -134,9 +140,9 @@
 <header class="site-header">
   <div class="container site-header__inner">
     <a href="index.html" class="brand" aria-label="Lawsuit Center home">
-  <img src="logo-center-new.png" alt="Lawsuit Center" />
-  <span class="brand__tag">Attorney-Created</span>
-</a>
+      <img src="logo-center-new.png" alt="Lawsuit Center" />
+      <span class="brand__tag">Attorney-Created</span>
+    </a>
     <nav class="nav" aria-label="Primary">
       <div class="nav__links" id="site-menu">
         <a href="index.html">Home</a>
@@ -217,127 +223,126 @@
       an available review path.
     </p>
 
-<div class="form-card">
-  <form
-    name="processed-food-case-review"
-    method="POST"
-    data-netlify="true"
-    data-netlify-recaptcha="true"
-    netlify-honeypot="bot-field"
-    action="/thank-you.html"
-    class="form"
-  >
-    <input type="hidden" name="form-name" value="processed-food-case-review" />
-    <p style="display:none;">
-      <label>Do not fill this out if you are human: <input name="bot-field" /></label>
-    </p>
+    <div class="form-card">
+      <form
+        name="processed-food-case-review"
+        method="POST"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+        netlify-honeypot="bot-field"
+        action="/thank-you.html"
+        class="form"
+      >
+        <input type="hidden" name="form-name" value="processed-food-case-review" />
+        <p style="display:none;">
+          <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+        </p>
 
-<div class="field">
-  <label for="situation-type" class="field-label">Diagnosis or situation</label>
-  <select id="situation-type" name="situation-type" required>
-    <option value="">Select what best fits</option>
-    <option value="Childhood T2D">Type 2 diabetes diagnosed in childhood or adolescence</option>
-    <option value="NAFLD">Non-alcoholic fatty liver disease (NAFLD)</option>
-    <option value="Adult T2D">Type 2 diabetes diagnosed as adult</option>
-    <option value="Other Metabolic">Other metabolic condition</option>
-    <option value="Obesity">Obesity / weight-related condition</option>
-    <option value="Multiple Conditions">Multiple metabolic conditions</option>
-    <option value="Family Member">Researching on behalf of a child or family member</option>
-    <option value="Other Health Concern">Other ultra-processed food health concern</option>
-    <option value="Not Sure">Not sure / still investigating</option>
-  </select>
-</div>
+        <div class="field">
+          <label for="situation-type" class="field-label">Diagnosis or situation</label>
+          <select id="situation-type" name="situation-type" required>
+            <option value="">Select what best fits</option>
+            <option value="Childhood T2D">Type 2 diabetes diagnosed in childhood or adolescence</option>
+            <option value="NAFLD">Non-alcoholic fatty liver disease (NAFLD)</option>
+            <option value="Adult T2D">Type 2 diabetes diagnosed as adult</option>
+            <option value="Other Metabolic">Other metabolic condition</option>
+            <option value="Obesity">Obesity / weight-related condition</option>
+            <option value="Multiple Conditions">Multiple metabolic conditions</option>
+            <option value="Family Member">Researching on behalf of a child or family member</option>
+            <option value="Other Health Concern">Other ultra-processed food health concern</option>
+            <option value="Not Sure">Not sure / still investigating</option>
+          </select>
+        </div>
 
-<div class="field">
-  <label for="age-at-diagnosis" class="field-label">Approximate age at diagnosis</label>
-  <input type="text" id="age-at-diagnosis" name="age-at-diagnosis" placeholder="e.g. 14, mid-20s, 'as a child'" aria-describedby="age-note" />
-  <p id="age-note" class="form-note">
-    Age at diagnosis can be important. Current claims often focus on diagnoses that began in childhood or adolescence.
-  </p>
-</div>
+        <div class="field">
+          <label for="age-at-diagnosis" class="field-label">Approximate age at diagnosis</label>
+          <input type="text" id="age-at-diagnosis" name="age-at-diagnosis" placeholder="e.g. 14, mid-20s, 'as a child'" aria-describedby="age-note" />
+          <p id="age-note" class="form-note">
+            Age at diagnosis can be important. Current claims often focus on diagnoses that began in childhood or adolescence.
+          </p>
+        </div>
 
-<div class="field">
-  <label for="products" class="field-label">Products consumed regularly</label>
-  <p id="products-note" class="form-note">
-    Sugary drinks, sweetened cereals, fast food, packaged snacks — please list any specific brands or product types you remember.
-  </p>
-  <textarea id="products" name="products" rows="4" aria-describedby="products-note"></textarea>
-</div>
+        <div class="field">
+          <label for="products" class="field-label">Products consumed regularly</label>
+          <p id="products-note" class="form-note">
+            Sugary drinks, sweetened cereals, fast food, packaged snacks — please list any specific brands or product types you remember.
+          </p>
+          <textarea id="products" name="products" rows="4" aria-describedby="products-note"></textarea>
+        </div>
 
-<div class="field">
-  <label for="summary" class="field-label">Briefly describe what happened</label>
-  <p id="summary-note" class="form-note">
-    When did the consumption pattern begin? When was the diagnosis received? Any other context that may help us understand the situation.
-  </p>
-  <textarea id="summary" name="summary" rows="6" aria-describedby="summary-note summary-warning" required></textarea>
-  <p id="summary-warning" class="form-note">
-    Please do not include Social Security numbers, financial account numbers, full medical
-    records, or highly sensitive personal information.
-  </p>
-</div>
+        <div class="field">
+          <label for="summary" class="field-label">Briefly describe what happened</label>
+          <p id="summary-note" class="form-note">
+            When did the consumption pattern begin? When was the diagnosis received? Any other context that may help us understand the situation.
+          </p>
+          <textarea id="summary" name="summary" rows="6" aria-describedby="summary-note summary-warning" required></textarea>
+          <p id="summary-warning" class="form-note">
+            Please do not include Social Security numbers, financial account numbers, full medical
+            records, or highly sensitive personal information.
+          </p>
+        </div>
 
-<div class="field">
-  <label for="consumption-period" class="field-label">Approximate years of consumption</label>
-  <input type="text" id="consumption-period" name="consumption-period" placeholder="e.g. 2005–2020" aria-describedby="consumption-note" />
-  <p id="consumption-note" class="form-note">
-    Approximate is fine. Long-term consumption history can be relevant to these claims.
-  </p>
-</div>
+        <div class="field">
+          <label for="consumption-period" class="field-label">Approximate years of consumption</label>
+          <input type="text" id="consumption-period" name="consumption-period" placeholder="e.g. 2005–2020" aria-describedby="consumption-note" />
+          <p id="consumption-note" class="form-note">
+            Approximate is fine. Long-term consumption history can be relevant to these claims.
+          </p>
+        </div>
 
-<div class="field">
-  <label for="state" class="field-label">State</label>
-  <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
-  <p id="state-note" class="form-note">
-    Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
-  </p>
-</div>
+        <div class="field">
+          <label for="state" class="field-label">State</label>
+          <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
+          <p id="state-note" class="form-note">
+            Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
+          </p>
+        </div>
 
-<div class="field">
-  <label for="name" class="field-label">Name</label>
-  <input type="text" id="name" name="name" autocomplete="name" required />
-</div>
+        <div class="field">
+          <label for="name" class="field-label">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+        </div>
 
-<div class="field">
-  <label for="email" class="field-label">Email</label>
-  <input type="email" id="email" name="email" autocomplete="email" required />
-</div>
+        <div class="field">
+          <label for="email" class="field-label">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
 
-<div class="field">
-  <label for="phone" class="field-label">Phone</label>
-  <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
-  <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
-</div>
+        <div class="field">
+          <label for="phone" class="field-label">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
+          <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
+        </div>
 
-<label class="checkbox-row">
-  <input type="checkbox" name="legal-understanding" value="yes" required />
-  <span>
-    I understand that Lawsuit Center is not a law firm and that submitting this form
-    does not create an attorney-client relationship.
-  </span>
-</label>
+        <label class="checkbox-row">
+          <input type="checkbox" name="legal-understanding" value="yes" required />
+          <span>
+            I understand that Lawsuit Center is not a law firm and that submitting this form
+            does not create an attorney-client relationship.
+          </span>
+        </label>
 
-<label class="checkbox-row">
-  <input type="checkbox" name="contact-consent" value="yes" required />
-  <span>
-    I consent to being contacted by Lawsuit Center, participating law firms, legal
-    advertisers, or intake partners by phone, including autodialed calls and prerecorded
-    voice messages, email, or text message about my case review request. Consent is not
-    a condition of any service. Message and data rates may apply. Reply STOP to opt out.
-  </span>
-</label>
+        <label class="checkbox-row">
+          <input type="checkbox" name="contact-consent" value="yes" required />
+          <span>
+            I consent to being contacted by Lawsuit Center, participating law firms, legal
+            advertisers, or intake partners by phone, including autodialed calls and prerecorded
+            voice messages, email, or text message about my case review request. Consent is not
+            a condition of any service. Message and data rates may apply. Reply STOP to opt out.
+          </span>
+        </label>
 
-<div data-netlify-recaptcha="true"></div>
+        <div data-netlify-recaptcha="true"></div>
 
-<button type="submit">Submit Case Review Request</button>
+        <button type="submit">Submit Case Review Request</button>
 
-<p class="form-fineprint">
-  Created by a California-licensed attorney. Your submission may be reviewed by
-  participating legal professionals, legal advertisers, or intake partners where available.
-  A submission does not guarantee eligibility, compensation, contact, or representation.
-</p>
-
-  </form>
-</div>
+        <p class="form-fineprint">
+          Created by a California-licensed attorney. Your submission may be reviewed by
+          participating legal professionals, legal advertisers, or intake partners where available.
+          A submission does not guarantee eligibility, compensation, contact, or representation.
+        </p>
+      </form>
+    </div>
 
   </div>
 </section>
