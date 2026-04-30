@@ -46,6 +46,55 @@
     <loc>https://lawsuit.center/marketing-packages.html</loc>
   </url>
 
+  <!-- Case review intake pages -->
+  <url>
+    <loc>https://lawsuit.center/asbestos-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/pfas-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/toxic-water-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/environmental-contamination-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/air-pollution-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/pesticide-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/consumer-product-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/processed-food-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/social-media-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/video-game-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/neurological-case-review.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/reproductive-case-review.html</loc>
+  </url>
+
   <!-- Toxic exposure, chemical exposure, and contamination pages -->
   <url>
     <loc>https://lawsuit.center/chemical-exposure-lawsuits.html</loc>
@@ -56,7 +105,7 @@
   </url>
 
   <url>
-  <loc>https://lawsuit.center/asbestos-lawsuits.html</loc>
+    <loc>https://lawsuit.center/asbestos-lawsuits.html</loc>
   </url>
 
   <url>
@@ -79,9 +128,9 @@
   <url>
     <loc>https://lawsuit.center/product-liability-lawsuits.html</loc>
   </url>
-  
+
   <url>
-  <loc>https://lawsuit.center/social-media-addiction-lawsuit.html</loc>
+    <loc>https://lawsuit.center/social-media-addiction-lawsuit.html</loc>
   </url>
 
   <url>
