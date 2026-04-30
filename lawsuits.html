@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Browse Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Browse lawsuit categories on Lawsuit Center. Request a free case review for asbestos, PFAS, toxic water, pesticides, social media, video games, processed food, air pollution, environmental contamination, or consumer products." />
+  <meta name="description" content="Browse lawsuit categories on Lawsuit Center. Request a free case review for asbestos, PFAS, toxic water, pesticides, social media, video games, processed food, air pollution, environmental contamination, consumer products, and more." />
   <script async data-id="101502868" src="https://static.getclicky.com/js"></script>
   <link rel="canonical" href="https://lawsuit.center/lawsuits.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -77,18 +77,24 @@
   .section{padding:clamp(56px,7vw,88px) 0;}
   .section--surface{background:var(--surface);border-block:1px solid var(--border);}
   .section h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.018em;color:var(--ink);margin-bottom:14px;}
+  .section h3.subhead{font-family:var(--display);font-weight:500;font-size:21px;color:var(--ink);margin:32px 0 16px;letter-spacing:-.01em;}
   .section__head{margin-bottom:32px;max-width:680px;}
   .section__head .eyebrow{display:inline-block;margin-bottom:14px;}
   .section__head p{color:var(--ink-muted);line-height:1.65;font-size:16px;}
 
   .dir-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;}
+  .dir-grid + .dir-grid{margin-top:20px;}
   .dir-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;transition:border-color .2s var(--ease),transform .2s var(--ease);display:flex;flex-direction:column;gap:12px;}
   .dir-card:hover{border-color:var(--amber);transform:translateY(-2px);}
+  .dir-card--learn:hover{border-color:var(--border-strong);}
   .dir-card__tag{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);}
+  .dir-card--learn .dir-card__tag{color:var(--ink-soft);}
   .dir-card h3{font-family:var(--display);font-weight:500;font-size:21px;line-height:1.25;color:var(--ink);}
   .dir-card p{color:var(--ink-muted);line-height:1.55;font-size:14.5px;flex-grow:1;}
   .dir-card__cta{font-size:13.5px;font-weight:600;color:var(--amber);margin-top:4px;}
+  .dir-card--learn .dir-card__cta{color:var(--ink-muted);}
   .dir-card:hover .dir-card__cta{color:var(--amber-bright);}
+  .dir-card--learn:hover .dir-card__cta{color:var(--ink);}
 
   .final{padding:clamp(56px,7vw,88px) 0;background:var(--surface);border-top:1px solid var(--border);}
   .final h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.018em;margin-bottom:16px;max-width:24ch;}
@@ -152,11 +158,11 @@
 
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow" style="display:inline-block;margin-bottom:18px;">Browse Case Reviews</span>
-    <h1>Find the case review that <em>fits your situation.</em></h1>
+    <span class="eyebrow" style="display:inline-block;margin-bottom:18px;">Browse Lawsuits</span>
+    <h1>Find the case review or topic that <em>fits your situation.</em></h1>
     <p class="lede">
-      Each case review path below leads to a free, no-obligation submission form. Choose the one closest to your diagnosis,
-      exposure, or product involved. Not sure which fits? Use the general case review.
+      Each category below leads with a free case review path, followed by background pages on related lawsuits.
+      Choose the one closest to your diagnosis, exposure, or product — or start a general review if you're not sure.
     </p>
     <div class="actions">
       <a href="case-review.html" class="btn btn--amber btn--lg">Start General Case Review</a>
@@ -176,7 +182,9 @@
       <a href="#water-environment">Water &amp; Environment</a>
       <a href="#chemicals-pesticides">Chemicals &amp; Pesticides</a>
       <a href="#products-food">Products &amp; Food</a>
-      <a href="#general">General Review</a>
+      <a href="#drugs-devices">Drugs &amp; Medical Devices</a>
+      <a href="#personal-injury">Personal Injury</a>
+      <a href="#state-lawyers">State Lawyer Pages</a>
     </div>
   </div>
 </nav>
@@ -192,12 +200,36 @@
         Filing deadlines often begin from the date of diagnosis.
       </p>
     </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
     <div class="dir-grid">
       <a class="dir-card" href="asbestos-case-review.html">
         <span class="dir-card__tag">Case Review</span>
         <h3>Asbestos Case Review</h3>
         <p>Mesothelioma, asbestos-related lung cancer, asbestosis, military or shipyard exposure, secondhand exposure, or other asbestos-related illness.</p>
         <span class="dir-card__cta">Request Review →</span>
+      </a>
+      <a class="dir-card" href="lung-cancer-asbestos-review.html">
+        <span class="dir-card__tag">Case Review</span>
+        <h3>Lung Cancer Asbestos Review</h3>
+        <p>Submit basic information about asbestos exposure history and a lung cancer diagnosis for possible case review.</p>
+        <span class="dir-card__cta">Request Review →</span>
+      </a>
+    </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="asbestos-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Asbestos Lawsuits</h3>
+        <p>Main asbestos hub: exposure history, illnesses commonly tied to asbestos, and how case review options work.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="lung-cancer-from-asbestos-exposure.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Lung Cancer From Asbestos Exposure</h3>
+        <p>Background on lung cancer claims involving asbestos exposure history and how legal review may apply.</p>
+        <span class="dir-card__cta">Read Overview →</span>
       </a>
     </div>
   </div>
@@ -214,6 +246,8 @@
         of social media cases in federal court.
       </p>
     </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
     <div class="dir-grid">
       <a class="dir-card" href="social-media-case-review.html">
         <span class="dir-card__tag">Case Review</span>
@@ -226,6 +260,16 @@
         <h3>Video Game Case Review</h3>
         <p>Compulsive gaming, academic decline, mental health impact, or significant unauthorized in-game spending tied to a specific game or platform — particularly involving minors.</p>
         <span class="dir-card__cta">Request Review →</span>
+      </a>
+    </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="social-media-addiction-lawsuit.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Social Media Addiction Lawsuit</h3>
+        <p>Background on allegations that platforms used addictive design features and contributed to youth mental-health harms.</p>
+        <span class="dir-card__cta">Read Overview →</span>
       </a>
     </div>
   </div>
@@ -241,6 +285,8 @@
         releases, or long-term environmental exposure through air, soil, or groundwater near contaminated sites.
       </p>
     </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
     <div class="dir-grid">
       <a class="dir-card" href="pfas-case-review.html">
         <span class="dir-card__tag">Case Review</span>
@@ -256,7 +302,7 @@
       </a>
       <a class="dir-card" href="environmental-contamination-case-review.html">
         <span class="dir-card__tag">Case Review</span>
-        <h3>Environmental Contamination Case Review</h3>
+        <h3>Environmental Contamination Review</h3>
         <p>Exposure through soil, groundwater, industrial sites, landfills, or surrounding community conditions tied to a specific contamination source.</p>
         <span class="dir-card__cta">Request Review →</span>
       </a>
@@ -265,6 +311,28 @@
         <h3>Air Pollution Case Review</h3>
         <p>Long-term air pollution exposure, industrial emissions, refinery or plant proximity, and respiratory or other health conditions tied to airborne contaminants.</p>
         <span class="dir-card__cta">Request Review →</span>
+      </a>
+    </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="water-contamination-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Water Contamination Lawsuits</h3>
+        <p>Background on contaminated drinking water, groundwater, and long-term community water exposure claims.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="pfas-water-contamination-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>PFAS Water Contamination</h3>
+        <p>Forever chemicals in drinking water near military bases, airports, or industrial facilities, and how these claims have evolved.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="environmental-contamination-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Environmental Contamination Lawsuits</h3>
+        <p>Background on exposure through air, soil, groundwater, industrial sites, or surrounding community conditions.</p>
+        <span class="dir-card__cta">Read Overview →</span>
       </a>
     </div>
   </div>
@@ -281,12 +349,42 @@
         living near agricultural or industrial operations.
       </p>
     </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
     <div class="dir-grid">
       <a class="dir-card" href="pesticide-case-review.html">
         <span class="dir-card__tag">Case Review</span>
         <h3>Pesticide Case Review</h3>
         <p>Glyphosate (Roundup), paraquat, chlorpyrifos, and other pesticide or herbicide exposure tied to non-Hodgkin lymphoma, Parkinson's disease, or other related diagnoses.</p>
         <span class="dir-card__cta">Request Review →</span>
+      </a>
+    </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="chemical-exposure-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Chemical Exposure Lawsuits</h3>
+        <p>Toxic substances, repeated exposure, contaminated property, workplace exposure, or consumer products containing harmful chemicals.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="who-may-qualify-for-a-chemical-exposure-lawsuit.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Who May Qualify for a Chemical Exposure Lawsuit</h3>
+        <p>Common qualification factors, exposure patterns, and information people often gather before pursuing a claim.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="roundup-lawsuit.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Roundup Lawsuit</h3>
+        <p>Glyphosate-based herbicides and alleged links to certain cancers, including non-Hodgkin lymphoma.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="hair-relaxer-lawsuit.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Hair Relaxer Lawsuit</h3>
+        <p>Chemical hair relaxer products and alleged long-term reproductive health risks.</p>
+        <span class="dir-card__cta">Read Overview →</span>
       </a>
     </div>
   </div>
@@ -303,6 +401,8 @@
         non-alcoholic fatty liver disease, or other metabolic conditions.
       </p>
     </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
     <div class="dir-grid">
       <a class="dir-card" href="consumer-product-case-review.html">
         <span class="dir-card__tag">Case Review</span>
@@ -317,25 +417,133 @@
         <span class="dir-card__cta">Request Review →</span>
       </a>
     </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="product-liability-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Product Liability Lawsuits</h3>
+        <p>Background on allegedly defective, unsafe, mislabeled, contaminated, or harmful consumer products and devices.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<section id="general" class="section section--surface cat-section">
+<section id="drugs-devices" class="section section--surface cat-section">
   <div class="container">
     <div class="section__head">
-      <span class="eyebrow">General Review</span>
-      <h2>Not sure which category fits?</h2>
+      <span class="eyebrow">Drugs &amp; Medical Devices</span>
+      <h2>Medications, devices, and reported injuries.</h2>
       <p>
-        If your situation doesn't match a specific category above — or you're not sure where it fits — use the
-        general case review. Describe the exposure, product, or harm involved, and we'll route it appropriately.
+        Background on prescription medications, medical devices, implants, and other treatments where reported
+        side effects, complications, recalls, or warning issues have led to litigation. For an injury that may
+        relate to one of these, start with a general case review.
       </p>
     </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
     <div class="dir-grid">
       <a class="dir-card" href="case-review.html">
         <span class="dir-card__tag">Case Review</span>
         <h3>General Case Review</h3>
-        <p>For situations that don't fit a specific category, or if you're still figuring out which type of claim may apply. Briefly describe what happened.</p>
+        <p>For injuries possibly related to a medication, medical device, or implant. Describe the drug or device involved and the harm experienced.</p>
         <span class="dir-card__cta">Request Review →</span>
+      </a>
+    </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="drug-injury-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Drug Injury Lawsuits</h3>
+        <p>Prescription medications, reported side effects, warning issues, and alleged medication-related injuries.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="medical-device-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Medical Device Lawsuits</h3>
+        <p>Implants, surgical mesh, joint replacements, complications, recalls, revision surgeries, or alleged defects.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="ozempic-lawsuit.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Ozempic / GLP-1 Lawsuits</h3>
+        <p>Certain GLP-1 medications and reported gastrointestinal complications or related injuries.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="hernia-mesh-lawsuit.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Hernia Mesh Lawsuit</h3>
+        <p>Surgical mesh used in hernia repair and reported complications after surgery.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="personal-injury" class="section cat-section">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Personal Injury</span>
+      <h2>Accidents, negligence, and serious harm.</h2>
+      <p>
+        Claims involving accidents, unsafe conditions, negligence, insurance issues, or serious injuries.
+        For a specific injury claim, start with a general case review.
+      </p>
+    </div>
+
+    <h3 class="subhead">Request a Case Review</h3>
+    <div class="dir-grid">
+      <a class="dir-card" href="case-review.html">
+        <span class="dir-card__tag">Case Review</span>
+        <h3>General Case Review</h3>
+        <p>For personal injury, accident, or negligence claims. Describe what happened, when, and the injuries involved.</p>
+        <span class="dir-card__cta">Request Review →</span>
+      </a>
+    </div>
+
+    <h3 class="subhead">Background &amp; Overview</h3>
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="personal-injury-lawsuits.html">
+        <span class="dir-card__tag">Overview</span>
+        <h3>Personal Injury Lawsuits</h3>
+        <p>Background on accident, negligence, unsafe condition, and injury-related claim categories.</p>
+        <span class="dir-card__cta">Read Overview →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="state-lawyers" class="section section--surface cat-section">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">State Lawyer Pages</span>
+      <h2>State-specific lawyer information.</h2>
+      <p>
+        Reader-focused information about lawyers in specific states, including questions to ask before hiring.
+        These pages may include sponsored law firm visibility — see the advertising disclosure for details.
+      </p>
+    </div>
+
+    <div class="dir-grid">
+      <a class="dir-card dir-card--learn" href="california-personal-injury-lawyers.html">
+        <span class="dir-card__tag">State Page</span>
+        <h3>California Personal Injury Lawyers</h3>
+        <p>California injury lawyer information, sponsored visibility, and questions to ask before hiring.</p>
+        <span class="dir-card__cta">View Page →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="california-asbestos-lawyers.html">
+        <span class="dir-card__tag">State Page</span>
+        <h3>California Asbestos Lawyers</h3>
+        <p>Asbestos lawyer information for California-related exposure, illness, or claim review.</p>
+        <span class="dir-card__cta">View Page →</span>
+      </a>
+      <a class="dir-card dir-card--learn" href="florida-asbestos-lawyers.html">
+        <span class="dir-card__tag">State Page</span>
+        <h3>Florida Asbestos Lawyers</h3>
+        <p>Asbestos lawyer information for Florida-related exposure, illness, or claim review.</p>
+        <span class="dir-card__cta">View Page →</span>
       </a>
     </div>
   </div>
@@ -396,8 +604,8 @@
     const menu = document.getElementById("site-menu");
     if (toggle && menu) {
       toggle.addEventListener("click", function () {
-        const isOpen = menu.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        const isOpen = menu.classList.toggle(\"is-open\");
+        toggle.setAttribute(\"aria-expanded\", isOpen ? \"true\" : \"false\");
       });
     }
   });
