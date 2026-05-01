@@ -4,8 +4,8 @@
  *
  * Behavior:
  *   - Targets any <form class="form"> on the page
- *   - Validates name (full name with a space, min 4 chars), email (format +
- *     rejects obvious junk domains), and phone (exactly 10 US digits)
+ *   - Validates name (full name with a space, min 4 chars), email (format,
+ *     rejects junk domains, catches common typos), and phone (10 US digits)
  *   - Inline error messages appear on blur and on submit
  *   - Auto-formats phone as (XXX) XXX-XXXX on blur
  *   - Blocks submit if any field is invalid; valid submissions pass through
@@ -25,6 +25,43 @@
   var EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var ERROR_COLOR = "#e07a5f";
 
+  var COMMON_EMAIL_TYPOS = {
+    "gmail.cm": "gmail.com",
+    "gmail.co": "gmail.com",
+    "gmail.con": "gmail.com",
+    "gmial.com": "gmail.com",
+    "gmaill.com": "gmail.com",
+    "gnail.com": "gmail.com",
+    "gmaul.com": "gmail.com",
+    "yahoo.cm": "yahoo.com",
+    "yahoo.co": "yahoo.com",
+    "yahoo.con": "yahoo.com",
+    "yaho.com": "yahoo.com",
+    "yahooo.com": "yahoo.com",
+    "yhaoo.com": "yahoo.com",
+    "hotmail.cm": "hotmail.com",
+    "hotmail.co": "hotmail.com",
+    "hotmail.con": "hotmail.com",
+    "hotmial.com": "hotmail.com",
+    "hotmai.com": "hotmail.com",
+    "hotnail.com": "hotmail.com",
+    "outlook.cm": "outlook.com",
+    "outlook.co": "outlook.com",
+    "outlook.con": "outlook.com",
+    "outlok.com": "outlook.com",
+    "outloook.com": "outlook.com",
+    "icloud.cm": "icloud.com",
+    "icloud.co": "icloud.com",
+    "icloud.con": "icloud.com",
+    "iclould.com": "icloud.com",
+    "icoud.com": "icloud.com",
+    "aol.cm": "aol.com",
+    "aol.co": "aol.com",
+    "aol.con": "aol.com",
+    "comcast.cm": "comcast.net",
+    "comcast.com": "comcast.net"
+  };
+
   function validateName(value) {
     var v = (value || "").trim();
     if (v.length < 4) {
@@ -42,9 +79,14 @@
     if (!EMAIL_REGEX.test(v)) {
       return "Please enter a valid email address (e.g. name@example.com).";
     }
-    var domain = v.split("@")[1];
+    var parts = v.split("@");
+    var local = parts[0];
+    var domain = parts[1];
     if (JUNK_EMAIL_DOMAINS.indexOf(domain) !== -1) {
       return "Please enter a real email address.";
+    }
+    if (COMMON_EMAIL_TYPOS[domain]) {
+      return "Did you mean " + local + "@" + COMMON_EMAIL_TYPOS[domain] + "?";
     }
     return null;
   }
