@@ -437,7 +437,7 @@ footer p:first-child { color: var(--ink-muted); }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__panel { order: 2; }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .nav__links, .site-nav, .nav .btn--amber { display: none; }
   .menu-toggle, .nav__toggle { display: inline-flex; }
   .site-header__inner,
@@ -454,6 +454,7 @@ footer p:first-child { color: var(--ink-muted); }
   .nav__links.is-open a, .site-nav.open a { width: 100%; font-size: 1.02rem; color: var(--ink); }
   .jump-nav { top: 76px; }
 }
+
 @media (max-width: 760px) {
   .site-header__inner,
   header > .container.nav, header.site-header > .container.nav { height: 76px; }
