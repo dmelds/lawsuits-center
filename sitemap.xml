@@ -220,6 +220,10 @@
     <loc>https://lawsuit.center/financial-lawsuits.html</loc>
   </url>
 
+   <url>
+    <loc>https://lawsuit.center/stock-market-fraud-lawsuits.html</loc>
+  </url>
+
   <url>
     <loc>https://lawsuit.center/stock-market-fraud-lawsuits.html</loc>
   </url>
@@ -279,6 +283,16 @@
   <url>
     <loc>https://lawsuit.center/default-judgment.html</loc>
   </url>
+
+    <!-- Bankruptcy topics -->
+  <url>
+    <loc>https://lawsuit.center/consumer-bankruptcy.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lawsuit.center/business-bankruptcy.html</loc>
+  </url>
+
 
   <!-- Resources -->
   <url>
