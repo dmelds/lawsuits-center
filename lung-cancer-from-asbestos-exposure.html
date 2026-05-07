@@ -366,24 +366,13 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="site-footer__brand">Lawsuit Center</div>
-    <div class="site-footer__legal">Educational information only. Not legal advice. No attorney-client relationship is formed by using this website. Some pages may include attorney advertising or sponsored law firm visibility. Lawsuit Center is not a law firm and does not provide legal advice.</div>
-    <div class="site-footer__links">
-      <a href="privacy-policy.html">Privacy Policy</a> ·
-      <a href="disclaimer.html">Disclaimer</a> ·
-      <a href="advertising-disclosure.html">Advertising Disclosure</a> ·
-      <a href="editorial-policy.html">Editorial Policy</a> ·
-      <a href="how-case-review-works.html">How Case Review Works</a> ·
-      <a href="resources.html">Resources</a> ·
-      <a href="https://lawsuitinformer.com/">Lawsuit Informer</a> ·
-      <a href="for-law-firms.html">For Law Firms</a> ·
-      <a href="about.html">About</a> ·
-      <a href="contact.html">Contact</a>
-    </div>
-    <div class="site-footer__copy">© 2026 Lawsuit Center. All rights reserved.</div>
-  </div>
+  <div id="footer-placeholder"></div>
 </footer>
+<script>
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+</script>
 
 </body>
 </html>
