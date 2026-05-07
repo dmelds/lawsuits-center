@@ -312,18 +312,13 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container narrow">
-      <p>
-        Lawsuit Center provides general legal information only. This page does not
-        provide legal advice. Viewing this page or submitting a form does not create
-        an attorney-client relationship. Any potential claim depends on individual
-        facts, available records, and applicable law.
-      </p>
-      <p>
-        © Lawsuit Center
-      </p>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+</footer>
+<script>
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+</script>
 
 </body>
 </html>
