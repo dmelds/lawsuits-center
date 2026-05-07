@@ -206,6 +206,7 @@
       <li>Firefighters and others occupationally exposed to AFFF firefighting foam</li>
       <li>Workers at chemical manufacturing, plating, or PFAS-handling facilities</li>
       <li>Communities downstream of landfills or industrial sites with reported PFAS releases</li>
+      <li>Farms or agricultural land impacted by biosolid spreading, irrigation contamination, or livestock and crop losses</li>
       <li>Diagnosis of kidney or testicular cancer, thyroid disease, ulcerative colitis, or other condition with possible PFAS exposure history</li>
     </ul>
   </div>
@@ -221,7 +222,7 @@
       an available review path.
     </p>
 
-```
+
 <div class="form-card">
   <form
     name="pfas-case-review"
@@ -247,6 +248,7 @@
         <option value="AFFF Firefighting Foam">AFFF firefighting foam exposure (firefighter or trainee)</option>
         <option value="Chemical Manufacturing / Industrial">Chemical manufacturing or PFAS-handling facility</option>
         <option value="Landfill / Waste Site">Landfill or waste site near home or work</option>
+        <option value="Farm or Agricultural Land Contamination">Farm or agricultural land contamination (biosolids, irrigation, livestock or crop losses)</option>
         <option value="Kidney Cancer Diagnosis">Diagnosed with kidney cancer (possible PFAS link)</option>
         <option value="Testicular Cancer Diagnosis">Diagnosed with testicular cancer (possible PFAS link)</option>
         <option value="Thyroid Disease Diagnosis">Diagnosed with thyroid disease (possible PFAS link)</option>
@@ -259,8 +261,8 @@
     <div class="field">
       <label for="summary" class="field-label">Briefly describe what happened</label>
       <p id="summary-note" class="form-note">
-        What water source, base, airport, or facility was involved? Where did exposure occur — at home, work, or both?
-        Any diagnosis received? Approximate years of residence or exposure help.
+        What water source, base, airport, facility, or farm was involved? Where did exposure or contamination occur — at home, work, on your land, or all of these?
+        Any diagnosis, livestock or crop losses, or land impacts? Approximate years of residence, operation, or exposure help.
       </p>
       <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
       <p id="summary-warning" class="form-note">
@@ -330,7 +332,7 @@
     </p>
   </form>
 </div>
-```
+
 
   </div>
 </section>
@@ -453,6 +455,7 @@
       "AFFF Firefighting Foam": "AFFF firefighting foam exposure",
       "Chemical Manufacturing / Industrial": "PFAS industrial / occupational exposure",
       "Landfill / Waste Site": "PFAS landfill or waste site exposure",
+      "Farm or Agricultural Land Contamination": "PFAS farm or agricultural land contamination",
       "Kidney Cancer Diagnosis": "PFAS-related kidney cancer",
       "Testicular Cancer Diagnosis": "PFAS-related testicular cancer",
       "Thyroid Disease Diagnosis": "PFAS-related thyroid disease",
