@@ -221,114 +221,116 @@
       an available review path.
     </p>
 
-    <div class="form-card">
-      <form
-        name="pfas-case-review"
-        method="POST"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-        netlify-honeypot="bot-field"
-        action="/thank-you.html"
-        class="form"
-      >
-        <input type="hidden" name="form-name" value="pfas-case-review" />
-        <p style="display:none;">
-          <label>Do not fill this out if you are human: <input name="bot-field" /></label>
-        </p>
+```
+<div class="form-card">
+  <form
+    name="pfas-case-review"
+    method="POST"
+    data-netlify="true"
+    data-netlify-recaptcha="true"
+    netlify-honeypot="bot-field"
+    action="/thank-you.html"
+    class="form"
+  >
+    <input type="hidden" name="form-name" value="pfas-case-review" />
+    <p style="display:none;">
+      <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+    </p>
 
-        <div class="field">
-          <label for="exposure-type" class="field-label">Exposure type or situation</label>
-          <select id="exposure-type" name="exposure-type" required>
-            <option value="">Select what best fits</option>
-            <option value="Contaminated Drinking Water">Contaminated drinking water (public system or private well)</option>
-            <option value="Military Base Exposure">Lived or worked on or near a military base</option>
-            <option value="Airport Exposure">Lived or worked on or near an airport</option>
-            <option value="AFFF Firefighting Foam">AFFF firefighting foam exposure (firefighter or trainee)</option>
-            <option value="Chemical Manufacturing / Industrial">Chemical manufacturing or PFAS-handling facility</option>
-            <option value="Landfill / Waste Site">Landfill or waste site near home or work</option>
-            <option value="Kidney Cancer Diagnosis">Diagnosed with kidney cancer (possible PFAS link)</option>
-            <option value="Testicular Cancer Diagnosis">Diagnosed with testicular cancer (possible PFAS link)</option>
-            <option value="Thyroid Disease Diagnosis">Diagnosed with thyroid disease (possible PFAS link)</option>
-            <option value="Ulcerative Colitis Diagnosis">Diagnosed with ulcerative colitis (possible PFAS link)</option>
-            <option value="Other PFAS Health Concern">Other PFAS-related health concern</option>
-            <option value="Not Sure">Not sure / still investigating</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="summary" class="field-label">Briefly describe what happened</label>
-          <p id="summary-note" class="form-note">
-            What water source, base, airport, or facility was involved? Where did exposure occur — at home, work, or both?
-            Any diagnosis received? Approximate years of residence or exposure help.
-          </p>
-          <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
-          <p id="summary-warning" class="form-note">
-            Please do not include Social Security numbers, financial account numbers, full medical
-            records, or highly sensitive personal information.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="exposure-period" class="field-label">Approximate years of exposure or residence</label>
-          <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 2005–2020" aria-describedby="exposure-note" />
-          <p id="exposure-note" class="form-note">
-            Approximate is fine. PFAS exposure dates can be important because related illnesses may appear years later.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="state" class="field-label">State</label>
-          <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
-          <p id="state-note" class="form-note">
-            Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="name" class="field-label">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required />
-        </div>
-
-        <div class="field">
-          <label for="email" class="field-label">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required />
-        </div>
-
-        <div class="field">
-          <label for="phone" class="field-label">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
-          <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
-        </div>
-
-        <label class="checkbox-row">
-          <input type="checkbox" name="legal-understanding" value="yes" required />
-          <span>
-            I understand that Lawsuit Center is not a law firm and that submitting this form
-            does not create an attorney-client relationship.
-          </span>
-        </label>
-
-        <label class="checkbox-row">
-          <input type="checkbox" name="contact-consent" value="yes" required />
-          <span>
-            I consent to being contacted by Lawsuit Center, participating law firms, legal
-            advertisers, or intake partners by phone, including autodialed calls and prerecorded
-            voice messages, email, or text message about my case review request. Consent is not
-            a condition of any service. Message and data rates may apply. Reply STOP to opt out.
-          </span>
-        </label>
-
-        <div data-netlify-recaptcha="true"></div>
-
-        <button type="submit">Submit Case Review Request</button>
-
-        <p class="form-fineprint">
-          Created by a California-licensed attorney. Your submission may be reviewed by
-          participating legal professionals, legal advertisers, or intake partners where available.
-          A submission does not guarantee eligibility, compensation, contact, or representation.
-        </p>
-      </form>
+    <div class="field">
+      <label for="exposure-type" class="field-label">Exposure type or situation</label>
+      <select id="exposure-type" name="exposure-type" required>
+        <option value="">Select what best fits</option>
+        <option value="Contaminated Drinking Water">Contaminated drinking water (public system or private well)</option>
+        <option value="Military Base Exposure">Lived or worked on or near a military base</option>
+        <option value="Airport Exposure">Lived or worked on or near an airport</option>
+        <option value="AFFF Firefighting Foam">AFFF firefighting foam exposure (firefighter or trainee)</option>
+        <option value="Chemical Manufacturing / Industrial">Chemical manufacturing or PFAS-handling facility</option>
+        <option value="Landfill / Waste Site">Landfill or waste site near home or work</option>
+        <option value="Kidney Cancer Diagnosis">Diagnosed with kidney cancer (possible PFAS link)</option>
+        <option value="Testicular Cancer Diagnosis">Diagnosed with testicular cancer (possible PFAS link)</option>
+        <option value="Thyroid Disease Diagnosis">Diagnosed with thyroid disease (possible PFAS link)</option>
+        <option value="Ulcerative Colitis Diagnosis">Diagnosed with ulcerative colitis (possible PFAS link)</option>
+        <option value="Other PFAS Health Concern">Other PFAS-related health concern</option>
+        <option value="Not Sure">Not sure / still investigating</option>
+      </select>
     </div>
+
+    <div class="field">
+      <label for="summary" class="field-label">Briefly describe what happened</label>
+      <p id="summary-note" class="form-note">
+        What water source, base, airport, or facility was involved? Where did exposure occur — at home, work, or both?
+        Any diagnosis received? Approximate years of residence or exposure help.
+      </p>
+      <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
+      <p id="summary-warning" class="form-note">
+        Please do not include Social Security numbers, financial account numbers, full medical
+        records, or highly sensitive personal information.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="exposure-period" class="field-label">Approximate years of exposure or residence</label>
+      <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 2005–2020" aria-describedby="exposure-note" />
+      <p id="exposure-note" class="form-note">
+        Approximate is fine. PFAS exposure dates can be important because related illnesses may appear years later.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="state" class="field-label">State</label>
+      <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
+      <p id="state-note" class="form-note">
+        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="name" class="field-label">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name" required />
+    </div>
+
+    <div class="field">
+      <label for="email" class="field-label">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required />
+    </div>
+
+    <div class="field">
+      <label for="phone" class="field-label">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
+      <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
+    </div>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="legal-understanding" value="yes" required />
+      <span>
+        I understand that Lawsuit Center is not a law firm and that submitting this form
+        does not create an attorney-client relationship.
+      </span>
+    </label>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="contact-consent" value="yes" required />
+      <span>
+        I consent to being contacted by Lawsuit Center, participating law firms, legal
+        advertisers, or intake partners by phone, including autodialed calls and prerecorded
+        voice messages, email, or text message about my case review request. Consent is not
+        a condition of any service. Message and data rates may apply. Reply STOP to opt out.
+      </span>
+    </label>
+
+    <div data-netlify-recaptcha="true"></div>
+
+    <button type="submit">Submit Case Review Request</button>
+
+    <p class="form-fineprint">
+      Created by a California-licensed attorney. Your submission may be reviewed by
+      participating legal professionals, legal advertisers, or intake partners where available.
+      A submission does not guarantee eligibility, compensation, contact, or representation.
+    </p>
+  </form>
+</div>
+```
 
   </div>
 </section>
@@ -423,6 +425,27 @@
       });
     }
 
+    // PREFILL FROM URL PARAMS (e.g., from exposure checker)
+    var params = new URLSearchParams(window.location.search);
+
+    var exposureParam = params.get('exposure');
+    if (exposureParam) {
+      var exposureSelect = document.getElementById('exposure-type');
+      if (exposureSelect) {
+        Array.from(exposureSelect.options).forEach(function(opt) {
+          if (opt.value === exposureParam) opt.selected = true;
+        });
+      }
+    }
+
+    var stateParam = params.get('state');
+    if (stateParam) {
+      var stateInput = document.getElementById('state');
+      if (stateInput && !stateInput.value) {
+        stateInput.value = stateParam;
+      }
+    }
+
     var displayLabelMap = {
       "Contaminated Drinking Water": "PFAS contaminated drinking water exposure",
       "Military Base Exposure": "PFAS military base exposure",
@@ -449,6 +472,7 @@
     }
   });
 </script>
+
 <script src="form-validation.js"></script>
 
 </body>
