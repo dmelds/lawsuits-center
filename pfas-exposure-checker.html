@@ -253,7 +253,7 @@
       you choose to request a case review at the end.
     </p>
 
-
+```
 <div class="form-card">
   <div class="progress" id="progress" hidden>
     <div class="progress__head">
@@ -265,7 +265,7 @@
 
   <div id="checker"></div>
 </div>
-
+```
 
   </div>
 </section>
@@ -376,6 +376,7 @@
         { id: 'water', title: 'Drinking water', desc: 'Public water system or private well in a contaminated area' },
         { id: 'afff', title: 'Firefighting foam (AFFF)', desc: 'Firefighter, military service member, or airport worker' },
         { id: 'occupational', title: 'Workplace exposure', desc: 'Chemical plant, manufacturing, or industrial setting that handled PFAS' },
+        { id: 'farm', title: 'Farm or agricultural land', desc: 'Biosolid spreading, irrigation contamination, livestock losses, or land devaluation' },
         { id: 'multiple', title: 'More than one of these', desc: "Or you're not sure which was the primary source" }
       ]
     },
@@ -419,12 +420,31 @@
   const STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming','District of Columbia'];
 
   const QUALIFYING_DX = ['kidney_cancer','testicular_cancer','thyroid','ulcerative_colitis','liver','preeclampsia','other_cancer'];
+  const QUALIFYING_FARM = ['soil_test','crops','livestock','product','land_value','operations'];
+
+  // alternate step 4 used when exposure === 'farm' — asks about agricultural damages, not personal diagnoses
+  const FARM_DAMAGES_STEP = {
+    key: 'diagnoses', name: 'Damages',
+    heading: 'What damages or impacts have you experienced?',
+    sub: "Select all that apply. These are the impacts most commonly cited in agricultural PFAS contamination cases.",
+    type: 'multi',
+    options: [
+      { id: 'soil_test', title: 'Soil tested positive for PFAS' },
+      { id: 'crops', title: 'Crops condemned, unsellable, or destroyed' },
+      { id: 'livestock', title: 'Livestock illness, death, or contamination' },
+      { id: 'product', title: 'Milk, meat, or eggs with elevated PFAS' },
+      { id: 'land_value', title: 'Land value decline, or unable to sell or operate' },
+      { id: 'operations', title: 'Forced to halt, restrict, or change farm operations' },
+      { id: 'none_farm', title: 'Contamination suspected — but not yet confirmed', desc: 'Initial testing or investigation may still help' }
+    ]
+  };
 
   // map quiz exposure → existing case-review form's exposure-type select values
   const EXPOSURE_TO_FORM_VALUE = {
     water: 'Contaminated Drinking Water',
     afff: 'AFFF Firefighting Foam',
     occupational: 'Chemical Manufacturing / Industrial',
+    farm: 'Farm or Agricultural Land Contamination',
     multiple: 'Not Sure'
   };
 
@@ -434,12 +454,21 @@
   const stepNumEl = document.getElementById('stepNum');
   const stepNameEl = document.getElementById('stepName');
 
+  function getCurrentStep() {
+    let step = STEPS[state.step - 1];
+    if (step && step.key === 'diagnoses' && state.answers.exposure === 'farm') {
+      step = FARM_DAMAGES_STEP;
+    }
+    return step;
+  }
+
   function render() {
     if (state.step === 0) return renderIntro();
     if (state.step > STEPS.length) return renderResult();
     progressEl.hidden = false;
-    renderStep(STEPS[state.step - 1]);
-    updateProgress();
+    const step = getCurrentStep();
+    renderStep(step);
+    updateProgress(step);
   }
 
   function renderIntro() {
@@ -542,11 +571,11 @@
     });
   }
 
-  function updateProgress() {
+  function updateProgress(step) {
     const pct = (state.step / STEPS.length) * 100;
     fillEl.style.width = `${pct}%`;
     stepNumEl.textContent = state.step;
-    stepNameEl.textContent = STEPS[state.step - 1].name;
+    stepNameEl.textContent = (step || STEPS[state.step - 1]).name;
   }
 
   function matchCases() {
@@ -583,6 +612,25 @@
         desc: 'Some jurisdictions allow medical monitoring claims for documented PFAS exposure even without a current diagnosis. State law varies — worth a free attorney review to see if yours is one of them.'
       });
     }
+
+    if (a.exposure === 'farm') {
+      const hasFarmDamages = a.diagnoses.some(d => QUALIFYING_FARM.includes(d));
+      const onlySuspected = a.diagnoses.includes('none_farm');
+      if (hasFarmDamages) {
+        cases.push({
+          label: 'Agricultural · Active Filings',
+          title: 'Farm & Agricultural PFAS Contamination Claims',
+          desc: 'Farms with PFAS contamination from biosolid spreading, irrigation water, or industrial sources are pursuing claims for crop and livestock losses, land devaluation, and remediation costs against chemical manufacturers and biosolid processors. Maine, Michigan, and Texas farms have led recent filings.'
+        });
+      } else if (onlySuspected) {
+        cases.push({
+          label: 'Investigation Track',
+          title: 'Farm PFAS Investigation & Testing',
+          desc: 'If you suspect contamination but lack confirmed testing, an attorney can advise on next steps — including soil and water testing, biosolid application records, and preservation of evidence before damages compound.'
+        });
+      }
+    }
+
     return cases;
   }
 
@@ -601,12 +649,15 @@
     } catch (e) {}
     const ctaHref = `pfas-case-review.html?exposure=${encodeURIComponent(formValue)}&state=${encodeURIComponent(a.state || '')}#case-review-form`;
 
+    const isFarmPath = a.exposure === 'farm';
     let headline, summary, body;
     if (cases.length > 0) {
       headline = cases.length === 1
         ? 'Your situation may relate to an active case.'
         : `Your situation may relate to ${cases.length} active case categories.`;
-      summary = `Based on your exposure in ${a.state}, your timeframe, and your health history, here's what currently looks relevant. An attorney review is the only way to confirm — it's free and there's no obligation.`;
+      summary = isFarmPath
+        ? `Based on your operation in ${a.state}, your timeframe, and the damages you reported, here's what currently looks relevant. An attorney review is the only way to confirm — it's free and there's no obligation.`
+        : `Based on your exposure in ${a.state}, your timeframe, and your health history, here's what currently looks relevant. An attorney review is the only way to confirm — it's free and there's no obligation.`;
       body = cases.map(c => `
         <div class="case-card">
           <div class="case-card__label">${c.label}</div>
