@@ -95,6 +95,10 @@
         <span class="preview-item__title">PFAS / Forever Chemicals</span>
         <span class="preview-item__desc">Drinking water, AFFF, and consumer-product exposure.</span>
       </a>
+      <a class="preview-item" href="depo-provera-case-review.html">
+        <span class="preview-item__title">Depo-Provera / Meningioma</span>
+        <span class="preview-item__desc">Long-term Depo-Provera use and brain tumor diagnosis claims.</span>
+      </a>
       <a class="preview-item" href="asbestos-case-review.html">
         <span class="preview-item__title">Asbestos Exposure</span>
         <span class="preview-item__desc">Occupational, residential, and product-based claims.</span>
@@ -203,6 +207,11 @@
   <a class="cat" href="pesticide-case-review.html">
     <h3 class="cat__name">Pesticides &amp; Herbicides</h3>
     <p class="cat__desc">Roundup, paraquat, chlorpyrifos, and other exposure tied to cancer or Parkinson's.</p>
+    <span class="cat__more">Learn more</span>
+  </a>
+  <a class="cat" href="depo-provera-case-review.html">
+    <h3 class="cat__name">Depo-Provera / Meningioma</h3>
+    <p class="cat__desc">Long-term Depo-Provera birth control injection use and meningioma brain tumor claims.</p>
     <span class="cat__more">Learn more</span>
   </a>
   <a class="cat" href="reproductive-case-review.html">
@@ -404,13 +413,28 @@
   </div>
 </section>
 
+<!-- Hidden form stub for Netlify form detection. Required for Netlify to register the depo-provera-case-review form. -->
+<form name="depo-provera-case-review" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+  <input type="text" name="exposure-type" />
+  <input type="text" name="summary" />
+  <input type="text" name="exposure-period" />
+  <input type="text" name="diagnosis-year" />
+  <input type="text" name="state" />
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="tel" name="phone" />
+  <input type="checkbox" name="legal-understanding" />
+  <input type="checkbox" name="contact-consent" />
+  <input type="text" name="bot-field" />
+</form>
+
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 </footer>
 <script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
 </script>
 
 <script>
