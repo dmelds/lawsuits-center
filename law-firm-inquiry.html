@@ -91,7 +91,7 @@
 
   .form-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(28px,4vw,48px);margin-top:28px;}
   .form{display:flex;flex-direction:column;gap:18px;}
-  .form .-group{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .form .field-group{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
   .form label.field-label{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin-bottom:4px;display:block;}
   .form .field-label .opt{font-weight:400;color:var(--ink-soft);letter-spacing:.02em;text-transform:none;font-size:12.5px;margin-left:6px;}
   .form .field{display:flex;flex-direction:column;gap:6px;}
@@ -295,7 +295,7 @@
 
         <h3 class="section-break">Placement Interest</h3>
 
-         <div class="field">
+        <div class="field">
           <label for="placement" class="field-label">Primary placement interest</label>
           <select id="placement" name="placement" required>
             <option value="">Select what fits best</option>
@@ -309,9 +309,7 @@
           </select>
         </div>
 
-        </div>
-
-                <div class="field">
+        <div class="field">
           <label class="field-label">Lawsuit categories of interest <span class="opt">(select all that apply)</span></label>
           <div class="checkbox-grid">
             <label class="checkbox-row"><input type="checkbox" name="categories[]" value="Toxic exposure & environmental" /><span>Toxic exposure &amp; environmental</span></label>
@@ -323,7 +321,6 @@
           </div>
         </div>
 
-
         <div class="field">
           <label for="geography" class="field-label">Geographic focus <span class="opt">(optional)</span></label>
           <input type="text" id="geography" name="geography" placeholder="e.g. California only, Southeast U.S., nationwide" />
@@ -333,7 +330,6 @@
           <div class="field">
             <label for="budget" class="field-label">Approximate monthly budget <span class="opt">(optional)</span></label>
             <select id="budget" name="budget">
-              <select id="budget" name="budget">
               <option value="">Prefer to discuss</option>
               <option value="Under $5K">Under $5K</option>
               <option value="$5K–$15K">$5K – $15K</option>
@@ -341,7 +337,7 @@
               <option value="$50K+">$50K+</option>
             </select>
           </div>
-                    <div class="field">
+          <div class="field">
             <label for="stage" class="field-label">Where are you in the process? <span class="opt">(optional)</span></label>
             <select id="stage" name="stage">
               <option value="">Prefer to discuss</option>
@@ -388,9 +384,7 @@
           </span>
         </label>
 
-         <div class="g-recaptcha" data-sitekey="6Ldz8uEsAAAAANLHFiT5OZL3_uy4JTl-paUXCC4N" data-theme="dark"></div>
-
-
+        <div class="g-recaptcha" data-sitekey="6Ldz8uEsAAAAANLHFiT5OZL3_uy4JTl-paUXCC4N" data-theme="dark"></div>
 
         <button type="submit">Submit Inquiry</button>
 
@@ -460,7 +454,7 @@
 </script>
 
 <script>
-   document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     var toggle = document.querySelector(".nav__toggle");
     var menu = document.getElementById("site-menu");
     if (toggle && menu) {
