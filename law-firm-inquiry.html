@@ -250,7 +250,7 @@
           </div>
           <div class="field">
             <label for="firm-website" class="field-label">Firm website <span class="opt">(optional)</span></label>
-            <input type="url" id="firm-website" name="firm-website" placeholder="https://" autocomplete="url" />
+            <input type="text" id="firm-website" name="firm-website" placeholder="firm.com" autocomplete="url" />
           </div>
         </div>
 
@@ -455,13 +455,23 @@
 </script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+   document.addEventListener("DOMContentLoaded", function () {
     var toggle = document.querySelector(".nav__toggle");
     var menu = document.getElementById("site-menu");
     if (toggle && menu) {
       toggle.addEventListener("click", function () {
         var isOpen = menu.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+
+    var websiteInput = document.getElementById("firm-website");
+    if (websiteInput) {
+      websiteInput.addEventListener("blur", function () {
+        var v = websiteInput.value.trim();
+        if (v && !/^https?:\/\//i.test(v)) {
+          websiteInput.value = "https://" + v;
+        }
       });
     }
   });
