@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cancer Case Review | Lawsuit Center</title>
-  <meta name="description" content="Request a cancer case review through Lawsuit Center. Submit details about diagnosis, possible product or chemical exposure, contaminated water source, or workplace exposure history." />
+  <meta name="description" content="Request a cancer case review through Lawsuit Center. Submit details about a cancer diagnosis and possible product, chemical, contaminated water, or workplace exposure history." />
 
   <link rel="canonical" href="https://lawsuit.center/cancer-case-review.html" />
   <link rel="icon" type="image/x-icon" href="lawsuit-center-favicon.ico" />
@@ -51,10 +51,10 @@
   .container--narrow{max-width:820px;}
   .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);}
   .site-header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.85);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--border);}
-  .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px;}
-  .brand{display:flex;flex-direction:column;flex-shrink:0;line-height:1.05;}
-  .brand__name{font-family:var(--display);font-weight:600;font-size:20px;letter-spacing:-.01em;color:var(--ink);white-space:nowrap;}
-  .brand__tag{font-size:11px;color:var(--ink-soft);letter-spacing:.04em;}
+  .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px;}
+  .brand{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .brand img{height:60px;width:auto;}
+  .brand__tag{font-size:12.5px;color:var(--ink-muted);letter-spacing:.04em;white-space:nowrap;}
   .nav{display:flex;align-items:center;gap:28px;}
   .nav__links{display:flex;gap:26px;}
   .nav__links a{font-size:14.5px;color:var(--ink-muted);transition:color .2s var(--ease);}
@@ -113,12 +113,26 @@
   .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
 
   .site-footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 0 36px;}
+  .site-footer__brand{font-family:var(--display);font-weight:600;font-size:20px;margin-bottom:8px;}
+  .site-footer__tag{color:var(--ink-muted);font-size:14px;line-height:1.5;max-width:50ch;margin-bottom:28px;}
+  .site-footer__legal{font-size:12.5px;color:var(--ink-soft);line-height:1.6;padding-top:24px;border-top:1px solid var(--border);}
+  .site-footer__links{margin-top:14px;font-size:13px;color:var(--ink-soft);line-height:1.9;}
+  .site-footer__links a{color:var(--ink-muted);transition:color .2s var(--ease);}
+  .site-footer__links a:hover{color:var(--ink);}
+  .site-footer__copy{margin-top:18px;font-size:12.5px;color:var(--ink-soft);}
 
   @media(max-width:760px){
+    .site-header__inner{height:76px;}
+    .brand img{height:52px;}
+    .brand{gap:12px;}
     .nav__links,.nav .btn--amber{display:none;}
     .nav__toggle{display:inline-flex;}
     .nav__links.is-open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:rgba(17,17,17,.97);padding:24px var(--gutter);border-bottom:1px solid var(--border);gap:18px;}
     .actions{flex-direction:column;align-items:stretch;}.actions .btn{width:100%;}
+  }
+  @media(max-width:480px){
+    .brand img{height:46px;}
+    .brand__tag{display:none;}
   }
 </style>
 
@@ -155,7 +169,8 @@
     <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Cancer Case Review</span>
     <h1>Request a <em>cancer case review.</em></h1>
     <p class="lede">
-      Tell us about the diagnosis and any possible exposure history. Your submission may be reviewed by participating legal professionals, legal advertisers, or intake partners where available.
+      Tell us about the diagnosis and any possible exposure history. Your submission may be reviewed by
+      participating legal professionals, legal advertisers, or intake partners where available.
     </p>
     <div class="actions">
       <a href="#case-review-form" class="btn btn--amber btn--lg">Skip to Form &darr;</a>
@@ -170,7 +185,8 @@
 <section class="legal-note">
   <div class="container container--narrow">
     <p>
-      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information does not guarantee eligibility, compensation, contact, or representation.
+      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
+      does not guarantee eligibility, compensation, contact, or representation.
     </p>
   </div>
 </section>
@@ -180,7 +196,10 @@
     <span class="eyebrow section__eyebrow">Who This Page May Help</span>
     <h2>Situations people often research.</h2>
     <p>
-      Cancer-related lawsuit research often starts with a diagnosis and a possible exposure source. A consumer product used over years, a chemical handled at work, contaminated drinking water, or a known toxic substance. You don't need to know the legal terms. Basic information about diagnosis and possible exposure is enough to start.
+      Cancer-related lawsuit research often starts with a diagnosis and a possible exposure source &mdash;
+      a consumer product used over years, a chemical handled at work, contaminated drinking water,
+      or a known toxic substance. You don't need to know the legal terms &mdash; basic information about
+      diagnosis and possible exposure is enough to start.
     </p>
     <ul>
       <li>People diagnosed with cancer who used a product named in litigation (talc, hair relaxer, weed killer, and others)</li>
@@ -198,124 +217,135 @@
     <span class="eyebrow section__eyebrow">Submit Your Information</span>
     <h2>Cancer case review form.</h2>
     <p>
-      Start with the diagnosis that best fits, then briefly describe what happened. Contact information is requested so someone can follow up if your submission appears to match an available review path.
+      Start with the diagnosis that best fits, then briefly describe what happened.
+      Contact information is requested so someone can follow up if your submission appears to match
+      an available review path.
     </p>
 
-    <div class="form-card">
-      <div id="prefill-banner" class="prefill-banner" hidden>
-        <strong>Carried over from the Cancer Exposure Checker.</strong> Review the prefilled details below and edit anything that needs correcting before submitting.
-      </div>
 
-      <form
-        name="cancer-case-review"
-        method="POST"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-        netlify-honeypot="bot-field"
-        action="/thank-you.html"
-        class="form"
-      >
-        <input type="hidden" name="form-name" value="cancer-case-review" />
-        <input type="hidden" name="source" id="source" value="" />
-        <input type="hidden" name="referrer-cancers" id="referrer-cancers" value="" />
-        <input type="hidden" name="referrer-exposures" id="referrer-exposures" value="" />
-        <input type="hidden" name="referrer-period" id="referrer-period" value="" />
-        <p style="display:none;">
-          <label>Do not fill this out if you are human: <input name="bot-field" /></label>
-        </p>
+<div class="form-card">
+  <div id="prefill-banner" class="prefill-banner" hidden>
+    <strong>Carried over from the Cancer Exposure Checker.</strong> Review the prefilled details below and edit anything that needs correcting before submitting.
+  </div>
 
-        <div class="field">
-          <label for="cancer-type" class="field-label">Cancer diagnosis</label>
-          <select id="cancer-type" name="cancer-type" required>
-            <option value="">Select what best fits</option>
-            <option value="Kidney Cancer">Kidney cancer</option>
-            <option value="Ovarian Cancer">Ovarian cancer</option>
-            <option value="Lung Cancer">Lung cancer</option>
-            <option value="Mesothelioma">Mesothelioma</option>
-            <option value="Non-Hodgkin Lymphoma">Non-Hodgkin lymphoma</option>
-            <option value="Leukemia">Leukemia</option>
-            <option value="Bladder Cancer">Bladder cancer</option>
-            <option value="Liver Cancer">Liver cancer</option>
-            <option value="Uterine / Endometrial Cancer">Uterine or endometrial cancer</option>
-            <option value="Other Cancer">Other cancer diagnosis</option>
-            <option value="Not Sure">Not sure / still investigating</option>
-          </select>
-        </div>
+  <form
+    name="cancer-case-review"
+    method="POST"
+    data-netlify="true"
+    data-netlify-recaptcha="true"
+    netlify-honeypot="bot-field"
+    action="/thank-you.html"
+    class="form"
+  >
+    <input type="hidden" name="form-name" value="cancer-case-review" />
+    <input type="hidden" name="source" id="source" value="" />
+    <input type="hidden" name="referrer-cancers" id="referrer-cancers" value="" />
+    <input type="hidden" name="referrer-exposures" id="referrer-exposures" value="" />
+    <input type="hidden" name="referrer-period" id="referrer-period" value="" />
+    <p style="display:none;">
+      <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+    </p>
 
-        <div class="field">
-          <label for="summary" class="field-label">Briefly describe what happened</label>
-          <p id="summary-note" class="form-note">
-            When was the diagnosis? What product, chemical, work site, or contaminated water source do you suspect may be connected? Approximate years of exposure or product use help.
-          </p>
-          <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
-          <p id="summary-warning" class="form-note">
-            Please do not include Social Security numbers, financial account numbers, full medical records, or highly sensitive personal information.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="diagnosis-date" class="field-label">Approximate diagnosis date</label>
-          <input type="text" id="diagnosis-date" name="diagnosis-date" placeholder="e.g. 2022 or March 2022" aria-describedby="diagnosis-note" />
-          <p id="diagnosis-note" class="form-note">
-            Approximate is fine. Diagnosis timing matters because legal deadlines often run from the date a person knew or should have known of the connection.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="exposure-period" class="field-label">Approximate years of exposure or product use</label>
-          <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 1995 to 2020" aria-describedby="exposure-note" />
-          <p id="exposure-note" class="form-note">
-            Approximate is fine. Cancer-related illnesses may appear years or decades after exposure.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="state" class="field-label">State</label>
-          <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
-          <p id="state-note" class="form-note">
-            Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
-          </p>
-        </div>
-
-        <div class="field">
-          <label for="name" class="field-label">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required />
-        </div>
-
-        <div class="field">
-          <label for="email" class="field-label">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required />
-        </div>
-
-        <div class="field">
-          <label for="phone" class="field-label">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
-          <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
-        </div>
-
-        <label class="checkbox-row">
-          <input type="checkbox" name="legal-understanding" value="yes" required />
-          <span>
-            I understand that Lawsuit Center is not a law firm and that submitting this form does not create an attorney-client relationship.
-          </span>
-        </label>
-
-        <label class="checkbox-row">
-          <input type="checkbox" name="contact-consent" value="yes" required />
-          <span>
-            I consent to being contacted by Lawsuit Center, participating law firms, legal advertisers, or intake partners by phone, including autodialed calls and prerecorded voice messages, email, or text message about my case review request. Consent is not a condition of any service. Message and data rates may apply. Reply STOP to opt out.
-          </span>
-        </label>
-
-        <div data-netlify-recaptcha="true"></div>
-
-        <button type="submit">Submit Case Review Request</button>
-
-        <p class="form-fineprint">
-          Created by a California-licensed attorney. Your submission may be reviewed by participating legal professionals, legal advertisers, or intake partners where available. A submission does not guarantee eligibility, compensation, contact, or representation.
-        </p>
-      </form>
+    <div class="field">
+      <label for="cancer-type" class="field-label">Cancer diagnosis</label>
+      <select id="cancer-type" name="cancer-type" required>
+        <option value="">Select what best fits</option>
+        <option value="Kidney Cancer">Kidney cancer</option>
+        <option value="Ovarian Cancer">Ovarian cancer</option>
+        <option value="Lung Cancer">Lung cancer</option>
+        <option value="Mesothelioma">Mesothelioma</option>
+        <option value="Non-Hodgkin Lymphoma">Non-Hodgkin lymphoma</option>
+        <option value="Leukemia">Leukemia</option>
+        <option value="Bladder Cancer">Bladder cancer</option>
+        <option value="Liver Cancer">Liver cancer</option>
+        <option value="Uterine / Endometrial Cancer">Uterine or endometrial cancer</option>
+        <option value="Other Cancer">Other cancer diagnosis</option>
+        <option value="Not Sure">Not sure / still investigating</option>
+      </select>
     </div>
+
+    <div class="field">
+      <label for="summary" class="field-label">Briefly describe what happened</label>
+      <p id="summary-note" class="form-note">
+        When was the diagnosis? What product, chemical, work site, or contaminated water source do you suspect may be connected? Approximate years of exposure or product use help.
+      </p>
+      <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
+      <p id="summary-warning" class="form-note">
+        Please do not include Social Security numbers, financial account numbers, full medical
+        records, or highly sensitive personal information.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="diagnosis-date" class="field-label">Approximate diagnosis date</label>
+      <input type="text" id="diagnosis-date" name="diagnosis-date" placeholder="e.g. 2022 or March 2022" aria-describedby="diagnosis-note" />
+      <p id="diagnosis-note" class="form-note">
+        Approximate is fine. Diagnosis timing matters because legal deadlines often run from the date a person knew or should have known of the connection.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="exposure-period" class="field-label">Approximate years of exposure or product use</label>
+      <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 1995&ndash;2020" aria-describedby="exposure-note" />
+      <p id="exposure-note" class="form-note">
+        Approximate is fine. Cancer-related illnesses may appear years or decades after exposure.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="state" class="field-label">State</label>
+      <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
+      <p id="state-note" class="form-note">
+        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="name" class="field-label">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name" required />
+    </div>
+
+    <div class="field">
+      <label for="email" class="field-label">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" required />
+    </div>
+
+    <div class="field">
+      <label for="phone" class="field-label">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
+      <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
+    </div>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="legal-understanding" value="yes" required />
+      <span>
+        I understand that Lawsuit Center is not a law firm and that submitting this form
+        does not create an attorney-client relationship.
+      </span>
+    </label>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="contact-consent" value="yes" required />
+      <span>
+        I consent to being contacted by Lawsuit Center, participating law firms, legal
+        advertisers, or intake partners by phone, including autodialed calls and prerecorded
+        voice messages, email, or text message about my case review request. Consent is not
+        a condition of any service. Message and data rates may apply. Reply STOP to opt out.
+      </span>
+    </label>
+
+    <div data-netlify-recaptcha="true"></div>
+
+    <button type="submit">Submit Case Review Request</button>
+
+    <p class="form-fineprint">
+      Created by a California-licensed attorney. Your submission may be reviewed by
+      participating legal professionals, legal advertisers, or intake partners where available.
+      A submission does not guarantee eligibility, compensation, contact, or representation.
+    </p>
+  </form>
+</div>
+
 
   </div>
 </section>
@@ -325,13 +355,16 @@
     <span class="eyebrow section__eyebrow">After Submission</span>
     <h2>What happens next.</h2>
     <p>
-      Your information may be reviewed to understand whether it relates to a cancer-related lawsuit category, claim pattern, sponsored case-review path, or possible law firm follow-up.
+      Your information may be reviewed to understand whether it relates to a cancer-related lawsuit
+      category, claim pattern, sponsored case-review path, or possible law firm follow-up.
     </p>
     <p>
-      If there appears to be a possible fit, a participating law firm, legal advertiser, intake provider, or other partner may contact you to ask for more information.
+      If there appears to be a possible fit, a participating law firm, legal advertiser, intake
+      provider, or other partner may contact you to ask for more information.
     </p>
     <p>
-      No attorney-client relationship is formed unless and until you sign an agreement directly with a law firm.
+      No attorney-client relationship is formed unless and until you sign an agreement directly
+      with a law firm.
     </p>
     <div class="actions">
       <a href="how-case-review-works.html" class="btn btn--ghost">How Case Review Works</a>
@@ -345,13 +378,19 @@
     <span class="eyebrow section__eyebrow">Important Disclosures</span>
     <h2>Read this before submitting.</h2>
     <p>
-      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information through this website does not create an attorney-client relationship and does not guarantee that you qualify for a claim, that compensation will be available, or that any attorney or law firm will offer representation.
+      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
+      through this website does not create an attorney-client relationship and does not guarantee
+      that you qualify for a claim, that compensation will be available, or that any attorney or
+      law firm will offer representation.
     </p>
     <p>
-      Some pages may include attorney advertising, sponsored listings, paid law firm visibility, or referral-related opportunities. Sponsored visibility is advertising and should not be treated as a recommendation or endorsement of any attorney or law firm.
+      Some pages may include attorney advertising, sponsored listings, paid law firm visibility,
+      or referral-related opportunities. Sponsored visibility is advertising and should not be
+      treated as a recommendation or endorsement of any attorney or law firm.
     </p>
     <p class="small-text">
-      Legal deadlines for cancer-related claims can vary by state and can be short. If you believe you may have a claim, consider speaking with a licensed attorney as soon as possible.
+      Legal deadlines for cancer-related claims can vary by state and can be short. If you believe you
+      may have a claim, consider speaking with a licensed attorney as soon as possible.
     </p>
     <div class="actions">
       <a href="advertising-disclosure.html" class="btn btn--ghost">Advertising Disclosure</a>
@@ -373,7 +412,6 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    // Mobile nav toggle
     var toggle = document.querySelector(".nav__toggle");
     var menu = document.getElementById("site-menu");
     if (toggle && menu) {
@@ -412,7 +450,6 @@
     try {
       var params = new URLSearchParams(window.location.search);
 
-      // Maps from checker's lowercase IDs to the form's title-cased select values
       var cancerMap = {
         kidney: "Kidney Cancer",
         ovarian: "Ovarian Cancer",
@@ -459,7 +496,6 @@
         none: "Researching exposure; no diagnosis yet"
       };
 
-      // Read params, with sessionStorage as fallback for the checker's saved values
       var source = params.get("source") || "";
       var cancersParam = params.get("cancers") || params.get("cancer") || sessionStorage.getItem("lc_prefill_cancers") || "";
       var cancerList = cancersParam.split(",").map(function (s) { return s.trim().toLowerCase(); }).filter(Boolean);
@@ -471,7 +507,6 @@
 
       var didPrefill = false;
 
-      // Hidden attribution fields
       if (source) {
         var sourceEl = document.getElementById("source");
         if (sourceEl) sourceEl.value = source;
@@ -489,7 +524,6 @@
         if (pEl) pEl.value = periodParam;
       }
 
-      // Cancer dropdown (uses the first/primary cancer from the list)
       if (cancerParam && cancerMap[cancerParam]) {
         var target = cancerMap[cancerParam];
         var matched = false;
@@ -512,14 +546,12 @@
         }
       }
 
-      // State field
       var stateEl = document.getElementById("state");
       if (stateEl && stateParam && !stateEl.value) {
         stateEl.value = stateParam;
         didPrefill = true;
       }
 
-      // Summary textarea: build a human-readable starter the user can edit
       var summaryEl = document.getElementById("summary");
       if (summaryEl && !summaryEl.value) {
         var lines = [];
@@ -528,7 +560,6 @@
           lines.push(periodMap[periodParam] + ".");
         }
 
-        // If multiple cancers were carried over, list them all so the dropdown's single pick doesn't lose context
         if (cancerList.length > 1) {
           var cancerReadable = cancerList.map(function (id) {
             var label = cancerMap[id] || "Other Cancer";
@@ -553,7 +584,6 @@
         }
       }
 
-      // Show the banner only if something was actually prefilled and the user came from the checker
       if (didPrefill && (source === "cancer-exposure-checker" || cancerParam || exposuresParam)) {
         var banner = document.getElementById("prefill-banner");
         if (banner) banner.hidden = false;
@@ -563,6 +593,7 @@
     }
   });
 </script>
+
 <script src="form-validation.js"></script>
 
 </body>
