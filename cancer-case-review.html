@@ -460,7 +460,10 @@
 
       // Read params, with sessionStorage as fallback for the checker's saved values
       var source = params.get("source") || "";
-      var cancerParam = (params.get("cancer") || "").toLowerCase();
+            var cancersParam = params.get("cancers") || params.get("cancer") || "";
+      var cancerList = cancersParam.split(",").map(function (s) { return s.trim().toLowerCase(); }).filter(Boolean);
+      var cancerParam = cancerList[0] || "";
+
       var exposuresParam = params.get("exposures") || sessionStorage.getItem("lc_prefill_exposures") || "";
       var periodParam = (params.get("period") || "").toLowerCase();
       var stateParam = params.get("state") || sessionStorage.getItem("lc_prefill_state") || "";
@@ -480,6 +483,13 @@
         var pEl = document.getElementById("referrer-period");
         if (pEl) pEl.value = periodParam;
       }
+       if (cancerList.length > 1) {
+       var cancerReadable = cancerList.map(function (id) {
+        return (cancerMap[id] || "Other Cancer").toLowerCase().replace(" / endometrial cancer", " or endometrial cancer");
+        });
+        lines.push("Diagnoses include: " + cancerReadable.join(", ") + ".");
+        }
+
 
       // Cancer dropdown
       if (cancerParam && cancerMap[cancerParam]) {
