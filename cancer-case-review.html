@@ -217,6 +217,7 @@
       >
         <input type="hidden" name="form-name" value="cancer-case-review" />
         <input type="hidden" name="source" id="source" value="" />
+        <input type="hidden" name="referrer-cancers" id="referrer-cancers" value="" />
         <input type="hidden" name="referrer-exposures" id="referrer-exposures" value="" />
         <input type="hidden" name="referrer-period" id="referrer-period" value="" />
         <p style="display:none;">
@@ -407,7 +408,7 @@
       });
     }
 
-       // Prefill from Cancer Exposure Checker handoff (URL params + sessionStorage)
+    // Prefill from Cancer Exposure Checker handoff (URL params + sessionStorage)
     try {
       var params = new URLSearchParams(window.location.search);
 
@@ -475,6 +476,10 @@
         var sourceEl = document.getElementById("source");
         if (sourceEl) sourceEl.value = source;
       }
+      if (cancersParam) {
+        var canEl = document.getElementById("referrer-cancers");
+        if (canEl) canEl.value = cancersParam;
+      }
       if (exposuresParam) {
         var exEl = document.getElementById("referrer-exposures");
         if (exEl) exEl.value = exposuresParam;
@@ -484,7 +489,7 @@
         if (pEl) pEl.value = periodParam;
       }
 
-      // Cancer dropdown — uses the first (primary) cancer from the list
+      // Cancer dropdown (uses the first/primary cancer from the list)
       if (cancerParam && cancerMap[cancerParam]) {
         var target = cancerMap[cancerParam];
         var matched = false;
@@ -556,7 +561,6 @@
     } catch (e) {
       // Fail silently; direct visits to this page behave exactly as before
     }
-
   });
 </script>
 <script src="form-validation.js"></script>
