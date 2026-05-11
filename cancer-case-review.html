@@ -217,6 +217,7 @@
       >
         <input type="hidden" name="form-name" value="cancer-case-review" />
         <input type="hidden" name="source" id="source" value="" />
+        <input type="hidden" name="referrer-cancers" id="referrer-cancers" value="" />
         <input type="hidden" name="referrer-exposures" id="referrer-exposures" value="" />
         <input type="hidden" name="referrer-period" id="referrer-period" value="" />
         <p style="display:none;">
@@ -460,7 +461,10 @@
 
       // Read params, with sessionStorage as fallback for the checker's saved values
       var source = params.get("source") || "";
-      var cancerParam = (params.get("cancer") || "").toLowerCase();
+      var cancersParam = params.get("cancers") || params.get("cancer") || sessionStorage.getItem("lc_prefill_cancers") || "";
+      var cancerList = cancersParam.split(",").map(function (s) { return s.trim().toLowerCase(); }).filter(Boolean);
+      var cancerParam = cancerList[0] || "";
+
       var exposuresParam = params.get("exposures") || sessionStorage.getItem("lc_prefill_exposures") || "";
       var periodParam = (params.get("period") || "").toLowerCase();
       var stateParam = params.get("state") || sessionStorage.getItem("lc_prefill_state") || "";
@@ -472,6 +476,10 @@
         var sourceEl = document.getElementById("source");
         if (sourceEl) sourceEl.value = source;
       }
+      if (cancersParam) {
+        var canEl = document.getElementById("referrer-cancers");
+        if (canEl) canEl.value = cancersParam;
+      }
       if (exposuresParam) {
         var exEl = document.getElementById("referrer-exposures");
         if (exEl) exEl.value = exposuresParam;
@@ -481,7 +489,7 @@
         if (pEl) pEl.value = periodParam;
       }
 
-      // Cancer dropdown
+      // Cancer dropdown (uses the first/primary cancer from the list)
       if (cancerParam && cancerMap[cancerParam]) {
         var target = cancerMap[cancerParam];
         var matched = false;
@@ -515,9 +523,20 @@
       var summaryEl = document.getElementById("summary");
       if (summaryEl && !summaryEl.value) {
         var lines = [];
+
         if (periodParam && periodMap[periodParam]) {
           lines.push(periodMap[periodParam] + ".");
         }
+
+        // If multiple cancers were carried over, list them all so the dropdown's single pick doesn't lose context
+        if (cancerList.length > 1) {
+          var cancerReadable = cancerList.map(function (id) {
+            var label = cancerMap[id] || "Other Cancer";
+            return label.toLowerCase().replace(" / endometrial cancer", " or endometrial cancer");
+          });
+          lines.push("Diagnoses include: " + cancerReadable.join(", ") + ".");
+        }
+
         if (exposuresParam) {
           var exposureIds = exposuresParam.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
           var readable = exposureIds.map(function (id) { return exposureMap[id] || id; });
@@ -525,6 +544,7 @@
             lines.push("Suspected exposures: " + readable.join(", ") + ".");
           }
         }
+
         if (lines.length) {
           lines.push("");
           lines.push("(Please add any additional details about timing, location, products used, or work history.)");

@@ -228,10 +228,10 @@
     <span class="eyebrow section__eyebrow">What This Checks</span>
     <h2>Patterns the tool looks for.</h2>
     <p>
-      Cancer-related lawsuits often involve allegations that a product, chemical, environmental contaminant, or toxic exposure contributed to a diagnosis. This checker walks through four short questions about the cancer type, suspected exposure, diagnosis timeframe, and state, then maps your answers to the active case categories most commonly associated with that pattern. For a deeper overview, read <a class="inline-link" href="https://lawsuitinformer.com/cancers-linked-to-lawsuits.html">Cancers Linked to Lawsuits</a> on Lawsuit Informer.
+      Cancer-related lawsuits often involve allegations that a product, chemical, environmental contaminant, or toxic exposure contributed to a diagnosis. This checker walks through four short questions about the cancer type or types, suspected exposure, diagnosis timeframe, and state, then maps your answers to the active case categories most commonly associated with that pattern. For a deeper overview, read <a class="inline-link" href="https://lawsuitinformer.com/cancers-linked-to-lawsuits.html">Cancers Linked to Lawsuits</a> on Lawsuit Informer.
     </p>
     <ul>
-      <li>Cancer type, including mesothelioma, kidney, ovarian, lung, lymphoma, leukemia, bladder, liver, and uterine</li>
+      <li>Cancer type or types, including mesothelioma, kidney, ovarian, lung, lymphoma, leukemia, bladder, liver, and uterine. Select all that apply.</li>
       <li>Suspected exposure source, including asbestos, talc, Roundup, hair relaxer, AFFF foam, PFAS, Camp Lejeune water, benzene, and more</li>
       <li>Approximate diagnosis timeframe, since statutes of limitations can be short</li>
       <li>State, because deadlines and claim rules vary</li>
@@ -326,15 +326,15 @@
 
   const state = {
     step: 0,
-    answers: { cancer: null, exposures: [], period: null, state: null }
+    answers: { cancers: [], exposures: [], period: null, state: null }
   };
 
   const STEPS = [
     {
-      key: 'cancer', name: 'Cancer',
+      key: 'cancers', name: 'Cancer',
       heading: 'What is the cancer diagnosis?',
-      sub: "Pick the closest match. If you're researching for a loved one, select their diagnosis.",
-      type: 'single',
+      sub: "Select all that apply. If you or a loved one has been diagnosed with more than one cancer, pick each one.",
+      type: 'multi',
       options: [
         { id: 'mesothelioma', title: 'Mesothelioma', desc: 'Most often linked to asbestos exposure' },
         { id: 'lung', title: 'Lung cancer' },
@@ -380,7 +380,7 @@
     {
       key: 'period', name: 'Timeframe',
       heading: 'When was the diagnosis?',
-      sub: "Statutes of limitations can be short and vary by state, so timing matters.",
+      sub: "Statutes of limitations can be short and vary by state, so timing matters. If there are multiple diagnoses, pick the earliest.",
       type: 'single',
       options: [
         { id: 'current', title: 'Within the last 2 years' },
@@ -401,8 +401,30 @@
 
   const STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming','District of Columbia'];
 
+  // Plain-English labels for cancers, used in the result summary and case-review handoff
+  const CANCER_LABELS = {
+    mesothelioma: 'mesothelioma',
+    lung: 'lung cancer',
+    ovarian: 'ovarian cancer',
+    uterine: 'uterine or endometrial cancer',
+    kidney: 'kidney cancer',
+    bladder: 'bladder cancer',
+    liver: 'liver cancer',
+    testicular: 'testicular cancer',
+    thyroid: 'thyroid cancer or thyroid disease',
+    breast: 'breast cancer',
+    prostate: 'prostate cancer',
+    pancreatic: 'pancreatic cancer',
+    stomach: 'stomach or esophageal cancer',
+    leukemia: 'leukemia',
+    nhl: 'non-Hodgkin lymphoma',
+    hodgkin: 'Hodgkin lymphoma',
+    myeloma: 'multiple myeloma',
+    other: 'another cancer'
+  };
+
   // Case profile registry. Each profile lists cancers and exposures it covers; a match requires overlap on both.
-    const CASE_PROFILES = [
+  const CASE_PROFILES = [
     {
       id: 'meso',
       label: 'Active Litigation',
@@ -595,10 +617,15 @@
         btn.addEventListener('click', () => {
           const id = btn.dataset.id;
           if (step.type === 'multi') {
-            if (id === 'unsure') {
-              state.answers[step.key] = state.answers[step.key].includes('unsure') ? [] : ['unsure'];
+            // Sentinel keys behave as "clear and select only me"
+            const sentinels = { exposures: 'unsure', cancers: 'other' };
+            const sentinel = sentinels[step.key];
+            if (sentinel && id === sentinel) {
+              state.answers[step.key] = state.answers[step.key].includes(sentinel) ? [] : [sentinel];
             } else {
-              const arr = state.answers[step.key].filter(v => v !== 'unsure');
+              const arr = sentinel
+                ? state.answers[step.key].filter(v => v !== sentinel)
+                : state.answers[step.key].slice();
               state.answers[step.key] = arr.includes(id) ? arr.filter(v => v !== id) : [...arr, id];
             }
           } else {
@@ -635,14 +662,29 @@
     stepNameEl.textContent = step.name;
   }
 
+  // Matching: strict cancer-exposure overlap.
+  // A profile matches when at least one selected cancer is in its `cancers` list
+  // AND at least one selected exposure is in its `exposures` list.
+  // "other" cancer or "unsure" exposure relaxes the corresponding side so we still surface options.
   function matchCases() {
     const a = state.answers;
+    const cancers = a.cancers || [];
     const exposures = a.exposures || [];
+    const cancerWildcard = cancers.includes('other');
+    const exposureWildcard = exposures.includes('unsure');
+
     return CASE_PROFILES.filter(p => {
-      const cancerMatch = p.cancers.includes(a.cancer) || a.cancer === 'other';
-      const exposureMatch = exposures.some(e => p.exposures.includes(e)) || exposures.includes('unsure');
+      const cancerMatch = cancerWildcard || cancers.some(c => p.cancers.includes(c));
+      const exposureMatch = exposureWildcard || exposures.some(e => p.exposures.includes(e));
       return cancerMatch && exposureMatch;
     });
+  }
+
+  function formatList(arr) {
+    if (!arr.length) return '';
+    if (arr.length === 1) return arr[0];
+    if (arr.length === 2) return arr[0] + ' and ' + arr[1];
+    return arr.slice(0, -1).join(', ') + ', and ' + arr[arr.length - 1];
   }
 
   function renderResult() {
@@ -652,17 +694,25 @@
     const cases = matchCases();
     const a = state.answers;
 
-    // pass context to case review page
+    // Build a human-readable cancer phrase for the summary
+    const cancerNames = (a.cancers || []).map(id => CANCER_LABELS[id] || id);
+    const cancerPhrase = cancerNames.length
+      ? (cancerNames.length === 1
+          ? 'a diagnosis of ' + cancerNames[0]
+          : 'diagnoses of ' + formatList(cancerNames))
+      : 'the diagnosis history';
+
+    // Pass context to case review page
     const params = new URLSearchParams();
     params.set('source', 'cancer-exposure-checker');
-    if (a.cancer) params.set('cancer', a.cancer);
+    if (a.cancers && a.cancers.length) params.set('cancers', a.cancers.join(','));
     if (a.exposures && a.exposures.length) params.set('exposures', a.exposures.join(','));
     if (a.period) params.set('period', a.period);
     if (a.state) params.set('state', a.state);
     const ctaHref = `cancer-case-review.html?${params.toString()}#case-review-form`;
 
     try {
-      sessionStorage.setItem('lc_prefill_cancer', a.cancer || '');
+      sessionStorage.setItem('lc_prefill_cancers', (a.cancers || []).join(','));
       sessionStorage.setItem('lc_prefill_exposures', (a.exposures || []).join(','));
       sessionStorage.setItem('lc_prefill_state', a.state || '');
     } catch (e) {}
@@ -672,7 +722,7 @@
       headline = cases.length === 1
         ? 'Your situation may relate to an active case.'
         : `Your situation may relate to ${cases.length} active case categories.`;
-      summary = `Based on the diagnosis, exposure history, and ${a.state}, here's what currently looks relevant. An attorney review is the only way to confirm. It's free and there's no obligation.`;
+      summary = `Based on ${cancerPhrase}, the exposure history, and ${a.state}, here's what currently looks relevant. An attorney review is the only way to confirm. It's free and there's no obligation.`;
       body = cases.map(c => `
         <div class="case-card">
           <div class="case-card__label">${c.label}</div>
@@ -683,7 +733,7 @@
       `).join('');
     } else {
       headline = "Nothing matched cleanly today, but it's worth a closer look.";
-      summary = "Your answers don't fit a current active case profile we track, but cancer litigation evolves and qualifying conditions expand. A free attorney review can flag claims this tool doesn't.";
+      summary = `Based on ${cancerPhrase} and the exposures you selected, the answers don't fit a current active case profile we track. Cancer litigation evolves and qualifying conditions expand. A free attorney review can flag claims this tool doesn't.`;
       body = `
         <div class="case-card">
           <div class="case-card__label">No Active Match</div>
@@ -718,7 +768,7 @@
 
     document.getElementById('restartBtn').addEventListener('click', () => {
       state.step = 0;
-      state.answers = { cancer: null, exposures: [], period: null, state: null };
+      state.answers = { cancers: [], exposures: [], period: null, state: null };
       render();
       document.getElementById('exposure-checker').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
