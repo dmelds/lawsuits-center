@@ -17,6 +17,7 @@
   <!-- Case review intake pages -->
   <url><loc>https://lawsuit.center/asbestos-case-review.html</loc></url>
   <url><loc>https://lawsuit.center/pfas-case-review.html</loc></url>
+  <url><loc>https://lawsuit.center/cancer-case-review.html</loc></url>
   <url><loc>https://lawsuit.center/chemical-exposure-case-review.html</loc></url>
   <url><loc>https://lawsuit.center/depo-provera-case-review.html</loc></url>
   <url><loc>https://lawsuit.center/depo-provera.html</loc></url>
@@ -33,6 +34,7 @@
 
   <!-- Tools -->
   <url><loc>https://lawsuit.center/pfas-exposure-checker.html</loc></url>
+  <url><loc>https://lawsuit.center/cancer-exposure-checker.html</loc></url>
 
   <!-- Toxic exposure, chemical exposure, and contamination pages -->
   <url><loc>https://lawsuit.center/chemical-exposure-lawsuits.html</loc></url>
