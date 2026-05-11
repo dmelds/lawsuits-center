@@ -407,7 +407,7 @@
       });
     }
 
-    // Prefill from Cancer Exposure Checker handoff (URL params + sessionStorage)
+       // Prefill from Cancer Exposure Checker handoff (URL params + sessionStorage)
     try {
       var params = new URLSearchParams(window.location.search);
 
@@ -460,7 +460,7 @@
 
       // Read params, with sessionStorage as fallback for the checker's saved values
       var source = params.get("source") || "";
-            var cancersParam = params.get("cancers") || params.get("cancer") || "";
+      var cancersParam = params.get("cancers") || params.get("cancer") || sessionStorage.getItem("lc_prefill_cancers") || "";
       var cancerList = cancersParam.split(",").map(function (s) { return s.trim().toLowerCase(); }).filter(Boolean);
       var cancerParam = cancerList[0] || "";
 
@@ -483,15 +483,8 @@
         var pEl = document.getElementById("referrer-period");
         if (pEl) pEl.value = periodParam;
       }
-       if (cancerList.length > 1) {
-       var cancerReadable = cancerList.map(function (id) {
-        return (cancerMap[id] || "Other Cancer").toLowerCase().replace(" / endometrial cancer", " or endometrial cancer");
-        });
-        lines.push("Diagnoses include: " + cancerReadable.join(", ") + ".");
-        }
 
-
-      // Cancer dropdown
+      // Cancer dropdown — uses the first (primary) cancer from the list
       if (cancerParam && cancerMap[cancerParam]) {
         var target = cancerMap[cancerParam];
         var matched = false;
@@ -525,9 +518,20 @@
       var summaryEl = document.getElementById("summary");
       if (summaryEl && !summaryEl.value) {
         var lines = [];
+
         if (periodParam && periodMap[periodParam]) {
           lines.push(periodMap[periodParam] + ".");
         }
+
+        // If multiple cancers were carried over, list them all so the dropdown's single pick doesn't lose context
+        if (cancerList.length > 1) {
+          var cancerReadable = cancerList.map(function (id) {
+            var label = cancerMap[id] || "Other Cancer";
+            return label.toLowerCase().replace(" / endometrial cancer", " or endometrial cancer");
+          });
+          lines.push("Diagnoses include: " + cancerReadable.join(", ") + ".");
+        }
+
         if (exposuresParam) {
           var exposureIds = exposuresParam.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
           var readable = exposureIds.map(function (id) { return exposureMap[id] || id; });
@@ -535,6 +539,7 @@
             lines.push("Suspected exposures: " + readable.join(", ") + ".");
           }
         }
+
         if (lines.length) {
           lines.push("");
           lines.push("(Please add any additional details about timing, location, products used, or work history.)");
@@ -551,6 +556,7 @@
     } catch (e) {
       // Fail silently; direct visits to this page behave exactly as before
     }
+
   });
 </script>
 <script src="form-validation.js"></script>
