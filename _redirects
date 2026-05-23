@@ -1,1 +1,2 @@
-/*.html  /:splat  301!
+/:slug.html    /:slug    301!
+
