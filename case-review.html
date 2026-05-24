@@ -101,6 +101,8 @@
        class="form"
      >
        <input type="hidden" name="form-name" value="case-review" />
+       <input type="hidden" name="legal-understanding" value="yes" />
+       <input type="hidden" name="contact-consent" value="yes" />
        <p style="display:none;">
          <label>Do not fill this out if you are human: <input name="bot-field" /></label>
        </p>
@@ -157,27 +159,20 @@
          <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
          <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
        </div>
-      <label class="checkbox-row">
-       <input type="checkbox" name="agree-and-consent" value="yes" required />
-       <span>
-         I understand Lawsuit Center is not a law firm and does not represent me. I consent to being contacted about my case review request by phone, email, or text — including autodialed calls and prerecorded messages. Reply STOP to opt out.
-        </span>
-      </label>
 
-       <div data-netlify-recaptcha="true"></div>
-
-        <button type="submit">Submit Case Review Request</button>
-
-       <p class="form-fineprint">
-        Lawsuit Center may receive a referral or marketing fee from a participating firm if your case review is connected to them — paid by the firm, never deducted from any recovery. A submission does not guarantee eligibility, compensation, contact, or representation. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="advertising-disclosure.html">Advertising Disclosure</a>.
-      </p>
+       <label class="checkbox-row">
+         <input type="checkbox" name="agree-and-consent" value="yes" required />
+         <span>
+           I understand Lawsuit Center is not a law firm and does not represent me. I consent to being contacted about my case review request by phone, email, or text — including autodialed calls and prerecorded messages. Reply STOP to opt out.
+         </span>
+       </label>
 
        <div data-netlify-recaptcha="true"></div>
 
        <button type="submit">Submit Case Review Request</button>
 
        <p class="form-fineprint">
-         Lawsuit Center is attorney-built and independent of any law firm. We may receive a referral or marketing fee from a participating firm if your case review is connected to them; this fee is paid by the firm and is not deducted from any recovery you may receive. A submission does not guarantee eligibility, compensation, contact, or representation.
+         Lawsuit Center may receive a referral or marketing fee from a participating firm if your case review is connected to them — paid by the firm, never deducted from any recovery. A submission does not guarantee eligibility, compensation, contact, or representation. See our <a href="privacy-policy.html">Privacy Policy</a> and <a href="advertising-disclosure.html">Advertising Disclosure</a>.
        </p>
      </form>
    </div>
