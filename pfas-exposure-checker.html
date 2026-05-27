@@ -172,6 +172,44 @@
     .brand img{height:46px;}
     .brand__tag{display:none;}
   }
+
+  /* Related Topics module */
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px;
+    margin-top:26px;
+  }
+  .card{
+    display:block;
+    background:var(--surface-2, #1f1f1f);
+    border:1px solid var(--border, #262626);
+    border-radius:var(--radius, 14px);
+    padding:24px;
+    transition:transform .15s var(--ease, ease), border-color .2s var(--ease, ease), background .2s var(--ease, ease);
+  }
+  .card:hover{
+    transform:translateY(-1px);
+    border-color:var(--border-strong, #333);
+    background:rgba(255,255,255,.03);
+  }
+  .card h3{
+    font-family:var(--display, serif);
+    font-weight:500;
+    font-size:22px;
+    line-height:1.15;
+    margin-bottom:10px;
+    color:var(--ink, #f5f5f4);
+  }
+  .card p{
+    color:var(--ink-muted, #a8a29e);
+    line-height:1.6;
+    margin:0;
+  }
+  @media(max-width:860px){
+    .card-grid{grid-template-columns:1fr;}
+  }
+
 </style>
 
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
@@ -326,6 +364,30 @@
     </div>
   </div>
 </section>
+
+<section class="section related-topics-module">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">Related Topics</span>
+      <h2>Browse related lawsuit categories.</h2>
+    </div>
+    <div class="card-grid">
+      <a href="pfas-water-contamination-lawsuits.html" class="card">
+        <h3>PFAS Water Contamination Lawsuits</h3>
+        <p>Learn about PFAS exposure claims involving drinking water and long-term contamination.</p>
+      </a>
+      <a href="pfas-case-review.html" class="card">
+        <h3>PFAS Case Review</h3>
+        <p>Submit basic information about PFAS exposure history for review.</p>
+      </a>
+      <a href="case-review.html" class="card">
+        <h3>Start a Free Case Review</h3>
+        <p>Submit basic information about your situation for review — no obligation, no cost.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 
 </main>
 
