@@ -3,105 +3,105 @@
 
   <!-- Core site pages -->
   <url><loc>https://lawsuit.center/</loc></url>
-  <url><loc>https://lawsuit.center/about.html</loc></url>
-  <url><loc>https://lawsuit.center/david-meldofsky.html</loc></url>
-  <url><loc>https://lawsuit.center/contact.html</loc></url>
-  <url><loc>https://lawsuit.center/resources.html</loc></url>
-  <url><loc>https://lawsuit.center/lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/how-case-review-works.html</loc></url>
-  <url><loc>https://lawsuit.center/case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/advertising-disclosure.html</loc></url>
-  <url><loc>https://lawsuit.center/for-law-firms.html</loc></url>
-  <url><loc>https://lawsuit.center/marketing-packages.html</loc></url>
+  <url><loc>https://lawsuit.center/about</loc></url>
+  <url><loc>https://lawsuit.center/david-meldofsky</loc></url>
+  <url><loc>https://lawsuit.center/contact</loc></url>
+  <url><loc>https://lawsuit.center/resources</loc></url>
+  <url><loc>https://lawsuit.center/lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/how-case-review-works</loc></url>
+  <url><loc>https://lawsuit.center/case-review</loc></url>
+  <url><loc>https://lawsuit.center/advertising-disclosure</loc></url>
+  <url><loc>https://lawsuit.center/for-law-firms</loc></url>
+  <url><loc>https://lawsuit.center/marketing-packages</loc></url>
 
   <!-- Case review intake pages -->
-  <url><loc>https://lawsuit.center/asbestos-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/pfas-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/cancer-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/chemical-exposure-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/depo-provera-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/depo-provera.html</loc></url>
-  <url><loc>https://lawsuit.center/toxic-water-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/environmental-contamination-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/air-pollution-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/pesticide-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/consumer-product-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/processed-food-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/social-media-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/video-game-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/neurological-case-review.html</loc></url>
-  <url><loc>https://lawsuit.center/reproductive-case-review.html</loc></url>
+  <url><loc>https://lawsuit.center/asbestos-case-review</loc></url>
+  <url><loc>https://lawsuit.center/pfas-case-review</loc></url>
+  <url><loc>https://lawsuit.center/cancer-case-review</loc></url>
+  <url><loc>https://lawsuit.center/chemical-exposure-case-review</loc></url>
+  <url><loc>https://lawsuit.center/depo-provera-case-review</loc></url>
+  <url><loc>https://lawsuit.center/depo-provera</loc></url>
+  <url><loc>https://lawsuit.center/toxic-water-case-review</loc></url>
+  <url><loc>https://lawsuit.center/environmental-contamination-case-review</loc></url>
+  <url><loc>https://lawsuit.center/air-pollution-case-review</loc></url>
+  <url><loc>https://lawsuit.center/pesticide-case-review</loc></url>
+  <url><loc>https://lawsuit.center/consumer-product-case-review</loc></url>
+  <url><loc>https://lawsuit.center/processed-food-case-review</loc></url>
+  <url><loc>https://lawsuit.center/social-media-case-review</loc></url>
+  <url><loc>https://lawsuit.center/video-game-case-review</loc></url>
+  <url><loc>https://lawsuit.center/neurological-case-review</loc></url>
+  <url><loc>https://lawsuit.center/reproductive-case-review</loc></url>
 
   <!-- Tools -->
-  <url><loc>https://lawsuit.center/pfas-exposure-checker.html</loc></url>
-  <url><loc>https://lawsuit.center/cancer-exposure-checker.html</loc></url>
+  <url><loc>https://lawsuit.center/pfas-exposure-checker</loc></url>
+  <url><loc>https://lawsuit.center/cancer-exposure-checker</loc></url>
 
   <!-- Toxic exposure, chemical exposure, and contamination pages -->
-  <url><loc>https://lawsuit.center/chemical-exposure-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/who-may-qualify-for-a-chemical-exposure-lawsuit.html</loc></url>
-  <url><loc>https://lawsuit.center/asbestos-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/environmental-contamination-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/water-contamination-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/pfas-water-contamination-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/roundup-lawsuit.html</loc></url>
+  <url><loc>https://lawsuit.center/chemical-exposure-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/who-may-qualify-for-a-chemical-exposure-lawsuit</loc></url>
+  <url><loc>https://lawsuit.center/asbestos-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/environmental-contamination-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/water-contamination-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/pfas-water-contamination-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/roundup-lawsuit</loc></url>
 
   <!-- Product liability, drug injury, and medical device pages -->
-  <url><loc>https://lawsuit.center/product-liability-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/social-media-addiction-lawsuit.html</loc></url>
-  <url><loc>https://lawsuit.center/drug-injury-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/medical-device-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/ozempic-lawsuit.html</loc></url>
-  <url><loc>https://lawsuit.center/hair-relaxer-lawsuit.html</loc></url>
+  <url><loc>https://lawsuit.center/product-liability-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/social-media-addiction-lawsuit</loc></url>
+  <url><loc>https://lawsuit.center/drug-injury-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/medical-device-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/ozempic-lawsuit</loc></url>
+  <url><loc>https://lawsuit.center/hair-relaxer-lawsuit</loc></url>
 
   <!-- Asbestos pages -->
-  <url><loc>https://lawsuit.center/lung-cancer-asbestos-review.html</loc></url>
-  <url><loc>https://lawsuit.center/lung-cancer-from-asbestos-exposure.html</loc></url>
-  <url><loc>https://lawsuit.center/california-asbestos-lawyers.html</loc></url>
-  <url><loc>https://lawsuit.center/florida-asbestos-lawyers.html</loc></url>
+  <url><loc>https://lawsuit.center/lung-cancer-asbestos-review</loc></url>
+  <url><loc>https://lawsuit.center/lung-cancer-from-asbestos-exposure</loc></url>
+  <url><loc>https://lawsuit.center/california-asbestos-lawyers</loc></url>
+  <url><loc>https://lawsuit.center/florida-asbestos-lawyers</loc></url>
 
   <!-- Personal injury pages -->
-  <url><loc>https://lawsuit.center/personal-injury-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/california-personal-injury-lawyers.html</loc></url>
-  <url><loc>https://lawsuit.center/car-accident-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/truck-accident-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/motorcycle-accident-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/pedestrian-accident-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/slip-and-fall-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/dog-bite-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/catastrophic-injury-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/wrongful-death-lawsuits.html</loc></url>
+  <url><loc>https://lawsuit.center/personal-injury-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/california-personal-injury-lawyers</loc></url>
+  <url><loc>https://lawsuit.center/car-accident-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/truck-accident-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/motorcycle-accident-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/pedestrian-accident-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/slip-and-fall-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/dog-bite-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/catastrophic-injury-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/wrongful-death-lawsuits</loc></url>
 
   <!-- Consumer, financial, banking & privacy topics -->
-  <url><loc>https://lawsuit.center/consumer-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/financial-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/stock-market-fraud-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/banking-lending-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/privacy-data-breach-lawsuits.html</loc></url>
+  <url><loc>https://lawsuit.center/consumer-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/financial-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/stock-market-fraud-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/banking-lending-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/privacy-data-breach-lawsuits</loc></url>
 
   <!-- Defamation, reputation & civil rights topics -->
-  <url><loc>https://lawsuit.center/defamation-reputation-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/civil-rights-lawsuits.html</loc></url>
+  <url><loc>https://lawsuit.center/defamation-reputation-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/civil-rights-lawsuits</loc></url>
 
   <!-- Business, employment & class action topics -->
-  <url><loc>https://lawsuit.center/business-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/employment-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/class-action-lawsuits.html</loc></url>
+  <url><loc>https://lawsuit.center/business-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/employment-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/class-action-lawsuits</loc></url>
 
   <!-- Insurance, real estate & construction topics -->
-  <url><loc>https://lawsuit.center/insurance-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/real-estate-property-lawsuits.html</loc></url>
-  <url><loc>https://lawsuit.center/construction-lawsuits.html</loc></url>
+  <url><loc>https://lawsuit.center/insurance-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/real-estate-property-lawsuits</loc></url>
+  <url><loc>https://lawsuit.center/construction-lawsuits</loc></url>
 
   <!-- Lawsuit defense topics -->
-  <url><loc>https://lawsuit.center/lawsuit-defense.html</loc></url>
-  <url><loc>https://lawsuit.center/what-to-do-after-being-sued.html</loc></url>
-  <url><loc>https://lawsuit.center/default-judgment.html</loc></url>
+  <url><loc>https://lawsuit.center/lawsuit-defense</loc></url>
+  <url><loc>https://lawsuit.center/what-to-do-after-being-sued</loc></url>
+  <url><loc>https://lawsuit.center/default-judgment</loc></url>
 
   <!-- Bankruptcy topics -->
-  <url><loc>https://lawsuit.center/consumer-bankruptcy.html</loc></url>
-  <url><loc>https://lawsuit.center/business-bankruptcy.html</loc></url>
+  <url><loc>https://lawsuit.center/consumer-bankruptcy</loc></url>
+  <url><loc>https://lawsuit.center/business-bankruptcy</loc></url>
 
   <!-- Resources -->
-  <url><loc>https://lawsuit.center/lawsuit-funding-options.html</loc></url>
+  <url><loc>https://lawsuit.center/lawsuit-funding-options</loc></url>
 
 </urlset>

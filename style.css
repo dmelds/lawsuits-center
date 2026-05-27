@@ -921,12 +921,3 @@ footer p:first-child { color: var(--ink-muted); }
 .breadcrumb__list [aria-current="page"]{
   color:var(--ink, #f5f5f4);
 }
-.resources__subhead {
-  margin: 2.5rem 0 1rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.resources__subhead:first-of-type {
-  margin-top: 1.5rem;
-}
-
