@@ -61,7 +61,7 @@
         <a href="how-case-review-works.html">How It Works</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <form class="nav__search" role="search" action="/lawsuits.html" method="get">
+        <form class="nav__search" role="search" action="/search.html" method="get">
           <svg class="nav__search-icon" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
           <input type="search" name="q" placeholder="Search lawsuits…" aria-label="Search lawsuits" autocomplete="off" />
           <button type="submit" class="nav__search-btn" aria-label="Search">Go</button>
@@ -87,25 +87,10 @@
     </p>
     <div class="actions">
       <a href="case-review.html" class="btn btn--amber btn--lg">Start General Case Review</a>
-      <a href="how-case-review-works.html" class="btn btn--ghost btn--lg">How Case Review Works</a>
+      <a href="search.html" class="btn btn--ghost btn--lg">Search Lawsuits</a>
     </div>
     <p class="meta">
       Lawsuit Center is not a law firm. Submitting information does not create an attorney-client relationship.
-    </p>
-  </div>
-</section>
-
-<section class="lawsuits-filter">
-  <div class="container">
-    <form class="lawsuits-filter__bar" role="search" onsubmit="return false;">
-      <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
-      <input type="search" id="lawsuit-filter-input" placeholder="Filter lawsuits — try asbestos, PFAS, Roundup, water…" aria-label="Filter lawsuits" autocomplete="off" />
-      <button type="button" class="lawsuits-filter__clear" id="lawsuit-filter-clear" aria-label="Clear filter" hidden>×</button>
-    </form>
-    <p class="lawsuits-filter__count" id="lawsuit-filter-count" aria-live="polite"></p>
-    <p class="lawsuits-filter__empty" id="lawsuit-no-results" hidden>
-      No categories match that search. Try a shorter term — or
-      <a href="case-review.html">start a general case review</a>.
     </p>
   </div>
 </section>
@@ -791,67 +776,6 @@
       });
     }
   });
-</script>
-
-<script>
-(function () {
-  var input = document.getElementById('lawsuit-filter-input');
-  if (!input) return;
-  var clearBtn = document.getElementById('lawsuit-filter-clear');
-  var count = document.getElementById('lawsuit-filter-count');
-  var empty = document.getElementById('lawsuit-no-results');
-  var cards = [].slice.call(document.querySelectorAll('.cat-section .dir-card'));
-  var grids = [].slice.call(document.querySelectorAll('.cat-section .dir-grid'));
-  var sections = [].slice.call(document.querySelectorAll('.cat-section'));
-  var jumpLinks = [].slice.call(document.querySelectorAll('.jump-nav__inner a'));
-
-  function apply(q) {
-    q = (q || '').trim().toLowerCase();
-    var total = 0;
-    cards.forEach(function (c) {
-      var show = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
-      c.style.display = show ? '' : 'none';
-      if (show) total++;
-    });
-    grids.forEach(function (g) {
-      var any = [].slice.call(g.querySelectorAll('.dir-card')).some(function (c) { return c.style.display !== 'none'; });
-      var hide = q && !any;
-      g.style.display = hide ? 'none' : '';
-      var prev = g.previousElementSibling;
-      if (prev && prev.classList.contains('subhead')) prev.style.display = hide ? 'none' : '';
-    });
-    sections.forEach(function (s) {
-      var any = [].slice.call(s.querySelectorAll('.dir-card')).some(function (c) { return c.style.display !== 'none'; });
-      var hide = q && !any;
-      s.style.display = hide ? 'none' : '';
-      if (s.id) jumpLinks.forEach(function (l) {
-        if (l.getAttribute('href') === '#' + s.id) l.style.display = hide ? 'none' : '';
-      });
-    });
-    if (count) count.textContent = q ? (total + (total === 1 ? ' match' : ' matches') + ' for "' + q + '"') : '';
-    if (empty) empty.hidden = !(q && total === 0);
-    if (clearBtn) clearBtn.hidden = !q;
-  }
-
-  var initial = (new URLSearchParams(location.search).get('q') || '').trim();
-  if (initial) { input.value = initial; apply(initial); }
-
-  var t;
-  input.addEventListener('input', function (e) {
-    clearTimeout(t);
-    var v = e.target.value;
-    t = setTimeout(function () { apply(v); }, 80);
-  });
-
-  if (clearBtn) {
-    clearBtn.addEventListener('click', function () {
-      input.value = '';
-      apply('');
-      input.focus();
-      history.replaceState(null, '', location.pathname);
-    });
-  }
-})();
 </script>
 
 </body>
