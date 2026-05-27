@@ -30,6 +30,11 @@
       "name": "Lawsuit Center",
       "url": "https://lawsuit.center/",
       "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://lawsuit.center/search.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
   }
   </script>
@@ -85,6 +90,24 @@
     <div class="hero-actions">
       <a href="case-review.html" class="btn btn--amber btn--lg">Start Free Case Review</a>
     </div>
+
+    <form class="hero-search" role="search" action="/search.html" method="get">
+      <span class="hero-search__label">Or search lawsuits directly</span>
+      <div class="hero-search__bar">
+        <svg class="hero-search__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
+        <input type="search" name="q" placeholder="Try asbestos, PFAS, Roundup, Depo-Provera…" aria-label="Search lawsuit categories" autocomplete="off" />
+        <button type="submit" class="hero-search__btn">Search</button>
+      </div>
+      <div class="hero-search__chips" aria-label="Popular searches">
+        <span class="hero-search__chips-label">Popular:</span>
+        <a href="/search.html?q=asbestos">Asbestos</a>
+        <a href="/search.html?q=PFAS">PFAS</a>
+        <a href="/search.html?q=Roundup">Roundup</a>
+        <a href="/search.html?q=Depo-Provera">Depo-Provera</a>
+        <a href="/search.html?q=social+media">Social media</a>
+        <a href="/search.html?q=ChatGPT">ChatGPT</a>
+      </div>
+    </form>
 
     <h2 class="hero-cats__title">Pick your category, or run a free check first.</h2>
     <div class="cats">
@@ -326,7 +349,6 @@
   </div>
 </section>
 
-<!-- Hidden form stub for Netlify form detection. -->
 <form name="depo-provera-case-review" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
   <input type="text" name="exposure-type" />
   <input type="text" name="summary" />

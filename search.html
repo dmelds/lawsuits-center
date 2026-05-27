@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search | Lawsuit Center</title>
+  <meta name="description" content="Search lawsuit categories, case review pages, and background topics on Lawsuit Center." />
+  <meta name="robots" content="noindex,follow" />
+  <link rel="canonical" href="https://lawsuit.center/search.html" />
+  <link rel="icon" type="image/x-icon" href="lawsuit-center-favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand" aria-label="Lawsuit Center home">
+      <img src="logo-center-new.png" alt="Lawsuit Center" />
+      <span class="brand__tag">attorney-built</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links" id="site-menu">
+        <a href="index.html">Home</a>
+        <a href="case-review.html">Start Case Review</a>
+        <a href="lawsuits.html">Browse Lawsuits</a>
+        <a href="how-case-review-works.html">How It Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="case-review.html" class="btn btn--amber">Start Case Review</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="search-page">
+  <div class="container container--narrow">
+    <span class="eyebrow">Search</span>
+    <h1 class="search-page__title">Search lawsuit topics</h1>
+
+    <form class="search-page__form" role="search" action="/search.html" method="get" id="search-page-form">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
+      <input
+        type="search"
+        name="q"
+        id="search-page-input"
+        placeholder="Search asbestos, PFAS, Roundup, Depo-Provera, water…"
+        aria-label="Search lawsuits"
+        autocomplete="off"
+        autofocus
+      />
+      <button type="button" class="search-page__clear" id="search-page-clear" aria-label="Clear search" hidden>×</button>
+    </form>
+
+    <div class="search-page__chips" aria-label="Popular searches" id="search-page-chips">
+      <span class="search-page__chips-label">Popular:</span>
+      <a href="?q=asbestos">Asbestos</a>
+      <a href="?q=PFAS">PFAS</a>
+      <a href="?q=Roundup">Roundup</a>
+      <a href="?q=Depo-Provera">Depo-Provera</a>
+      <a href="?q=social+media">Social media</a>
+      <a href="?q=ChatGPT">ChatGPT</a>
+      <a href="?q=cancer">Cancer</a>
+      <a href="?q=water">Water</a>
+    </div>
+
+    <p class="search-page__meta" id="search-page-meta" aria-live="polite"></p>
+
+    <ul class="search-results" id="search-results" role="list"></ul>
+
+    <div class="search-empty" id="search-empty" hidden>
+      <h2>No matches for that search.</h2>
+      <p>Try a shorter term — like a product name, diagnosis, or chemical. Or start a general review and describe the situation in your own words.</p>
+      <div class="search-empty__ctas">
+        <a href="case-review.html" class="btn btn--amber">Start General Case Review</a>
+        <a href="lawsuits.html" class="btn btn--ghost">Browse All Categories</a>
+      </div>
+    </div>
+
+    <div class="search-idle" id="search-idle">
+      <p>Type above, or pick a popular topic. Search covers case review categories, background overviews, and lawsuit guides.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div id="footer-placeholder"></div>
+</footer>
+<script>
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav__toggle");
+    const menu = document.getElementById("site-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+  });
+</script>
+
+<script src="/search.js" defer></script>
+
+</body>
+</html>
