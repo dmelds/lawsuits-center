@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy &amp; Data Breach Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Background on privacy and data breach lawsuits — data breaches, biometric privacy violations, tracking technologies, and cybersecurity failures." />
+  <title>Defamation &amp; Reputation Lawsuits | Lawsuit Center</title>
+  <meta name="description" content="Background on defamation and reputation lawsuits — libel, slander, online reviews, false statements, and business and professional reputation harm." />
   
-  <link rel="canonical" href="https://lawsuit.center/privacy-data-breach-lawsuits.html" />
+  <link rel="canonical" href="https://lawsuit.center/defamation-reputation-lawsuits.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,50 +18,33 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy & Data Breach Lawsuits",
-    "url": "https://lawsuit.center/privacy-data-breach-lawsuits.html",
-    "description": "Background on privacy and data breach lawsuits — data breaches, biometric privacy violations, tracking technologies, and cybersecurity failures.",
+    "name": "Defamation & Reputation Lawsuits",
+    "url": "https://lawsuit.center/defamation-reputation-lawsuits.html",
+    "description": "Background on defamation and reputation lawsuits — libel, slander, online reviews, false statements, and business and professional reputation harm.",
     "isPartOf": { "@type": "WebSite", "name": "Lawsuit Center", "url": "https://lawsuit.center/" },
     "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/", "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" } },
     "about": [
-      { "@type": "Thing", "name": "Privacy lawsuits" },
-      { "@type": "Thing", "name": "Data breach lawsuits" },
-      { "@type": "Thing", "name": "Biometric privacy" },
-      { "@type": "Thing", "name": "Cybersecurity" }
+      { "@type": "Thing", "name": "Defamation lawsuits" },
+      { "@type": "Thing", "name": "Libel" },
+      { "@type": "Thing", "name": "Slander" },
+      { "@type": "Thing", "name": "Reputation lawsuits" }
     ]
   }
   </script>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Defamation & Reputation Lawsuits", "item": "https://lawsuit.center/defamation-reputation-lawsuits.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Privacy & Data Breach Lawsuits",
-      "item": "https://lawsuit.center/privacy-data-breach-lawsuits.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -90,47 +73,36 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li aria-current="page">Privacy &amp; Data Breach Lawsuits</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow">Privacy &amp; Data Breach Lawsuits</span>
-    <h1>Data breaches, biometric privacy, and digital tracking claims.</h1>
-    <p class="lede">Privacy and data breach lawsuits arise where personal information has been exposed, collected without consent, or used in violation of privacy laws — including breaches of customer databases, biometric data collection, web tracking pixels, and unauthorized recordings.</p>
+    <span class="eyebrow">Defamation &amp; Reputation Lawsuits</span>
+    <h1>Libel, slander, and reputation harm claims.</h1>
+    <p class="lede">Defamation lawsuits involve false statements that harm a person's or business's reputation — covering libel (written), slander (spoken), online reviews, social media posts, news reports, and other published statements alleged to be false and damaging.</p>
     <p class="meta">Educational background only. Lawsuit Center is not a law firm and does not provide legal advice.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>Data breach claims.</h2>
-    <p>Data breaches occur when personal information — names, addresses, Social Security numbers, payment data, health records — is accessed by unauthorized parties. Resulting lawsuits often allege negligence in cybersecurity practices, breach of contract, or violations of state breach notification laws.</p>
-    <p>Plaintiffs may seek damages for identity theft risk, credit monitoring costs, time spent responding to the breach, and emotional distress. Many data breach cases proceed as class actions because a single breach can affect thousands or millions of people in similar ways.</p>
+    <h2>Libel, slander, and required elements.</h2>
+    <p>Defamation generally requires a false statement of fact (not opinion), publication to a third party, fault on the part of the publisher, and harm to reputation. Libel refers to written or otherwise fixed statements; slander to spoken statements. The exact elements and defenses vary by state.</p>
+    <p>Some statements are considered "defamation per se" — false statements about criminal conduct, a serious disease, professional misconduct, or sexual misconduct — where harm is presumed. Other statements require the plaintiff to prove actual damage to reputation, such as lost business or specific financial loss.</p>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
-    <h2>Biometric privacy and tracking technologies.</h2>
-    <p>Some states have specific biometric privacy laws — most notably Illinois's Biometric Information Privacy Act (BIPA) — that regulate the collection, storage, and disclosure of fingerprints, facial geometry, voiceprints, and other biometric identifiers. Violations can carry significant statutory damages.</p>
-    <p>Other privacy claims involve session replay tools, tracking pixels, chat features, video and recording technologies, and analytics services that allegedly collect data without proper disclosure or consent. Some of these claims are brought under state wiretap statutes or state video privacy laws.</p>
+    <h2>Public figures, private individuals, and First Amendment limits.</h2>
+    <p>The First Amendment imposes important limits on defamation law. Public officials and public figures generally must prove "actual malice" — that the publisher knew the statement was false or acted with reckless disregard for whether it was true. Private individuals typically have a lower burden, though laws vary by state.</p>
+    <p>True statements, opinions, fair comment on matters of public concern, and certain privileged communications (such as statements made in court proceedings) are generally not actionable. Anti-SLAPP statutes in many states allow defendants to seek early dismissal of defamation suits that target protected speech.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>State privacy laws and consumer rights.</h2>
-    <p>State privacy laws — including the California Consumer Privacy Act (CCPA/CPRA) and comparable laws in Virginia, Colorado, Connecticut, Utah, and other states — give consumers rights to access, delete, and limit the sale of their personal information. They also impose obligations on businesses that collect or process consumer data.</p>
-    <p>Some of these laws include private rights of action for specific violations (such as data breaches involving unencrypted information); others can only be enforced by a state regulator. The legal landscape continues to evolve as more states pass privacy legislation.</p>
+    <h2>Online reviews and business reputation.</h2>
+    <p>Many modern defamation disputes involve online reviews, social media posts, and statements by competitors or former employees. Section 230 of the Communications Decency Act generally shields online platforms from liability for content posted by users, though the user posting the content may still be liable.</p>
+    <p>Businesses may also pursue related claims such as trade libel, tortious interference with business relationships, and unfair competition. Whether any of these claims is viable depends heavily on the specific statements, the speaker, the audience, and applicable state law.</p>
   </div>
 </section>
 
@@ -138,10 +110,10 @@
   <div class="container container--narrow">
     <h2>Related topics.</h2>
     <div class="inline-link-list">
-      <a href="consumer-lawsuits.html">Consumer Lawsuits</a>
-      <a href="defamation-reputation-lawsuits.html">Defamation &amp; Reputation Lawsuits</a>
+      <a href="privacy-data-breach-lawsuits.html">Privacy &amp; Data Breach Lawsuits</a>
       <a href="civil-rights-lawsuits.html">Civil Rights Lawsuits</a>
-      <a href="class-action-lawsuits.html">Class Action Lawsuits</a>
+      <a href="business-lawsuits.html">Business Lawsuits</a>
+      <a href="employment-lawsuits.html">Employment Lawsuits</a>
     </div>
   </div>
 </section>
@@ -155,13 +127,13 @@
       <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="consumer-lawsuits.html" class="card">
-        <h3>Consumer Lawsuits</h3>
-        <p>Explore broader consumer claims involving products, services, privacy, and unfair practices.</p>
+      <a href="civil-rights-lawsuits.html" class="card">
+        <h3>Civil Rights Lawsuits</h3>
+        <p>Explore claims involving rights, reputation, treatment, and legal protections.</p>
       </a>
-      <a href="class-action-lawsuits.html" class="card">
-        <h3>Class Action Lawsuits</h3>
-        <p>Learn how large groups of people may bring claims involving similar harm.</p>
+      <a href="business-lawsuits.html" class="card">
+        <h3>Business Lawsuits</h3>
+        <p>Learn about disputes that may involve commercial reputation, contracts, or business harm.</p>
       </a>
       <a href="case-review.html" class="card">
         <h3>Start a Free Case Review</h3>

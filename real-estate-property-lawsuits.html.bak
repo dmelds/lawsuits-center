@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insurance Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Background on insurance lawsuits — denied claims, bad faith, delayed payments, coverage disputes, and improper claim handling." />
+  <title>Real Estate &amp; Property Lawsuits | Lawsuit Center</title>
+  <meta name="description" content="Background on real estate and property lawsuits — landlord-tenant disputes, boundary issues, title problems, HOA disputes, and property damage." />
   
-  <link rel="canonical" href="https://lawsuit.center/insurance-lawsuits.html" />
+  <link rel="canonical" href="https://lawsuit.center/real-estate-property-lawsuits.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,50 +18,33 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Insurance Lawsuits",
-    "url": "https://lawsuit.center/insurance-lawsuits.html",
-    "description": "Background on insurance lawsuits — denied claims, bad faith, delayed payments, coverage disputes, and improper claim handling.",
+    "name": "Real Estate & Property Lawsuits",
+    "url": "https://lawsuit.center/real-estate-property-lawsuits.html",
+    "description": "Background on real estate and property lawsuits — landlord-tenant disputes, boundary issues, title problems, HOA disputes, and property damage.",
     "isPartOf": { "@type": "WebSite", "name": "Lawsuit Center", "url": "https://lawsuit.center/" },
     "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/", "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" } },
     "about": [
-      { "@type": "Thing", "name": "Insurance lawsuits" },
-      { "@type": "Thing", "name": "Bad faith insurance" },
-      { "@type": "Thing", "name": "Denied insurance claims" },
-      { "@type": "Thing", "name": "Coverage disputes" }
+      { "@type": "Thing", "name": "Real estate lawsuits" },
+      { "@type": "Thing", "name": "Property lawsuits" },
+      { "@type": "Thing", "name": "Landlord-tenant disputes" },
+      { "@type": "Thing", "name": "HOA disputes" }
     ]
   }
   </script>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Real Estate & Property Lawsuits", "item": "https://lawsuit.center/real-estate-property-lawsuits.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Insurance Lawsuits",
-      "item": "https://lawsuit.center/insurance-lawsuits.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -90,47 +73,36 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li aria-current="page">Insurance Lawsuits</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow">Insurance Lawsuits</span>
-    <h1>Denied claims, bad faith, and coverage disputes.</h1>
-    <p class="lede">Insurance lawsuits arise when a policyholder believes an insurer has wrongly denied a claim, delayed payment, underpaid a loss, or otherwise violated the terms of a policy or applicable insurance law — covering property, health, auto, disability, life, and commercial policies.</p>
+    <span class="eyebrow">Real Estate &amp; Property Lawsuits</span>
+    <h1>Landlord-tenant, boundary, title, and HOA disputes.</h1>
+    <p class="lede">Real estate lawsuits cover disputes over property ownership, use, and contracts — including landlord-tenant issues, boundary and easement disputes, title problems, HOA enforcement, real estate transactions, and property damage claims.</p>
     <p class="meta">Educational background only. Lawsuit Center is not a law firm and does not provide legal advice.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>Common types of insurance disputes.</h2>
-    <p>Common insurance disputes involve denial of coverage, underpayment of a covered loss, delays in claim handling, disputes over policy interpretation, and disagreements about whether a particular event falls within policy exclusions.</p>
-    <p>Property and casualty disputes often follow natural disasters, fires, or large losses. Health insurance disputes frequently involve denied treatments, network issues, and ERISA-governed plans. Auto, disability, and life insurance each have their own recurring patterns of dispute.</p>
+    <h2>Landlord-tenant disputes.</h2>
+    <p>Landlord-tenant law varies by state and locality, but common disputes involve security deposits, habitability and repair issues, evictions, lease interpretation, rent increases under rent control, retaliation, and discrimination.</p>
+    <p>Many jurisdictions have specialized housing courts, tenant protection laws, and just-cause eviction rules that affect how disputes are handled. Procedural deadlines for both landlords and tenants are often short and strictly enforced.</p>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
-    <h2>Bad faith claims.</h2>
-    <p>Most states recognize a cause of action for insurance "bad faith" — separate from breach of contract — where an insurer unreasonably denies a claim, fails to investigate, or otherwise mishandles a policyholder's claim. Bad faith claims may allow recovery beyond the policy limits.</p>
-    <p>Depending on the state, bad faith damages may include emotional distress, attorney's fees, and punitive damages. The standards vary significantly by state, and some require specific procedural steps before a bad faith lawsuit can proceed.</p>
+    <h2>Boundary, easement, and title issues.</h2>
+    <p>Property line disputes can arise from inaccurate surveys, encroachments (fences, structures, vegetation), easement use disagreements, and adverse possession claims. Title issues may involve undisclosed liens, errors in deeds, fraudulent transfers, and gaps in the chain of title — sometimes addressed through quiet title actions or claims against title insurance.</p>
+    <p>These disputes often turn on detailed land records and may involve title companies, surveyors, prior owners, and neighboring property owners as parties or witnesses.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>First-party versus third-party claims.</h2>
-    <p>First-party claims involve disputes between a policyholder and their own insurer — for example, a homeowner against their home insurer for fire damage, or a driver against their own auto insurer for uninsured motorist coverage.</p>
-    <p>Third-party claims involve a policyholder's insurer covering claims by other people — for example, liability coverage where a third party sues the policyholder. Each context has different procedures, rights, and standards. Many policies also require specific notice and cooperation from the policyholder, with consequences for non-compliance.</p>
+    <h2>Real estate transactions and HOAs.</h2>
+    <p>Transaction disputes often involve undisclosed defects, breach of purchase agreements, broker or agent misconduct, and seller disclosure obligations. State disclosure laws and contract terms shape what a seller must reveal and what remedies a buyer has after closing.</p>
+    <p>Homeowner associations (HOAs) and condominium associations can generate disputes over assessments, rule enforcement, architectural review, common area maintenance, and board governance. State HOA statutes and the association's governing documents typically control these disputes.</p>
   </div>
 </section>
 
@@ -138,10 +110,10 @@
   <div class="container container--narrow">
     <h2>Related topics.</h2>
     <div class="inline-link-list">
-      <a href="real-estate-property-lawsuits.html">Real Estate &amp; Property Lawsuits</a>
+      <a href="insurance-lawsuits.html">Insurance Lawsuits</a>
       <a href="construction-lawsuits.html">Construction Lawsuits</a>
-      <a href="consumer-lawsuits.html">Consumer Lawsuits</a>
-      <a href="lawsuit-defense.html">Lawsuit Defense</a>
+      <a href="banking-lending-lawsuits.html">Banking &amp; Lending Lawsuits</a>
+      <a href="business-lawsuits.html">Business Lawsuits</a>
     </div>
   </div>
 </section>
@@ -155,13 +127,13 @@
       <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="real-estate-property-lawsuits.html" class="card">
-        <h3>Real Estate and Property Lawsuits</h3>
-        <p>Explore disputes involving property damage, ownership, transactions, or land use.</p>
-      </a>
       <a href="construction-lawsuits.html" class="card">
         <h3>Construction Lawsuits</h3>
-        <p>Learn about disputes involving construction defects, contractors, projects, and property damage.</p>
+        <p>Explore claims involving construction defects, contractors, and property-related disputes.</p>
+      </a>
+      <a href="insurance-lawsuits.html" class="card">
+        <h3>Insurance Lawsuits</h3>
+        <p>Learn about disputes involving insurance coverage, denials, delays, or claim handling.</p>
       </a>
       <a href="case-review.html" class="card">
         <h3>Start a Free Case Review</h3>

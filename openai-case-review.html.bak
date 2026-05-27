@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Depo-Provera Case Review | Lawsuit Center</title>
-  <meta name="description" content="Request a Depo-Provera case review through Lawsuit Center. Submit details about Depo-Provera or medroxyprogesterone acetate use, meningioma diagnosis, treatment history, and related neurological symptoms." />
-  
-  <link rel="canonical" href="https://lawsuit.center/depo-provera-case-review.html" />
+  <title>OpenAI Case Review | Lawsuit Center</title>
+  <meta name="description" content="Request a case review related to OpenAI and ChatGPT. Submit details about a wrongful death, self-harm, drug interaction, or other alleged harm involving ChatGPT use." />
+
+  <link rel="canonical" href="https://lawsuit.center/openai-case-review.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -23,9 +22,9 @@
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Depo-Provera Case Review",
-    "description": "Request a Depo-Provera case review through Lawsuit Center.",
-    "url": "https://lawsuit.center/depo-provera-case-review.html",
+    "name": "OpenAI Case Review",
+    "description": "Request a case review related to OpenAI and ChatGPT through Lawsuit Center.",
+    "url": "https://lawsuit.center/openai-case-review.html",
     "publisher": {
       "@type": "Organization",
       "name": "Lawsuit Center",
@@ -35,7 +34,18 @@
   }
   </script>
 
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "OpenAI Case Review", "item": "https://lawsuit.center/openai-case-review.html" }
+    ]
+  }
+  </script>
+
 <style>
   :root{--bg:#111;--surface:#181818;--surface-2:#1f1f1f;--border:#262626;--border-strong:#333;--ink:#f5f5f4;--ink-muted:#a8a29e;--ink-soft:#78716c;--amber:#d4a24e;--amber-bright:#e7b961;--display:"Fraunces","Times New Roman",serif;--body:"IBM Plex Sans",system-ui,sans-serif;--container:1280px;--gutter:clamp(20px,4vw,72px);--radius:14px;--radius-lg:22px;--ease:cubic-bezier(.2,.8,.2,1);}
   *,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;}html{scroll-behavior:smooth;}
@@ -68,6 +78,10 @@
 
   .legal-note{background:var(--surface);border-bottom:1px solid var(--border);padding:18px 0;}
   .legal-note p{font-size:13.5px;color:var(--ink-soft);line-height:1.55;max-width:70ch;}
+
+  .crisis-banner{background:rgba(231,185,97,.06);border-bottom:1px solid var(--amber);padding:20px 0;}
+  .crisis-banner p{font-size:14px;color:var(--ink);line-height:1.6;max-width:70ch;}
+  .crisis-banner strong{color:var(--amber);font-weight:600;letter-spacing:.02em;}
 
   .section{padding:clamp(56px,7vw,88px) 0;}
   .section--surface{background:var(--surface);border-block:1px solid var(--border);}
@@ -164,84 +178,11 @@
     .card-grid{grid-template-columns:1fr;}
   }
 
-
-/* Visible breadcrumbs */
-.breadcrumb{
-  background:var(--bg, #111);
-  border-bottom:1px solid var(--border, #262626);
-  padding:14px 0;
-}
-.breadcrumb__list{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:8px;
-  list-style:none;
-  margin:0;
-  padding:0;
-  font-size:13px;
-  line-height:1.4;
-  color:var(--ink-soft, #78716c);
-}
-.breadcrumb__list li{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.breadcrumb__list li:not(:last-child)::after{
-  content:"/";
-  color:var(--ink-soft, #78716c);
-  opacity:.65;
-}
-.breadcrumb__list a{
-  color:var(--ink-muted, #a8a29e);
-  text-decoration:none;
-  transition:color .2s var(--ease, ease);
-}
-.breadcrumb__list a:hover{
-  color:var(--amber, #d4a24e);
-}
-.breadcrumb__list [aria-current="page"]{
-  color:var(--ink, #f5f5f4);
-}
 </style>
 
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Drug Injury Lawsuits",
-      "item": "https://lawsuit.center/drug-injury-lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Depo-Provera Case Review",
-      "item": "https://lawsuit.center/depo-provera-case-review.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -270,32 +211,29 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li><a href="drug-injury-lawsuits.html">Drug Injury Lawsuits</a></li>
-     <li aria-current="page">Depo-Provera Case Review</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Depo-Provera Case Review</span>
-    <h1>Request a <em>Depo-Provera case review.</em></h1>
+    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">OpenAI Case Review</span>
+    <h1>Request an <em>OpenAI case review.</em></h1>
     <p class="lede">
-      Tell us about Depo-Provera use and any meningioma diagnosis or related symptoms. Your submission may be reviewed by
-      participating legal professionals, legal advertisers, or intake partners where available.
+      Tell us what happened. If you or a family member experienced serious harm following sustained ChatGPT use,
+      a case review may help clarify whether the situation fits a developing legal category.
+      Your submission may be reviewed by participating legal professionals, legal advertisers, or intake partners where available.
     </p>
     <div class="actions">
-      <a href="#case-review-form" class="btn btn--amber btn--lg">Skip to Form ↓</a>
-      <a href="https://lawsuitinformer.com/depo-provera-lawsuits.html" class="btn btn--ghost btn--lg">Read the Educational Guide</a>
+      <a href="#case-review-form" class="btn btn--amber btn--lg">Skip to Form &darr;</a>
+      <a href="https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability.html" class="btn btn--ghost btn--lg">Read the Educational Guide</a>
     </div>
     <p class="meta">
-      Free initial review · No obligation · No attorney-client relationship is formed by submitting this form.
+      Free initial review &middot; No obligation &middot; No attorney-client relationship is formed by submitting this form.
+    </p>
+  </div>
+</section>
+
+<section class="crisis-banner">
+  <div class="container container--narrow">
+    <p>
+      <strong>If you or someone you know is in crisis right now,</strong> please contact the 988 Suicide and Crisis Lifeline by calling or texting 988 (in the U.S.), or contact your local emergency services. This page is for case-review intake about past events and is not a crisis resource.
     </p>
   </div>
 </section>
@@ -304,7 +242,8 @@
   <div class="container container--narrow">
     <p>
       Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
-      does not guarantee eligibility, compensation, contact, or representation.
+      does not guarantee eligibility, compensation, contact, or representation. AI chatbot liability
+      is a developing area of law, and outcomes in pending cases are unpredictable.
     </p>
   </div>
 </section>
@@ -314,19 +253,19 @@
     <span class="eyebrow section__eyebrow">Who This Page May Help</span>
     <h2>Situations people often research.</h2>
     <p>
-      Depo-Provera lawsuits generally focus on long-term or repeated use of the injectable contraceptive — including
-      Depo-Provera CI, Depo-SubQ Provera 104, and authorized generic medroxyprogesterone acetate — followed by a
-      meningioma diagnosis. You don't need to know the legal terms — basic information about how long the injections
-      were used, when symptoms began, and what the diagnosis was is enough to start.
+      A small but growing number of lawsuits have been filed against OpenAI alleging that ChatGPT
+      contributed to serious harm &mdash; including wrongful death, self-harm, dangerous drug interaction
+      advice, and acts of violence carried out after sustained chatbot use. These cases typically rely on
+      product liability, negligence, and failure-to-warn theories rather than treating chatbot output as
+      ordinary user-generated content.
     </p>
     <ul>
-      <li>Used Depo-Provera (or generic medroxyprogesterone acetate) for approximately one year or longer and later diagnosed with a meningioma</li>
-      <li>Used Depo-SubQ Provera 104 long-term and later diagnosed with an intracranial meningioma</li>
-      <li>Underwent surgery, radiation, or ongoing monitoring for a meningioma after Depo-Provera use</li>
-      <li>Experiencing persistent neurological symptoms — headaches, vision changes, seizures, memory issues — after long-term Depo-Provera use</li>
-      <li>Loved one diagnosed with a meningioma after years of Depo-Provera injections</li>
-      <li>Pharmacy or clinic records confirm repeated injections going back several years</li>
-      <li>Diagnosed with multiple meningiomas after long-term Depo-Provera or MPA use</li>
+      <li>Families of a loved one who died by suicide after sustained ChatGPT conversations</li>
+      <li>Families of a loved one who died of an overdose, drug interaction, or other harm after relying on ChatGPT for guidance</li>
+      <li>Families affected by a mass-casualty event allegedly preceded by the user's ChatGPT use</li>
+      <li>Individuals who experienced a serious mental health crisis, hospitalization, or self-harm event following sustained ChatGPT use</li>
+      <li>People who suffered injury after relying on ChatGPT for medical, mental health, drug interaction, or safety information</li>
+      <li>Family members researching a claim on behalf of someone who cannot research it themselves</li>
     </ul>
   </div>
 </section>
@@ -334,17 +273,15 @@
 <section id="case-review-form" class="section section--surface">
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Submit Your Information</span>
-    <h2>Depo-Provera case review form.</h2>
+    <h2>OpenAI case review form.</h2>
     <p>
-      Start with the situation that best fits, then briefly describe what happened.
-      Contact information is requested so someone can follow up if your submission appears to match
-      an available review path.
+      Start with the category that best fits, then briefly describe what happened. Contact information is
+      requested so someone can follow up if your submission appears to match an available review path.
     </p>
-
 
 <div class="form-card">
   <form
-    name="depo-provera-case-review"
+    name="openai-case-review"
     method="POST"
     data-netlify="true"
     data-netlify-recaptcha="true"
@@ -352,24 +289,24 @@
     action="/thank-you.html"
     class="form"
   >
-    <input type="hidden" name="form-name" value="depo-provera-case-review" />
+    <input type="hidden" name="form-name" value="openai-case-review" />
+    <input type="hidden" name="source" id="source" value="" />
     <p style="display:none;">
       <label>Do not fill this out if you are human: <input name="bot-field" /></label>
     </p>
 
     <div class="field">
-      <label for="exposure-type" class="field-label">Situation that best fits</label>
-      <select id="exposure-type" name="exposure-type" required>
+      <label for="harm-type" class="field-label">What happened</label>
+      <select id="harm-type" name="harm-type" required>
         <option value="">Select what best fits</option>
-        <option value="Long-Term Depo-Provera + Meningioma">Used Depo-Provera 1+ year and diagnosed with meningioma</option>
-        <option value="Depo-SubQ Provera + Meningioma">Used Depo-SubQ Provera 104 long-term and diagnosed with meningioma</option>
-        <option value="Generic MPA + Meningioma">Used generic medroxyprogesterone acetate (MPA) and diagnosed with meningioma</option>
-        <option value="Multiple Meningiomas">Diagnosed with multiple meningiomas after long-term Depo-Provera use</option>
-        <option value="Meningioma Surgery">Underwent surgery for meningioma after Depo-Provera use</option>
-        <option value="Meningioma Radiation or Monitoring">Radiation or ongoing monitoring for meningioma after Depo-Provera use</option>
-        <option value="Symptoms Without Diagnosis">Long-term Depo-Provera use with neurological symptoms but no diagnosis yet</option>
-        <option value="Short-Term Depo-Provera Use">Used Depo-Provera less than 1 year and diagnosed with meningioma</option>
-        <option value="Loved One Affected">Loved one diagnosed with meningioma after Depo-Provera use</option>
+        <option value="Wrongful Death - Suicide">Loved one died by suicide after sustained ChatGPT use</option>
+        <option value="Wrongful Death - Overdose">Loved one died of an overdose or drug interaction after relying on ChatGPT</option>
+        <option value="Wrongful Death - Violence">Loved one died in an act of violence preceded by perpetrator's ChatGPT use</option>
+        <option value="Wrongful Death - Other">Loved one died from other harm linked to ChatGPT use</option>
+        <option value="Self-Harm or Mental Health Crisis">Self-harm, hospitalization, or serious mental health crisis following sustained ChatGPT use</option>
+        <option value="Physical Injury from Bad Information">Physical injury or illness after relying on ChatGPT advice (drug interaction, medical, safety)</option>
+        <option value="Minor Involved">Harm involving a minor or teenager</option>
+        <option value="Other Harm">Other serious harm linked to ChatGPT use</option>
         <option value="Not Sure">Not sure / still investigating</option>
       </select>
     </div>
@@ -377,30 +314,50 @@
     <div class="field">
       <label for="summary" class="field-label">Briefly describe what happened</label>
       <p id="summary-note" class="form-note">
-        When did Depo-Provera injections start and stop? Approximate years help. When were symptoms first noticed,
-        and when was the meningioma diagnosed? Any surgery, radiation, or ongoing treatment? Branded Depo-Provera,
-        Depo-SubQ Provera 104, or generic MPA?
+        When did the harm occur? What was the person using ChatGPT for, and over what period? What do you understand about the chatbot's role in what happened?
       </p>
       <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
       <p id="summary-warning" class="form-note">
-        Please do not include Social Security numbers, financial account numbers, full medical
-        records, or highly sensitive personal information.
+        Please do not include Social Security numbers, financial account numbers, full medical records, or highly sensitive personal information. Do not paste full chat transcripts at this stage.
       </p>
     </div>
 
     <div class="field">
-      <label for="exposure-period" class="field-label">Approximate years of Depo-Provera use</label>
-      <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 2008–2020" aria-describedby="exposure-note" />
-      <p id="exposure-note" class="form-note">
-        Approximate is fine. Duration of use is often a key factor — many lawsuits focus on use of one year or longer.
+      <label for="harm-date" class="field-label">Approximate date of the harm</label>
+      <input type="text" id="harm-date" name="harm-date" placeholder="e.g. 2025 or March 2025" aria-describedby="harm-date-note" />
+      <p id="harm-date-note" class="form-note">
+        Approximate is fine. Timing matters because legal deadlines often run from the date a person knew or should have known of the connection to the alleged cause.
       </p>
     </div>
 
     <div class="field">
-      <label for="diagnosis-year" class="field-label">Approximate year of meningioma diagnosis (if applicable)</label>
-      <input type="text" id="diagnosis-year" name="diagnosis-year" placeholder="e.g. 2022" aria-describedby="diagnosis-note" />
-      <p id="diagnosis-note" class="form-note">
-        Diagnosis year matters because state filing deadlines may be tied to when the injury was discovered.
+      <label for="usage-period" class="field-label">Approximate period of ChatGPT use</label>
+      <input type="text" id="usage-period" name="usage-period" placeholder="e.g. several months in 2024-2025" aria-describedby="usage-note" />
+      <p id="usage-note" class="form-note">
+        Approximate is fine. Sustained use over a period of weeks or months is a common pattern in the cases that have been filed.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="version" class="field-label">ChatGPT version, if known</label>
+      <input type="text" id="version" name="version" placeholder="e.g. ChatGPT Plus, GPT-4o, GPT-5, not sure" aria-describedby="version-note" />
+      <p id="version-note" class="form-note">
+        It is fine to leave this blank or note that you are not sure. The specific model version may matter for the legal analysis.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="evidence" class="field-label">Available records</label>
+      <select id="evidence" name="evidence" aria-describedby="evidence-note">
+        <option value="">Select what applies</option>
+        <option value="Chat history accessible">Chat history is accessible to me or to family</option>
+        <option value="Chat history with law enforcement">Chat history is with law enforcement or another authority</option>
+        <option value="Some chat history">Some chat history exists; not sure of the full record</option>
+        <option value="No chat history">No chat history is currently available</option>
+        <option value="Not sure">Not sure yet</option>
+      </select>
+      <p id="evidence-note" class="form-note">
+        Chat records are often central to these cases. You do not need to gather anything to submit; this is just so reviewers know the starting point.
       </p>
     </div>
 
@@ -408,12 +365,27 @@
       <label for="state" class="field-label">State</label>
       <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
       <p id="state-note" class="form-note">
-        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
+        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply. Most filed cases against OpenAI to date have been brought in California state and federal courts.
       </p>
     </div>
 
     <div class="field">
-      <label for="name" class="field-label">Name</label>
+      <label for="relationship" class="field-label">Your relationship to the affected person</label>
+      <select id="relationship" name="relationship" required>
+        <option value="">Select what fits</option>
+        <option value="Self">I am the affected person</option>
+        <option value="Spouse">Spouse</option>
+        <option value="Parent">Parent</option>
+        <option value="Child">Child</option>
+        <option value="Sibling">Sibling</option>
+        <option value="Other family">Other family member</option>
+        <option value="Legal representative">Legal representative or estate representative</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="name" class="field-label">Your name</label>
       <input type="text" id="name" name="name" autocomplete="name" required />
     </div>
 
@@ -431,18 +403,21 @@
     <label class="checkbox-row">
       <input type="checkbox" name="legal-understanding" value="yes" required />
       <span>
-        I understand that Lawsuit Center is not a law firm and that submitting this form
-        does not create an attorney-client relationship.
+        I understand that Lawsuit Center is not a law firm and that submitting this form does not create an attorney-client relationship.
+      </span>
+    </label>
+
+    <label class="checkbox-row">
+      <input type="checkbox" name="developing-law" value="yes" required />
+      <span>
+        I understand that AI chatbot liability is a developing area of law, that outcomes in pending cases against OpenAI are unpredictable, and that my submission does not guarantee that any claim is viable or that any law firm will offer representation.
       </span>
     </label>
 
     <label class="checkbox-row">
       <input type="checkbox" name="contact-consent" value="yes" required />
       <span>
-        I consent to being contacted by Lawsuit Center, participating law firms, legal
-        advertisers, or intake partners by phone, including autodialed calls and prerecorded
-        voice messages, email, or text message about my case review request. Consent is not
-        a condition of any service. Message and data rates may apply. Reply STOP to opt out.
+        I consent to being contacted by Lawsuit Center, participating law firms, legal advertisers, or intake partners by phone, including autodialed calls and prerecorded voice messages, email, or text message about my case review request. Consent is not a condition of any service. Message and data rates may apply. Reply STOP to opt out.
       </span>
     </label>
 
@@ -451,13 +426,10 @@
     <button type="submit">Submit Case Review Request</button>
 
     <p class="form-fineprint">
-      Created by a California-licensed attorney. Your submission may be reviewed by
-      participating legal professionals, legal advertisers, or intake partners where available.
-      A submission does not guarantee eligibility, compensation, contact, or representation.
+      Created by a California-licensed attorney. Your submission may be reviewed by participating legal professionals, legal advertisers, or intake partners where available. A submission does not guarantee eligibility, compensation, contact, or representation.
     </p>
   </form>
 </div>
-
 
   </div>
 </section>
@@ -467,16 +439,13 @@
     <span class="eyebrow section__eyebrow">After Submission</span>
     <h2>What happens next.</h2>
     <p>
-      Your information may be reviewed to understand whether it relates to the Depo-Provera meningioma
-      lawsuit category, claim pattern, sponsored case-review path, or possible law firm follow-up.
+      Your information may be reviewed to understand whether it relates to a category of lawsuit that has been filed against OpenAI, an emerging claim pattern, a sponsored case-review path, or possible law firm follow-up.
     </p>
     <p>
-      If there appears to be a possible fit, a participating law firm, legal advertiser, intake
-      provider, or other partner may contact you to ask for more information.
+      If there appears to be a possible fit, a participating law firm, legal advertiser, intake provider, or other partner may contact you to ask for more information.
     </p>
     <p>
-      No attorney-client relationship is formed unless and until you sign an agreement directly
-      with a law firm.
+      No attorney-client relationship is formed unless and until you sign an agreement directly with a law firm.
     </p>
     <div class="actions">
       <a href="how-case-review-works.html" class="btn btn--ghost">How Case Review Works</a>
@@ -487,23 +456,40 @@
 
 <section class="section section--surface">
   <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Background on the Pending Cases</span>
+    <h2>The OpenAI litigation landscape.</h2>
+    <p>
+      Lawsuits filed against OpenAI to date allege that ChatGPT contributed to harm in several ways: by providing information used to plan acts of violence, by encouraging or instructing on self-harm, by giving drug interaction or medical advice that led to overdose or injury, and by fostering psychological dependency in vulnerable users without adequate safeguards. The complaints generally plead strict products liability (design defect and failure to warn), negligence, and wrongful death theories under state law.
+    </p>
+    <p>
+      Most of these cases are at the early pleading stage. None has yet been resolved on the merits. Key contested issues include whether ChatGPT output is a "product" subject to traditional products liability law, whether Section 230 of the Communications Decency Act shields OpenAI from liability for chatbot-generated content, and whether the First Amendment provides additional protection. The answers to those questions will shape what is and is not a viable claim.
+    </p>
+    <p>
+      For background on the specific cases that have been filed and the doctrinal questions they raise, the educational articles at Lawsuit Informer provide attorney-led commentary written for non-lawyers.
+    </p>
+    <div class="actions">
+      <a href="https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability.html" class="btn btn--ghost">OpenAI School Shooting Lawsuits</a>
+      <a href="https://lawsuitinformer.com/chatgpt-fsu-shooting-lawsuit.html" class="btn btn--ghost">FSU Shooting Lawsuit</a>
+      <a href="https://lawsuitinformer.com/chatgpt-overdose-lawsuit-scott.html" class="btn btn--ghost">Scott Overdose Lawsuit</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Important Disclosures</span>
     <h2>Read this before submitting.</h2>
     <p>
-      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
-      through this website does not create an attorney-client relationship and does not guarantee
-      that you qualify for a claim, that compensation will be available, or that any attorney or
-      law firm will offer representation.
+      Lawsuit Center is not a law firm and does not provide legal advice. Submitting information through this website does not create an attorney-client relationship and does not guarantee that you qualify for a claim, that compensation will be available, or that any attorney or law firm will offer representation.
     </p>
     <p>
-      Some pages may include attorney advertising, sponsored listings, paid law firm visibility,
-      or referral-related opportunities. Sponsored visibility is advertising and should not be
-      treated as a recommendation or endorsement of any attorney or law firm.
+      AI chatbot liability is a developing area of law. The legal theories being advanced in the pending cases against OpenAI have not yet been resolved by appellate courts. Outcomes are unpredictable, and a viable-looking case under current pleadings may not survive a motion to dismiss or a later substantive ruling.
+    </p>
+    <p>
+      Some pages may include attorney advertising, sponsored listings, paid law firm visibility, or referral-related opportunities. Sponsored visibility is advertising and should not be treated as a recommendation or endorsement of any attorney or law firm.
     </p>
     <p class="small-text">
-      Legal deadlines for Depo-Provera and meningioma claims can vary by state and can be short. Some states have
-      pharmaceutical immunity statutes or statutes of repose that may also affect claims. If you believe you may have
-      a claim, consider speaking with a licensed attorney as soon as possible.
+      Legal deadlines for these claims can vary by state and can be short. If you believe you may have a claim, consider speaking with a licensed attorney as soon as possible.
     </p>
     <div class="actions">
       <a href="advertising-disclosure.html" class="btn btn--ghost">Advertising Disclosure</a>
@@ -519,21 +505,21 @@
       <h2>Continue exploring this category.</h2>
     </div>
     <div class="card-grid">
-      <a href="depo-provera.html" class="card">
-        <h3>Depo-Provera Lawsuits</h3>
-        <p>Learn about Depo-Provera claims, alleged injuries, and review factors.</p>
+      <a href="social-media-addiction-lawsuit.html" class="card">
+        <h3>Social Media Addiction Lawsuits</h3>
+        <p>Explore adjacent claims involving digital platforms, product design, and alleged user harms.</p>
       </a>
-      <a href="drug-injury-lawsuits.html" class="card">
-        <h3>Drug Injury Lawsuits</h3>
-        <p>Explore broader medication injury claims involving prescription drugs and alleged side effects.</p>
+      <a href="product-liability-lawsuits.html" class="card">
+        <h3>Product Liability Lawsuits</h3>
+        <p>Learn how product design and warning theories may apply across different types of claims.</p>
       </a>
-      <a href="cancer-case-review.html" class="card">
-        <h3>Cancer Case Review</h3>
-        <p>Submit information about a cancer diagnosis and possible medication exposure for review.</p>
+      <a href="video-game-case-review.html" class="card">
+        <h3>Video Game Case Review</h3>
+        <p>Submit information about digital platform use and possible harm for review.</p>
       </a>
-      <a href="https://lawsuitinformer.com/depo-provera.html" class="card">
-        <h3>Depo-Provera Editorial Deep-Dive</h3>
-        <p>Read Lawsuit Informer’s background article on Depo-Provera litigation and claim evaluation.</p>
+      <a href="https://lawsuitinformer.com/openai-lawsuit.html" class="card">
+        <h3>AI Litigation Editorial Deep-Dive</h3>
+        <p>Read Lawsuit Informer’s background coverage on AI-related litigation and legal theories.</p>
       </a>
     </div>
   </div>
@@ -562,48 +548,39 @@
       });
     }
 
-    // PREFILL FROM URL PARAMS
-    var params = new URLSearchParams(window.location.search);
-
-    var exposureParam = params.get('exposure');
-    if (exposureParam) {
-      var exposureSelect = document.getElementById('exposure-type');
-      if (exposureSelect) {
-        Array.from(exposureSelect.options).forEach(function(opt) {
-          if (opt.value === exposureParam) opt.selected = true;
-        });
-      }
-    }
-
-    var stateParam = params.get('state');
-    if (stateParam) {
-      var stateInput = document.getElementById('state');
-      if (stateInput && !stateInput.value) {
-        stateInput.value = stateParam;
-      }
-    }
-
+    // sessionStorage handoff for the thank-you page
     var displayLabelMap = {
-      "Long-Term Depo-Provera + Meningioma": "Depo-Provera meningioma claim",
-      "Depo-SubQ Provera + Meningioma": "Depo-SubQ Provera 104 meningioma claim",
-      "Generic MPA + Meningioma": "Generic medroxyprogesterone acetate meningioma claim",
-      "Multiple Meningiomas": "Depo-Provera multiple meningiomas claim",
-      "Meningioma Surgery": "Depo-Provera meningioma surgery claim",
-      "Meningioma Radiation or Monitoring": "Depo-Provera meningioma treatment claim",
-      "Symptoms Without Diagnosis": "Depo-Provera neurological symptoms",
-      "Short-Term Depo-Provera Use": "Short-term Depo-Provera meningioma claim",
-      "Loved One Affected": "Depo-Provera meningioma — family member affected",
-      "Not Sure": "Depo-Provera case review"
+      "Wrongful Death - Suicide": "wrongful death claim involving ChatGPT",
+      "Wrongful Death - Overdose": "wrongful death claim involving ChatGPT and an overdose",
+      "Wrongful Death - Violence": "wrongful death claim involving ChatGPT and an act of violence",
+      "Wrongful Death - Other": "wrongful death claim involving ChatGPT",
+      "Self-Harm or Mental Health Crisis": "self-harm or mental health claim involving ChatGPT",
+      "Physical Injury from Bad Information": "physical injury claim involving ChatGPT advice",
+      "Minor Involved": "claim involving a minor and ChatGPT",
+      "Other Harm": "claim involving ChatGPT",
+      "Not Sure": "claim involving ChatGPT"
     };
 
-    var form = document.querySelector('form[name="depo-provera-case-review"]');
-    var exposureType = document.getElementById("exposure-type");
-    if (form && exposureType) {
+    var form = document.querySelector('form[name="openai-case-review"]');
+    var harmType = document.getElementById("harm-type");
+    if (form && harmType) {
       form.addEventListener("submit", function () {
-        var raw = exposureType.value;
-        var display = displayLabelMap[raw] || "Depo-Provera";
-        sessionStorage.setItem("lc_category", display);
+        var raw = harmType.value;
+        var display = displayLabelMap[raw] || "claim involving ChatGPT";
+        try { sessionStorage.setItem("lc_category", display); } catch (e) {}
       });
+    }
+
+    // Capture source param if a referring page passes one
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var source = params.get("source") || "";
+      if (source) {
+        var sourceEl = document.getElementById("source");
+        if (sourceEl) sourceEl.value = source;
+      }
+    } catch (e) {
+      // Fail silently
     }
   });
 </script>

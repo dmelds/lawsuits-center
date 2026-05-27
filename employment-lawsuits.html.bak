@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy &amp; Data Breach Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Background on privacy and data breach lawsuits — data breaches, biometric privacy violations, tracking technologies, and cybersecurity failures." />
+  <title>Employment Lawsuits | Lawsuit Center</title>
+  <meta name="description" content="Background on employment lawsuits — wage and hour claims, discrimination, retaliation, harassment, wrongful termination, and whistleblower protections." />
   
-  <link rel="canonical" href="https://lawsuit.center/privacy-data-breach-lawsuits.html" />
+  <link rel="canonical" href="https://lawsuit.center/employment-lawsuits.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,50 +18,33 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy & Data Breach Lawsuits",
-    "url": "https://lawsuit.center/privacy-data-breach-lawsuits.html",
-    "description": "Background on privacy and data breach lawsuits — data breaches, biometric privacy violations, tracking technologies, and cybersecurity failures.",
+    "name": "Employment Lawsuits",
+    "url": "https://lawsuit.center/employment-lawsuits.html",
+    "description": "Background on employment lawsuits — wage and hour claims, discrimination, retaliation, harassment, wrongful termination, and whistleblower protections.",
     "isPartOf": { "@type": "WebSite", "name": "Lawsuit Center", "url": "https://lawsuit.center/" },
     "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/", "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" } },
     "about": [
-      { "@type": "Thing", "name": "Privacy lawsuits" },
-      { "@type": "Thing", "name": "Data breach lawsuits" },
-      { "@type": "Thing", "name": "Biometric privacy" },
-      { "@type": "Thing", "name": "Cybersecurity" }
+      { "@type": "Thing", "name": "Employment lawsuits" },
+      { "@type": "Thing", "name": "Wage and hour claims" },
+      { "@type": "Thing", "name": "Workplace discrimination" },
+      { "@type": "Thing", "name": "Wrongful termination" }
     ]
   }
   </script>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Employment Lawsuits", "item": "https://lawsuit.center/employment-lawsuits.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Privacy & Data Breach Lawsuits",
-      "item": "https://lawsuit.center/privacy-data-breach-lawsuits.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -90,47 +73,36 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li aria-current="page">Privacy &amp; Data Breach Lawsuits</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow">Privacy &amp; Data Breach Lawsuits</span>
-    <h1>Data breaches, biometric privacy, and digital tracking claims.</h1>
-    <p class="lede">Privacy and data breach lawsuits arise where personal information has been exposed, collected without consent, or used in violation of privacy laws — including breaches of customer databases, biometric data collection, web tracking pixels, and unauthorized recordings.</p>
+    <span class="eyebrow">Employment Lawsuits</span>
+    <h1>Wage claims, discrimination, retaliation, and wrongful termination.</h1>
+    <p class="lede">Employment lawsuits cover disputes between workers and employers — including unpaid wages, misclassification, discrimination, harassment, retaliation, wrongful termination, whistleblower retaliation, and violations of leave and accommodation rights.</p>
     <p class="meta">Educational background only. Lawsuit Center is not a law firm and does not provide legal advice.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>Data breach claims.</h2>
-    <p>Data breaches occur when personal information — names, addresses, Social Security numbers, payment data, health records — is accessed by unauthorized parties. Resulting lawsuits often allege negligence in cybersecurity practices, breach of contract, or violations of state breach notification laws.</p>
-    <p>Plaintiffs may seek damages for identity theft risk, credit monitoring costs, time spent responding to the breach, and emotional distress. Many data breach cases proceed as class actions because a single breach can affect thousands or millions of people in similar ways.</p>
+    <h2>Wage and hour claims.</h2>
+    <p>The Fair Labor Standards Act (FLSA) and state wage laws govern minimum wage, overtime, meal and rest breaks, and recordkeeping. Common claims include unpaid overtime, off-the-clock work, misclassification of employees as independent contractors, misclassification as exempt from overtime, tip pooling violations, and improper deductions.</p>
+    <p>Many wage claims proceed as collective or class actions because pay practices typically affect groups of workers in similar ways. State wage laws often offer broader protections and longer limitations periods than federal law.</p>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
-    <h2>Biometric privacy and tracking technologies.</h2>
-    <p>Some states have specific biometric privacy laws — most notably Illinois's Biometric Information Privacy Act (BIPA) — that regulate the collection, storage, and disclosure of fingerprints, facial geometry, voiceprints, and other biometric identifiers. Violations can carry significant statutory damages.</p>
-    <p>Other privacy claims involve session replay tools, tracking pixels, chat features, video and recording technologies, and analytics services that allegedly collect data without proper disclosure or consent. Some of these claims are brought under state wiretap statutes or state video privacy laws.</p>
+    <h2>Discrimination, harassment, and retaliation.</h2>
+    <p>Title VII, the Americans with Disabilities Act, the Age Discrimination in Employment Act, and state laws prohibit discrimination in hiring, firing, pay, promotion, and other terms of employment based on protected characteristics. Harassment that is severe or pervasive enough to alter working conditions can also be actionable.</p>
+    <p>Retaliation claims protect workers who report discrimination, file complaints, request accommodations, or participate in investigations. Retaliation is often the most frequently filed type of employment claim with the EEOC.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>State privacy laws and consumer rights.</h2>
-    <p>State privacy laws — including the California Consumer Privacy Act (CCPA/CPRA) and comparable laws in Virginia, Colorado, Connecticut, Utah, and other states — give consumers rights to access, delete, and limit the sale of their personal information. They also impose obligations on businesses that collect or process consumer data.</p>
-    <p>Some of these laws include private rights of action for specific violations (such as data breaches involving unencrypted information); others can only be enforced by a state regulator. The legal landscape continues to evolve as more states pass privacy legislation.</p>
+    <h2>Wrongful termination and whistleblower protections.</h2>
+    <p>Most U.S. employment is at-will, meaning either party can end the relationship at any time without cause. But terminations that violate public policy, breach an employment contract, or retaliate against protected activity can give rise to claims.</p>
+    <p>Whistleblower laws protect reports of fraud, safety violations, securities violations, and other illegal conduct — protections vary by statute. Many employment claims require administrative filings (EEOC, state agency, Department of Labor) before a lawsuit can be filed, with deadlines that can be short — sometimes 180 or 300 days from the conduct at issue.</p>
   </div>
 </section>
 
@@ -138,10 +110,10 @@
   <div class="container container--narrow">
     <h2>Related topics.</h2>
     <div class="inline-link-list">
-      <a href="consumer-lawsuits.html">Consumer Lawsuits</a>
-      <a href="defamation-reputation-lawsuits.html">Defamation &amp; Reputation Lawsuits</a>
       <a href="civil-rights-lawsuits.html">Civil Rights Lawsuits</a>
+      <a href="business-lawsuits.html">Business Lawsuits</a>
       <a href="class-action-lawsuits.html">Class Action Lawsuits</a>
+      <a href="defamation-reputation-lawsuits.html">Defamation &amp; Reputation Lawsuits</a>
     </div>
   </div>
 </section>
@@ -155,13 +127,13 @@
       <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="consumer-lawsuits.html" class="card">
-        <h3>Consumer Lawsuits</h3>
-        <p>Explore broader consumer claims involving products, services, privacy, and unfair practices.</p>
+      <a href="business-lawsuits.html" class="card">
+        <h3>Business Lawsuits</h3>
+        <p>Explore related disputes involving companies, contracts, operations, and commercial relationships.</p>
       </a>
-      <a href="class-action-lawsuits.html" class="card">
-        <h3>Class Action Lawsuits</h3>
-        <p>Learn how large groups of people may bring claims involving similar harm.</p>
+      <a href="civil-rights-lawsuits.html" class="card">
+        <h3>Civil Rights Lawsuits</h3>
+        <p>Learn about claims involving legal rights, discrimination, and unequal treatment.</p>
       </a>
       <a href="case-review.html" class="card">
         <h3>Start a Free Case Review</h3>

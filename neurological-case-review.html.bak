@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reproductive Injury Case Review | Lawsuit Center</title>
-  <meta name="description" content="Request a reproductive injury case review through Lawsuit Center. Submit details about uterine cancer, ovarian cancer, fertility complications, or other reproductive harm tied to hair relaxers, talcum powder, prenatal medications, or chemical exposure." />
+  <title>Neurological Case Review | Lawsuit Center</title>
+  <meta name="description" content="Request a neurological case review through Lawsuit Center. Submit details about Parkinson's disease, neuropathy, cognitive decline, or other neurological diagnoses with possible exposure history — pesticides, contaminated water, industrial chemicals, medications, or consumer products." />
   
-  <link rel="canonical" href="https://lawsuit.center/reproductive-case-review.html" />
+  <link rel="canonical" href="https://lawsuit.center/neurological-case-review.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,9 +19,9 @@
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Reproductive Injury Case Review",
-    "description": "Request a reproductive injury case review through Lawsuit Center.",
-    "url": "https://lawsuit.center/reproductive-case-review.html",
+    "name": "Neurological Case Review",
+    "description": "Request a neurological case review through Lawsuit Center.",
+    "url": "https://lawsuit.center/neurological-case-review.html",
     "publisher": {
       "@type": "Organization",
       "name": "Lawsuit Center",
@@ -31,43 +31,20 @@
   }
   </script>
 
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Neurological Case Review", "item": "https://lawsuit.center/neurological-case-review.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Product Liability Lawsuits",
-      "item": "https://lawsuit.center/product-liability-lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Reproductive Injury Case Review",
-      "item": "https://lawsuit.center/reproductive-case-review.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -96,31 +73,18 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li><a href="product-liability-lawsuits.html">Product Liability Lawsuits</a></li>
-     <li aria-current="page">Reproductive Injury Case Review</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow">Reproductive Injury Case Review</span>
-    <h1>Request a <em>reproductive injury case review.</em></h1>
+    <span class="eyebrow">Neurological Case Review</span>
+    <h1>Request a <em>neurological case review.</em></h1>
     <p class="lede">
-      If you or a family member has been diagnosed with uterine cancer, ovarian cancer, fertility complications,
-      or another reproductive injury possibly tied to a specific product or exposure — long-term hair relaxer use,
-      talcum powder use, prenatal medication exposure, or chemical workplace exposure — you may be eligible for
-      a free, confidential case review.
+      If you or a family member has been diagnosed with Parkinson's disease, neuropathy, cognitive decline, or another
+      neurological condition with a possible exposure history — pesticides, contaminated water, industrial chemicals,
+      medications, or consumer products — you may be eligible for a free, confidential case review.
     </p>
     <div class="actions">
       <a href="#case-review-form" class="btn btn--amber btn--lg">Skip to Form ↓</a>
-      <a href="https://lawsuitinformer.com/reproductive-injuries-linked-to-lawsuits.html" class="btn btn--ghost btn--lg">Read the Educational Guide</a>
+      <a href="https://lawsuitinformer.com/neurological-conditions-linked-to-lawsuits.html" class="btn btn--ghost btn--lg">Read the Educational Guide</a>
     </div>
     <p class="meta">
       Free initial review · No obligation · No attorney-client relationship is formed by submitting this form.
@@ -132,8 +96,8 @@
   <div class="container container--narrow">
     <p>
       Lawsuit Center is not a law firm and does not provide legal advice. Submitting information
-      does not guarantee eligibility, compensation, contact, or representation. Reproductive injury
-      claims depend heavily on diagnosis history, product use history, and supporting medical records.
+      does not guarantee eligibility, compensation, contact, or representation. Neurological injury
+      claims depend heavily on diagnosis history, exposure history, and supporting medical records.
     </p>
   </div>
 </section>
@@ -143,19 +107,19 @@
     <span class="eyebrow section__eyebrow">Who This Page May Help</span>
     <h2>Situations people often research.</h2>
     <p>
-      Reproductive injury claims often involve a documented diagnosis paired with long-term use of a specific
-      product or known chemical exposure. The strongest current claim patterns include uterine cancer following
-      long-term hair relaxer use, ovarian cancer following long-term talcum powder use, and developmental conditions
-      following prenatal exposure to certain medications. You don't need to know the legal terms — basic information
-      about the diagnosis, the product or exposure, and approximate years of use is enough to start.
+      Neurological injury claims often involve a documented diagnosis paired with occupational, agricultural,
+      residential, or product-based exposure history. The strongest current claims include
+      paraquat-related Parkinson's disease, neuropathy following long-term pesticide or chemical exposure,
+      and developmental conditions tied to specific products or contaminants. You don't need to know the
+      legal terms — basic information about the diagnosis, when it happened, and the suspected exposure is enough to start.
     </p>
     <ul>
-      <li>Uterine cancer following long-term chemical hair relaxer use</li>
-      <li>Ovarian cancer following long-term talcum powder use (perineal application)</li>
-      <li>Developmental conditions in children with prenatal medication exposure (acetaminophen and others)</li>
-      <li>Fertility complications or hormone-related diagnoses possibly tied to chemical or product exposure</li>
-      <li>Reproductive cancers following occupational chemical or industrial exposure</li>
-      <li>Other reproductive injuries where a specific product or exposure source can be identified</li>
+      <li>Parkinson's disease following long-term pesticide or herbicide exposure (paraquat, agricultural chemicals)</li>
+      <li>Neuropathy or nerve damage tied to chemical, solvent, or heavy metal exposure</li>
+      <li>Cognitive decline or memory loss following occupational or environmental contamination exposure</li>
+      <li>Developmental conditions in children with documented exposure history (heavy metals, contaminated products, certain medications)</li>
+      <li>Movement disorders or tremors following pesticide, industrial, or chemical exposure</li>
+      <li>Other neurological diagnoses where a specific exposure source can be identified</li>
     </ul>
   </div>
 </section>
@@ -163,16 +127,16 @@
 <section id="case-review-form" class="section section--surface">
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Submit Your Information</span>
-    <h2>Reproductive injury case review form.</h2>
+    <h2>Neurological case review form.</h2>
     <p>
-      Start with the diagnosis or situation that best fits, then briefly describe the product or exposure involved.
+      Start with the diagnosis or situation that best fits, then briefly describe the suspected exposure.
       Contact information is requested so someone can follow up if your submission appears to match
       an available review path.
     </p>
 
     <div class="form-card">
       <form
-        name="reproductive-case-review"
+        name="neurological-case-review"
         method="POST"
         data-netlify="true"
         data-netlify-recaptcha="true"
@@ -180,7 +144,7 @@
         action="/thank-you.html"
         class="form"
       >
-        <input type="hidden" name="form-name" value="reproductive-case-review" />
+        <input type="hidden" name="form-name" value="neurological-case-review" />
         <p style="display:none;">
           <label>Do not fill this out if you are human: <input name="bot-field" /></label>
         </p>
@@ -189,58 +153,57 @@
           <label for="diagnosis" class="field-label">Diagnosis or condition</label>
           <select id="diagnosis" name="diagnosis" required>
             <option value="">Select what best fits</option>
-            <option value="Uterine Cancer">Uterine cancer (endometrial)</option>
-            <option value="Ovarian Cancer">Ovarian cancer</option>
-            <option value="Cervical Cancer">Cervical cancer</option>
-            <option value="Breast Cancer">Breast cancer</option>
-            <option value="Fertility Complications">Fertility complications</option>
-            <option value="Hormone Disorder">Hormone-related disorder</option>
-            <option value="Pregnancy Complications">Pregnancy or birth complications</option>
-            <option value="Developmental Child">Child's developmental condition (prenatal exposure)</option>
-            <option value="Other Reproductive">Other reproductive injury</option>
+            <option value="Parkinsons">Parkinson's disease</option>
+            <option value="Neuropathy">Neuropathy or nerve damage</option>
+            <option value="Cognitive Decline">Cognitive decline or memory loss</option>
+            <option value="Movement Disorder">Movement disorder or tremors</option>
+            <option value="Developmental">Developmental condition (child)</option>
+            <option value="Other Neurological">Other neurological diagnosis</option>
+            <option value="Symptoms No Diagnosis">Symptoms, no formal diagnosis yet</option>
             <option value="Not Sure">Not sure / still investigating</option>
           </select>
         </div>
 
         <div class="field">
-          <label for="product-exposure" class="field-label">Suspected product or exposure</label>
-          <select id="product-exposure" name="product-exposure" required>
+          <label for="exposure-type" class="field-label">Suspected exposure source</label>
+          <select id="exposure-type" name="exposure-type" required>
             <option value="">Select what best fits</option>
-            <option value="Hair Relaxer">Chemical hair relaxer (long-term use)</option>
-            <option value="Talcum Powder">Talcum powder (long-term perineal use)</option>
-            <option value="Tylenol Prenatal">Tylenol / acetaminophen during pregnancy</option>
-            <option value="Other Prenatal Medication">Other medication during pregnancy</option>
-            <option value="Hormone Medication">Hormone-related medication</option>
-            <option value="Chemical Workplace">Chemical workplace exposure</option>
-            <option value="Endocrine Disrupting">Endocrine-disrupting chemicals (BPA, phthalates, etc.)</option>
-            <option value="Contaminated Product">Contaminated consumer product</option>
-            <option value="Multiple Products">Multiple products or exposures</option>
-            <option value="Unknown">Unsure of specific source</option>
+            <option value="Paraquat">Paraquat or agricultural herbicides</option>
+            <option value="Other Pesticide">Other pesticides or chemicals (occupational)</option>
+            <option value="Contaminated Water">Contaminated drinking water</option>
+            <option value="Industrial Chemicals">Industrial chemicals or solvents (workplace)</option>
+            <option value="Heavy Metals">Heavy metals (lead, mercury, arsenic, etc.)</option>
+            <option value="Tylenol Acetaminophen">Tylenol / acetaminophen (prenatal exposure)</option>
+            <option value="Baby Food Heavy Metals">Heavy metals in baby food</option>
+            <option value="Medication Other">Other medication or pharmaceutical</option>
+            <option value="Consumer Product">Consumer product</option>
+            <option value="Multiple Exposures">Multiple suspected exposures</option>
+            <option value="Unknown Exposure">Suspect exposure but unsure of source</option>
             <option value="Not Sure">Not sure / still investigating</option>
           </select>
         </div>
 
         <div class="field">
           <label for="age-at-diagnosis" class="field-label">Age at diagnosis</label>
-          <input type="text" id="age-at-diagnosis" name="age-at-diagnosis" placeholder="e.g. 42, mid-30s, child age 5" aria-describedby="age-note" />
+          <input type="text" id="age-at-diagnosis" name="age-at-diagnosis" placeholder="e.g. 58, mid-60s, child age 4" aria-describedby="age-note" />
           <p id="age-note" class="form-note">
             Approximate is fine. For developmental cases, the child's age at diagnosis is what matters.
           </p>
         </div>
 
         <div class="field">
-          <label for="use-period" class="field-label">Approximate years of product use or exposure</label>
-          <input type="text" id="use-period" name="use-period" placeholder="e.g. 1995–2018, weekly for 20 years, during pregnancy in 2019" aria-describedby="use-note" />
-          <p id="use-note" class="form-note">
-            Approximate is fine. Long-term use is often important for product-related reproductive cancer claims.
+          <label for="exposure-period" class="field-label">Approximate years of exposure</label>
+          <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 1985–2010, during pregnancy in 2018" aria-describedby="exposure-note" />
+          <p id="exposure-note" class="form-note">
+            Approximate is fine. Many neurological conditions appear years or decades after exposure.
           </p>
         </div>
 
         <div class="field">
           <label for="summary" class="field-label">Briefly describe what happened</label>
           <p id="summary-note" class="form-note">
-            What's the diagnosis and when was it made? What product was used and how often? When did use begin and end?
-            For prenatal exposure cases, when during pregnancy did exposure occur and what is the child's diagnosis?
+            What's the diagnosis and when was it made? Where did the suspected exposure occur — workplace, residence,
+            specific product, medication? Any known contamination at the location? Family or medical history that may be relevant?
           </p>
           <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
           <p id="summary-warning" class="form-note">
@@ -311,8 +274,8 @@
     <span class="eyebrow section__eyebrow">After Submission</span>
     <h2>What happens next.</h2>
     <p>
-      Your information may be reviewed to understand whether it relates to a reproductive injury lawsuit
-      category — hair relaxer uterine cancer, talcum powder ovarian cancer, prenatal medication, hormone-related,
+      Your information may be reviewed to understand whether it relates to a neurological injury lawsuit
+      category — paraquat Parkinson's, pesticide exposure, water contamination, heavy metals, medication,
       or other claim pattern — sponsored case-review path, or possible law firm follow-up.
     </p>
     <p>
@@ -346,12 +309,12 @@
       treated as a recommendation or endorsement of any attorney or law firm.
     </p>
     <p>
-      Reproductive injury claims are highly fact-specific. Diagnosis history, product use history,
-      timing, and supporting medical records can significantly affect whether a claim is viable.
-      Honest screening protects everyone's time.
+      Neurological injury claims are highly fact-specific. Diagnosis history, exposure history, timing,
+      and supporting medical records can significantly affect whether a claim is viable. Honest screening
+      protects everyone's time.
     </p>
     <p class="small-text">
-      Legal deadlines for product liability and personal injury claims can vary by state and can be short.
+      Legal deadlines for product liability, toxic exposure, and personal injury claims can vary by state and can be short.
       If you believe you may have a claim, consider speaking with a licensed attorney as soon as possible.
     </p>
     <div class="actions">
@@ -368,13 +331,13 @@
       <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="hair-relaxer-lawsuit.html" class="card">
-        <h3>Hair Relaxer Lawsuits</h3>
-        <p>Learn about hair relaxer claims involving alleged reproductive health risks.</p>
+      <a href="drug-injury-lawsuits.html" class="card">
+        <h3>Drug Injury Lawsuits</h3>
+        <p>Explore medication injury claims involving alleged side effects and neurological concerns.</p>
       </a>
-      <a href="product-liability-lawsuits.html" class="card">
-        <h3>Product Liability Lawsuits</h3>
-        <p>Explore claims involving products, warnings, safety, and consumer harm.</p>
+      <a href="chemical-exposure-lawsuits.html" class="card">
+        <h3>Chemical Exposure Lawsuits</h3>
+        <p>Learn about toxic exposure claims that may involve long-term health effects.</p>
       </a>
       <a href="case-review.html" class="card">
         <h3>Start a Free Case Review</h3>
@@ -408,24 +371,22 @@
     }
 
     var displayLabelMap = {
-      "Uterine Cancer": "uterine cancer",
-      "Ovarian Cancer": "ovarian cancer",
-      "Cervical Cancer": "cervical cancer",
-      "Breast Cancer": "breast cancer",
-      "Fertility Complications": "fertility complications",
-      "Hormone Disorder": "hormone disorder",
-      "Pregnancy Complications": "pregnancy complications",
-      "Developmental Child": "developmental condition (prenatal)",
-      "Other Reproductive": "reproductive injury",
-      "Not Sure": "reproductive review"
+      "Parkinsons": "Parkinson's disease",
+      "Neuropathy": "neuropathy / nerve damage",
+      "Cognitive Decline": "cognitive decline",
+      "Movement Disorder": "movement disorder / tremors",
+      "Developmental": "developmental neurological condition",
+      "Other Neurological": "neurological condition",
+      "Symptoms No Diagnosis": "neurological symptoms",
+      "Not Sure": "neurological review"
     };
 
-    var form = document.querySelector('form[name="reproductive-case-review"]');
+    var form = document.querySelector('form[name="neurological-case-review"]');
     var diagnosis = document.getElementById("diagnosis");
     if (form && diagnosis) {
       form.addEventListener("submit", function () {
         var raw = diagnosis.value;
-        var display = displayLabelMap[raw] || "reproductive";
+        var display = displayLabelMap[raw] || "neurological";
         sessionStorage.setItem("lc_category", display);
       });
     }

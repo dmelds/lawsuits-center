@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insurance Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Background on insurance lawsuits — denied claims, bad faith, delayed payments, coverage disputes, and improper claim handling." />
+  <title>Default Judgment | Lawsuit Center</title>
+  <meta name="description" content="Plain-English background on what a default judgment is, how it happens, what it can do, and how courts sometimes set defaults aside." />
   
-  <link rel="canonical" href="https://lawsuit.center/insurance-lawsuits.html" />
+  <link rel="canonical" href="https://lawsuit.center/default-judgment.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,50 +18,33 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Insurance Lawsuits",
-    "url": "https://lawsuit.center/insurance-lawsuits.html",
-    "description": "Background on insurance lawsuits — denied claims, bad faith, delayed payments, coverage disputes, and improper claim handling.",
+    "name": "Default Judgment",
+    "url": "https://lawsuit.center/default-judgment.html",
+    "description": "Plain-English background on what a default judgment is, how it happens, what it can do, and how courts sometimes set defaults aside.",
     "isPartOf": { "@type": "WebSite", "name": "Lawsuit Center", "url": "https://lawsuit.center/" },
     "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/", "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" } },
     "about": [
-      { "@type": "Thing", "name": "Insurance lawsuits" },
-      { "@type": "Thing", "name": "Bad faith insurance" },
-      { "@type": "Thing", "name": "Denied insurance claims" },
-      { "@type": "Thing", "name": "Coverage disputes" }
+      { "@type": "Thing", "name": "Default judgment" },
+      { "@type": "Thing", "name": "Lawsuit defense" },
+      { "@type": "Thing", "name": "Civil procedure" },
+      { "@type": "Thing", "name": "Response deadlines" }
     ]
   }
   </script>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Default Judgment", "item": "https://lawsuit.center/default-judgment.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Insurance Lawsuits",
-      "item": "https://lawsuit.center/insurance-lawsuits.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -90,58 +73,55 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li aria-current="page">Insurance Lawsuits</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow">Insurance Lawsuits</span>
-    <h1>Denied claims, bad faith, and coverage disputes.</h1>
-    <p class="lede">Insurance lawsuits arise when a policyholder believes an insurer has wrongly denied a claim, delayed payment, underpaid a loss, or otherwise violated the terms of a policy or applicable insurance law — covering property, health, auto, disability, life, and commercial policies.</p>
+    <span class="eyebrow">Lawsuit Defense Guide</span>
+    <h1>What a default judgment is and why deadlines matter.</h1>
+    <p class="lede">A default judgment is a court ruling against a defendant who has failed to respond to a lawsuit on time. This page explains the basics — what it is, how it happens, what it can do, and what defendants typically do to address one.</p>
     <p class="meta">Educational background only. Lawsuit Center is not a law firm and does not provide legal advice.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>Common types of insurance disputes.</h2>
-    <p>Common insurance disputes involve denial of coverage, underpayment of a covered loss, delays in claim handling, disputes over policy interpretation, and disagreements about whether a particular event falls within policy exclusions.</p>
-    <p>Property and casualty disputes often follow natural disasters, fires, or large losses. Health insurance disputes frequently involve denied treatments, network issues, and ERISA-governed plans. Auto, disability, and life insurance each have their own recurring patterns of dispute.</p>
+    <h2>How default judgments happen.</h2>
+    <p>When someone is sued, they have a deadline to respond — usually stated in the summons. If the defendant does not file an answer or other proper response by that deadline, the plaintiff can ask the court to enter a default. The court may then enter a default judgment, awarding what the plaintiff requested (subject to certain limits and proof of damages).</p>
+    <p>Defaults can also occur after a case is underway — for example, if a party fails to appear at a required hearing, fails to comply with court orders, or stops participating in the case altogether.</p>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
-    <h2>Bad faith claims.</h2>
-    <p>Most states recognize a cause of action for insurance "bad faith" — separate from breach of contract — where an insurer unreasonably denies a claim, fails to investigate, or otherwise mishandles a policyholder's claim. Bad faith claims may allow recovery beyond the policy limits.</p>
-    <p>Depending on the state, bad faith damages may include emotional distress, attorney's fees, and punitive damages. The standards vary significantly by state, and some require specific procedural steps before a bad faith lawsuit can proceed.</p>
+    <h2>What a default judgment can do.</h2>
+    <p>A default judgment is a real, enforceable court order. Depending on the case, it can lead to wage garnishment, bank account levies, liens on real property, damage to credit, and other collection actions. In some cases, plaintiffs use default judgments to collect on debts the defendant disputes or never received proper notice of.</p>
+    <p>Default judgments can also have collateral consequences — affecting professional licenses, security clearances, or future credit applications — depending on the underlying claim and how the judgment is reported.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>First-party versus third-party claims.</h2>
-    <p>First-party claims involve disputes between a policyholder and their own insurer — for example, a homeowner against their home insurer for fire damage, or a driver against their own auto insurer for uninsured motorist coverage.</p>
-    <p>Third-party claims involve a policyholder's insurer covering claims by other people — for example, liability coverage where a third party sues the policyholder. Each context has different procedures, rights, and standards. Many policies also require specific notice and cooperation from the policyholder, with consequences for non-compliance.</p>
+    <h2>Setting aside a default.</h2>
+    <p>Courts can sometimes set aside a default or default judgment, particularly if the defendant moves quickly and shows good cause — such as improper service, excusable neglect, fraud, or a meritorious defense. Standards and timelines vary significantly by jurisdiction, and some grounds (like void judgments for lack of service) have different rules than others.</p>
+    <p>The longer a default judgment sits, the harder it generally is to undo. Some states have firm outer deadlines for relief, after which only narrow grounds remain available.</p>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
+    <h2>Why response deadlines are critical.</h2>
+    <p>The simplest way to avoid a default judgment is to respond on time. Even a basic answer that denies the allegations and raises defenses can preserve the right to fight the case on the merits.</p>
+    <p>If you have been served with a lawsuit and the deadline is approaching, contacting an attorney quickly is often more important than figuring out the right response on your own. Many defense attorneys offer initial consultations and can help evaluate options before the deadline expires.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
     <h2>Related topics.</h2>
     <div class="inline-link-list">
-      <a href="real-estate-property-lawsuits.html">Real Estate &amp; Property Lawsuits</a>
-      <a href="construction-lawsuits.html">Construction Lawsuits</a>
-      <a href="consumer-lawsuits.html">Consumer Lawsuits</a>
       <a href="lawsuit-defense.html">Lawsuit Defense</a>
+      <a href="what-to-do-after-being-sued.html">What To Do After Being Sued</a>
+      <a href="insurance-lawsuits.html">Insurance Lawsuits</a>
+      <a href="business-lawsuits.html">Business Lawsuits</a>
     </div>
   </div>
 </section>
@@ -155,13 +135,13 @@
       <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="real-estate-property-lawsuits.html" class="card">
-        <h3>Real Estate and Property Lawsuits</h3>
-        <p>Explore disputes involving property damage, ownership, transactions, or land use.</p>
+      <a href="what-to-do-after-being-sued.html" class="card">
+        <h3>What To Do After Being Sued</h3>
+        <p>Learn common steps people consider after being served with lawsuit papers.</p>
       </a>
-      <a href="construction-lawsuits.html" class="card">
-        <h3>Construction Lawsuits</h3>
-        <p>Learn about disputes involving construction defects, contractors, projects, and property damage.</p>
+      <a href="lawsuit-defense.html" class="card">
+        <h3>Lawsuit Defense</h3>
+        <p>Explore the broader category of defense issues after a lawsuit is filed.</p>
       </a>
       <a href="case-review.html" class="card">
         <h3>Start a Free Case Review</h3>

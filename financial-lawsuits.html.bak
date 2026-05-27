@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insurance Lawsuits | Lawsuit Center</title>
-  <meta name="description" content="Background on insurance lawsuits — denied claims, bad faith, delayed payments, coverage disputes, and improper claim handling." />
+  <title>Financial Lawsuits | Lawsuit Center</title>
+  <meta name="description" content="Background on financial lawsuit categories — investment losses, broker misconduct, securities fraud, financial mismanagement, and consumer finance disputes." />
   
-  <link rel="canonical" href="https://lawsuit.center/insurance-lawsuits.html" />
+  <link rel="canonical" href="https://lawsuit.center/financial-lawsuits.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,50 +18,33 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Insurance Lawsuits",
-    "url": "https://lawsuit.center/insurance-lawsuits.html",
-    "description": "Background on insurance lawsuits — denied claims, bad faith, delayed payments, coverage disputes, and improper claim handling.",
+    "name": "Financial Lawsuits",
+    "url": "https://lawsuit.center/financial-lawsuits.html",
+    "description": "Background on financial lawsuit categories — investment losses, broker misconduct, securities fraud, financial mismanagement, and consumer finance disputes.",
     "isPartOf": { "@type": "WebSite", "name": "Lawsuit Center", "url": "https://lawsuit.center/" },
     "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/", "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" } },
     "about": [
-      { "@type": "Thing", "name": "Insurance lawsuits" },
-      { "@type": "Thing", "name": "Bad faith insurance" },
-      { "@type": "Thing", "name": "Denied insurance claims" },
-      { "@type": "Thing", "name": "Coverage disputes" }
+      { "@type": "Thing", "name": "Financial lawsuits" },
+      { "@type": "Thing", "name": "Investment fraud" },
+      { "@type": "Thing", "name": "Securities lawsuits" },
+      { "@type": "Thing", "name": "Broker misconduct" }
     ]
   }
   </script>
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Financial Lawsuits", "item": "https://lawsuit.center/financial-lawsuits.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Insurance Lawsuits",
-      "item": "https://lawsuit.center/insurance-lawsuits.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -90,47 +73,36 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li aria-current="page">Insurance Lawsuits</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow">Insurance Lawsuits</span>
-    <h1>Denied claims, bad faith, and coverage disputes.</h1>
-    <p class="lede">Insurance lawsuits arise when a policyholder believes an insurer has wrongly denied a claim, delayed payment, underpaid a loss, or otherwise violated the terms of a policy or applicable insurance law — covering property, health, auto, disability, life, and commercial policies.</p>
+    <span class="eyebrow">Financial Lawsuits</span>
+    <h1>Investment losses, securities issues, and financial misconduct.</h1>
+    <p class="lede">Financial lawsuits involve disputes over investments, brokerage accounts, securities, financial advice, and other money-related transactions — including alleged misrepresentation, suitability violations, churning, unauthorized trades, Ponzi schemes, and outright fraud.</p>
     <p class="meta">Educational background only. Lawsuit Center is not a law firm and does not provide legal advice.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>Common types of insurance disputes.</h2>
-    <p>Common insurance disputes involve denial of coverage, underpayment of a covered loss, delays in claim handling, disputes over policy interpretation, and disagreements about whether a particular event falls within policy exclusions.</p>
-    <p>Property and casualty disputes often follow natural disasters, fires, or large losses. Health insurance disputes frequently involve denied treatments, network issues, and ERISA-governed plans. Auto, disability, and life insurance each have their own recurring patterns of dispute.</p>
+    <h2>Common categories of financial claims.</h2>
+    <p>Financial claims typically arise where someone has lost money in an investment, account, or transaction and believes the loss involved misconduct rather than ordinary market risk. Common categories include broker-dealer disputes, investment advisor disputes, claims involving private placements or alternative investments, and securities fraud claims.</p>
+    <p>Other recurring categories include claims involving Ponzi schemes and investment fraud, complaints about unsuitable investments given a customer's risk tolerance, allegations of churning (excessive trading to generate commissions), unauthorized trading, misrepresentation of an investment's risk or features, and failure to disclose material information.</p>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
-    <h2>Bad faith claims.</h2>
-    <p>Most states recognize a cause of action for insurance "bad faith" — separate from breach of contract — where an insurer unreasonably denies a claim, fails to investigate, or otherwise mishandles a policyholder's claim. Bad faith claims may allow recovery beyond the policy limits.</p>
-    <p>Depending on the state, bad faith damages may include emotional distress, attorney's fees, and punitive damages. The standards vary significantly by state, and some require specific procedural steps before a bad faith lawsuit can proceed.</p>
+    <h2>Securities laws and regulators.</h2>
+    <p>Federal securities laws, including the Securities Act of 1933 and the Securities Exchange Act of 1934, set the basic framework for public company disclosures, broker-dealer conduct, and antifraud rules. The Securities and Exchange Commission (SEC) is the primary federal regulator. The Financial Industry Regulatory Authority (FINRA) is a self-regulatory organization that oversees brokerage firms and most disputes between brokers and customers.</p>
+    <p>States also have their own securities laws (sometimes called Blue Sky laws) and securities regulators. Investment advisors may be regulated at the federal or state level depending on the size of the firm.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <h2>First-party versus third-party claims.</h2>
-    <p>First-party claims involve disputes between a policyholder and their own insurer — for example, a homeowner against their home insurer for fire damage, or a driver against their own auto insurer for uninsured motorist coverage.</p>
-    <p>Third-party claims involve a policyholder's insurer covering claims by other people — for example, liability coverage where a third party sues the policyholder. Each context has different procedures, rights, and standards. Many policies also require specific notice and cooperation from the policyholder, with consequences for non-compliance.</p>
+    <h2>FINRA arbitration and other forums.</h2>
+    <p>Many disputes between investors and brokerage firms are resolved through FINRA arbitration rather than court, because most brokerage account agreements include arbitration clauses. FINRA arbitration is a private dispute resolution process with its own rules and procedures.</p>
+    <p>Other financial disputes may proceed in court, including securities class actions, derivative suits, claims against investment advisors, and claims that fall outside the scope of an arbitration agreement. Forum selection often depends on the contract, the type of claim, and the parties involved.</p>
   </div>
 </section>
 
@@ -138,11 +110,12 @@
   <div class="container container--narrow">
     <h2>Related topics.</h2>
     <div class="inline-link-list">
-      <a href="real-estate-property-lawsuits.html">Real Estate &amp; Property Lawsuits</a>
-      <a href="construction-lawsuits.html">Construction Lawsuits</a>
-      <a href="consumer-lawsuits.html">Consumer Lawsuits</a>
-      <a href="lawsuit-defense.html">Lawsuit Defense</a>
-    </div>
+    <a href="stock-market-fraud-lawsuits.html">Stock Market Fraud Lawsuits</a>
+    <a href="consumer-lawsuits.html">Consumer Lawsuits</a>
+    <a href="banking-lending-lawsuits.html">Banking &amp; Lending Lawsuits</a>
+    <a href="class-action-lawsuits.html">Class Action Lawsuits</a>
+  </div>
+
   </div>
 </section>
 
@@ -155,13 +128,13 @@
       <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="real-estate-property-lawsuits.html" class="card">
-        <h3>Real Estate and Property Lawsuits</h3>
-        <p>Explore disputes involving property damage, ownership, transactions, or land use.</p>
+      <a href="banking-lending-lawsuits.html" class="card">
+        <h3>Banking and Lending Lawsuits</h3>
+        <p>Explore disputes involving loans, banks, credit, lending practices, and financial services.</p>
       </a>
-      <a href="construction-lawsuits.html" class="card">
-        <h3>Construction Lawsuits</h3>
-        <p>Learn about disputes involving construction defects, contractors, projects, and property damage.</p>
+      <a href="stock-market-fraud-lawsuits.html" class="card">
+        <h3>Stock Market Fraud Lawsuits</h3>
+        <p>Learn about claims involving investment losses, securities fraud, or misleading financial conduct.</p>
       </a>
       <a href="case-review.html" class="card">
         <h3>Start a Free Case Review</h3>

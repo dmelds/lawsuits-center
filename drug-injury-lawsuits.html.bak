@@ -32,43 +32,21 @@
   }
   </script>
 
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Product Liability Lawsuits", "item": "https://lawsuit.center/product-liability-lawsuits.html" },
+      { "@type": "ListItem", "position": 4, "name": "Drug Injury Lawsuits", "item": "https://lawsuit.center/drug-injury-lawsuits.html" }
+    ]
+  }
+  </script>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Product Liability Lawsuits",
-      "item": "https://lawsuit.center/product-liability-lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Drug Injury Lawsuits",
-      "item": "https://lawsuit.center/drug-injury-lawsuits.html"
-    }
-  ]
-}
-</script>
-
 </head>
 
 <body>
@@ -97,18 +75,6 @@
 </header>
 
 <main>
-
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li><a href="product-liability-lawsuits.html">Product Liability Lawsuits</a></li>
-     <li aria-current="page">Drug Injury Lawsuits</li>
-   </ol>
-  </div>
-</nav>
 
 <section class="page-hero">
   <div class="container">

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PFAS Case Review | Lawsuit Center</title>
-  <meta name="description" content="Request a PFAS case review through Lawsuit Center. Submit details about contaminated drinking water, AFFF firefighting foam exposure, industrial PFAS releases, farm and agricultural land contamination, or related diagnoses." />
+  <title>Pesticide Case Review | Lawsuit Center</title>
+  <meta name="description" content="Request a pesticide exposure case review through Lawsuit Center. Submit details about paraquat, Roundup, agricultural chemical exposure, or related diagnoses." />
   
-  <link rel="canonical" href="https://lawsuit.center/pfas-case-review.html" />
+  <link rel="canonical" href="https://lawsuit.center/pesticide-case-review.html" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -23,19 +22,30 @@
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "PFAS Case Review",
-    "description": "Request a PFAS case review through Lawsuit Center.",
-    "url": "https://lawsuit.center/pfas-case-review.html",
+    "name": "Pesticide Case Review",
+    "description": "Request a pesticide exposure case review through Lawsuit Center.",
+    "url": "https://lawsuit.center/pesticide-case-review.html",
     "publisher": {
       "@type": "Organization",
       "name": "Lawsuit Center",
       "url": "https://lawsuit.center/",
-      "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center.jpeg" }
+      "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" }
     }
   }
   </script>
 
-  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+      { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits.html" },
+      { "@type": "ListItem", "position": 3, "name": "Pesticide Case Review", "item": "https://lawsuit.center/pesticide-case-review.html" }
+    ]
+  }
+  </script>
+
 <style>
   :root{--bg:#111;--surface:#181818;--surface-2:#1f1f1f;--border:#262626;--border-strong:#333;--ink:#f5f5f4;--ink-muted:#a8a29e;--ink-soft:#78716c;--amber:#d4a24e;--amber-bright:#e7b961;--display:"Fraunces","Times New Roman",serif;--body:"IBM Plex Sans",system-ui,sans-serif;--container:1280px;--gutter:clamp(20px,4vw,72px);--radius:14px;--radius-lg:22px;--ease:cubic-bezier(.2,.8,.2,1);}
   *,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;}html{scroll-behavior:smooth;}
@@ -46,7 +56,7 @@
   .container--narrow{max-width:820px;}
   .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);}
   .site-header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.85);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--border);}
-  .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px;}
+  .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:76px;}
   .brand{display:flex;align-items:center;gap:14px;flex-shrink:0;}
   .brand img{height:60px;width:auto;}
   .brand__tag{font-size:12.5px;color:var(--ink-muted);letter-spacing:.04em;white-space:nowrap;}
@@ -114,17 +124,10 @@
   .site-footer__copy{margin-top:18px;font-size:12.5px;color:var(--ink-soft);}
 
   @media(max-width:760px){
-    .site-header__inner{height:76px;}
-    .brand img{height:52px;}
-    .brand{gap:12px;}
     .nav__links,.nav .btn--amber{display:none;}
     .nav__toggle{display:inline-flex;}
     .nav__links.is-open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:rgba(17,17,17,.97);padding:24px var(--gutter);border-bottom:1px solid var(--border);gap:18px;}
     .actions{flex-direction:column;align-items:stretch;}.actions .btn{width:100%;}
-  }
-  @media(max-width:480px){
-    .brand img{height:46px;}
-    .brand__tag{display:none;}
   }
 
   /* Related Topics module */
@@ -164,84 +167,11 @@
     .card-grid{grid-template-columns:1fr;}
   }
 
-
-/* Visible breadcrumbs */
-.breadcrumb{
-  background:var(--bg, #111);
-  border-bottom:1px solid var(--border, #262626);
-  padding:14px 0;
-}
-.breadcrumb__list{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:8px;
-  list-style:none;
-  margin:0;
-  padding:0;
-  font-size:13px;
-  line-height:1.4;
-  color:var(--ink-soft, #78716c);
-}
-.breadcrumb__list li{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.breadcrumb__list li:not(:last-child)::after{
-  content:"/";
-  color:var(--ink-soft, #78716c);
-  opacity:.65;
-}
-.breadcrumb__list a{
-  color:var(--ink-muted, #a8a29e);
-  text-decoration:none;
-  transition:color .2s var(--ease, ease);
-}
-.breadcrumb__list a:hover{
-  color:var(--amber, #d4a24e);
-}
-.breadcrumb__list [aria-current="page"]{
-  color:var(--ink, #f5f5f4);
-}
 </style>
 
-<meta property="og:image" content="https://lawsuit.center/og-pfas.png">
-<meta name="twitter:image" content="https://lawsuit.center/og-pfas.png">
+<meta property="og:image" content="https://lawsuit.center/og-default.jpg">
+<meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "PFAS Water Contamination",
-      "item": "https://lawsuit.center/pfas-water-contamination-lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "PFAS Case Review",
-      "item": "https://lawsuit.center/pfas-case-review.html"
-    }
-  ]
-}
-</script>
-
 </head>
 <body>
 
@@ -270,29 +200,18 @@
 
 <main>
 
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li><a href="pfas-water-contamination-lawsuits.html">PFAS Water Contamination</a></li>
-     <li aria-current="page">PFAS Case Review</li>
-   </ol>
-  </div>
-</nav>
-
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">PFAS Case Review</span>
-    <h1>Request a <em>PFAS case review.</em></h1>
+    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Pesticide Case Review</span>
+    <h1>Request a <em>pesticide case review.</em></h1>
     <p class="lede">
-      Tell us about the exposure history or diagnosis. Your submission may be reviewed by
-      participating legal professionals, legal advertisers, or intake partners where available.
+      Tell us about pesticide or herbicide exposure and any related diagnosis. Your submission may be
+      reviewed by participating legal professionals, legal advertisers, or intake partners where
+      available.
     </p>
     <div class="actions">
       <a href="#case-review-form" class="btn btn--amber btn--lg">Skip to Form ↓</a>
-      <a href="https://lawsuitinformer.com/pfas-water-contamination-lawsuits.html" class="btn btn--ghost btn--lg">Read the Educational Guide</a>
+      <a href="https://lawsuitinformer.com/pesticide-exposure-lawsuits.html" class="btn btn--ghost btn--lg">Read the Educational Guide</a>
     </div>
     <p class="meta">
       Free initial review · No obligation · No attorney-client relationship is formed by submitting this form.
@@ -314,20 +233,22 @@
     <span class="eyebrow section__eyebrow">Who This Page May Help</span>
     <h2>Situations people often research.</h2>
     <p>
-      PFAS claims often involve alleged contamination of drinking water, firefighting foam exposure,
-      or releases from industrial facilities — affecting workers, residents near military bases or
-      airports, and entire communities served by the same water source. You don't need to know the
-      legal terms — basic information about exposure, residence, work history, or a related
-      diagnosis is enough to start.
+      Pesticide claims often involve allegations that long-term exposure to herbicides, weed killers,
+      or agricultural chemicals contributed to serious illness. Two of the most-researched product
+      categories are paraquat (linked to Parkinson's disease allegations) and Roundup (linked to
+      non-Hodgkin lymphoma allegations) — but exposure can also involve other products, drift from
+      nearby spraying, or repeated occupational use. You don't need to know the legal terms — basic
+      information about the product, work setting, exposure timing, or a related diagnosis is enough
+      to start.
     </p>
     <ul>
-      <li>Residents served by a public water system or private well with reported PFAS contamination</li>
-      <li>People living near military bases, airports, or industrial sites where AFFF or PFAS were used</li>
-      <li>Firefighters and others occupationally exposed to AFFF firefighting foam</li>
-      <li>Workers at chemical manufacturing, plating, or PFAS-handling facilities</li>
-      <li>Communities downstream of landfills or industrial sites with reported PFAS releases</li>
-      <li>Farms or agricultural land impacted by biosolid spreading, irrigation contamination, or livestock and crop losses</li>
-      <li>Diagnosis of kidney or testicular cancer, thyroid disease, ulcerative colitis, or other condition with possible PFAS exposure history</li>
+      <li>Farm workers, applicators, mixers, or crop dusters with repeated pesticide use</li>
+      <li>Landscapers, groundskeepers, or grounds maintenance workers</li>
+      <li>Residential users of weed killers or herbicides over many years</li>
+      <li>People exposed to drift from nearby agricultural spraying</li>
+      <li>Diagnosis of Parkinson's disease after possible paraquat exposure</li>
+      <li>Diagnosis of non-Hodgkin lymphoma after possible Roundup or glyphosate exposure</li>
+      <li>Other cancer or neurological diagnosis with possible pesticide-exposure history</li>
     </ul>
   </div>
 </section>
@@ -335,124 +256,138 @@
 <section id="case-review-form" class="section section--surface">
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Submit Your Information</span>
-    <h2>PFAS case review form.</h2>
+    <h2>Pesticide case review form.</h2>
     <p>
       Start with the situation that best fits, then briefly describe what happened.
       Contact information is requested so someone can follow up if your submission appears to match
       an available review path.
     </p>
 
+    <div class="form-card">
+      <form
+        name="pesticide-case-review"
+        method="POST"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+        netlify-honeypot="bot-field"
+        action="/thank-you.html"
+        class="form"
+      >
+        <input type="hidden" name="form-name" value="pesticide-case-review" />
+        <p style="display:none;">
+          <label>Do not fill this out if you are human: <input name="bot-field" /></label>
+        </p>
 
-<div class="form-card">
-  <form
-    name="pfas-case-review"
-    method="POST"
-    data-netlify="true"
-    data-netlify-recaptcha="true"
-    netlify-honeypot="bot-field"
-    action="/thank-you.html"
-    class="form"
-  >
-    <input type="hidden" name="form-name" value="pfas-case-review" />
-    <p style="display:none;">
-      <label>Do not fill this out if you are human: <input name="bot-field" /></label>
-    </p>
+        <div class="field">
+          <label for="exposure-type" class="field-label">Product or situation</label>
+          <select id="exposure-type" name="exposure-type" required>
+            <option value="">Select what best fits</option>
+            <option value="Paraquat / Parkinson's">Paraquat exposure with Parkinson's disease diagnosis</option>
+            <option value="Paraquat Exposure">Paraquat exposure (no diagnosis yet)</option>
+            <option value="Roundup / Non-Hodgkin Lymphoma">Roundup exposure with non-Hodgkin lymphoma diagnosis</option>
+            <option value="Roundup Exposure">Roundup or glyphosate exposure (no diagnosis yet)</option>
+            <option value="Other Herbicide Exposure">Other herbicide or weed killer exposure</option>
+            <option value="Insecticide Exposure">Insecticide exposure</option>
+            <option value="Agricultural Chemical Exposure">General agricultural chemical exposure</option>
+            <option value="Pesticide Drift">Drift from nearby spraying</option>
+            <option value="Other Cancer Diagnosis">Other cancer diagnosis (possible pesticide link)</option>
+            <option value="Other Neurological Diagnosis">Other neurological diagnosis (possible pesticide link)</option>
+            <option value="Other Health Concern">Other health concern possibly linked to pesticide exposure</option>
+            <option value="Not Sure">Not sure / still investigating</option>
+          </select>
+        </div>
 
-    <div class="field">
-      <label for="exposure-type" class="field-label">Exposure type or situation</label>
-      <select id="exposure-type" name="exposure-type" required>
-        <option value="">Select what best fits</option>
-        <option value="Contaminated Drinking Water">Contaminated drinking water (public system or private well)</option>
-        <option value="Military Base Exposure">Lived or worked on or near a military base</option>
-        <option value="Airport Exposure">Lived or worked on or near an airport</option>
-        <option value="AFFF Firefighting Foam">AFFF firefighting foam exposure (firefighter or trainee)</option>
-        <option value="Chemical Manufacturing / Industrial">Chemical manufacturing or PFAS-handling facility</option>
-        <option value="Landfill / Waste Site">Landfill or waste site near home or work</option>
-        <option value="Farm or Agricultural Land Contamination">Farm or agricultural land contamination (biosolids, irrigation, livestock or crop losses)</option>
-        <option value="Kidney Cancer Diagnosis">Diagnosed with kidney cancer (possible PFAS link)</option>
-        <option value="Testicular Cancer Diagnosis">Diagnosed with testicular cancer (possible PFAS link)</option>
-        <option value="Thyroid Disease Diagnosis">Diagnosed with thyroid disease (possible PFAS link)</option>
-        <option value="Ulcerative Colitis Diagnosis">Diagnosed with ulcerative colitis (possible PFAS link)</option>
-        <option value="Other PFAS Health Concern">Other PFAS-related health concern</option>
-        <option value="Not Sure">Not sure / still investigating</option>
-      </select>
+        <div class="field">
+          <label for="summary" class="field-label">Briefly describe what happened</label>
+          <p id="summary-note" class="form-note">
+            What product was involved — paraquat, Roundup, another herbicide or insecticide?
+            Where did exposure occur — farm, landscaping job, residential use, drift from a neighbor?
+            Any diagnosis received? Approximate years of exposure or use help.
+          </p>
+          <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
+          <p id="summary-warning" class="form-note">
+            Please do not include Social Security numbers, financial account numbers, full medical
+            records, or highly sensitive personal information.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="exposure-period" class="field-label">Approximate years of exposure</label>
+          <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 1995–2015" aria-describedby="exposure-note" />
+          <p id="exposure-note" class="form-note">
+            Approximate is fine. Exposure dates can be important because pesticide-related illnesses may appear years later.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="product-name" class="field-label">Product name (if known)</label>
+          <input type="text" id="product-name" name="product-name" placeholder="e.g. Roundup, Gramoxone, paraquat, herbicide brand" aria-describedby="product-name-note" />
+          <p id="product-name-note" class="form-note">
+            Brand or chemical name — if you remember it. Skip if unsure.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="work-setting" class="field-label">Work or exposure setting</label>
+          <input type="text" id="work-setting" name="work-setting" placeholder="e.g. row-crop farm, landscaping, residential lawn care" aria-describedby="work-setting-note" />
+          <p id="work-setting-note" class="form-note">
+            Where the exposure happened — farm, landscaping, residential use, or another setting.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="state" class="field-label">State</label>
+          <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
+          <p id="state-note" class="form-note">
+            Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="name" class="field-label">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+        </div>
+
+        <div class="field">
+          <label for="email" class="field-label">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label for="phone" class="field-label">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
+          <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
+        </div>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="legal-understanding" value="yes" required />
+          <span>
+            I understand that Lawsuit Center is not a law firm and that submitting this form
+            does not create an attorney-client relationship.
+          </span>
+        </label>
+
+        <label class="checkbox-row">
+          <input type="checkbox" name="contact-consent" value="yes" required />
+          <span>
+            I consent to being contacted by Lawsuit Center, participating law firms, legal
+            advertisers, or intake partners by phone, including autodialed calls and prerecorded
+            voice messages, email, or text message about my case review request. Consent is not
+            a condition of any service. Message and data rates may apply. Reply STOP to opt out.
+          </span>
+        </label>
+
+        <div data-netlify-recaptcha="true"></div>
+
+        <button type="submit">Submit Case Review Request</button>
+
+        <p class="form-fineprint">
+          Created by a California-licensed attorney. Your submission may be reviewed by
+          participating legal professionals, legal advertisers, or intake partners where available.
+          A submission does not guarantee eligibility, compensation, contact, or representation.
+        </p>
+      </form>
     </div>
-
-    <div class="field">
-      <label for="summary" class="field-label">Briefly describe what happened</label>
-      <p id="summary-note" class="form-note">
-        What water source, base, airport, facility, or farm was involved? Where did exposure or contamination occur — at home, work, on your land, or all of these?
-        Any diagnosis, livestock or crop losses, or land impacts? Approximate years of residence, operation, or exposure help.
-      </p>
-      <textarea id="summary" name="summary" rows="7" aria-describedby="summary-note summary-warning" required></textarea>
-      <p id="summary-warning" class="form-note">
-        Please do not include Social Security numbers, financial account numbers, full medical
-        records, or highly sensitive personal information.
-      </p>
-    </div>
-
-    <div class="field">
-      <label for="exposure-period" class="field-label">Approximate years of exposure or residence</label>
-      <input type="text" id="exposure-period" name="exposure-period" placeholder="e.g. 2005–2020" aria-describedby="exposure-note" />
-      <p id="exposure-note" class="form-note">
-        Approximate is fine. PFAS exposure dates can be important because related illnesses may appear years later.
-      </p>
-    </div>
-
-    <div class="field">
-      <label for="state" class="field-label">State</label>
-      <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
-      <p id="state-note" class="form-note">
-        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
-      </p>
-    </div>
-
-    <div class="field">
-      <label for="name" class="field-label">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name" required />
-    </div>
-
-    <div class="field">
-      <label for="email" class="field-label">Email</label>
-      <input type="email" id="email" name="email" autocomplete="email" required />
-    </div>
-
-    <div class="field">
-      <label for="phone" class="field-label">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel" aria-describedby="phone-note" required />
-      <p id="phone-note" class="form-note">For follow-up about your case review request.</p>
-    </div>
-
-    <label class="checkbox-row">
-      <input type="checkbox" name="legal-understanding" value="yes" required />
-      <span>
-        I understand that Lawsuit Center is not a law firm and that submitting this form
-        does not create an attorney-client relationship.
-      </span>
-    </label>
-
-    <label class="checkbox-row">
-      <input type="checkbox" name="contact-consent" value="yes" required />
-      <span>
-        I consent to being contacted by Lawsuit Center, participating law firms, legal
-        advertisers, or intake partners by phone, including autodialed calls and prerecorded
-        voice messages, email, or text message about my case review request. Consent is not
-        a condition of any service. Message and data rates may apply. Reply STOP to opt out.
-      </span>
-    </label>
-
-    <div data-netlify-recaptcha="true"></div>
-
-    <button type="submit">Submit Case Review Request</button>
-
-    <p class="form-fineprint">
-      Created by a California-licensed attorney. Your submission may be reviewed by
-      participating legal professionals, legal advertisers, or intake partners where available.
-      A submission does not guarantee eligibility, compensation, contact, or representation.
-    </p>
-  </form>
-</div>
-
 
   </div>
 </section>
@@ -462,7 +397,7 @@
     <span class="eyebrow section__eyebrow">After Submission</span>
     <h2>What happens next.</h2>
     <p>
-      Your information may be reviewed to understand whether it relates to a PFAS lawsuit
+      Your information may be reviewed to understand whether it relates to a pesticide lawsuit
       category, claim pattern, sponsored case-review path, or possible law firm follow-up.
     </p>
     <p>
@@ -496,8 +431,8 @@
       treated as a recommendation or endorsement of any attorney or law firm.
     </p>
     <p class="small-text">
-      Legal deadlines for PFAS and water contamination claims can vary by state and can be short. If you believe you
-      may have a claim, consider speaking with a licensed attorney as soon as possible.
+      Legal deadlines for pesticide exposure claims can vary by state and can be short. If you
+      believe you may have a claim, consider speaking with a licensed attorney as soon as possible.
     </p>
     <div class="actions">
       <a href="advertising-disclosure.html" class="btn btn--ghost">Advertising Disclosure</a>
@@ -506,29 +441,24 @@
   </div>
 </section>
 
-
 <section class="section related-topics-module">
   <div class="container">
     <div class="section__head section__head--left">
       <span class="eyebrow section__eyebrow">Related Topics</span>
-      <h2>Continue exploring this category.</h2>
+      <h2>Browse related lawsuit categories.</h2>
     </div>
     <div class="card-grid">
-      <a href="pfas-water-contamination-lawsuits.html" class="card">
-        <h3>PFAS Water Contamination Lawsuits</h3>
-        <p>Learn about PFAS lawsuits, water contamination claims, exposure history, and review factors.</p>
+      <a href="roundup-lawsuit.html" class="card">
+        <h3>Roundup Lawsuits</h3>
+        <p>Learn about Roundup claims involving glyphosate exposure and alleged cancer risks.</p>
       </a>
-      <a href="water-contamination-lawsuits.html" class="card">
-        <h3>Water Contamination Lawsuits</h3>
-        <p>Explore related claims involving contaminated drinking water, private wells, and affected communities.</p>
+      <a href="chemical-exposure-lawsuits.html" class="card">
+        <h3>Chemical Exposure Lawsuits</h3>
+        <p>Explore related toxic exposure claims involving pesticides, herbicides, and other chemicals.</p>
       </a>
-      <a href="pfas-exposure-checker.html" class="card">
-        <h3>PFAS Exposure Checker</h3>
-        <p>Use the free checker to walk through your location, water source, and possible exposure timeline.</p>
-      </a>
-      <a href="https://lawsuitinformer.com/pfas-water-contamination-lawsuits.html" class="card">
-        <h3>PFAS Editorial Deep-Dive</h3>
-        <p>Read Lawsuit Informer’s background article on PFAS litigation, evidence, and claim evaluation.</p>
+      <a href="case-review.html" class="card">
+        <h3>Start a Free Case Review</h3>
+        <p>Submit basic information about your situation for review — no obligation, no cost.</p>
       </a>
     </div>
   </div>
@@ -557,55 +487,32 @@
       });
     }
 
-    // PREFILL FROM URL PARAMS (e.g., from exposure checker)
-    var params = new URLSearchParams(window.location.search);
-
-    var exposureParam = params.get('exposure');
-    if (exposureParam) {
-      var exposureSelect = document.getElementById('exposure-type');
-      if (exposureSelect) {
-        Array.from(exposureSelect.options).forEach(function(opt) {
-          if (opt.value === exposureParam) opt.selected = true;
-        });
-      }
-    }
-
-    var stateParam = params.get('state');
-    if (stateParam) {
-      var stateInput = document.getElementById('state');
-      if (stateInput && !stateInput.value) {
-        stateInput.value = stateParam;
-      }
-    }
-
     var displayLabelMap = {
-      "Contaminated Drinking Water": "PFAS contaminated drinking water exposure",
-      "Military Base Exposure": "PFAS military base exposure",
-      "Airport Exposure": "PFAS airport exposure",
-      "AFFF Firefighting Foam": "AFFF firefighting foam exposure",
-      "Chemical Manufacturing / Industrial": "PFAS industrial / occupational exposure",
-      "Landfill / Waste Site": "PFAS landfill or waste site exposure",
-      "Farm or Agricultural Land Contamination": "PFAS farm or agricultural land contamination",
-      "Kidney Cancer Diagnosis": "PFAS-related kidney cancer",
-      "Testicular Cancer Diagnosis": "PFAS-related testicular cancer",
-      "Thyroid Disease Diagnosis": "PFAS-related thyroid disease",
-      "Ulcerative Colitis Diagnosis": "PFAS-related ulcerative colitis",
-      "Other PFAS Health Concern": "PFAS-related health concern",
-      "Not Sure": "PFAS exposure"
+      "Paraquat / Parkinson's": "paraquat exposure with Parkinson's disease",
+      "Paraquat Exposure": "paraquat exposure",
+      "Roundup / Non-Hodgkin Lymphoma": "Roundup exposure with non-Hodgkin lymphoma",
+      "Roundup Exposure": "Roundup or glyphosate exposure",
+      "Other Herbicide Exposure": "herbicide or weed killer exposure",
+      "Insecticide Exposure": "insecticide exposure",
+      "Agricultural Chemical Exposure": "agricultural chemical exposure",
+      "Pesticide Drift": "pesticide drift exposure",
+      "Other Cancer Diagnosis": "cancer with possible pesticide-exposure link",
+      "Other Neurological Diagnosis": "neurological condition with possible pesticide-exposure link",
+      "Other Health Concern": "pesticide exposure health concern",
+      "Not Sure": "pesticide exposure"
     };
 
-    var form = document.querySelector('form[name="pfas-case-review"]');
+    var form = document.querySelector('form[name="pesticide-case-review"]');
     var exposureType = document.getElementById("exposure-type");
     if (form && exposureType) {
       form.addEventListener("submit", function () {
         var raw = exposureType.value;
-        var display = displayLabelMap[raw] || "PFAS";
+        var display = displayLabelMap[raw] || "pesticide";
         sessionStorage.setItem("lc_category", display);
       });
     }
   });
 </script>
-
 <script src="form-validation.js"></script>
 
 </body>

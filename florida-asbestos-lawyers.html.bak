@@ -127,83 +127,10 @@
     .brand img { height: 46px; }
     .brand__tag { display: none; }
   }
-
-/* Visible breadcrumbs */
-.breadcrumb{
-  background:var(--bg, #111);
-  border-bottom:1px solid var(--border, #262626);
-  padding:14px 0;
-}
-.breadcrumb__list{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:8px;
-  list-style:none;
-  margin:0;
-  padding:0;
-  font-size:13px;
-  line-height:1.4;
-  color:var(--ink-soft, #78716c);
-}
-.breadcrumb__list li{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-.breadcrumb__list li:not(:last-child)::after{
-  content:"/";
-  color:var(--ink-soft, #78716c);
-  opacity:.65;
-}
-.breadcrumb__list a{
-  color:var(--ink-muted, #a8a29e);
-  text-decoration:none;
-  transition:color .2s var(--ease, ease);
-}
-.breadcrumb__list a:hover{
-  color:var(--amber, #d4a24e);
-}
-.breadcrumb__list [aria-current="page"]{
-  color:var(--ink, #f5f5f4);
-}
 </style>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://lawsuit.center/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Browse Lawsuits",
-      "item": "https://lawsuit.center/lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Asbestos Lawsuits",
-      "item": "https://lawsuit.center/asbestos-lawsuits.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Florida Asbestos Lawyers",
-      "item": "https://lawsuit.center/florida-asbestos-lawyers.html"
-    }
-  ]
-}
-</script>
-
 </head>
 
 <body>
@@ -232,18 +159,6 @@
 </header>
 
 <main>
-
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-   <ol class="breadcrumb__list">
-     <li><a href="index.html">Home</a></li>
-     <li><a href="lawsuits.html">Browse Lawsuits</a></li>
-     <li><a href="asbestos-lawsuits.html">Asbestos Lawsuits</a></li>
-     <li aria-current="page">Florida Asbestos Lawyers</li>
-   </ol>
-  </div>
-</nav>
 
 <section class="page-hero">
   <div class="container container--narrow">
