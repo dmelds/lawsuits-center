@@ -30,6 +30,11 @@
       "name": "Lawsuit Center",
       "url": "https://lawsuit.center/",
       "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center-new.png" }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://lawsuit.center/lawsuits.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
     }
   }
   </script>
@@ -64,6 +69,11 @@
         <a href="how-case-review-works.html">How It Works</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <form class="nav__search" role="search" action="/lawsuits.html" method="get">
+          <svg class="nav__search-icon" width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
+          <input type="search" name="q" placeholder="Search lawsuits…" aria-label="Search lawsuits" autocomplete="off" />
+          <button type="submit" class="nav__search-btn" aria-label="Search">Go</button>
+        </form>
       </div>
       <a href="case-review.html" class="btn btn--amber">Start Case Review</a>
       <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
@@ -85,6 +95,24 @@
     <div class="hero-actions">
       <a href="case-review.html" class="btn btn--amber btn--lg">Start Free Case Review</a>
     </div>
+
+    <form class="hero-search" role="search" action="/lawsuits.html" method="get">
+      <span class="hero-search__label">Or search lawsuits directly</span>
+      <div class="hero-search__bar">
+        <svg class="hero-search__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
+        <input type="search" name="q" placeholder="Try asbestos, PFAS, Roundup, Depo-Provera…" aria-label="Search lawsuit categories" autocomplete="off" />
+        <button type="submit" class="hero-search__btn">Search</button>
+      </div>
+      <div class="hero-search__chips" aria-label="Popular searches">
+        <span class="hero-search__chips-label">Popular:</span>
+        <a href="/lawsuits.html?q=asbestos">Asbestos</a>
+        <a href="/lawsuits.html?q=PFAS">PFAS</a>
+        <a href="/lawsuits.html?q=Roundup">Roundup</a>
+        <a href="/lawsuits.html?q=Depo-Provera">Depo-Provera</a>
+        <a href="/lawsuits.html?q=social+media">Social media</a>
+        <a href="/lawsuits.html?q=ChatGPT">ChatGPT</a>
+      </div>
+    </form>
 
     <h2 class="hero-cats__title">Pick your category, or run a free check first.</h2>
     <div class="cats">
@@ -326,7 +354,6 @@
   </div>
 </section>
 
-<!-- Hidden form stub for Netlify form detection. -->
 <form name="depo-provera-case-review" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
   <input type="text" name="exposure-type" />
   <input type="text" name="summary" />
