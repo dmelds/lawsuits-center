@@ -466,12 +466,12 @@
 </main>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 </footer>
 <script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
 </script>
 
 <script>
@@ -767,12 +767,18 @@
     const a = state.answers;
     const formValue = EXPOSURE_TO_FORM_VALUE[a.exposure] || '';
 
+    // AFFF exposure routes to the dedicated AFFF case-review page; all others to the general PFAS form.
+    const isAfffPath = a.exposure === 'afff';
+    const reviewPage = isAfffPath ? 'afff-case-review.html' : 'pfas-case-review.html';
+    // AFFF page has its own exposure-type select values; pass one that matches it.
+    const ctaExposure = isAfffPath ? 'Firefighter Occupational' : formValue;
+
     // pass context to case review page (sessionStorage + URL param)
     try {
-      sessionStorage.setItem('lc_prefill_exposure', formValue);
+      sessionStorage.setItem('lc_prefill_exposure', ctaExposure);
       sessionStorage.setItem('lc_prefill_state', a.state || '');
     } catch (e) {}
-    const ctaHref = `pfas-case-review.html?exposure=${encodeURIComponent(formValue)}&state=${encodeURIComponent(a.state || '')}#case-review-form`;
+    const ctaHref = `${reviewPage}?exposure=${encodeURIComponent(ctaExposure)}&state=${encodeURIComponent(a.state || '')}#case-review-form`;
 
     const isFarmPath = a.exposure === 'farm';
     let headline, summary, body;
