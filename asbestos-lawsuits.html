@@ -199,13 +199,13 @@
 
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="index" class="brand" aria-label="Lawsuit Center home">
+    <a href="/" class="brand" aria-label="Lawsuit Center home">
       <img src="logo-center-new.png" alt="Lawsuit Center" />
       <span class="brand__tag">attorney-built</span>
     </a>
     <nav class="nav" aria-label="Primary">
       <div class="nav__links" id="site-menu">
-        <a href="index">Home</a>
+        <a href="/">Home</a>
         <a href="case-review">Start Case Review</a>
         <a href="lawsuits">Browse Lawsuits</a>
         <a href="how-case-review-works">How It Works</a>
@@ -276,13 +276,9 @@
         <h3>Lung Cancer Asbestos Case Review</h3>
         <p>Share basic information about asbestos exposure and lung cancer for possible case review.</p>
       </a>
-      <a href="california-asbestos-lawyers" class="card">
-        <h3>California Asbestos Lawyers</h3>
-        <p>Explore asbestos lawyer information for California-related exposure, illness, or claim review.</p>
-      </a>
-      <a href="florida-asbestos-lawyers" class="card">
-        <h3>Florida Asbestos Lawyers</h3>
-        <p>Explore asbestos lawyer information for Florida-related exposure, illness, or claim review.</p>
+      <a href="asbestos-lawyers" class="card">
+        <h3>Asbestos Lawyers by State</h3>
+        <p>Find an asbestos lawyer guide for your state — what attorneys review, time limits, and how to compare firms across California, Florida, Illinois, Pennsylvania, Michigan, and Louisiana.</p>
       </a>
     </div>
   </div>
@@ -329,8 +325,7 @@
     <p>Asbestos claims may depend on where exposure occurred, where the person lived, where a company did business, where a diagnosis occurred, and which statute of limitations applies. Deadlines can vary by state and case type.</p>
     <p>Because deadlines can be important, people researching possible asbestos claims should not wait to speak with a qualified attorney if they believe they may have a claim.</p>
     <div class="hero-actions">
-      <a href="california-asbestos-lawyers" class="btn btn--ghost">California Asbestos Lawyers</a>
-      <a href="florida-asbestos-lawyers" class="btn btn--ghost">Florida Asbestos Lawyers</a>
+      <a href="asbestos-lawyers" class="btn btn--ghost">Find Asbestos Lawyers by State</a>
     </div>
   </div>
 </section>
@@ -391,12 +386,12 @@
 </main>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 </footer>
 <script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
 </script>
 
 <script>
