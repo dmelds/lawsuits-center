@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Florida Asbestos Lawyers | Lawsuit Center</title>
-  <meta name="description" content="Learn how Florida asbestos lawyers may evaluate mesothelioma, asbestos lung cancer, asbestosis, wrongful death, and other exposure-related claims, and what readers may want to gather before contacting a firm." />
-  
+  <meta name="description" content="How Florida asbestos lawyers evaluate mesothelioma, lung cancer, asbestosis, and wrongful death claims — Florida exposure sites, time limits, what to gather, and how to compare firms." />
+
   <link rel="canonical" href="https://lawsuit.center/florida-asbestos-lawyers" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -24,7 +24,7 @@
     "@type": "WebPage",
     "name": "Florida Asbestos Lawyers",
     "url": "https://lawsuit.center/florida-asbestos-lawyers",
-    "description": "Learn how Florida asbestos lawyers may evaluate mesothelioma, asbestos lung cancer, asbestosis, wrongful death, and other exposure-related claims, and what readers may want to gather before contacting a firm."
+    "description": "How Florida asbestos lawyers evaluate mesothelioma, lung cancer, asbestosis, and wrongful death claims — Florida exposure sites, time limits, what to gather, and how to compare firms."
   }
   </script>
 
@@ -167,6 +167,18 @@
 .breadcrumb__list [aria-current="page"]{
   color:var(--ink, #f5f5f4);
 }
+
+/* Background / education module (Informer funnel) */
+.learn-more{ background:rgba(212,162,78,.06); border:1px solid rgba(212,162,78,.28); border-radius:var(--radius); padding:24px clamp(20px,3vw,32px); }
+.learn-more p{ margin-bottom:10px; }
+.learn-more .small-text{ margin-top:12px; }
+
+/* By-state cluster module */
+.state-grid{ display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:12px; }
+.state-grid a{ display:flex; align-items:center; justify-content:center; text-align:center; padding:14px 12px; border:1px solid var(--border); border-radius:12px; font-size:14.5px; font-weight:600; color:var(--ink); border-bottom:1px solid var(--border); transition:border-color .2s var(--ease), background .2s var(--ease); }
+.state-grid a:hover{ border-color:var(--amber); border-bottom-color:var(--amber); background:var(--surface); }
+.state-grid a[aria-current="page"]{ border-color:var(--amber); color:var(--amber); }
+@media (max-width:760px){ .state-grid{ grid-template-columns:repeat(2,1fr); } }
 </style>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
@@ -247,34 +259,62 @@
 
 <section class="page-hero">
   <div class="container container--narrow">
-    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Florida exposure and diagnosis guide</span>
+    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Florida legal help guide</span>
     <h1>Florida Asbestos Lawyers</h1>
-    <p class="lede">People searching for a Florida asbestos lawyer are often dealing with a serious diagnosis, a complicated work history, or questions about exposure that may have happened decades ago. This page is built to help readers understand how asbestos lawyers may review these cases, what information may matter early, and how to compare firms more carefully.</p>
+    <p class="lede">People searching for a Florida asbestos lawyer are often facing a serious diagnosis, a complicated work history, or questions about exposure that may have happened decades ago. This page explains how asbestos lawyers may review these cases, the Florida work settings that frequently come up, what information tends to matter early, and how to compare firms more carefully.</p>
     <div class="hero-actions">
-      <a href="#featured-lawyers" class="btn btn--amber btn--lg">Browse Featured Lawyers</a>
-      <a href="#records-to-gather" class="btn btn--ghost btn--lg">What to Gather First</a>
+      <a href="#featured-lawyers" class="btn btn--amber btn--lg">See Featured Lawyers</a>
+      <a href="#how-to-choose" class="btn btn--ghost btn--lg">How to Choose</a>
     </div>
-    <p class="small-text">Some listings or placements on this page may be sponsored. Sponsored visibility should be clearly disclosed and should not be treated as a promise of outcome or a recommendation for every reader.</p>
+    <p class="small-text">Some placements on this page may be sponsored. Featured visibility should be clearly identified and does not constitute a recommendation or guarantee of results.</p>
   </div>
 </section>
 
 <section class="section section--surface" style="padding-top:36px; padding-bottom:36px;">
   <div class="container container--narrow">
     <div class="trust-strip">
-      <p><strong>Built for readers researching asbestos claims</strong></p>
-      <p><strong>Focused on diagnosis, work history, and exposure clues</strong></p>
-      <p><strong>Featured firm section with disclosure language</strong></p>
-      <p><strong>Educational information only</strong></p>
+      <p><strong>Attorney-built, independent</strong></p>
+      <p><strong>Florida-specific context</strong></p>
+      <p><strong>Featured lawyer section</strong></p>
+      <p><strong>Clear disclosure approach</strong></p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Why Readers Search</span>
-    <h2>Why readers look for Florida asbestos lawyers.</h2>
-    <p>Readers may start searching for a Florida asbestos lawyer after a mesothelioma diagnosis, an asbestos-related lung cancer diagnosis, an asbestosis diagnosis, or the loss of a family member. Others start earlier, after realizing that work in construction, shipyards, industrial facilities, power plants, commercial buildings, boiler systems, maintenance trades, or military-related environments may have involved asbestos exposure.</p>
-    <p>In many situations, the problem is not just the diagnosis. It is also the uncertainty. Exposure may have happened across multiple job sites, over many years, and around products or materials that the reader does not fully remember. That is often why people want a lawyer or firm that appears comfortable with old timelines and incomplete information.</p>
+    <span class="eyebrow section__eyebrow">Overview</span>
+    <h2>What Florida asbestos lawyers do.</h2>
+    <p>Florida asbestos lawyers represent people and families dealing with asbestos-related diseases and exposure histories. Depending on the facts, these lawyers may investigate where exposure happened, identify products or job sites involved, gather medical and occupational records, evaluate possible legal claims, and pursue lawsuits or trust-related claim options where appropriate.</p>
+    <p>Some firms focus heavily on mesothelioma and other asbestos-related cancer claims, while others may also handle asbestosis, occupational exposure cases, secondary exposure claims, and wrongful death matters involving a family member who died from an asbestos-related illness.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Florida Exposure</span>
+    <h2>Where asbestos exposure happened in Florida.</h2>
+    <p>Florida's exposure history is shaped heavily by its military, maritime, and industrial footprint. Naval and shipbuilding sites around Jacksonville — including NAS Jacksonville and Naval Station Mayport — along with Pensacola Naval Air Station and the Port of Tampa, are recurring sources of asbestos exposure aboard vessels and throughout repair and base facilities.</p>
+    <p>Power generation plants, the paper mills of North Florida, and the state's phosphate and chemical-processing industry add to the picture, as does the extensive construction that accompanied Florida's long building boom.</p>
+    <p>As elsewhere, not all exposure happened on the job directly. Take-home exposure from a family member's work clothing, and exposure during the renovation or demolition of older structures, are common patterns.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Claim Types</span>
+    <h2>Common types of asbestos-related claims.</h2>
+    <p>Florida asbestos lawyers may handle a range of asbestos-related matters depending on the firm and the exposure history involved.</p>
+    <ul>
+      <li>Mesothelioma claims</li>
+      <li>Asbestos-related lung cancer claims</li>
+      <li>Asbestosis claims</li>
+      <li>Wrongful death claims involving asbestos-related disease</li>
+      <li>Occupational exposure cases</li>
+      <li>Secondary or take-home exposure claims</li>
+      <li>Exposure involving shipyards, naval service, power plants, paper mills, and construction</li>
+      <li>Claims involving older asbestos-containing products or worksites</li>
+    </ul>
   </div>
 </section>
 
@@ -282,87 +322,54 @@
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">What Lawyers Review</span>
     <h2>What Florida asbestos lawyers may actually review.</h2>
-    <p>Florida asbestos lawyers may review more than just medical records. Depending on the case, they may look at a person's work history, military service, trades performed, possible job sites, product identification issues, family exposure patterns, and the sequence of events between exposure and diagnosis.</p>
-    <p>Some firms may also evaluate whether the facts suggest a lawsuit, a wrongful death claim, a product-focused investigation, or another claim path that may be worth discussing further. Readers often want a firm that can explain this process clearly instead of forcing them to guess what matters.</p>
-    <p>Readers researching these issues may also want to review <a href="lung-cancer-from-asbestos-exposure">lung cancer from asbestos exposure</a> as part of a broader review of possible asbestos-related claims.</p>
+    <p>Florida asbestos lawyers may review far more than medical records. Depending on the case, they may look at a person's work history, military service, trades performed, possible job sites, product identification issues, family exposure patterns, and the sequence of events between exposure and diagnosis.</p>
+    <p>Some firms may also evaluate whether the facts suggest a lawsuit, a wrongful death claim, a product-focused investigation, or a trust-based claim path worth discussing further. Readers often want a firm that can explain this process clearly instead of forcing them to guess what matters.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Exposure Histories</span>
-    <h2>Exposure histories that may lead readers here.</h2>
-    <p>Florida readers may reach this page with many different exposure backgrounds. Some remember direct occupational exposure. Others are less certain and only know they worked around insulation, pipe systems, gaskets, pumps, boilers, industrial equipment, renovation dust, or older commercial and residential materials.</p>
-    <ul>
-      <li>Shipyard or maritime-related work</li>
-      <li>Construction, demolition, or renovation work</li>
-      <li>Industrial maintenance or plant work</li>
-      <li>Refinery, power generation, or boiler-related work</li>
-      <li>Mechanical repair, piping, valve, pump, or gasket work</li>
-      <li>Military or naval service with possible asbestos exposure</li>
-      <li>Secondary exposure from a household member's work clothing</li>
-      <li>Long-term work in older buildings or around older asbestos-containing materials</li>
-    </ul>
+    <span class="eyebrow section__eyebrow">Time Limits</span>
+    <h2>Acting within Florida's time limits.</h2>
+    <p>Florida sets its own deadlines for asbestos-related claims. As in other states, the time to file often depends on when an illness was diagnosed or connected to asbestos rather than on when the exposure occurred, which may have been decades earlier. Claims following an asbestos-related death follow their own separate timing.</p>
+    <p>Because these deadlines are specific to Florida and depend on the facts of each case, they are best confirmed with a Florida-licensed attorney rather than estimated on your own.</p>
   </div>
 </section>
 
 <section id="records-to-gather" class="section section--surface">
   <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">What to Gather</span>
-    <h2>What readers may want to gather before contacting a lawyer.</h2>
+    <h2>What readers may want to gather first.</h2>
     <p>Many readers do not have a complete file when they first reach out, and that is common. Even so, it may help to gather whatever basic information is available so the initial conversation is more useful.</p>
     <ul>
       <li>Diagnosis records and any pathology, imaging, or treatment summaries</li>
       <li>A rough work history with employer names, dates, and job titles</li>
-      <li>Military service details if relevant</li>
-      <li>A list of job sites, plants, ships, buildings, or facilities remembered</li>
+      <li>Military or naval service details if relevant</li>
+      <li>A list of job sites, plants, ships, bases, or facilities remembered</li>
       <li>Notes about insulation, equipment, dust, pipe systems, boilers, or older materials</li>
-      <li>Names of coworkers, supervisors, or family members who may remember the work conditions</li>
-      <li>A timeline showing when symptoms, diagnosis, or major medical events occurred</li>
+      <li>Names of coworkers, supervisors, or family members who may remember the conditions</li>
+      <li>A timeline of when symptoms, diagnosis, or major medical events occurred</li>
     </ul>
-    <p>A rough timeline is often better than waiting for a perfect one. Readers often begin with partial information, and a firm can decide what additional records may be worth tracking down later.</p>
+    <p>A rough timeline is often better than waiting for a perfect one. A firm can decide what additional records may be worth tracking down later.</p>
   </div>
 </section>
 
-<section class="section">
+<section id="how-to-choose" class="section">
   <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Evaluating a Firm</span>
-    <h2>How to evaluate a Florida asbestos law firm more carefully.</h2>
-    <p>Readers often want to know whether a firm looks genuinely prepared to handle asbestos-related cases or whether the page is just broad legal marketing. One useful starting point is whether the firm appears to understand the kinds of diagnoses, work settings, and long exposure timelines that make these matters different from ordinary injury advertising.</p>
-    <p>It may also help to pay attention to whether the firm explains its process clearly, seems prepared to discuss job-site and product issues, and communicates in a way that feels organized rather than vague. Readers facing serious health issues often want clarity, responsiveness, and a realistic discussion of what comes next.</p>
-  </div>
-</section>
-
-<section class="section section--surface">
-  <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Questions to Ask</span>
-    <h2>Questions readers may want to ask early.</h2>
+    <span class="eyebrow section__eyebrow">How to Choose</span>
+    <h2>How to choose a Florida asbestos lawyer.</h2>
+    <p>Readers often begin by looking for a lawyer or firm that appears to have real experience with asbestos-related claims, not just general personal injury marketing. Because asbestos cases can involve old job histories, product identification, serious medical issues, and long exposure timelines, many readers want a firm that seems organized, informed, and able to explain the process clearly.</p>
+    <p>It may also help to pay attention to whether the firm appears familiar with mesothelioma, asbestos lung cancer, occupational exposure patterns, and the kinds of Florida work settings and records that often matter in these cases.</p>
+    <h3 style="font-family:var(--display); font-weight:600; font-size:20px; color:var(--ink); margin:26px 0 10px;">Questions readers often ask first</h3>
     <ul>
       <li>How much of your practice involves asbestos-related cases?</li>
-      <li>Have you worked with mesothelioma, asbestos lung cancer, or asbestosis matters before?</li>
-      <li>What details from my work history would be most useful in the first review?</li>
+      <li>Have you handled mesothelioma, asbestos lung cancer, or asbestosis matters before?</li>
+      <li>What kinds of exposure histories do you usually work with?</li>
+      <li>What records should I gather first?</li>
       <li>How do you investigate exposure when someone does not remember exact products?</li>
-      <li>Will my case be handled by the lawyer I speak with, or by another team member?</li>
-      <li>What kinds of documents should I try to send first?</li>
-      <li>How are fees and costs usually explained?</li>
-      <li>How often can I expect updates if the firm moves forward?</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Common Cases</span>
-    <h2>Common types of asbestos-related cases readers research.</h2>
-    <ul>
-      <li>Mesothelioma claims</li>
-      <li>Asbestos lung cancer claims</li>
-      <li>Asbestosis claims</li>
-      <li>Wrongful death claims tied to asbestos-related disease</li>
-      <li>Occupational exposure claims</li>
-      <li>Household or take-home exposure claims</li>
-      <li>Claims involving older products, equipment, or work environments</li>
-      <li>Claims involving long-term industrial or maritime exposure histories</li>
+      <li>Who at the firm will actually work on my case?</li>
+      <li>How are fees typically structured?</li>
+      <li>How often should I expect updates?</li>
     </ul>
   </div>
 </section>
@@ -372,31 +379,31 @@
     <div class="container--narrow" style="margin-bottom: 18px;">
       <span class="eyebrow section__eyebrow">Featured Lawyers</span>
       <h2>Featured Florida asbestos lawyers.</h2>
-      <p class="section-intro">This section may include sponsored law firm placements for firms seeking visibility with readers researching asbestos-related claims in Florida. Readers should review any featured firm carefully and decide whether contacting that firm makes sense for their own situation.</p>
+      <p class="section-intro">This section may include sponsored law firm placements. Readers should review each firm carefully and decide which one, if any, appears appropriate for their situation.</p>
     </div>
 
     <div class="card-grid">
       <div class="card">
         <h3>Law Firm Name</h3>
-        <p>Brief description of the firm, the kinds of asbestos-related matters it highlights, and how it presents its experience to potential clients.</p>
+        <p>Short description of the firm, asbestos case focus, and the kinds of clients they may be trying to reach.</p>
         <p><strong style="color:var(--ink);">Location:</strong> City, Florida</p>
-        <p><strong style="color:var(--ink);">Focus:</strong> Mesothelioma, asbestos lung cancer, exposure-related case review</p>
+        <p><strong style="color:var(--ink);">Focus:</strong> Mesothelioma, asbestos lung cancer, occupational exposure claims</p>
         <a href="contact">Request Information</a>
       </div>
 
       <div class="card">
         <h3>Law Firm Name</h3>
-        <p>Brief description of the firm's general litigation focus, the types of clients it may be trying to reach, and whether it emphasizes occupational or wrongful death matters.</p>
+        <p>Short description of the firm, the kinds of asbestos matters they may handle, and their general practice focus.</p>
         <p><strong style="color:var(--ink);">Location:</strong> City, Florida</p>
-        <p><strong style="color:var(--ink);">Focus:</strong> Asbestos litigation, wrongful death, serious exposure claims</p>
+        <p><strong style="color:var(--ink);">Focus:</strong> Asbestos litigation, wrongful death, serious exposure cases</p>
         <a href="contact">Request Information</a>
       </div>
 
       <div class="card">
         <h3>Law Firm Name</h3>
-        <p>Brief description of the firm's geographic reach, case-screening approach, and the asbestos-related issues it appears to prioritize.</p>
+        <p>Short description of the firm, geographic reach, and experience emphasis.</p>
         <p><strong style="color:var(--ink);">Location:</strong> City, Florida</p>
-        <p><strong style="color:var(--ink);">Focus:</strong> Industrial exposure, plaintiff-side asbestos claims, case intake</p>
+        <p><strong style="color:var(--ink);">Focus:</strong> Plaintiff-side asbestos claims, industrial exposure, trust-related matters</p>
         <a href="contact">Request Information</a>
       </div>
     </div>
@@ -405,53 +412,77 @@
 
 <section class="section">
   <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">About This Page</span>
-    <h2>How this page is meant to be used.</h2>
-    <p>This page is meant to give readers a more useful framework for researching Florida asbestos lawyers. It is not a ranking page, and it is not a substitute for independently reviewing any firm's background, communication style, and apparent fit for a particular case.</p>
-    <p>Some readers may use this page to compare firms. Others may simply use it to get more organized before making contact. In either situation, the goal is to make the research process more informed and less confusing.</p>
+    <span class="eyebrow section__eyebrow">Background &amp; Education</span>
+    <h2>Understanding the diagnosis and exposure history.</h2>
+    <div class="learn-more">
+      <p>Some readers arrive here ready to compare firms. Others still want to understand the underlying illness or trace where exposure may have happened before taking any next step. <a href="https://lawsuitinformer.com/asbestos-exposure-lawsuits" target="_blank" rel="noopener">Lawsuit Informer</a>, the educational companion to this directory, covers those questions in depth.</p>
+      <p>Helpful background reading includes <a href="https://lawsuitinformer.com/mesothelioma-lawsuit" target="_blank" rel="noopener">mesothelioma</a>, <a href="https://lawsuitinformer.com/asbestos-lung-cancer-lawsuit" target="_blank" rel="noopener">asbestos-related lung cancer</a>, and <a href="https://lawsuitinformer.com/what-is-asbestosis" target="_blank" rel="noopener">asbestosis</a>, along with <a href="https://lawsuitinformer.com/where-asbestos-exposure-happened" target="_blank" rel="noopener">where asbestos exposure happened</a> and <a href="https://lawsuitinformer.com/who-qualifies-for-an-asbestos-lawsuit" target="_blank" rel="noopener">who may qualify for an asbestos claim</a>.</p>
+      <p class="small-text">Lawsuit Informer is an independent legal-education site published by the same attorney who built Lawsuit Center. It provides general information only, not legal advice.</p>
+    </div>
   </div>
 </section>
 
 <section class="section section--surface">
   <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Disclosure</span>
-    <h2>Disclosure.</h2>
-    <p>Some firms appearing on this page may be featured through paid placements or sponsored visibility. Lawsuit Center is not a law firm and does not recommend any attorney as the right choice for every reader.</p>
-    <p class="small-text">Readers should independently evaluate any lawyer or law firm they are considering contacting.</p>
+    <span class="eyebrow section__eyebrow">About This Page</span>
+    <h2>How this page is intended to help readers.</h2>
+    <p>This page is meant to help readers better understand what Florida asbestos lawyers do and what questions may matter before contacting a firm. It is not a ranking page, and it is not a substitute for reviewing a firm's experience, communication style, and fit for your specific situation.</p>
+    <p>Some readers may want to compare multiple firms, while others may simply want a better framework for understanding what an asbestos lawyer may look for in a case.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Disclosure</span>
+    <h2>Disclosure approach.</h2>
+    <p>Some law firms featured on this page may be paid placements or sponsored listings. Lawsuit Center is not a law firm and does not recommend or endorse any attorney as the right choice for every reader.</p>
+    <p class="small-text">Reading this page or contacting a featured firm through Lawsuit Center does not by itself create an attorney-client relationship. Readers should independently evaluate any law firm they are considering contacting.</p>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
     <span class="eyebrow section__eyebrow">Next Step</span>
-    <h2>Looking into a Florida asbestos claim?</h2>
-    <p>Start by organizing the facts you know, review any featured firms carefully, and compare your options before deciding who, if anyone, you want to contact.</p>
+    <h2>Looking for a Florida asbestos lawyer?</h2>
+    <p>Start with clearer questions, review featured firm placements carefully, and take time to decide which lawyer or firm, if any, seems like the best fit for your situation.</p>
     <div class="hero-actions">
       <a href="#featured-lawyers" class="btn btn--amber btn--lg">View Featured Lawyers</a>
       <a href="contact" class="btn btn--ghost btn--lg">Contact Lawsuit Center</a>
     </div>
-    <p class="small-text">Reading this page or contacting a featured firm through Lawsuit Center does not by itself create an attorney-client relationship.</p>
   </div>
 </section>
 
-<section class="section related-topics-module">
+<section class="section">
   <div class="container">
-    <div class="section__head section__head--left">
+    <div class="container--narrow" style="margin-bottom:18px;">
+      <span class="eyebrow section__eyebrow">By State</span>
+      <h2>Asbestos lawyers by state.</h2>
+    </div>
+    <nav class="state-grid" aria-label="Asbestos lawyers by state">
+      <a href="california-asbestos-lawyers">California</a>
+      <a href="florida-asbestos-lawyers" aria-current="page">Florida</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section section--surface related-topics-module">
+  <div class="container">
+    <div class="section__head section__head--left container--narrow" style="margin-bottom:18px;">
       <span class="eyebrow section__eyebrow">Related Topics</span>
-      <h2>Browse related lawsuit categories.</h2>
+      <h2>Browse related categories.</h2>
     </div>
     <div class="card-grid">
       <a href="asbestos-lawsuits" class="card">
         <h3>Asbestos Lawsuits</h3>
-        <p>Learn about asbestos claims involving occupational exposure and long-term disease.</p>
-      </a>
-      <a href="lung-cancer-from-asbestos-exposure" class="card">
-        <h3>Lung Cancer From Asbestos Exposure</h3>
-        <p>Explore how asbestos exposure may be reviewed in lung cancer claims.</p>
+        <p>Browse asbestos claim categories on Lawsuit Center.</p>
       </a>
       <a href="asbestos-case-review" class="card">
         <h3>Start a Free Asbestos Case Review</h3>
         <p>Submit basic information about asbestos exposure for review — no obligation, no cost.</p>
+      </a>
+      <a href="https://lawsuitinformer.com/asbestos-guides" class="card" target="_blank" rel="noopener">
+        <h3>Asbestos Guides (Lawsuit Informer)</h3>
+        <p>Educational guides on illnesses, jobs, worksites, records, and trust claims.</p>
       </a>
     </div>
   </div>
@@ -461,12 +492,12 @@
 </main>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+  <div id="footer-placeholder"></div>
 </footer>
 <script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
 </script>
 
 <script>
