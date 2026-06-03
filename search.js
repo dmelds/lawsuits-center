@@ -236,13 +236,33 @@
       desc: "California injury lawyer information and questions to ask before hiring.",
       keywords: "california personal injury lawyer attorney" },
 
+    { url: "asbestos-lawyers.html", title: "Asbestos Lawyers", tag: "Lawyers", category: "State Lawyer Pages",
+      desc: "Find an asbestos lawyer by state — what asbestos attorneys do, time limits, and how to compare firms.",
+      keywords: "asbestos lawyer attorney mesothelioma law firm by state national find" },
+
     { url: "california-asbestos-lawyers.html", title: "California Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for California-related exposure or illness.",
       keywords: "california asbestos lawyer mesothelioma" },
 
     { url: "florida-asbestos-lawyers.html", title: "Florida Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for Florida-related exposure or illness.",
-      keywords: "florida asbestos lawyer mesothelioma" }
+      keywords: "florida asbestos lawyer mesothelioma" },
+
+    { url: "illinois-asbestos-lawyers.html", title: "Illinois Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos lawyer information for Illinois-related exposure or illness.",
+      keywords: "illinois asbestos lawyer mesothelioma chicago steel railroad" },
+
+    { url: "pennsylvania-asbestos-lawyers.html", title: "Pennsylvania Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos lawyer information for Pennsylvania-related exposure or illness.",
+      keywords: "pennsylvania asbestos lawyer mesothelioma pittsburgh steel philadelphia shipyard" },
+
+    { url: "michigan-asbestos-lawyers.html", title: "Michigan Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos lawyer information for Michigan-related exposure or illness.",
+      keywords: "michigan asbestos lawyer mesothelioma detroit auto foundry" },
+
+    { url: "louisiana-asbestos-lawyers.html", title: "Louisiana Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos lawyer information for Louisiana-related exposure or illness.",
+      keywords: "louisiana asbestos lawyer mesothelioma refinery petrochemical avondale shipyard" }
   ];
 
   // ---------- search logic ----------
