@@ -61,6 +61,73 @@
 
     { url: "neurological-case-review.html", title: "Neurological Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
       desc: "Parkinson's, neuropathy, cognitive decline, or movement disorders with exposure history.",
+/* ============================================================
+   Lawsuit Center — search index + results renderer
+   Edit the INDEX array below to add/remove searchable pages.
+   ============================================================ */
+
+(function () {
+  var INDEX = [
+    // ----- Free tools -----
+    { url: "pfas-exposure-checker.html",   title: "PFAS Exposure Checker", tag: "Free Tool", category: "Free Tools",
+      desc: "Check location, water source, AFFF or industrial exposure, and timeline against active PFAS case categories.",
+      keywords: "pfas forever chemicals water afff foam military airport exposure checker tool firefighting" },
+
+    { url: "cancer-exposure-checker.html", title: "Cancer Exposure Checker", tag: "Free Tool", category: "Free Tools",
+      desc: "Four short questions mapping a cancer diagnosis and exposure history to active case categories.",
+      keywords: "cancer mesothelioma talc hair relaxer roundup camp lejeune pfas benzene afff exposure checker tool" },
+
+    // ----- Case Review -----
+    { url: "cancer-case-review.html", title: "Cancer Case Review", tag: "Case Review", category: "Cancer",
+      desc: "Cancer diagnoses possibly tied to consumer products, workplace exposure, or contaminated water.",
+      keywords: "cancer mesothelioma kidney ovarian lung lymphoma leukemia bladder uterine talc roundup zantac asbestos benzene afff camp lejeune" },
+
+    { url: "asbestos-case-review.html", title: "Asbestos Case Review", tag: "Case Review", category: "Asbestos",
+      desc: "Mesothelioma, asbestos-related lung cancer, asbestosis, military or shipyard exposure, or secondhand exposure.",
+      keywords: "asbestos mesothelioma lung cancer asbestosis shipyard navy military secondhand" },
+
+    { url: "lung-cancer-asbestos-review.html", title: "Lung Cancer Asbestos Review", tag: "Case Review", category: "Asbestos",
+      desc: "Submit basic information about asbestos exposure history and a lung cancer diagnosis for case review.",
+      keywords: "lung cancer asbestos exposure occupational" },
+
+    { url: "social-media-case-review.html", title: "Social Media Case Review", tag: "Case Review", category: "Digital Platforms",
+      desc: "Children or teens with mental health harm tied to Instagram, TikTok, Snapchat, Facebook, YouTube.",
+      keywords: "social media instagram tiktok snapchat facebook youtube meta minors teen anxiety depression eating disorder self-harm MDL 3047" },
+
+    { url: "video-game-case-review.html", title: "Video Game Case Review", tag: "Case Review", category: "Digital Platforms",
+      desc: "Compulsive gaming, academic decline, mental health impact, or unauthorized in-game spending involving minors.",
+      keywords: "video game gaming addiction minors fortnite roblox in-game purchases" },
+
+    { url: "openai-case-review.html", title: "OpenAI / ChatGPT Case Review", tag: "Case Review", category: "AI Chatbot Harm",
+      desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
+      keywords: "openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
+
+    { url: "ai-case-review.html", title: "AI Case Review", tag: "Case Review", category: "AI Chatbot Harm",
+      desc: "Harm involving an AI chatbot, AI-generated deepfake images, or another AI product — chatbot harm, deepfakes, or professional impersonation.",
+      keywords: "ai artificial intelligence chatbot lawsuit deepfake nonconsensual images grok xai character ai openai chatgpt wrongful death self-harm medical impersonation take it down act" },
+
+    { url: "pfas-case-review.html", title: "PFAS Case Review", tag: "Case Review", category: "Water & Environment",
+      desc: "PFAS contamination, AFFF firefighting foam, military base or airport exposure, kidney/testicular cancer, thyroid disease, or ulcerative colitis.",
+      keywords: "pfas pfoa pfos forever chemicals afff firefighting foam military base airport kidney testicular cancer thyroid ulcerative colitis" },
+
+    { url: "toxic-water-case-review.html", title: "Toxic Water Case Review", tag: "Case Review", category: "Water & Environment",
+      desc: "Contaminated drinking water, well water contamination, or industrial chemical releases.",
+      keywords: "toxic water drinking well contamination industrial release" },
+
+    { url: "environmental-contamination-case-review.html", title: "Environmental Contamination Review", tag: "Case Review", category: "Water & Environment",
+      desc: "Exposure through soil, groundwater, industrial sites, landfills, or community conditions.",
+      keywords: "environmental contamination soil groundwater landfill industrial superfund" },
+
+    { url: "air-pollution-case-review.html", title: "Air Pollution Case Review", tag: "Case Review", category: "Water & Environment",
+      desc: "Long-term air pollution, industrial emissions, refinery or plant proximity, and respiratory conditions.",
+      keywords: "air pollution emissions refinery plant respiratory asthma" },
+
+    { url: "pesticide-case-review.html", title: "Pesticide Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
+      desc: "Glyphosate (Roundup), paraquat, chlorpyrifos, and other pesticide or herbicide exposure.",
+      keywords: "pesticide herbicide roundup glyphosate paraquat chlorpyrifos non-hodgkin lymphoma parkinson farmer applicator" },
+
+    { url: "neurological-case-review.html", title: "Neurological Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
+      desc: "Parkinson's, neuropathy, cognitive decline, or movement disorders with exposure history.",
       keywords: "neurological parkinson neuropathy cognitive decline movement disorder pesticide heavy metals" },
 
     { url: "consumer-product-case-review.html", title: "Consumer Product Case Review", tag: "Case Review", category: "Products & Food",
@@ -96,19 +163,39 @@
       desc: "Background on allegations that platforms used addictive design features harming youth mental health.",
       keywords: "social media addiction lawsuit design features youth teens" },
 
-    { url: "https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability.html", title: "OpenAI School Shooting Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/ai-lawsuits", title: "AI Lawsuits Overview", tag: "Overview", category: "AI Chatbot Harm",
+      desc: "The top-level guide to AI litigation: who is being sued, the legal theories involved, and how the OpenAI, Grok, and Character.AI cases differ.",
+      keywords: "ai lawsuits artificial intelligence litigation overview hub openai grok character ai deepfake chatbot product liability" },
+
+    { url: "https://lawsuitinformer.com/take-it-down-act", title: "The TAKE IT DOWN Act Explained", tag: "Overview", category: "AI Chatbot Harm",
+      desc: "The federal law on nonconsensual intimate images and AI deepfakes — what it covers, the 48-hour platform removal duty, and victims' rights.",
+      keywords: "take it down act nonconsensual intimate images ncii deepfake law platform removal 48 hours ftc victim rights deepfake laws" },
+
+    { url: "https://lawsuitinformer.com/grok-lawsuits", title: "Grok and xAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+      desc: "The deepfake-image litigation against xAI — nonconsensual AI-generated images, the class actions, and the city and state actions.",
+      keywords: "grok lawsuit xai deepfake nonconsensual ai generated images class action st clair baltimore privacy likeness" },
+
+    { url: "https://lawsuitinformer.com/character-ai-lawsuit", title: "Character.AI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+      desc: "Teen-safety and wrongful death cases, the January 2026 settlements, and the state action alleging a chatbot posed as a licensed doctor.",
+      keywords: "character ai lawsuit companion chatbot teen safety wrongful death settlement google medical impersonation doctor psychiatrist kentucky pennsylvania" },
+
+    { url: "https://lawsuitinformer.com/openai-lawsuits", title: "OpenAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+      desc: "The central hub for OpenAI litigation coverage — ChatGPT wrongful death, self-harm, mass shooting claims, and the product-versus-content framing question.",
+      keywords: "openai chatgpt lawsuits wrongful death self harm overdose school shooting product liability section 230" },
+
+    { url: "https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability", title: "OpenAI School Shooting Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "Federal lawsuits against OpenAI tied to mass shootings and the product-vs-content framing question.",
       keywords: "openai chatgpt school shooting product liability section 230" },
 
-    { url: "https://lawsuitinformer.com/chatgpt-fsu-shooting-lawsuit.html", title: "FSU Shooting Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/chatgpt-fsu-shooting-lawsuit", title: "FSU Shooting Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The Chabba complaint: an eight-count federal lawsuit with a novel negligent entrustment theory for AI access.",
       keywords: "fsu florida state shooting chatgpt openai negligent entrustment chabba" },
 
-    { url: "https://lawsuitinformer.com/chatgpt-overdose-lawsuit-scott.html", title: "Scott Overdose Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/chatgpt-overdose-lawsuit-scott", title: "Scott Overdose Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
       desc: "First major AI-as-unauthorized-medical-advisor wrongful death case (kratom + Xanax interaction).",
       keywords: "scott chatgpt overdose kratom xanax wrongful death drug interaction" },
 
-    { url: "https://lawsuitinformer.com/cancers-linked-to-lawsuits.html", title: "Cancers Linked to Lawsuits", tag: "Overview", category: "Cancer",
+    { url: "https://lawsuitinformer.com/cancers-linked-to-lawsuits", title: "Cancers Linked to Lawsuits", tag: "Overview", category: "Cancer",
       desc: "Guide on cancers most often involved in toxic exposure, product liability, and environmental claims.",
       keywords: "cancer lawsuits toxic exposure product liability environmental" },
 
