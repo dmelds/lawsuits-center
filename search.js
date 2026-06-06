@@ -39,69 +39,6 @@
       desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
       keywords: "openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
 
-    { url: "pfas-case-review.html", title: "PFAS Case Review", tag: "Case Review", category: "Water & Environment",
-      desc: "PFAS contamination, AFFF firefighting foam, military base or airport exposure, kidney/testicular cancer, thyroid disease, or ulcerative colitis.",
-      keywords: "pfas pfoa pfos forever chemicals afff firefighting foam military base airport kidney testicular cancer thyroid ulcerative colitis" },
-
-    { url: "toxic-water-case-review.html", title: "Toxic Water Case Review", tag: "Case Review", category: "Water & Environment",
-      desc: "Contaminated drinking water, well water contamination, or industrial chemical releases.",
-      keywords: "toxic water drinking well contamination industrial release" },
-
-    { url: "environmental-contamination-case-review.html", title: "Environmental Contamination Review", tag: "Case Review", category: "Water & Environment",
-      desc: "Exposure through soil, groundwater, industrial sites, landfills, or community conditions.",
-      keywords: "environmental contamination soil groundwater landfill industrial superfund" },
-
-    { url: "air-pollution-case-review.html", title: "Air Pollution Case Review", tag: "Case Review", category: "Water & Environment",
-      desc: "Long-term air pollution, industrial emissions, refinery or plant proximity, and respiratory conditions.",
-      keywords: "air pollution emissions refinery plant respiratory asthma" },
-
-    { url: "pesticide-case-review.html", title: "Pesticide Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
-      desc: "Glyphosate (Roundup), paraquat, chlorpyrifos, and other pesticide or herbicide exposure.",
-      keywords: "pesticide herbicide roundup glyphosate paraquat chlorpyrifos non-hodgkin lymphoma parkinson farmer applicator" },
-
-    { url: "neurological-case-review.html", title: "Neurological Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
-      desc: "Parkinson's, neuropathy, cognitive decline, or movement disorders with exposure history.",
-/* ============================================================
-   Lawsuit Center — search index + results renderer
-   Edit the INDEX array below to add/remove searchable pages.
-   ============================================================ */
-
-(function () {
-  var INDEX = [
-    // ----- Free tools -----
-    { url: "pfas-exposure-checker.html",   title: "PFAS Exposure Checker", tag: "Free Tool", category: "Free Tools",
-      desc: "Check location, water source, AFFF or industrial exposure, and timeline against active PFAS case categories.",
-      keywords: "pfas forever chemicals water afff foam military airport exposure checker tool firefighting" },
-
-    { url: "cancer-exposure-checker.html", title: "Cancer Exposure Checker", tag: "Free Tool", category: "Free Tools",
-      desc: "Four short questions mapping a cancer diagnosis and exposure history to active case categories.",
-      keywords: "cancer mesothelioma talc hair relaxer roundup camp lejeune pfas benzene afff exposure checker tool" },
-
-    // ----- Case Review -----
-    { url: "cancer-case-review.html", title: "Cancer Case Review", tag: "Case Review", category: "Cancer",
-      desc: "Cancer diagnoses possibly tied to consumer products, workplace exposure, or contaminated water.",
-      keywords: "cancer mesothelioma kidney ovarian lung lymphoma leukemia bladder uterine talc roundup zantac asbestos benzene afff camp lejeune" },
-
-    { url: "asbestos-case-review.html", title: "Asbestos Case Review", tag: "Case Review", category: "Asbestos",
-      desc: "Mesothelioma, asbestos-related lung cancer, asbestosis, military or shipyard exposure, or secondhand exposure.",
-      keywords: "asbestos mesothelioma lung cancer asbestosis shipyard navy military secondhand" },
-
-    { url: "lung-cancer-asbestos-review.html", title: "Lung Cancer Asbestos Review", tag: "Case Review", category: "Asbestos",
-      desc: "Submit basic information about asbestos exposure history and a lung cancer diagnosis for case review.",
-      keywords: "lung cancer asbestos exposure occupational" },
-
-    { url: "social-media-case-review.html", title: "Social Media Case Review", tag: "Case Review", category: "Digital Platforms",
-      desc: "Children or teens with mental health harm tied to Instagram, TikTok, Snapchat, Facebook, YouTube.",
-      keywords: "social media instagram tiktok snapchat facebook youtube meta minors teen anxiety depression eating disorder self-harm MDL 3047" },
-
-    { url: "video-game-case-review.html", title: "Video Game Case Review", tag: "Case Review", category: "Digital Platforms",
-      desc: "Compulsive gaming, academic decline, mental health impact, or unauthorized in-game spending involving minors.",
-      keywords: "video game gaming addiction minors fortnite roblox in-game purchases" },
-
-    { url: "openai-case-review.html", title: "OpenAI / ChatGPT Case Review", tag: "Case Review", category: "AI Chatbot Harm",
-      desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
-      keywords: "openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
-
     { url: "ai-case-review.html", title: "AI Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Harm involving an AI chatbot, AI-generated deepfake images, or another AI product — chatbot harm, deepfakes, or professional impersonation.",
       keywords: "ai artificial intelligence chatbot lawsuit deepfake nonconsensual images grok xai character ai openai chatgpt wrongful death self-harm medical impersonation take it down act" },
