@@ -24,6 +24,12 @@ window.SEARCH_INDEX = [
     text: "houston ship channel asbestos exposure texas gulf coast refineries petrochemical plants baytown mesothelioma insulation pipefitters boilermakers insulators refinery operators turnarounds shutdowns heat exchangers boilers gaskets harris county exposure site take-home secondary exposure"
   },
   {
+    title: "Asbestos Exposure at Mare Island Naval Shipyard",
+    url: "mare-island-naval-shipyard-asbestos-exposure",
+    category: "Exposure Site",
+    text: "mare island naval shipyard asbestos exposure vallejo california pacific coast submarines nuclear submarine overhaul mesothelioma boilers pipe insulation gaskets insulators pipefitters boilermakers shipfitters welders navy veterans enclosed compartments exposure site take-home secondary exposure"
+  },
+  {
     title: "PFAS Water Contamination Lawsuits",
     url: "pfas-water-contamination-lawsuits",
     category: "Lawsuit Topic",
