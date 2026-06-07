@@ -48,7 +48,7 @@ h1, h2, h3, h4, p { margin: 0; }
 ::selection { background: var(--amber); color: #111; }
 
 .container { width: 100%; max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
-.container--narrow, .narrow, .container.narrow { max-width: 820px; }
+.container--narrow, .narrow, .container.narrow { max-width: 820px; margin-inline: auto; }
 
 .eyebrow, .section-label {
  display: inline-block;
