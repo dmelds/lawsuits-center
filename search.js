@@ -284,6 +284,10 @@
       desc: "Asbestos lawyer information for Pennsylvania-related exposure or illness.",
       keywords: "pennsylvania asbestos lawyer mesothelioma pittsburgh steel philadelphia shipyard" },
 
+    { url: "texas-asbestos-lawyers.html", title: "Texas Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos and mesothelioma lawyer information for Texas-related exposure or illness — Gulf Coast refineries, the Houston Ship Channel, and shipyards.",
+      keywords: "texas asbestos lawyer mesothelioma houston dallas beaumont port arthur refinery petrochemical gulf coast shipyard ship channel" },
+
     { url: "michigan-asbestos-lawyers.html", title: "Michigan Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for Michigan-related exposure or illness.",
       keywords: "michigan asbestos lawyer mesothelioma detroit auto foundry" },
