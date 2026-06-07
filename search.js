@@ -264,6 +264,10 @@
       desc: "Find an asbestos lawyer by state — what asbestos attorneys do, time limits, and how to compare firms.",
       keywords: "asbestos lawyer attorney mesothelioma law firm by state national find" },
 
+    { url: "mesothelioma-lawyers.html", title: "Mesothelioma Lawyers", tag: "Lawyers", category: "State Lawyer Pages",
+      desc: "How mesothelioma lawyers evaluate pleural, peritoneal, and wrongful death claims — fees, time limits, and how to find a mesothelioma attorney near you.",
+      keywords: "mesothelioma lawyer attorney near me law firm best pleural peritoneal wrongful death contingency fee asbestos by state" },
+
     { url: "california-asbestos-lawyers.html", title: "California Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for California-related exposure or illness.",
       keywords: "california asbestos lawyer mesothelioma" },
