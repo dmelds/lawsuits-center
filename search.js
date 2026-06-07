@@ -288,6 +288,10 @@
       desc: "Asbestos and mesothelioma lawyer information for Texas-related exposure or illness — Gulf Coast refineries, the Houston Ship Channel, and shipyards.",
       keywords: "texas asbestos lawyer mesothelioma houston dallas beaumont port arthur refinery petrochemical gulf coast shipyard ship channel" },
 
+    { url: "new-york-asbestos-lawyers.html", title: "New York Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos and mesothelioma lawyer information for New York-related exposure or illness — Brooklyn Navy Yard, NYC construction, Con Edison plants, and the World Trade Center.",
+      keywords: "new york asbestos lawyer mesothelioma nyc brooklyn navy yard con edison construction world trade center 9/11 buffalo bethlehem steel nycal" },
+
     { url: "michigan-asbestos-lawyers.html", title: "Michigan Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for Michigan-related exposure or illness.",
       keywords: "michigan asbestos lawyer mesothelioma detroit auto foundry" },
