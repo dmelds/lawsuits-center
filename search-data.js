@@ -12,6 +12,12 @@ window.SEARCH_INDEX = [
     text: "brooklyn navy yard asbestos exposure new york naval shipyard mesothelioma boilers pipe insulation gaskets shipfitters boilermakers pipefitters insulators welders navy veterans uss missouri uss arizona wallabout bay shipyard exposure site take-home secondary exposure"
   },
   {
+    title: "Asbestos Exposure at the Philadelphia Naval Shipyard",
+    url: "philadelphia-naval-shipyard-asbestos-exposure",
+    category: "Exposure Site",
+    text: "philadelphia naval shipyard asbestos exposure pennsylvania league island delaware river mesothelioma boilers turbines pumps valves pipe insulation gaskets shipfitters boilermakers pipefitters insulators welders navy veterans warships overhaul BRAC shipyard exposure site take-home secondary exposure"
+  },
+  {
     title: "PFAS Water Contamination Lawsuits",
     url: "pfas-water-contamination-lawsuits",
     category: "Lawsuit Topic",
