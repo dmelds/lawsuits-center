@@ -18,6 +18,12 @@ window.SEARCH_INDEX = [
     text: "philadelphia naval shipyard asbestos exposure pennsylvania league island delaware river mesothelioma boilers turbines pumps valves pipe insulation gaskets shipfitters boilermakers pipefitters insulators welders navy veterans warships overhaul BRAC shipyard exposure site take-home secondary exposure"
   },
   {
+    title: "Asbestos Exposure Along the Houston Ship Channel",
+    url: "houston-ship-channel-asbestos-exposure",
+    category: "Exposure Site",
+    text: "houston ship channel asbestos exposure texas gulf coast refineries petrochemical plants baytown mesothelioma insulation pipefitters boilermakers insulators refinery operators turnarounds shutdowns heat exchangers boilers gaskets harris county exposure site take-home secondary exposure"
+  },
+  {
     title: "PFAS Water Contamination Lawsuits",
     url: "pfas-water-contamination-lawsuits",
     category: "Lawsuit Topic",
