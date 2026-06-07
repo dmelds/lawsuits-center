@@ -179,6 +179,13 @@
 .state-grid a:hover{ border-color:var(--amber); border-bottom-color:var(--amber); background:var(--surface); }
 .state-grid a[aria-current="page"]{ border-color:var(--amber); color:var(--amber); }
 @media (max-width:760px){ .state-grid{ grid-template-columns:repeat(2,1fr); } }
+
+/* Featured placement (unsold state) */
+.featured-open{ background:rgba(212,162,78,.06); border:1px dashed rgba(212,162,78,.45); border-radius:var(--radius-lg); padding:clamp(24px,4vw,40px); text-align:center; }
+.featured-open h3{ font-family:var(--display); font-weight:600; font-size:22px; color:var(--ink); margin:0 0 10px; }
+.featured-open p{ color:var(--ink-muted); max-width:60ch; margin:0 auto 8px; }
+
+.site-footer__tag { font-size: 14px; color: var(--ink-muted); margin-bottom: 18px; }
 </style>
 <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
 <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
@@ -383,112 +390,17 @@
       <p class="section-intro">This section may include sponsored law firm placements. Readers should review each firm carefully and decide which one, if any, appears appropriate for their situation.</p>
     </div>
 
-    <div class="card-grid">
-      <div class="card">
-        <h3>Law Firm Name</h3>
-        <p>Short description of the firm, asbestos case focus, and the kinds of clients they may be trying to reach.</p>
-        <p><strong style="color:var(--ink);">Location:</strong> City, Illinois</p>
-        <p><strong style="color:var(--ink);">Focus:</strong> Mesothelioma, asbestos lung cancer, occupational exposure claims</p>
-        <a href="contact">Request Information</a>
+    <div class="container--narrow">
+      <div class="featured-open">
+        <h3>Featured placement available</h3>
+        <p>This section will feature vetted law firms. Any placement here is a clearly labeled sponsored listing, not a ranking or endorsement by Lawsuit Center.</p>
+        <p>In the meantime, readers can start with a free case review.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="asbestos-case-review" class="btn btn--amber">Start a Free Case Review</a>
+          <a href="for-law-firms" class="btn btn--ghost">For Law Firms</a>
+        </div>
+        <p class="small-text">Law firms interested in a featured placement can <a href="contact">contact Lawsuit Center</a>.</p>
       </div>
-
-      <div class="card">
-        <h3>Law Firm Name</h3>
-        <p>Short description of the firm, the kinds of asbestos matters they may handle, and their general practice focus.</p>
-        <p><strong style="color:var(--ink);">Location:</strong> City, Illinois</p>
-        <p><strong style="color:var(--ink);">Focus:</strong> Asbestos litigation, wrongful death, serious exposure cases</p>
-        <a href="contact">Request Information</a>
-      </div>
-
-      <div class="card">
-        <h3>Law Firm Name</h3>
-        <p>Short description of the firm, geographic reach, and experience emphasis.</p>
-        <p><strong style="color:var(--ink);">Location:</strong> City, Illinois</p>
-        <p><strong style="color:var(--ink);">Focus:</strong> Plaintiff-side asbestos claims, industrial exposure, trust-related matters</p>
-        <a href="contact">Request Information</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Background &amp; Education</span>
-    <h2>Understanding the diagnosis and exposure history.</h2>
-    <div class="learn-more">
-      <p>Some readers arrive here ready to compare firms. Others still want to understand the underlying illness or trace where exposure may have happened before taking any next step. <a href="https://lawsuitinformer.com/asbestos-exposure-lawsuits" target="_blank" rel="noopener">Lawsuit Informer</a>, the educational companion to this directory, covers those questions in depth.</p>
-      <p>Helpful background reading includes <a href="https://lawsuitinformer.com/mesothelioma-lawsuit" target="_blank" rel="noopener">mesothelioma</a>, <a href="https://lawsuitinformer.com/asbestos-lung-cancer-lawsuit" target="_blank" rel="noopener">asbestos-related lung cancer</a>, and <a href="https://lawsuitinformer.com/what-is-asbestosis" target="_blank" rel="noopener">asbestosis</a>, along with <a href="https://lawsuitinformer.com/where-asbestos-exposure-happened" target="_blank" rel="noopener">where asbestos exposure happened</a> and <a href="https://lawsuitinformer.com/who-qualifies-for-an-asbestos-lawsuit" target="_blank" rel="noopener">who may qualify for an asbestos claim</a>.</p>
-      <p class="small-text">Lawsuit Informer is an independent legal-education site published by the same attorney who built Lawsuit Center. It provides general information only, not legal advice.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section section--surface">
-  <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">About This Page</span>
-    <h2>How this page is intended to help readers.</h2>
-    <p>This page is meant to help readers better understand what Illinois asbestos lawyers do and what questions may matter before contacting a firm. It is not a ranking page, and it is not a substitute for reviewing a firm's experience, communication style, and fit for your specific situation.</p>
-    <p>Some readers may want to compare multiple firms, while others may simply want a better framework for understanding what an asbestos lawyer may look for in a case.</p>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Disclosure</span>
-    <h2>Disclosure approach.</h2>
-    <p>Some law firms featured on this page may be paid placements or sponsored listings. Lawsuit Center is not a law firm and does not recommend or endorse any attorney as the right choice for every reader.</p>
-    <p class="small-text">Reading this page or contacting a featured firm through Lawsuit Center does not by itself create an attorney-client relationship. Readers should independently evaluate any law firm they are considering contacting.</p>
-  </div>
-</section>
-
-<section class="section section--surface">
-  <div class="container container--narrow">
-    <span class="eyebrow section__eyebrow">Next Step</span>
-    <h2>Looking for an Illinois asbestos lawyer?</h2>
-    <p>Start with clearer questions, review featured firm placements carefully, and take time to decide which lawyer or firm, if any, seems like the best fit for your situation.</p>
-    <div class="hero-actions">
-      <a href="#featured-lawyers" class="btn btn--amber btn--lg">View Featured Lawyers</a>
-      <a href="contact" class="btn btn--ghost btn--lg">Contact Lawsuit Center</a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="container--narrow" style="margin-bottom:18px;">
-      <span class="eyebrow section__eyebrow">By State</span>
-      <h2>Asbestos lawyers by state.</h2>
-    </div>
-    <nav class="state-grid" aria-label="Asbestos lawyers by state">
-      <a href="california-asbestos-lawyers">California</a>
-      <a href="florida-asbestos-lawyers">Florida</a>
-      <a href="illinois-asbestos-lawyers" aria-current="page">Illinois</a>
-      <a href="pennsylvania-asbestos-lawyers">Pennsylvania</a>
-      <a href="michigan-asbestos-lawyers">Michigan</a>
-      <a href="louisiana-asbestos-lawyers">Louisiana</a>
-    </nav>
-  </div>
-</section>
-
-<section class="section section--surface related-topics-module">
-  <div class="container">
-    <div class="section__head section__head--left container--narrow" style="margin-bottom:18px;">
-      <span class="eyebrow section__eyebrow">Related Topics</span>
-      <h2>Browse related categories.</h2>
-    </div>
-    <div class="card-grid">
-      <a href="asbestos-lawsuits" class="card">
-        <h3>Asbestos Lawsuits</h3>
-        <p>Browse asbestos claim categories on Lawsuit Center.</p>
-      </a>
-      <a href="asbestos-case-review" class="card">
-        <h3>Start a Free Asbestos Case Review</h3>
-        <p>Submit basic information about asbestos exposure for review — no obligation, no cost.</p>
-      </a>
-      <a href="https://lawsuitinformer.com/asbestos-guides" class="card" target="_blank" rel="noopener">
-        <h3>Asbestos Guides (Lawsuit Informer)</h3>
-        <p>Educational guides on illnesses, jobs, worksites, records, and trust claims.</p>
-      </a>
     </div>
   </div>
 </section>
@@ -497,13 +409,34 @@
 </main>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+<div class="container">
+  <div class="site-footer__brand">Lawsuit Center</div>
+  <p class="site-footer__tag">Attorney-Built lawsuit research and case review platform.</p>
+  <div class="site-footer__legal">
+    Educational information only. Not legal advice. No attorney-client relationship is formed
+    by using this website. Some pages may include attorney advertising or sponsored law firm visibility.
+    Lawsuit Center is not a law firm and does not provide legal advice. Use of this site does not
+    create an attorney-client relationship. Information submitted through this site may be reviewed
+    by participating law firms, legal advertisers, or third-party intake providers, depending on the
+    claim category and availability.
+  </div>
+  <div class="site-footer__links">
+    <a href="privacy-policy">Privacy Policy</a>&nbsp;·
+    <a href="disclaimer">Disclaimer</a>&nbsp;·
+    <a href="advertising-disclosure">Advertising Disclosure</a>&nbsp;·
+    <a href="editorial-policy">Editorial Policy</a>&nbsp;·
+    <a href="how-case-review-works">How Case Review Works</a>&nbsp;·
+    <a href="resources">Resources</a>&nbsp;·
+    <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>&nbsp;·
+    <a href="https://lawsuitintelligencer.com/">Lawsuit Intelligencer</a>&nbsp;·
+    <a href="https://davidmeldofsky.com/">David Meldofsky</a>&nbsp;·
+    <a href="for-law-firms">For Law Firms</a>&nbsp;·
+    <a href="about">About</a>&nbsp;·
+    <a href="contact">Contact</a>
+  </div>
+  <div class="site-footer__copy">© 2026 Lawsuit Center. All rights reserved.</div>
+</div>
 </footer>
-<script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {

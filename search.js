@@ -264,6 +264,10 @@
       desc: "Find an asbestos lawyer by state — what asbestos attorneys do, time limits, and how to compare firms.",
       keywords: "asbestos lawyer attorney mesothelioma law firm by state national find" },
 
+    { url: "mesothelioma-lawyers.html", title: "Mesothelioma Lawyers", tag: "Lawyers", category: "State Lawyer Pages",
+      desc: "How mesothelioma lawyers evaluate pleural, peritoneal, and wrongful death claims — fees, time limits, and how to find a mesothelioma attorney near you.",
+      keywords: "mesothelioma lawyer attorney near me law firm best pleural peritoneal wrongful death contingency fee asbestos by state" },
+
     { url: "california-asbestos-lawyers.html", title: "California Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for California-related exposure or illness.",
       keywords: "california asbestos lawyer mesothelioma" },
@@ -279,6 +283,14 @@
     { url: "pennsylvania-asbestos-lawyers.html", title: "Pennsylvania Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for Pennsylvania-related exposure or illness.",
       keywords: "pennsylvania asbestos lawyer mesothelioma pittsburgh steel philadelphia shipyard" },
+
+    { url: "texas-asbestos-lawyers.html", title: "Texas Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos and mesothelioma lawyer information for Texas-related exposure or illness — Gulf Coast refineries, the Houston Ship Channel, and shipyards.",
+      keywords: "texas asbestos lawyer mesothelioma houston dallas beaumont port arthur refinery petrochemical gulf coast shipyard ship channel" },
+
+    { url: "new-york-asbestos-lawyers.html", title: "New York Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
+      desc: "Asbestos and mesothelioma lawyer information for New York-related exposure or illness — Brooklyn Navy Yard, NYC construction, Con Edison plants, and the World Trade Center.",
+      keywords: "new york asbestos lawyer mesothelioma nyc brooklyn navy yard con edison construction world trade center 9/11 buffalo bethlehem steel nycal" },
 
     { url: "michigan-asbestos-lawyers.html", title: "Michigan Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for Michigan-related exposure or illness.",
