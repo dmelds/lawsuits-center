@@ -140,6 +140,9 @@
       desc: "Background on contaminated drinking water and long-term community water exposure claims.",
       keywords: "water contamination drinking groundwater community" },
 
+    { url: "pfas-lawsuit", title: "PFAS Lawsuits", tag: "Overview", category: "Water & Environment",
+      desc: "Overview of PFAS forever chemicals litigation, including water contamination, AFFF firefighting foam, related illnesses, lawyer guides, and case review.",
+      keywords: "pfas lawsuit lawsuits forever chemicals afff firefighting foam water contamination kidney testicular cancer thyroid claim settlement case review" },
     { url: "pfas-water-contamination-lawsuits", title: "PFAS Water Contamination", tag: "Overview", category: "Water & Environment",
       desc: "Forever chemicals near military bases, airports, and industrial facilities.",
       keywords: "pfas pfoa pfos water contamination military airport industrial" },
