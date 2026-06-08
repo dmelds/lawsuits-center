@@ -159,6 +159,10 @@
       desc: "Common qualification factors, exposure patterns, and information people gather before pursuing a claim.",
       keywords: "qualify chemical exposure lawsuit eligibility" },
 
+    { url: "paraquat-lawsuit", title: "Paraquat Parkinson's Lawsuit", tag: "Overview", category: "Chemicals & Pesticides",
+      desc: "Long-term paraquat or Gramoxone exposure linked to Parkinson's disease, consolidated in MDL 3004 — who may qualify and how case review works.",
+      keywords: "paraquat parkinson gramoxone herbicide exposure lawsuit mdl 3004 syngenta chevron farmer applicator settlement attorney lawyer dichloride" },
+
     { url: "roundup-lawsuit", title: "Roundup Lawsuit", tag: "Overview", category: "Chemicals & Pesticides",
       desc: "Glyphosate-based herbicides and alleged links to non-Hodgkin lymphoma.",
       keywords: "roundup glyphosate monsanto bayer non-hodgkin lymphoma cancer" },
