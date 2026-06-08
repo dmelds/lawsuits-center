@@ -580,10 +580,16 @@ footer p:first-child { color: var(--ink-muted); }
 
 /* ============================================================
   HOMEPAGE HERO SEARCH
+  Contained as a self-grouped tool so it reads as its own zone,
+  clearly separated from the primary amber CTA above it.
   ============================================================ */
 .hero-search {
- margin: 32px 0 0;
+ margin: clamp(36px, 5vw, 48px) 0 0;
  max-width: 640px;
+ padding: clamp(20px, 4vw, 28px);
+ background: rgba(0,0,0,.22);
+ border: 1px solid var(--border);
+ border-radius: var(--radius-lg);
 }
 .hero-search__label {
  display: block;
@@ -623,7 +629,10 @@ footer p:first-child { color: var(--ink-muted); }
 
 .hero-search__chips {
  display: flex; flex-wrap: wrap; gap: 8px;
- align-items: center; margin-top: 14px;
+ align-items: center;
+ margin-top: 16px;
+ padding-top: 16px;
+ border-top: 1px solid var(--border);
 }
 .hero-search__chips-label {
  font-size: 12.5px; font-weight: 600;
