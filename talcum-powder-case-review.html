@@ -591,15 +591,15 @@
     }
 
     var displayLabelMap = {
-      "Johnson's Baby Powder + Ovarian Cancer": "Johnson's Baby Powder ovarian cancer claim",
-      "Shower to Shower + Ovarian Cancer": "Shower to Shower ovarian cancer claim",
-      "Other Talc Powder + Ovarian Cancer": "Talc powder ovarian cancer claim",
-      "Genital Talc Use + Ovarian Cancer": "Genital talc use ovarian cancer claim",
-      "Fallopian or Peritoneal Cancer": "Talc fallopian or peritoneal cancer claim",
-      "Ovarian Cancer Treatment": "Talc ovarian cancer treatment claim",
-      "Symptoms Without Diagnosis": "Talc use with symptoms",
-      "Loved One Affected": "Talcum powder ovarian cancer — family member affected",
-      "Not Sure": "Talcum powder case review"
+      "Johnson's Baby Powder + Ovarian Cancer": "Johnson's Baby Powder ovarian cancer",
+      "Shower to Shower + Ovarian Cancer": "Shower to Shower ovarian cancer",
+      "Other Talc Powder + Ovarian Cancer": "talcum powder ovarian cancer",
+      "Genital Talc Use + Ovarian Cancer": "talcum powder ovarian cancer",
+      "Fallopian or Peritoneal Cancer": "talc fallopian or peritoneal cancer",
+      "Ovarian Cancer Treatment": "talcum powder ovarian cancer",
+      "Symptoms Without Diagnosis": "talcum powder",
+      "Loved One Affected": "talcum powder ovarian cancer",
+      "Not Sure": "talcum powder"
     };
 
     var form = document.querySelector('form[name="talcum-powder-case-review"]');
@@ -607,7 +607,7 @@
     if (form && exposureType) {
       form.addEventListener("submit", function () {
         var raw = exposureType.value;
-        var display = displayLabelMap[raw] || "Talcum Powder";
+        var display = displayLabelMap[raw] || "talcum powder";
         sessionStorage.setItem("lc_category", display);
       });
     }
