@@ -79,6 +79,14 @@
       desc: "Uterine or ovarian cancer, fertility complications, or reproductive harm tied to long-term product use.",
       keywords: "reproductive uterine ovarian cancer fertility hair relaxer talc talcum prenatal" },
 
+    { url: "talcum-powder-case-review", title: "Talcum Powder Case Review", tag: "Case Review", category: "Products & Food",
+      desc: "Long-term talc or baby powder use (Johnson's Baby Powder, Shower to Shower) followed by an ovarian cancer diagnosis.",
+      keywords: "talcum powder talc lawsuit ovarian cancer johnson and johnson j&j baby powder shower to shower gold bond attorney lawyer settlement payout who qualifies eligibility deadline mdl 2738" },
+
+    { url: "talcum-powder-lawsuits", title: "Talcum Powder Lawsuit", tag: "Overview", category: "Products & Food",
+      desc: "Overview of the talcum powder ovarian cancer litigation (MDL 2738): what the lawsuit is about, who qualifies, settlements, and FAQs.",
+      keywords: "talcum powder lawsuit litigation ovarian cancer johnson and johnson j&j talc settlement attorneys lawyers mdl 2738 shower to shower who qualifies average settlement payout deadline class action" },
+
     { url: "depo-provera-case-review", title: "Depo-Provera Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
       desc: "Long-term Depo-Provera use (or generic medroxyprogesterone acetate) followed by a meningioma brain tumor diagnosis.",
       keywords: "depo-provera depo provera medroxyprogesterone meningioma brain tumor birth control injection MDL 3140" },
