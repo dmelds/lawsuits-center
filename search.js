@@ -187,6 +187,10 @@
       desc: "Background on the Depo-Provera meningioma litigation (MDL 3140), who qualifies, and FAQs.",
       keywords: "depo provera depo-provera meningioma brain tumor mdl 3140 birth control" },
 
+    { url: "depo-provera-lawyers", title: "Depo-Provera Lawyers", tag: "Lawyers", category: "Drugs & Medical Devices",
+      desc: "How Depo-Provera attorneys evaluate meningioma claims, what records help, MDL 3140, time limits, and how to compare firms.",
+      keywords: "depo provera lawyer depo provera lawyers depo provera attorney depo provera lawsuit lawyers medroxyprogesterone meningioma brain tumor mdl 3140 drug injury" },
+
     { url: "drug-injury-lawsuits", title: "Drug Injury Lawsuits", tag: "Overview", category: "Drugs & Medical Devices",
       desc: "Prescription medications, side effects, warning issues, and medication-related injuries.",
       keywords: "drug injury prescription medication side effect warning" },
