@@ -303,6 +303,10 @@
       desc: "Find a PFAS lawyer for forever chemicals claims, including water contamination and AFFF firefighting foam, plus what records help and how to compare firms.",
       keywords: "pfas lawyer attorney forever chemicals afff firefighting foam water contamination kidney testicular cancer thyroid law firm find national" },
 
+    { url: "roundup-lawyers", title: "Roundup Lawyers", tag: "Lawyers", category: "State Lawyer Pages",
+      desc: "Find a Roundup lawyer for glyphosate exposure and non-Hodgkin lymphoma claims, plus how settlements and deadlines work and how to compare firms.",
+      keywords: "roundup lawyer attorney glyphosate cancer lawyer non-hodgkin lymphoma best attorney for roundup lawsuit monsanto bayer settlement law firm find pesticide herbicide" },
+
     { url: "california-asbestos-lawyers", title: "California Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for California-related exposure or illness.",
       keywords: "california asbestos lawyer mesothelioma" },
