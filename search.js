@@ -307,6 +307,10 @@
       desc: "Find a Roundup lawyer for glyphosate exposure and non-Hodgkin lymphoma claims, plus how settlements and deadlines work and how to compare firms.",
       keywords: "roundup lawyer attorney glyphosate cancer lawyer non-hodgkin lymphoma best attorney for roundup lawsuit monsanto bayer settlement law firm find pesticide herbicide" },
 
+    { url: "hair-relaxer-lawyers", title: "Hair Relaxer Lawyers", tag: "Lawyers", category: "State Lawyer Pages",
+      desc: "Find a hair relaxer lawyer for uterine, endometrial, or ovarian cancer claims tied to chemical straighteners, plus how MDL 3060 settlements and deadlines work and how to compare firms.",
+      keywords: "hair relaxer lawyer attorney chemical straightener uterine cancer endometrial ovarian cancer mdl 3060 settlement payout class action morgan and morgan ben crump loreal revlon law firm find fibroids" },
+
     { url: "tylenol-autism-lawsuit", title: "Tylenol Autism Lawsuit", tag: "Lawsuit", category: "Consumer Products",
       desc: "Claims alleging failure to warn about a possible association between prenatal acetaminophen exposure and autism or ADHD. Litigation active but unsettled, federal appeal pending.",
       keywords: "tylenol autism lawsuit tylenol lawsuit acetaminophen autism adhd class action sign up age limit settlement update pregnancy johnson and johnson kenvue mdl daubert appeal who qualifies" },
