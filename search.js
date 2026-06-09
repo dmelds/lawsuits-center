@@ -108,6 +108,18 @@
       desc: "Background on allegations that platforms used addictive design features harming youth mental health.",
       keywords: "social media addiction lawsuit design features youth teens" },
 
+    { url: "social-media-lawyers", title: "Social Media Lawyers", tag: "Lawyers", category: "Digital Platforms",
+      desc: "How social media harm attorneys evaluate youth mental health and addiction claims, what records help, MDL 3047, time limits, and how to compare firms.",
+      keywords: "social media lawyer social media attorney social media harm lawyer social media mental health lawyer sue social media addiction lawyer to sue instagram mdl 3047 youth teens" },
+
+    { url: "instagram-lawsuit", title: "Instagram Lawsuit", tag: "Overview", category: "Digital Platforms",
+      desc: "What the Instagram lawsuits are about, who may be affected, MDL 3047, what to gather, and time limits.",
+      keywords: "instagram lawsuit meta instagram class action instagram lawyer to sue instagram teen mental health addiction mdl 3047 youth harm" },
+
+    { url: "tiktok-lawsuit", title: "TikTok Lawsuit", tag: "Overview", category: "Digital Platforms",
+      desc: "What the TikTok lawsuits are about, who may be affected, MDL 3047, what to gather, and time limits.",
+      keywords: "tiktok lawsuit bytedance tiktok addiction teen mental health youth harm mdl 3047 recommendation algorithm" },
+
     { url: "https://lawsuitinformer.com/ai-lawsuits", title: "AI Lawsuits Overview", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The top-level guide to AI litigation: who is being sued, the legal theories involved, and how the OpenAI, Grok, and Character.AI cases differ.",
       keywords: "ai lawsuits artificial intelligence litigation overview hub openai grok character ai deepfake chatbot product liability" },
