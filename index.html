@@ -144,7 +144,7 @@
       <span class="hero-search__label">Or search lawsuits directly</span>
       <div class="hero-search__bar">
         <svg class="hero-search__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4" stroke-linecap="round"/></svg>
-        <input type="search" name="q" placeholder="Try asbestos, PFAS, Roundup, Depo-Provera…" aria-label="Search lawsuit categories" autocomplete="off" />
+        <input type="search" name="q" placeholder="Try asbestos, PFAS, Roundup, Tylenol…" aria-label="Search lawsuit categories" autocomplete="off" />
         <button type="submit" class="hero-search__btn">Search</button>
       </div>
       <div class="hero-search__chips" aria-label="Popular searches">
@@ -152,6 +152,7 @@
         <a href="/search?q=asbestos">Asbestos</a>
         <a href="/search?q=PFAS">PFAS</a>
         <a href="/search?q=Roundup">Roundup</a>
+        <a href="/search?q=Tylenol">Tylenol</a>
         <a href="/search?q=Paraquat">Paraquat</a>
         <a href="/search?q=Depo-Provera">Depo-Provera</a>
         <a href="/search?q=talcum+powder">Talcum powder</a>
@@ -446,13 +447,34 @@
 </form>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+<div class="container">
+  <div class="site-footer__brand">Lawsuit Center</div>
+  <p class="site-footer__tag">Attorney-Built lawsuit research and case review platform.</p>
+  <div class="site-footer__legal">
+    Educational information only. Not legal advice. No attorney-client relationship is formed
+    by using this website. Some pages may include attorney advertising or sponsored law firm visibility.
+    Lawsuit Center is not a law firm and does not provide legal advice. Use of this site does not
+    create an attorney-client relationship. Information submitted through this site may be reviewed
+    by participating law firms, legal advertisers, or third-party intake providers, depending on the
+    claim category and availability.
+  </div>
+  <div class="site-footer__links">
+    <a href="privacy-policy">Privacy Policy</a>&nbsp;·
+    <a href="disclaimer">Disclaimer</a>&nbsp;·
+    <a href="advertising-disclosure">Advertising Disclosure</a>&nbsp;·
+    <a href="editorial-policy">Editorial Policy</a>&nbsp;·
+    <a href="how-case-review-works">How Case Review Works</a>&nbsp;·
+    <a href="resources">Resources</a>&nbsp;·
+    <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>&nbsp;·
+    <a href="https://lawsuitintelligencer.com/">Lawsuit Intelligencer</a>&nbsp;·
+    <a href="https://davidmeldofsky.com/">David Meldofsky</a>&nbsp;·
+    <a href="for-law-firms">For Law Firms</a>&nbsp;·
+    <a href="about">About</a>&nbsp;·
+    <a href="contact">Contact</a>
+  </div>
+  <div class="site-footer__copy">© 2026 Lawsuit Center. All rights reserved.</div>
+</div>
 </footer>
-<script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
