@@ -114,11 +114,11 @@
 
     { url: "instagram-lawsuit", title: "Instagram Lawsuit", tag: "Overview", category: "Digital Platforms",
       desc: "What the Instagram lawsuits are about, who may be affected, MDL 3047, what to gather, and time limits.",
-      keywords: "instagram lawsuit meta instagram class action instagram lawyer to sue instagram teen mental health addiction mdl 3047 youth harm" },
+      keywords: "instagram lawsuit meta instagram class action instagram lawyer to sue instagram teen mental health addiction mdl 3047 youth harm social media social media lawsuit social media addiction" },
 
     { url: "tiktok-lawsuit", title: "TikTok Lawsuit", tag: "Overview", category: "Digital Platforms",
       desc: "What the TikTok lawsuits are about, who may be affected, MDL 3047, what to gather, and time limits.",
-      keywords: "tiktok lawsuit bytedance tiktok addiction teen mental health youth harm mdl 3047 recommendation algorithm" },
+      keywords: "tiktok lawsuit bytedance tiktok addiction teen mental health youth harm mdl 3047 recommendation algorithm social media social media lawsuit social media addiction" },
 
     { url: "https://lawsuitinformer.com/ai-lawsuits", title: "AI Lawsuits Overview", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The top-level guide to AI litigation: who is being sued, the legal theories involved, and how the OpenAI, Grok, and Character.AI cases differ.",
