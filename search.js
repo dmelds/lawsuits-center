@@ -35,6 +35,14 @@
       desc: "Compulsive gaming, academic decline, mental health impact, or unauthorized in-game spending involving minors.",
       keywords: "video game gaming addiction minors fortnite roblox in-game purchases" },
 
+    { url: "video-game-lawsuit", title: "Video Game Lawsuit", tag: "Lawsuit", category: "Digital Platforms",
+      desc: "Claims alleging games like Roblox and Fortnite were designed to encourage compulsive play in minors. Coordinated in California, no settlement yet.",
+      keywords: "video game lawsuit video game addiction lawsuit claim file sign up do i qualify settlement gaming addiction roblox fortnite epic games loot boxes minors who qualifies" },
+
+    { url: "video-game-lawyers", title: "Video Game Lawyers", tag: "Lawyers", category: "Digital Platforms",
+      desc: "How video game attorneys evaluate compulsive gaming claims tied to Roblox, Fortnite, and other games, what records help, time limits, and how to compare firms.",
+      keywords: "video game addiction lawyer video game lawsuit attorney gaming addiction lawyer roblox lawsuit lawyer fortnite lawsuit attorney video game addiction law firm" },
+
     { url: "openai-case-review", title: "OpenAI / ChatGPT Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
       keywords: "openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
