@@ -149,18 +149,13 @@
       </div>
       <div class="hero-search__chips" aria-label="Popular searches">
         <span class="hero-search__chips-label">Popular:</span>
-        <a href="/search?q=asbestos">Asbestos</a>
-        <a href="/search?q=PFAS">PFAS</a>
-        <a href="/search?q=Roundup">Roundup</a>
-        <a href="/search?q=Tylenol">Tylenol</a>
-        <a href="/search?q=Paraquat">Paraquat</a>
-        <a href="/search?q=Depo-Provera">Depo-Provera</a>
-        <a href="/search?q=talcum+powder">Talcum powder</a>
-        <a href="/search?q=social+media">Social media</a>
-        <a href="/search?q=instagram">Instagram</a>
-        <a href="/search?q=tiktok">TikTok</a>
-        <a href="/search?q=ChatGPT">ChatGPT</a>
-        <a href="/search?q=deepfake">Deepfake</a>
+        <a href="search" data-q="asbestos">Asbestos</a>
+        <a href="search" data-q="PFAS">PFAS</a>
+        <a href="search" data-q="Roundup">Roundup</a>
+        <a href="search" data-q="Tylenol">Tylenol</a>
+        <a href="search" data-q="Paraquat">Paraquat</a>
+        <a href="search" data-q="Depo-Provera">Depo-Provera</a>
+        <a href="search" data-q="talcum powder">Talcum powder</a>
       </div>
     </form>
 
@@ -489,5 +484,15 @@
   });
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".hero-search__chips a[data-q]").forEach(function (chip) {
+      chip.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "search?q=" + encodeURIComponent(chip.getAttribute("data-q"));
+      });
+    });
+  });
+</script>
 </body>
 </html>
