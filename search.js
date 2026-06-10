@@ -83,6 +83,14 @@
       desc: "Childhood-onset Type 2 diabetes, NAFLD, or metabolic conditions from ultra-processed food.",
       keywords: "processed food ultra-processed type 2 diabetes nafld fatty liver childhood obesity sugar" },
 
+    { url: "processed-food-lawsuit", title: "Processed Food Lawsuit", tag: "Lawsuit", category: "Products & Food",
+      desc: "Claims alleging ultra processed foods were engineered for overconsumption, tied to childhood Type 2 diabetes and NAFLD. Early-stage litigation, test case dismissed, no settlement.",
+      keywords: "processed food lawsuit ultra processed food lawsuit claim file do i qualify settlement upf kraft heinz coca cola type 2 diabetes nafld fatty liver martinez who qualifies" },
+
+    { url: "processed-food-lawyers", title: "Processed Food Lawyers", tag: "Lawyers", category: "Products & Food",
+      desc: "How processed food attorneys evaluate childhood diabetes and NAFLD claims tied to ultra processed foods, what records help, time limits, and how to compare firms.",
+      keywords: "processed food lawsuit lawyer ultra processed food lawsuit attorney ultra processed food law firm nafld lawsuit attorney childhood diabetes lawsuit lawyer upf" },
+
     { url: "reproductive-case-review", title: "Reproductive Injury Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Uterine or ovarian cancer, fertility complications, or reproductive harm tied to long-term product use.",
       keywords: "reproductive uterine ovarian cancer fertility hair relaxer talc talcum prenatal" },
