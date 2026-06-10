@@ -8,7 +8,7 @@
  *     rejects junk domains, catches common typos), and phone (10 US digits)
  *   - Inline error messages appear on blur and on submit
  *   - Auto-formats phone as (XXX) XXX-XXXX on blur
- *   - Blocks submit if any field is invalid; valid submissions pass through
+ *   - Sets aria-invalid on failing fields and announces a screen-reader\n *     summary via an aria-live region on blocked submits\n *   - Blocks submit if any field is invalid; valid submissions pass through
  *     untouched (Netlify forms keep working)
  *
  * Install:
@@ -106,6 +106,20 @@
     return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
   }
 
+  function getOrCreateLiveRegion(form) {
+    var existing = form.querySelector(".form-error-summary");
+    if (existing) return existing;
+    var region = document.createElement("div");
+    region.className = "form-error-summary";
+    region.setAttribute("aria-live", "assertive");
+    region.setAttribute("role", "status");
+    region.style.cssText =
+      "position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;" +
+      "clip:rect(0,0,0,0);white-space:nowrap;border:0;";
+    form.insertBefore(region, form.firstChild);
+    return region;
+  }
+
   function getOrCreateErrorEl(input) {
     var existing = input.parentNode.querySelector(
       '.field-error[data-for="' + input.name + '"]'
@@ -195,9 +209,20 @@
             if (!firstInvalid) firstInvalid = f.input;
           }
         });
+        var liveRegion = getOrCreateLiveRegion(form);
         if (!allValid) {
           e.preventDefault();
+          var invalidCount = fields.filter(function (f) {
+            return f.input.getAttribute("aria-invalid") === "true";
+          }).length;
+          liveRegion.textContent =
+            "The form could not be submitted. " +
+            invalidCount +
+            (invalidCount === 1 ? " field needs" : " fields need") +
+            " attention. Please review the highlighted fields.";
           if (firstInvalid) firstInvalid.focus();
+        } else {
+          liveRegion.textContent = "";
         }
       });
     });

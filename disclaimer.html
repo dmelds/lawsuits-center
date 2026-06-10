@@ -32,7 +32,7 @@
   :root {
     --bg: #111111; --surface: #181818; --surface-2: #1f1f1f;
     --border: #262626; --border-strong: #333333;
-    --ink: #f5f5f4; --ink-muted: #a8a29e; --ink-soft: #78716c;
+    --ink: #f5f5f4; --ink-muted: #a8a29e; --ink-soft: #8f8a84;
     --amber: #d4a24e; --amber-bright: #e7b961;
     --display: "Fraunces", "Times New Roman", serif;
     --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -106,6 +106,15 @@
     .brand img { height: 46px; }
     .brand__tag { display: none; }
   }
+
+  /* Accessibility */
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--amber);color:#1a1306;padding:10px 18px;border-radius:0 0 10px 0;font-weight:600;font-size:14px;text-decoration:none;}
+  .skip-link:focus{left:0;}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
 </style>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lawsuit Center">
@@ -121,6 +130,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container site-header__inner">
@@ -145,7 +155,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="page-hero">
   <div class="container container--narrow">
