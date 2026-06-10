@@ -32,7 +32,7 @@
   :root {
     --bg: #111111; --surface: #181818; --surface-2: #1f1f1f;
     --border: #262626; --border-strong: #333333;
-    --ink: #f5f5f4; --ink-muted: #a8a29e; --ink-soft: #78716c;
+    --ink: #f5f5f4; --ink-muted: #a8a29e; --ink-soft: #8f8a84;
     --amber: #d4a24e; --amber-bright: #e7b961;
     --display: "Fraunces", "Times New Roman", serif;
     --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -125,9 +125,9 @@
 
 /* Visible breadcrumbs */
 .breadcrumb{ background:var(--bg, #111); border-bottom:1px solid var(--border, #262626); padding:14px 0; }
-.breadcrumb__list{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; list-style:none; margin:0; padding:0; font-size:13px; line-height:1.4; color:var(--ink-soft, #78716c); }
+.breadcrumb__list{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; list-style:none; margin:0; padding:0; font-size:13px; line-height:1.4; color:var(--ink-soft, #8f8a84); }
 .breadcrumb__list li{ display:flex; align-items:center; gap:8px; }
-.breadcrumb__list li:not(:last-child)::after{ content:"/"; color:var(--ink-soft, #78716c); opacity:.65; }
+.breadcrumb__list li:not(:last-child)::after{ content:"/"; color:var(--ink-soft, #8f8a84); opacity:.65; }
 .breadcrumb__list a{ color:var(--ink-muted, #a8a29e); text-decoration:none; transition:color .2s var(--ease, ease); }
 .breadcrumb__list a:hover{ color:var(--amber, #d4a24e); }
 .breadcrumb__list [aria-current="page"]{ color:var(--ink, #f5f5f4); }
@@ -157,6 +157,15 @@
 .site-footer__links a { color: var(--ink-muted); transition: color .2s var(--ease); }
 .site-footer__links a:hover { color: var(--ink); }
 .site-footer__copy { margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); }
+
+  /* Accessibility */
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--amber);color:#1a1306;padding:10px 18px;border-radius:0 0 10px 0;font-weight:600;font-size:14px;text-decoration:none;}
+  .skip-link:focus{left:0;}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
 </style>
 
 <script type="application/ld+json">
@@ -226,6 +235,7 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main">Skip to main content</a>
 
 <header class="site-header">
   <div class="container site-header__inner">
@@ -250,7 +260,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
