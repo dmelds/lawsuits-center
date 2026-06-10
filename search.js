@@ -255,6 +255,10 @@
       desc: "Libel, slander, online reviews, social media posts, and reputation harm.",
       keywords: "defamation libel slander reputation review" },
 
+    { url: "social-media-defamation-lawsuit", title: "Social Media Defamation Lawsuit", tag: "Lawsuit", category: "Privacy & Civil Rights",
+      desc: "Suing over false Facebook or Instagram posts: whom you sue, what you must prove, section 230, and when a case review makes sense.",
+      keywords: "social media defamation lawsuit facebook defamation lawsuit sue for slander on facebook libel instagram false post online reputation section 230" },
+
     { url: "civil-rights-lawsuits", title: "Civil Rights Lawsuits", tag: "Overview", category: "Privacy & Civil Rights",
       desc: "Discrimination, government misconduct, police misconduct, and disability access claims.",
       keywords: "civil rights discrimination police government disability ADA" },
