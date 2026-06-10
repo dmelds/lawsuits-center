@@ -219,6 +219,10 @@
       desc: "How Depo-Provera attorneys evaluate meningioma claims, what records help, MDL 3140, time limits, and how to compare firms.",
       keywords: "depo provera lawyer depo provera lawyers depo provera attorney depo provera lawsuit lawyers medroxyprogesterone meningioma brain tumor mdl 3140 drug injury" },
 
+    { url: "hernia-mesh-lawyers", title: "Hernia Mesh Lawyers", tag: "Lawyers", category: "Drugs & Medical Devices",
+      desc: "How hernia mesh attorneys evaluate complication and revision surgery claims, identifying your mesh product, the major MDLs, time limits, and how to compare firms.",
+      keywords: "hernia mesh lawyer hernia mesh lawyers hernia mesh attorney hernia mesh attorneys near me surgical mesh lawsuit bard davol ethicon physiomesh atrium c-qur covidien revision surgery mesh failure mdl 2846 medical device" },
+
     { url: "drug-injury-lawsuits", title: "Drug Injury Lawsuits", tag: "Overview", category: "Drugs & Medical Devices",
       desc: "Prescription medications, side effects, warning issues, and medication-related injuries.",
       keywords: "drug injury prescription medication side effect warning" },
