@@ -315,6 +315,14 @@
       desc: "Claims alleging failure to warn about a possible association between prenatal acetaminophen exposure and autism or ADHD. Litigation active but unsettled, federal appeal pending.",
       keywords: "tylenol autism lawsuit tylenol lawsuit acetaminophen autism adhd class action sign up age limit settlement update pregnancy johnson and johnson kenvue mdl daubert appeal who qualifies" },
 
+    { url: "baby-food-lawsuit", title: "Baby Food Lawsuit", tag: "Lawsuit", category: "Consumer Products",
+      desc: "Claims alleging heavy metals in baby foods from Gerber, Beech-Nut, and others, linked in litigation to autism and ADHD diagnoses. MDL 3101, no settlement yet.",
+      keywords: "baby food lawsuit toxic baby food gerber gerbers beech nut heavy metals lead arsenic autism adhd claim file sign up do i qualify settlement mdl 3101 who qualifies" },
+
+    { url: "baby-food-lawyers", title: "Baby Food Lawyers", tag: "Lawyers", category: "Consumer Products",
+      desc: "How baby food attorneys evaluate autism and ADHD claims tied to alleged heavy metals, what records help, MDL 3101, time limits, and how to compare firms.",
+      keywords: "baby food lawyer baby food lawyers baby food autism lawsuit lawyer baby food autism attorney toxic baby food law firm gerber lawyer beech nut attorney heavy metals" },
+
     { url: "california-asbestos-lawyers", title: "California Asbestos Lawyers", tag: "State Page", category: "State Lawyer Pages",
       desc: "Asbestos lawyer information for California-related exposure or illness.",
       keywords: "california asbestos lawyer mesothelioma" },
