@@ -47,6 +47,10 @@
       desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
       keywords: "openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
 
+    { url: "deepfake-case-review", title: "Deepfake Case Review", tag: "Case Review", category: "AI Chatbot Harm",
+      desc: "Non-consensual AI-generated intimate images of an adult or minor, distribution and removal failures, threats, and resulting harm.",
+      keywords: "deepfake nonconsensual intimate images ai generated nudify grok xai take it down act removal 48 hours sextortion extortion likeness privacy minor" },
+
     { url: "ai-case-review", title: "AI Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Harm involving an AI chatbot, AI-generated deepfake images, or another AI product — chatbot harm, deepfakes, or professional impersonation.",
       keywords: "ai artificial intelligence chatbot lawsuit deepfake nonconsensual images grok xai character ai openai chatgpt wrongful death self-harm medical impersonation take it down act" },
