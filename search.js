@@ -14,6 +14,10 @@
       desc: "Four short questions mapping a cancer diagnosis and exposure history to active case categories.",
       keywords: "cancer mesothelioma talc hair relaxer roundup camp lejeune pfas benzene afff exposure checker tool" },
 
+    { url: "processed-food-claim-checker", title: "Processed Food Claim Checker", tag: "Free Tool", category: "Free Tools",
+      desc: "Five quick questions mapping a Type 2 diabetes or NAFLD diagnosis, age, and consumption history to the ultra-processed food cases now being filed.",
+      keywords: "processed food ultra-processed upf claim checker tool type 2 diabetes nafld fatty liver childhood diagnosis kraft heinz coca cola eligibility qualify do i qualify" },
+
     // ----- Case Review -----
     { url: "cancer-case-review", title: "Cancer Case Review", tag: "Case Review", category: "Cancer",
       desc: "Cancer diagnoses possibly tied to consumer products, workplace exposure, or contaminated water.",
