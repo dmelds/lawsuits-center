@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processed Food Claim Checker | Lawsuit Center</title>
+  <meta name="description" content="A short, attorney-built check to see whether a Type 2 diabetes or fatty liver diagnosis may fit the ultra-processed food cases now being filed." />
+
+  <link rel="canonical" href="https://lawsuit.center/processed-food-claim-checker" />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0b1118">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Processed Food Claim Checker",
+    "description": "An educational walkthrough that helps users understand whether a Type 2 diabetes or fatty liver diagnosis may fit the ultra-processed food cases currently being filed.",
+    "url": "https://lawsuit.center/processed-food-claim-checker",
+    "applicationCategory": "Educational",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lawsuit Center",
+      "url": "https://lawsuit.center/",
+      "logo": { "@type": "ImageObject", "url": "https://lawsuit.center/logo-center.jpeg" }
+    }
+  }
+  </script>
+
+<style>
+  :root{--bg:#111;--surface:#181818;--surface-2:#1f1f1f;--border:#262626;--border-strong:#333;--ink:#f5f5f4;--ink-muted:#a8a29e;--ink-soft:#8f8a84;--amber:#d4a24e;--amber-bright:#e7b961;--display:"Fraunces","Times New Roman",serif;--body:"IBM Plex Sans",system-ui,sans-serif;--container:1280px;--gutter:clamp(20px,4vw,72px);--radius:14px;--radius-lg:22px;--ease:cubic-bezier(.2,.8,.2,1);}
+  *,*::before,*::after{box-sizing:border-box;}html,body{margin:0;padding:0;}html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
+  h1,h2,h3,h4,p{margin:0;}::selection{background:var(--amber);color:#111;}
+  .container{width:100%;max-width:var(--container);margin:0 auto;padding-inline:var(--gutter);}
+  .container--narrow{max-width:820px;}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);}
+
+  .site-header{position:sticky;top:0;z-index:50;background:rgba(17,17,17,.85);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--border);}
+  .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:88px;}
+  .brand{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+  .brand img{height:60px;width:auto;}
+  .brand__tag{font-size:12.5px;color:var(--ink-muted);letter-spacing:.04em;white-space:nowrap;}
+  .nav{display:flex;align-items:center;gap:28px;}
+  .nav__links{display:flex;gap:26px;}
+  .nav__links a{font-size:14.5px;color:var(--ink-muted);transition:color .2s var(--ease);}
+  .nav__links a:hover,.nav__links a[aria-current="page"]{color:var(--ink);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14.5px;transition:transform .15s var(--ease),background .2s var(--ease);white-space:nowrap;}
+  .btn--amber{background:var(--amber);color:#1a1306;}.btn--amber:hover{background:var(--amber-bright);transform:translateY(-1px);}
+  .btn--ghost{border:1px solid var(--border-strong);color:var(--ink);}.btn--ghost:hover{background:var(--surface);}
+  .btn--lg{padding:16px 30px;font-size:15.5px;}
+  .btn:disabled{opacity:.45;cursor:not-allowed;transform:none;}
+  .nav__toggle{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--border-strong);align-items:center;justify-content:center;}
+
+  .page-hero{padding:clamp(56px,8vw,96px) 0 clamp(40px,5vw,64px);border-bottom:1px solid var(--border);}
+  .page-hero h1{font-family:var(--display);font-weight:500;font-size:clamp(36px,5.2vw,60px);line-height:1.05;letter-spacing:-.022em;color:var(--ink);margin-bottom:18px;}
+  .page-hero h1 em{font-style:italic;font-weight:400;color:var(--amber);}
+  .page-hero p.lede{font-size:clamp(16.5px,1.3vw,18.5px);line-height:1.55;color:var(--ink-muted);max-width:60ch;margin-bottom:24px;}
+  .page-hero .meta{font-size:13px;color:var(--ink-soft);margin-top:14px;}
+
+  .legal-note{background:var(--surface);border-bottom:1px solid var(--border);padding:18px 0;}
+  .legal-note p{font-size:13.5px;color:var(--ink-soft);line-height:1.55;max-width:70ch;}
+
+  .section{padding:clamp(56px,7vw,88px) 0;}
+  .section--surface{background:var(--surface);border-block:1px solid var(--border);}
+  .section h2{font-family:var(--display);font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.018em;color:var(--ink);margin-bottom:16px;}
+  .section h2+p{color:var(--ink-muted);line-height:1.65;margin-bottom:14px;}
+  .section p{color:var(--ink-muted);line-height:1.65;margin-bottom:14px;}
+  .section ul{color:var(--ink-muted);line-height:1.7;padding-left:20px;margin:12px 0 0;}
+  .section ul li{margin-bottom:8px;}
+  .section .small-text{font-size:13px;color:var(--ink-soft);margin-top:14px;}
+  .section__eyebrow{display:inline-block;margin-bottom:14px;}
+
+  .form-card{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:clamp(28px,4vw,48px);margin-top:28px;}
+
+  .progress{margin-bottom:28px;}
+  .progress__head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;}
+  .progress__step{color:var(--ink);}
+  .progress__bar{height:3px;background:var(--border);border-radius:2px;overflow:hidden;}
+  .progress__fill{height:100%;background:var(--amber);width:0%;transition:width .5s var(--ease);}
+
+  .step{animation:stepIn .4s var(--ease);}
+  @keyframes stepIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+  .step__heading{font-family:var(--display);font-weight:500;font-size:clamp(24px,3vw,30px);line-height:1.2;letter-spacing:-.012em;color:var(--ink);margin-bottom:8px;}
+  .step__sub{color:var(--ink-muted);font-size:15.5px;line-height:1.55;margin-bottom:24px;}
+
+  .options{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;}
+  .option{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:border-color .2s var(--ease),background .2s var(--ease);text-align:left;width:100%;font-family:inherit;color:var(--ink);}
+  .option:hover{border-color:var(--border-strong);}
+  .option.is-selected{background:rgba(212,162,78,.08);border-color:var(--amber);}
+  .option__indicator{flex-shrink:0;width:20px;height:20px;border:1.5px solid var(--border-strong);border-radius:50%;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:border-color .2s var(--ease);}
+  .option.is-checkbox .option__indicator{border-radius:5px;}
+  .option.is-selected .option__indicator{border-color:var(--amber);}
+  .option.is-selected .option__indicator::after{content:"";width:10px;height:10px;background:var(--amber);border-radius:50%;}
+  .option.is-checkbox.is-selected .option__indicator::after{width:11px;height:6px;background:transparent;border-left:2px solid var(--amber);border-bottom:2px solid var(--amber);border-radius:0;transform:rotate(-45deg) translate(2px,-1px);}
+  .option__content{flex:1;}
+  .option__title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.4;}
+  .option__desc{font-size:13.5px;color:var(--ink-muted);line-height:1.5;}
+
+  .field-select{width:100%;padding:14px 16px;background:rgba(0,0,0,.35);border:1px solid var(--border);border-radius:10px;color:var(--ink);font:inherit;font-size:16px;transition:border-color .2s var(--ease),background .2s var(--ease);appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none' stroke='%23a8a29e' stroke-width='1.7'><path d='M3 5l4 4 4-4'/></svg>");background-repeat:no-repeat;background-position:right 16px center;padding-right:44px;margin-bottom:24px;}
+  .field-select:focus{outline:none;border-color:var(--amber);background-color:rgba(0,0,0,.5);}
+
+  .step__nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;}
+  .btn--back{background:none;color:var(--ink-soft);border-radius:0;padding:12px 0;font-weight:500;}
+  .btn--back:hover{color:var(--ink);}
+
+  .result{animation:stepIn .5s var(--ease);}
+  .result__eyebrow{margin-bottom:14px;}
+  .result__headline{font-family:var(--display);font-weight:500;font-size:clamp(28px,4vw,38px);line-height:1.1;letter-spacing:-.018em;color:var(--ink);margin-bottom:16px;}
+  .result__summary{font-size:16.5px;color:var(--ink-muted);line-height:1.65;margin-bottom:28px;}
+
+  .case-card{background:rgba(0,0,0,.3);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:12px;padding:22px 24px;margin-bottom:14px;}
+  .case-card--muted{border-left-color:var(--border-strong);}
+  .case-card__label{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;}
+  .case-card--muted .case-card__label{color:var(--ink-soft);}
+  .case-card__title{font-family:var(--display);font-weight:500;font-size:21px;line-height:1.2;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;}
+  .case-card__desc{font-size:14.5px;color:var(--ink-muted);line-height:1.6;}
+
+  .result__cta{margin-top:32px;padding-top:28px;border-top:1px solid var(--border);}
+  .result__cta-text{font-size:14.5px;color:var(--ink-muted);margin-bottom:18px;}
+  .result__actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+  .result__disclaimer{margin-top:24px;padding:16px 18px;background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:12px;font-size:12.5px;color:var(--ink-soft);line-height:1.6;}
+  .result__disclaimer strong{color:var(--ink);font-weight:600;}
+
+  .restart{margin-top:24px;text-align:center;}
+  .restart button{font-size:13px;color:var(--ink-soft);text-decoration:underline;cursor:pointer;background:none;}
+  .restart button:hover{color:var(--ink);}
+
+  .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
+
+  .site-footer{background:var(--bg);border-top:1px solid var(--border);padding:56px 0 36px;}
+  .site-footer__brand{font-family:var(--display);font-weight:600;font-size:20px;margin-bottom:8px;}
+  .site-footer__tag{color:var(--ink-muted);font-size:14px;line-height:1.5;max-width:50ch;margin-bottom:28px;}
+  .site-footer__legal{font-size:12.5px;color:var(--ink-soft);line-height:1.6;padding-top:24px;border-top:1px solid var(--border);}
+  .site-footer__links{margin-top:14px;font-size:13px;color:var(--ink-soft);line-height:1.9;}
+  .site-footer__links a{color:var(--ink-muted);transition:color .2s var(--ease);}
+  .site-footer__links a:hover{color:var(--ink);}
+  .site-footer__copy{margin-top:18px;font-size:12.5px;color:var(--ink-soft);}
+
+  @media(max-width:760px){
+    .site-header__inner{height:76px;}
+    .brand img{height:52px;}
+    .brand{gap:12px;}
+    .nav__links,.nav .btn--amber{display:none;}
+    .nav__toggle{display:inline-flex;}
+    .nav__links.is-open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:rgba(17,17,17,.97);padding:24px var(--gutter);border-bottom:1px solid var(--border);gap:18px;}
+    .actions,.result__actions{flex-direction:column;align-items:stretch;}.actions .btn,.result__actions .btn{width:100%;}
+    .step__nav{flex-direction:column-reverse;align-items:stretch;}.step__nav .btn{width:100%;justify-content:center;}.step__nav .btn--back{text-align:center;}
+  }
+  @media(max-width:480px){
+    .brand img{height:46px;}
+    .brand__tag{display:none;}
+  }
+
+  /* Related Topics module */
+  .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px;}
+  .card{display:block;background:var(--surface-2,#1f1f1f);border:1px solid var(--border,#262626);border-radius:var(--radius,14px);padding:24px;transition:transform .15s var(--ease,ease),border-color .2s var(--ease,ease),background .2s var(--ease,ease);}
+  .card:hover{transform:translateY(-1px);border-color:var(--border-strong,#333);background:rgba(255,255,255,.03);}
+  .card h3{font-family:var(--display,serif);font-weight:500;font-size:22px;line-height:1.15;margin-bottom:10px;color:var(--ink,#f5f5f4);}
+  .card p{color:var(--ink-muted,#a8a29e);line-height:1.6;margin:0;}
+  @media(max-width:860px){.card-grid{grid-template-columns:1fr;}}
+
+  /* Visible breadcrumbs */
+  .breadcrumb{background:var(--bg,#111);border-bottom:1px solid var(--border,#262626);padding:14px 0;}
+  .breadcrumb__list{display:flex;flex-wrap:wrap;align-items:center;gap:8px;list-style:none;margin:0;padding:0;font-size:13px;line-height:1.4;color:var(--ink-soft,#8f8a84);}
+  .breadcrumb__list li{display:flex;align-items:center;gap:8px;}
+  .breadcrumb__list li:not(:last-child)::after{content:"/";color:var(--ink-soft,#8f8a84);opacity:.65;}
+  .breadcrumb__list a{color:var(--ink-muted,#a8a29e);text-decoration:none;transition:color .2s var(--ease,ease);}
+  .breadcrumb__list a:hover{color:var(--amber,#d4a24e);}
+  .breadcrumb__list [aria-current="page"]{color:var(--ink,#f5f5f4);}
+
+  /* Accessibility */
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--amber);color:#1a1306;padding:10px 18px;border-radius:0 0 10px 0;font-weight:600;font-size:14px;text-decoration:none;}
+  .skip-link:focus{left:0;}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+    { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits" },
+    { "@type": "ListItem", "position": 3, "name": "Processed Food Lawsuit", "item": "https://lawsuit.center/processed-food-lawsuit" },
+    { "@type": "ListItem", "position": 4, "name": "Processed Food Claim Checker", "item": "https://lawsuit.center/processed-food-claim-checker" }
+  ]
+}
+</script>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lawsuit Center">
+  <meta property="og:url" content="https://lawsuit.center/processed-food-claim-checker">
+  <meta property="og:title" content="Processed Food Claim Checker | Lawsuit Center">
+  <meta property="og:description" content="A short, attorney-built check to see whether a Type 2 diabetes or fatty liver diagnosis may fit the ultra-processed food cases now being filed.">
+  <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
+  <meta property="og:image:alt" content="Lawsuit Center attorney-built case review">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Processed Food Claim Checker | Lawsuit Center">
+  <meta name="twitter:description" content="A short, attorney-built check to see whether a Type 2 diabetes or fatty liver diagnosis may fit the ultra-processed food cases now being filed.">
+  <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand" aria-label="Lawsuit Center home">
+      <img src="logo-center-new.png" alt="Lawsuit Center" />
+      <span class="brand__tag">attorney-built</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links" id="site-menu">
+        <a href="/">Home</a>
+        <a href="case-review">Start Case Review</a>
+        <a href="lawsuits">Browse Lawsuits</a>
+        <a href="how-case-review-works">How It Works</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
+      </div>
+      <a href="#claim-checker" class="btn btn--amber">Begin Check</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+   <ol class="breadcrumb__list">
+     <li><a href="/">Home</a></li>
+     <li><a href="lawsuits">Browse Lawsuits</a></li>
+     <li><a href="processed-food-lawsuit">Processed Food Lawsuit</a></li>
+     <li aria-current="page">Processed Food Claim Checker</li>
+   </ol>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container container--narrow">
+    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Processed Food Claim Checker</span>
+    <h1>See whether a <em>diagnosis</em> may fit the cases now being filed.</h1>
+    <p class="lede">
+      A short, attorney-built walkthrough. Five quick questions about the diagnosis, age, and
+      consumption history. We will tell you whether the situation looks like the narrow profile
+      firms are currently reviewing, or honestly tell you when it does not.
+    </p>
+    <div class="actions">
+      <a href="#claim-checker" class="btn btn--amber btn--lg">Begin Check</a>
+      <a href="processed-food-lawsuit" class="btn btn--ghost btn--lg">Read the Background</a>
+    </div>
+    <p class="meta">
+      Educational tool. No attorney-client relationship is formed by using this checker.
+    </p>
+  </div>
+</section>
+
+<section class="legal-note">
+  <div class="container container--narrow">
+    <p>
+      Lawsuit Center is not a law firm and does not provide legal advice. This is an emerging area
+      of litigation, the first test case was dismissed on pleading grounds, and the science is
+      contested. Using this checker does not guarantee eligibility, compensation, contact, or representation.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">What This Checks</span>
+    <h2>Why this asks about diagnosis, not diet.</h2>
+    <p>
+      Almost everyone eats ultra-processed food, so consumption alone does not tell you anything about
+      a claim. What the filed cases actually turn on is a serious metabolic diagnosis that began
+      unusually early, paired with heavy, documentable consumption. This checker is built around that,
+      so it screens on the diagnosis first and is honest when nothing fits.
+    </p>
+    <ul>
+      <li>The diagnosis, since the filed cases center on Type 2 diabetes and non-alcoholic fatty liver disease</li>
+      <li>Age at diagnosis, because early onset is what separates these claims from ordinary cases</li>
+      <li>Childhood and adolescent consumption history</li>
+      <li>A few exclusions that point to a different cause</li>
+      <li>State, because deadlines and rules vary</li>
+    </ul>
+  </div>
+</section>
+
+<section id="claim-checker" class="section section--surface">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">The Checker</span>
+    <h2>Walk through five questions.</h2>
+    <p>
+      Pick the closest fit at each step. Answers stay on your device. Nothing is submitted unless
+      you choose to request a case review at the end.
+    </p>
+
+    <div class="form-card">
+      <div class="progress" id="progress" hidden>
+        <div class="progress__head">
+          <span>Step <span id="stepNum">1</span> of 5</span>
+          <span class="progress__step" id="stepName">Diagnosis</span>
+        </div>
+        <div class="progress__bar"><div class="progress__fill" id="progressFill"></div></div>
+      </div>
+      <div id="checker"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">After Your Result</span>
+    <h2>What happens next.</h2>
+    <p>
+      If the checker points to a possible fit, you can request a free case review. Your information
+      may be reviewed to understand whether it relates to the ultra-processed food cases currently
+      being filed, and a participating law firm, legal advertiser, or intake provider may contact you
+      to ask for more information.
+    </p>
+    <p>
+      If the checker does not find a fit, it will say so and point you to background reading instead
+      of an intake form. No attorney-client relationship is formed unless and until you sign an
+      agreement directly with a law firm.
+    </p>
+    <div class="actions">
+      <a href="how-case-review-works" class="btn btn--ghost">How Case Review Works</a>
+      <a href="privacy-policy" class="btn btn--ghost">Privacy Policy</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Important Disclosures</span>
+    <h2>Read this before relying on results.</h2>
+    <p>
+      Lawsuit Center is not a law firm and does not provide legal advice. Using this checker does not
+      create an attorney-client relationship and does not guarantee that you qualify for a claim, that
+      compensation will be available, or that any attorney or law firm will offer representation.
+    </p>
+    <p>
+      Whether ultra-processed foods caused any individual's condition is scientifically contested and
+      has not been established, and the companies dispute the allegations. Results reflect general
+      patterns in a developing area of litigation, not a legal opinion about your situation.
+    </p>
+    <p class="small-text">
+      Legal deadlines for product liability and consumer claims can vary by state and can be short. If
+      you believe you may have a claim, consider speaking with a licensed attorney as soon as possible.
+    </p>
+    <div class="actions">
+      <a href="advertising-disclosure" class="btn btn--ghost">Advertising Disclosure</a>
+      <a href="disclaimer" class="btn btn--ghost">Disclaimer</a>
+    </div>
+  </div>
+</section>
+
+<section class="section related-topics-module">
+  <div class="container">
+    <div class="section__head section__head--left">
+      <span class="eyebrow section__eyebrow">Related Topics</span>
+      <h2>Browse related lawsuit categories.</h2>
+    </div>
+    <div class="card-grid">
+      <a href="processed-food-lawsuit" class="card">
+        <h3>Processed Food Lawsuit</h3>
+        <p>Where the litigation stands, the companies named, and who may qualify for review.</p>
+      </a>
+      <a href="processed-food-lawyers" class="card">
+        <h3>Processed Food Lawyers</h3>
+        <p>How attorneys evaluate these early-stage claims and what records help.</p>
+      </a>
+      <a href="processed-food-case-review" class="card">
+        <h3>Processed Food Case Review</h3>
+        <p>Submit basic information about a metabolic diagnosis for review.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+<div class="container">
+  <div class="site-footer__brand">Lawsuit Center</div>
+  <p class="site-footer__tag">Attorney-Built lawsuit research and case review platform.</p>
+  <div class="site-footer__legal">
+    Educational information only. Not legal advice. No attorney-client relationship is formed
+    by using this website. Some pages may include attorney advertising or sponsored law firm visibility.
+    Lawsuit Center is not a law firm and does not provide legal advice. Use of this site does not
+    create an attorney-client relationship. Information submitted through this site may be reviewed
+    by participating law firms, legal advertisers, or third-party intake providers, depending on the
+    claim category and availability.
+  </div>
+  <div class="site-footer__links">
+    <a href="privacy-policy">Privacy Policy</a>&nbsp;&middot;
+    <a href="disclaimer">Disclaimer</a>&nbsp;&middot;
+    <a href="advertising-disclosure">Advertising Disclosure</a>&nbsp;&middot;
+    <a href="editorial-policy">Editorial Policy</a>&nbsp;&middot;
+    <a href="how-case-review-works">How Case Review Works</a>&nbsp;&middot;
+    <a href="resources">Resources</a>&nbsp;&middot;
+    <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>&nbsp;&middot;
+    <a href="https://lawsuitintelligencer.com/">Lawsuit Intelligencer</a>&nbsp;&middot;
+    <a href="https://davidmeldofsky.com/">David Meldofsky</a>&nbsp;&middot;
+    <a href="for-law-firms">For Law Firms</a>&nbsp;&middot;
+    <a href="about">About</a>&nbsp;&middot;
+    <a href="contact">Contact</a>
+  </div>
+  <div class="site-footer__copy">&copy; 2026 Lawsuit Center. All rights reserved.</div>
+</div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggle = document.querySelector(".nav__toggle");
+    var menu = document.getElementById("site-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        var isOpen = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+  });
+
+  var state = {
+    step: 0,
+    answers: { diagnosis: [], age: null, consumption: null, confounders: [], state: null }
+  };
+
+  var STEPS = [
+    {
+      key: 'diagnosis', name: 'Diagnosis',
+      heading: 'Has a doctor diagnosed any of these?',
+      sub: "Select any that apply to you or the person you are checking for. These are the two conditions at the center of the filed cases.",
+      type: 'multi',
+      options: [
+        { id: 't2d', title: 'Type 2 diabetes', desc: 'Diagnosed by a physician' },
+        { id: 'nafld', title: 'Non-alcoholic fatty liver disease', desc: 'NAFLD or MASLD, sometimes called fatty liver not linked to alcohol' },
+        { id: 'neither', title: 'Neither of these', desc: 'No Type 2 diabetes or fatty liver diagnosis' }
+      ]
+    },
+    {
+      key: 'age', name: 'Age',
+      heading: 'How old was the person at first diagnosis?',
+      sub: "The filed cases center on diagnoses that began unusually early, so age does a lot of the work here.",
+      type: 'single',
+      options: [
+        { id: 'under18', title: 'Under 18', desc: 'Diagnosed as a child or teenager' },
+        { id: '18_29', title: '18 to 29', desc: 'Diagnosed as a young adult' },
+        { id: '30_44', title: '30 to 44' },
+        { id: '45plus', title: '45 or older' }
+      ]
+    },
+    {
+      key: 'consumption', name: 'Diet',
+      heading: 'Before age 18, how often were ultra-processed foods eaten?',
+      sub: "Think packaged snacks, sugary cereals, sodas, processed meats, and fast food.",
+      type: 'single',
+      options: [
+        { id: 'daily', title: 'Daily or more', desc: 'A regular, central part of the diet' },
+        { id: 'weekly', title: 'Several times a week' },
+        { id: 'occasional', title: 'Occasionally' },
+        { id: 'rarely', title: 'Rarely or never' }
+      ]
+    },
+    {
+      key: 'confounders', name: 'Exclusions',
+      heading: 'A few quick exclusions.',
+      sub: "These help rule out diagnoses that point to a different cause. Select any that apply, or choose none.",
+      type: 'multi',
+      options: [
+        { id: 'type1', title: 'The diabetes is Type 1', desc: 'An autoimmune condition, not diet-related' },
+        { id: 'gestational', title: 'It was gestational diabetes only', desc: 'Occurring only during pregnancy' },
+        { id: 'alcohol', title: 'The fatty liver was attributed mainly to alcohol' },
+        { id: 'none', title: 'None of these apply' }
+      ]
+    },
+    {
+      key: 'state', name: 'Location',
+      heading: 'Which state do you live in?',
+      sub: "State matters because filing deadlines and rules, including special rules for minors, vary.",
+      type: 'select'
+    }
+  ];
+
+  var STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming','District of Columbia'];
+
+  var checker = document.getElementById('checker');
+  var progressEl = document.getElementById('progress');
+  var fillEl = document.getElementById('progressFill');
+  var stepNumEl = document.getElementById('stepNum');
+  var stepNameEl = document.getElementById('stepName');
+
+  function isEarlyScreenOut() {
+    var dx = state.answers.diagnosis;
+    return dx.length === 1 && dx[0] === 'neither';
+  }
+
+  function render() {
+    if (state.step === 0) return renderIntro();
+    if (state.step > STEPS.length) return renderResult();
+    progressEl.hidden = false;
+    var step = STEPS[state.step - 1];
+    renderStep(step);
+    updateProgress(step);
+  }
+
+  function renderIntro() {
+    progressEl.hidden = true;
+    checker.innerHTML =
+      '<div class="step">' +
+        '<h3 class="step__heading">Ready when you are.</h3>' +
+        '<p class="step__sub">Five short questions. Takes about a minute. Your answers stay on your device.</p>' +
+        '<div class="step__nav" style="justify-content:flex-end;">' +
+          '<button class="btn btn--amber btn--lg" id="startBtn">Begin Check &nbsp;&rarr;</button>' +
+        '</div>' +
+      '</div>';
+    document.getElementById('startBtn').addEventListener('click', function () { state.step = 1; render(); });
+  }
+
+  function renderStep(step) {
+    var body = '';
+    if (step.type === 'select') {
+      body =
+        '<select class="field-select" id="stateSelect">' +
+          '<option value="">Select a state</option>' +
+          STATES.map(function (s) {
+            return '<option value="' + s + '"' + (state.answers.state === s ? ' selected' : '') + '>' + s + '</option>';
+          }).join('') +
+        '</select>';
+    } else {
+      body = '<div class="options">' + step.options.map(function (opt) {
+        var isSelected = step.type === 'multi'
+          ? state.answers[step.key].indexOf(opt.id) !== -1
+          : state.answers[step.key] === opt.id;
+        var cls = ['option', step.type === 'multi' ? 'is-checkbox' : '', isSelected ? 'is-selected' : ''].filter(Boolean).join(' ');
+        return '<button type="button" class="' + cls + '" data-id="' + opt.id + '">' +
+          '<span class="option__indicator"></span>' +
+          '<span class="option__content">' +
+            '<span class="option__title">' + opt.title + '</span>' +
+            (opt.desc ? '<span class="option__desc">' + opt.desc + '</span>' : '') +
+          '</span>' +
+        '</button>';
+      }).join('') + '</div>';
+    }
+
+    var isLast = state.step === STEPS.length;
+    var nextLabel = isLast ? 'See Result' : 'Continue';
+    if (state.step === 1 && isEarlyScreenOut()) nextLabel = 'See Result';
+
+    checker.innerHTML =
+      '<div class="step">' +
+        '<h3 class="step__heading">' + step.heading + '</h3>' +
+        '<p class="step__sub">' + step.sub + '</p>' +
+        body +
+        '<div class="step__nav">' +
+          '<button class="btn btn--back" id="backBtn"' + (state.step === 1 ? ' style="visibility:hidden;"' : '') + '>&larr; Back</button>' +
+          '<button class="btn btn--amber" id="nextBtn" disabled>' + nextLabel + ' &nbsp;&rarr;</button>' +
+        '</div>' +
+      '</div>';
+
+    if (step.type === 'select') {
+      var sel = document.getElementById('stateSelect');
+      sel.addEventListener('change', function (e) {
+        state.answers.state = e.target.value;
+        document.getElementById('nextBtn').disabled = !e.target.value;
+      });
+      if (state.answers.state) document.getElementById('nextBtn').disabled = false;
+    } else {
+      Array.prototype.forEach.call(checker.querySelectorAll('.option'), function (btn) {
+        btn.addEventListener('click', function () {
+          var id = btn.dataset.id;
+          if (step.type === 'multi') {
+            var noneId = step.key === 'confounders' ? 'none' : 'neither';
+            if (id === noneId) {
+              state.answers[step.key] = state.answers[step.key].indexOf(noneId) !== -1 ? [] : [noneId];
+            } else {
+              var arr = state.answers[step.key].filter(function (v) { return v !== noneId; });
+              state.answers[step.key] = arr.indexOf(id) !== -1 ? arr.filter(function (v) { return v !== id; }) : arr.concat([id]);
+            }
+          } else {
+            state.answers[step.key] = id;
+          }
+          renderStep(step);
+        });
+      });
+      var answered = step.type === 'multi'
+        ? state.answers[step.key].length > 0
+        : state.answers[step.key] !== null;
+      document.getElementById('nextBtn').disabled = !answered;
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', function () {
+      if (state.step === 1 && isEarlyScreenOut()) {
+        state.step = STEPS.length + 1;
+      } else {
+        state.step++;
+      }
+      render();
+      document.getElementById('claim-checker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    var backBtn = document.getElementById('backBtn');
+    if (backBtn) backBtn.addEventListener('click', function () {
+      if (state.step > 1) {
+        state.step--;
+        render();
+        document.getElementById('claim-checker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  function updateProgress(step) {
+    var pct = (state.step / STEPS.length) * 100;
+    fillEl.style.width = pct + '%';
+    stepNumEl.textContent = state.step;
+    stepNameEl.textContent = step.name;
+  }
+
+  function computeResult() {
+    var a = state.answers;
+    var hasT2D = a.diagnosis.indexOf('t2d') !== -1;
+    var hasNAFLD = a.diagnosis.indexOf('nafld') !== -1;
+
+    if (a.confounders.indexOf('type1') !== -1 || a.confounders.indexOf('gestational') !== -1) hasT2D = false;
+    if (a.confounders.indexOf('alcohol') !== -1) hasNAFLD = false;
+
+    if (!hasT2D && !hasNAFLD) {
+      return { tier: 'out', situation: null };
+    }
+
+    var young = a.age === 'under18' || a.age === '18_29';
+    var heavy = a.consumption === 'daily' || a.consumption === 'weekly';
+    var light = a.consumption === 'occasional' || a.consumption === 'rarely';
+
+    var tier;
+    if (young && heavy) tier = 'in';
+    else if (a.age === '45plus' && light) tier = 'out';
+    else tier = 'borderline';
+
+    var situation;
+    if (hasT2D && hasNAFLD) situation = 'Multiple Conditions';
+    else if (hasNAFLD) situation = 'NAFLD';
+    else situation = young ? 'Childhood T2D' : 'Adult T2D';
+
+    return { tier: tier, situation: situation };
+  }
+
+  function renderResult() {
+    fillEl.style.width = '100%';
+    progressEl.hidden = true;
+
+    var a = state.answers;
+    var res = computeResult();
+    var stateLabel = a.state || 'your state';
+
+    var caseCardIn =
+      '<div class="case-card">' +
+        '<div class="case-card__label">Emerging Litigation</div>' +
+        '<div class="case-card__title">Ultra-Processed Food Personal Injury Claims</div>' +
+        '<div class="case-card__desc">Individual claims allege that manufacturers including Kraft Heinz, Coca-Cola, and PepsiCo engineered and marketed ultra-processed foods linked to early-onset Type 2 diabetes and fatty liver disease. The litigation is early. The first test case was dismissed on pleading grounds in 2025, there is no MDL, and no settlement. An attorney can tell you whether these specific facts fit what firms are currently filing.</div>' +
+      '</div>';
+
+    var ctaHref = 'processed-food-case-review?situation=' + encodeURIComponent(res.situation || '') +
+                  '&state=' + encodeURIComponent(a.state || '') + '#case-review-form';
+
+    var disclaimer =
+      '<div class="result__disclaimer">' +
+        '<strong>Important:</strong> This tool is educational and does not create an attorney-client relationship. ' +
+        'Whether ultra-processed foods caused any condition is scientifically contested and unproven. Results reflect ' +
+        'general patterns in a developing area of litigation and are not a guarantee of eligibility, recovery, or outcome. ' +
+        'Filing deadlines apply and vary by state.' +
+      '</div>';
+
+    var html;
+
+    if (res.tier === 'in') {
+      html =
+        '<span class="eyebrow result__eyebrow">Your Result</span>' +
+        '<h3 class="result__headline">This may fit the cases now being filed.</h3>' +
+        '<p class="result__summary">Based on the diagnosis, an early age at diagnosis, and a heavy consumption history in ' + stateLabel + ', this looks like the narrow profile firms are currently reviewing. An attorney review is the only way to confirm. It is free and there is no obligation.</p>' +
+        caseCardIn +
+        '<div class="result__cta">' +
+          '<p class="result__cta-text">Free, confidential review. No attorney-client relationship is formed by requesting one.</p>' +
+          '<div class="result__actions">' +
+            '<a href="' + ctaHref + '" class="btn btn--amber btn--lg">Request a Free Case Review &nbsp;&rarr;</a>' +
+            '<a href="processed-food-lawsuit" class="btn btn--ghost btn--lg">Read the Background</a>' +
+          '</div>' +
+        '</div>' +
+        disclaimer;
+    } else if (res.tier === 'borderline') {
+      html =
+        '<span class="eyebrow result__eyebrow">Your Result</span>' +
+        '<h3 class="result__headline">This may be worth having reviewed.</h3>' +
+        '<p class="result__summary">There is a qualifying diagnosis here, but the age at diagnosis or the consumption history does not clearly match the strongest profile firms are filing right now. That does not rule anything out. An attorney review is the only way to know, and in ' + stateLabel + ' it is free with no obligation.</p>' +
+        caseCardIn +
+        '<div class="result__cta">' +
+          '<p class="result__cta-text">If you want a second look, a free review can tell you where these facts stand.</p>' +
+          '<div class="result__actions">' +
+            '<a href="' + ctaHref + '" class="btn btn--amber btn--lg">Have Your Situation Reviewed &nbsp;&rarr;</a>' +
+            '<a href="processed-food-lawsuit" class="btn btn--ghost btn--lg">Read the Background</a>' +
+          '</div>' +
+        '</div>' +
+        disclaimer;
+    } else {
+      var outSummary = isEarlyScreenOut()
+        ? 'Without a Type 2 diabetes or non-alcoholic fatty liver disease diagnosis, the situation does not match the cases currently being filed. These are the two conditions at the center of the litigation. If a diagnosis comes later, it may be worth checking again.'
+        : 'Based on your answers, this does not appear to match the narrow profile of cases currently being filed, which center on early-onset metabolic disease after heavy consumption. That is not a legal opinion, and this area is still developing, so it can be worth reading the background or checking again as the litigation evolves.';
+      html =
+        '<span class="eyebrow result__eyebrow">Your Result</span>' +
+        '<h3 class="result__headline">This does not appear to fit the current cases.</h3>' +
+        '<p class="result__summary">' + outSummary + '</p>' +
+        '<div class="case-card case-card--muted">' +
+          '<div class="case-card__label">No Current Match</div>' +
+          '<div class="case-card__title">Worth Understanding the Background</div>' +
+          '<div class="case-card__desc">The ultra-processed food litigation is early and narrow. Reading where it stands is more useful right now than an intake form. If circumstances change, you can run this check again.</div>' +
+        '</div>' +
+        '<div class="result__cta">' +
+          '<p class="result__cta-text">No case review is suggested for this result. These links explain the litigation.</p>' +
+          '<div class="result__actions">' +
+            '<a href="processed-food-lawsuit" class="btn btn--ghost btn--lg">Where the Litigation Stands</a>' +
+            '<a href="https://lawsuitinformer.com/ultra-processed-food-lawsuit?utm_source=lawsuitcenter&utm_medium=checker&utm_campaign=processed-food&utm_content=result-out" class="btn btn--ghost btn--lg">Educational Guide</a>' +
+          '</div>' +
+          '<p style="margin-top:18px;font-size:13px;color:var(--ink-soft);line-height:1.6;">' +
+            'Still want an attorney to look at it? You can ' +
+            '<a href="processed-food-case-review?situation=' + encodeURIComponent('Not Sure') +
+            '&state=' + encodeURIComponent(a.state || '') +
+            '&source=checker-screenout#case-review-form" style="color:var(--ink-muted);text-decoration:underline;">request a review anyway</a>. ' +
+            'It does not look like a current fit, but the choice is yours.' +
+          '</p>' +
+        '</div>' +
+        disclaimer;
+    }
+
+    html += '<div class="restart"><button id="restartBtn">Start over</button></div>';
+
+    checker.innerHTML = '<div class="step result">' + html + '</div>';
+
+    document.getElementById('restartBtn').addEventListener('click', function () {
+      state.step = 0;
+      state.answers = { diagnosis: [], age: null, consumption: null, confounders: [], state: null };
+      render();
+      document.getElementById('claim-checker').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  render();
+</script>
+
+</body>
+</html>
