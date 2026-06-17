@@ -372,6 +372,7 @@
         class="form"
       >
         <input type="hidden" name="form-name" value="processed-food-case-review" />
+        <input type="hidden" name="lead-source" id="lead-source" />
         <p style="display:none;">
           <label>Do not fill this out if you are human: <input name="bot-field" /></label>
         </p>
@@ -606,6 +607,12 @@
       if (stateInput && !stateInput.value) {
         stateInput.value = stateParam;
       }
+    }
+
+    var sourceParam = params.get('source');
+    if (sourceParam) {
+      var leadSource = document.getElementById('lead-source');
+      if (leadSource) leadSource.value = sourceParam;
     }
 
     var displayLabelMap = {
