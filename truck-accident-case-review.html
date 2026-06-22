@@ -11,7 +11,8 @@
   />
 
   <link rel="canonical" href="https://lawsuit.center/truck-accident-case-review" />
-  
+
+  <link rel="preload" href="/fonts/fraunces-v38-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css" />
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Lawsuit Center">
@@ -324,12 +325,12 @@
   </main>
 
   <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+ <div id="footer-placeholder"></div>
 </footer>
 <script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+ fetch('/footer.html')
+  .then(response => response.text())
+  .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
 </script>
 
 </body>
