@@ -6,7 +6,7 @@
   <title>Roundup Lawsuit | Who May Qualify | Lawsuit Center</title>
   <meta name="description" content="Learn about Roundup lawsuits, common exposure situations, who may qualify for review, and what steps people often consider next." />
 
-  
+  <link rel="preload" href="/fonts/fraunces-v38-latin-500.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css" />
   <link rel="canonical" href="https://lawsuit.center/roundup-lawsuit" />
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -112,7 +112,6 @@
 </header>
 
 <main id="main">
-
 
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
@@ -268,7 +267,6 @@
   </div>
 </section>
 
-
 <section class="section related-topics-module">
   <div class="container">
     <div class="section__head section__head--left">
@@ -300,7 +298,6 @@
   </div>
 </section>
 
-
 <section class="final">
   <div class="container">
     <h2>Do you recognize your situation?</h2>
@@ -321,12 +318,12 @@
 </main>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+ <div id="footer-placeholder"></div>
 </footer>
 <script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+ fetch('/footer.html')
+  .then(response => response.text())
+  .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
 </script>
 
 <script>
