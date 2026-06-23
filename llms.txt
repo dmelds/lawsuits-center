@@ -1,0 +1,72 @@
+# Lawsuit Center
+
+> Attorney-built lawsuit research and case-review platform. Free, no-obligation case reviews and plain-English explanations of who may qualify for mass-tort, product-liability, toxic-exposure, and personal-injury claims. Lawsuit Center is not a law firm and does not provide legal advice; submissions may be reviewed by participating law firms or intake providers.
+
+## Start here
+- [Start a free case review](https://lawsuit.center/case-review): Submit basic information about a potential claim for review.
+- [How case review works](https://lawsuit.center/how-case-review-works): What happens after you submit information.
+- [Browse all lawsuits](https://lawsuit.center/lawsuits): Index of lawsuit categories covered on the site.
+- [About Lawsuit Center](https://lawsuit.center/about): Who runs the platform and how it works.
+- [David Meldofsky](https://lawsuit.center/david-meldofsky): Founder; California-licensed attorney.
+
+## Asbestos and mesothelioma
+- [Asbestos lawsuits](https://lawsuit.center/asbestos-lawsuits): Exposure history, illnesses, and how claims are reviewed.
+- [Asbestos case review](https://lawsuit.center/asbestos-case-review): Free review for asbestos exposure claims.
+- [Mesothelioma lawyers](https://lawsuit.center/mesothelioma-lawyers): Attorneys handling mesothelioma claims.
+- [Asbestos lawyers](https://lawsuit.center/asbestos-lawyers): Attorneys handling asbestos claims.
+- [Lung cancer from asbestos exposure](https://lawsuit.center/lung-cancer-from-asbestos-exposure): How asbestos history is evaluated in lung cancer claims.
+- [Asbestos exposure in shipyards and naval service](https://lawsuit.center/asbestos-exposure-in-shipyards-and-naval-service): Navy and ship-repair exposure claims.
+- [Asbestos exposure in power plants and refineries](https://lawsuit.center/asbestos-exposure-in-power-plants-and-refineries): Industrial exposure claims.
+- [Asbestos lawyers by state](https://lawsuit.center/california-asbestos-lawyers): State pages for CA, FL, IL, LA, MI, NY, PA, TX.
+
+## PFAS and water contamination
+- [PFAS water contamination lawsuits](https://lawsuit.center/pfas-water-contamination-lawsuits): Forever-chemical drinking water and AFFF claims.
+- [PFAS lawsuit overview](https://lawsuit.center/pfas-lawsuit): What PFAS lawsuits involve and who may qualify.
+- [PFAS case review](https://lawsuit.center/pfas-case-review): Free review for PFAS exposure claims.
+- [PFAS exposure checker](https://lawsuit.center/pfas-exposure-checker): Check your PFAS exposure history.
+- [PFAS lawyers](https://lawsuit.center/pfas-lawyers): Attorneys handling PFAS claims.
+- [Water contamination lawsuits](https://lawsuit.center/water-contamination-lawsuits): Broader contaminated-water claims.
+
+## Pesticides and herbicides
+- [Roundup lawsuit](https://lawsuit.center/roundup-lawsuit): Glyphosate exposure and non-Hodgkin lymphoma.
+- [Paraquat lawsuit](https://lawsuit.center/paraquat-lawsuit): Herbicide exposure and Parkinson's disease.
+- [Pesticide case review](https://lawsuit.center/pesticide-case-review): Free review for herbicide/pesticide claims.
+
+## Pharmaceuticals and medical devices
+- [Depo-Provera lawsuit](https://lawsuit.center/depo-provera): Injectable contraceptive and meningioma claims.
+- [Depo-Provera case review](https://lawsuit.center/depo-provera-case-review): Free Depo-Provera claim review.
+- [Tylenol autism lawsuit](https://lawsuit.center/tylenol-autism-lawsuit): Prenatal acetaminophen claims.
+- [Ozempic lawsuit](https://lawsuit.center/ozempic-lawsuit): GLP-1 drug injury claims.
+- [Hernia mesh lawyers](https://lawsuit.center/hernia-mesh-lawyers): Surgical mesh device claims.
+- [Medical device lawsuits](https://lawsuit.center/medical-device-lawsuits): Defective device claims.
+
+## Consumer products
+- [Talcum powder lawsuits](https://lawsuit.center/talcum-powder-lawsuits): Talc and ovarian cancer claims.
+- [Hair relaxer lawsuit](https://lawsuit.center/hair-relaxer-lawsuit): Chemical hair-straightener cancer claims.
+- [Baby food lawsuit](https://lawsuit.center/baby-food-lawsuit): Heavy-metal baby food injury claims.
+- [Processed food lawsuit](https://lawsuit.center/processed-food-lawsuit): Ultra-processed food claims.
+- [Product liability lawsuits](https://lawsuit.center/product-liability-lawsuits): Design, manufacturing, and warning defects.
+
+## Social media, AI, and tech harm
+- [Social media addiction lawsuit](https://lawsuit.center/social-media-addiction-lawsuit): Youth mental-health claims.
+- [Social media case review](https://lawsuit.center/social-media-case-review): Free review for social-media harm claims.
+- [Video game lawsuit](https://lawsuit.center/video-game-lawsuit): Compulsive-design youth-harm claims.
+- [OpenAI case review](https://lawsuit.center/openai-case-review): Review for AI chatbot harm claims.
+- [Deepfake case review](https://lawsuit.center/deepfake-case-review): Non-consensual AI image claims.
+
+## Personal injury
+- [Personal injury lawsuits](https://lawsuit.center/personal-injury-lawsuits): Overview of personal-injury claims.
+- [Truck accident lawsuits](https://lawsuit.center/truck-accident-lawsuits): Commercial truck collision claims.
+- [Car accident lawsuits](https://lawsuit.center/car-accident-lawsuits): Auto collision claims.
+- [Wrongful death lawsuits](https://lawsuit.center/wrongful-death-lawsuits): Fatal-injury claims.
+
+## For attorneys
+- [For law firms](https://lawsuit.center/for-law-firms): How firms can work with Lawsuit Center.
+- [Marketing packages](https://lawsuit.center/marketing-packages): Sponsored visibility options.
+
+## Policies
+- [Editorial policy](https://lawsuit.center/editorial-policy)
+- [Advertising disclosure](https://lawsuit.center/advertising-disclosure)
+- [Privacy policy](https://lawsuit.center/privacy-policy)
+- [Disclaimer](https://lawsuit.center/disclaimer)
+- [Contact](https://lawsuit.center/contact)

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Page Not Found | Lawsuit Center</title>
+  <meta name="description" content="The page you were looking for could not be found. Start a free case review or browse lawsuit categories on Lawsuit Center." />
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#0b1118">
+  <link rel="preload" href="/fonts/fraunces-v38-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand" aria-label="Lawsuit Center home">
+      <img src="logo-center-new.png" alt="Lawsuit Center" />
+      <span class="brand__tag">attorney-built</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links" id="site-menu">
+        <a href="/">Home</a>
+        <a href="case-review">Start Case Review</a>
+        <a href="lawsuits">Browse Lawsuits</a>
+        <a href="how-case-review-works">How It Works</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
+      </div>
+      <a href="case-review" class="btn btn--amber">Start Case Review</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container" style="max-width:760px">
+      <span class="eyebrow">Error 404</span>
+      <h1>That page could not be found.</h1>
+      <p class="lede">The link may be broken or the page may have moved. You can start a free case review, browse lawsuit categories, or head back to the homepage.</p>
+      <div class="btn-row" style="margin:24px 0 8px">
+        <a href="case-review" class="btn btn--amber btn--lg">Start a Free Case Review</a>
+        <a href="lawsuits" class="btn btn--ghost btn--lg">Browse Lawsuits</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section related-topics-module">
+    <div class="container">
+      <div class="section__head section__head--left">
+        <span class="eyebrow section__eyebrow">Popular Case Reviews</span>
+        <h2>Pick up where you left off.</h2>
+      </div>
+      <div class="card-grid">
+        <a href="asbestos-case-review" class="card">
+          <h3>Asbestos &amp; Mesothelioma</h3>
+          <p>Occupational and Navy asbestos exposure and mesothelioma claim review.</p>
+        </a>
+        <a href="pfas-case-review" class="card">
+          <h3>PFAS &amp; Water Contamination</h3>
+          <p>Forever-chemical drinking water and AFFF firefighting foam claims.</p>
+        </a>
+        <a href="depo-provera-case-review" class="card">
+          <h3>Depo-Provera</h3>
+          <p>Injectable contraceptive and meningioma claim review.</p>
+        </a>
+        <a href="pesticide-case-review" class="card">
+          <h3>Roundup &amp; Paraquat</h3>
+          <p>Herbicide exposure, non-Hodgkin lymphoma, and Parkinson's claims.</p>
+        </a>
+        <a href="social-media-case-review" class="card">
+          <h3>Social Media Harm</h3>
+          <p>Youth mental-health and platform-design injury claims.</p>
+        </a>
+        <a href="how-case-review-works" class="card">
+          <h3>How Case Review Works</h3>
+          <p>See what happens after you submit information for review.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div id="footer-placeholder"></div>
+</footer>
+<script>
+  fetch('/footer.html')
+    .then(response => response.text())
+    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav__toggle");
+    const menu = document.getElementById("site-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
