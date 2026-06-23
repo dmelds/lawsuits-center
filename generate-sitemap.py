@@ -24,6 +24,9 @@ EXCLUDE_FILES = {
     "thank-you-asbestos-review.html",
     "thank-you-truck-accident-review.html",
     "404.html",
+    # Removed as Lawsuit Informer duplicates (June 23, 2026); now 301 -> /asbestos-lawsuits
+    "asbestos-exposure-in-power-plants-and-refineries.html",
+    "asbestos-exposure-in-shipyards-and-naval-service.html",
 }
 
 

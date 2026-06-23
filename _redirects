@@ -18,8 +18,11 @@
 /ai-case-review.html  /ai-case-review  301!
 /air-pollution-case-review.html  /air-pollution-case-review  301!
 /asbestos-case-review.html  /asbestos-case-review  301!
-/asbestos-exposure-in-power-plants-and-refineries.html  /asbestos-exposure-in-power-plants-and-refineries  301!
-/asbestos-exposure-in-shipyards-and-naval-service.html  /asbestos-exposure-in-shipyards-and-naval-service  301!
+# Removed as Lawsuit Informer duplicates (June 23, 2026) -> redirect to asbestos hub
+/asbestos-exposure-in-power-plants-and-refineries.html  /asbestos-lawsuits  301!
+/asbestos-exposure-in-power-plants-and-refineries       /asbestos-lawsuits  301
+/asbestos-exposure-in-shipyards-and-naval-service.html  /asbestos-lawsuits  301!
+/asbestos-exposure-in-shipyards-and-naval-service       /asbestos-lawsuits  301
 /asbestos-lawsuits.html  /asbestos-lawsuits  301!
 /asbestos-lawyers.html  /asbestos-lawyers  301!
 /baby-food-lawsuit.html  /baby-food-lawsuit  301!
