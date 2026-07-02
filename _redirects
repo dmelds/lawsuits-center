@@ -5,24 +5,13 @@
 # /lawsuits.html, etc). Forced rules (trailing !) override
 # Netlify physical-file shadowing; Pretty URLs still serves
 # the extensionless path. One rule per file, generated from
-# the repo. REGENERATE when pages are added or removed.
-#
-# EXCLUDED: footer.html -- it is fetched by JS as a fragment
-# (fetch('/footer.html')) and must keep returning 200 directly.
-# ============================================================
-
-/index.html  /  301!
+# BEGIN AUTO-GENERATED HTML REDIRECTS (managed by generate_redirects.py - do not edit)
 /about.html  /about  301!
 /advertising-disclosure.html  /advertising-disclosure  301!
 /afff-case-review.html  /afff-case-review  301!
 /ai-case-review.html  /ai-case-review  301!
 /air-pollution-case-review.html  /air-pollution-case-review  301!
 /asbestos-case-review.html  /asbestos-case-review  301!
-# Removed as Lawsuit Informer duplicates (June 23, 2026) -> redirect to asbestos hub
-/asbestos-exposure-in-power-plants-and-refineries.html  /asbestos-lawsuits  301!
-/asbestos-exposure-in-power-plants-and-refineries       /asbestos-lawsuits  301
-/asbestos-exposure-in-shipyards-and-naval-service.html  /asbestos-lawsuits  301!
-/asbestos-exposure-in-shipyards-and-naval-service       /asbestos-lawsuits  301
 /asbestos-lawsuits.html  /asbestos-lawsuits  301!
 /asbestos-lawyers.html  /asbestos-lawyers  301!
 /baby-food-lawsuit.html  /baby-food-lawsuit  301!
@@ -47,11 +36,12 @@
 /consumer-product-case-review.html  /consumer-product-case-review  301!
 /contact.html  /contact  301!
 /david-meldofsky.html  /david-meldofsky  301!
+/deepfake-case-review.html  /deepfake-case-review  301!
 /defamation-reputation-lawsuits.html  /defamation-reputation-lawsuits  301!
 /default-judgment.html  /default-judgment  301!
+/depo-provera.html  /depo-provera  301!
 /depo-provera-case-review.html  /depo-provera-case-review  301!
 /depo-provera-lawyers.html  /depo-provera-lawyers  301!
-/depo-provera.html  /depo-provera  301!
 /disclaimer.html  /disclaimer  301!
 /dog-bite-lawsuits.html  /dog-bite-lawsuits  301!
 /drug-injury-lawsuits.html  /drug-injury-lawsuits  301!
@@ -99,6 +89,7 @@
 /privacy-data-breach-lawsuits.html  /privacy-data-breach-lawsuits  301!
 /privacy-policy.html  /privacy-policy  301!
 /processed-food-case-review.html  /processed-food-case-review  301!
+/processed-food-claim-checker.html  /processed-food-claim-checker  301!
 /processed-food-lawsuit.html  /processed-food-lawsuit  301!
 /processed-food-lawyers.html  /processed-food-lawyers  301!
 /product-liability-lawsuits.html  /product-liability-lawsuits  301!
@@ -117,9 +108,9 @@
 /talcum-powder-case-review.html  /talcum-powder-case-review  301!
 /talcum-powder-lawsuits.html  /talcum-powder-lawsuits  301!
 /texas-asbestos-lawyers.html  /texas-asbestos-lawyers  301!
+/thank-you.html  /thank-you  301!
 /thank-you-asbestos-review.html  /thank-you-asbestos-review  301!
 /thank-you-truck-accident-review.html  /thank-you-truck-accident-review  301!
-/thank-you.html  /thank-you  301!
 /tiktok-lawsuit.html  /tiktok-lawsuit  301!
 /toxic-water-case-review.html  /toxic-water-case-review  301!
 /truck-accident-case-review.html  /truck-accident-case-review  301!
@@ -132,3 +123,15 @@
 /what-to-do-after-being-sued.html  /what-to-do-after-being-sued  301!
 /who-may-qualify-for-a-chemical-exposure-lawsuit.html  /who-may-qualify-for-a-chemical-exposure-lawsuit  301!
 /wrongful-death-lawsuits.html  /wrongful-death-lawsuits  301!
+# END AUTO-GENERATED HTML REDIRECTS
+#
+# EXCLUDED: footer.html -- it is fetched by JS as a fragment
+# (fetch('/footer.html')) and must keep returning 200 directly.
+# ============================================================
+
+/index.html  /  301!
+# Removed as Lawsuit Informer duplicates (June 23, 2026) -> redirect to asbestos hub
+/asbestos-exposure-in-power-plants-and-refineries.html  /asbestos-lawsuits  301!
+/asbestos-exposure-in-power-plants-and-refineries       /asbestos-lawsuits  301
+/asbestos-exposure-in-shipyards-and-naval-service.html  /asbestos-lawsuits  301!
+/asbestos-exposure-in-shipyards-and-naval-service       /asbestos-lawsuits  301
