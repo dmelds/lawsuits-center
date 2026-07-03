@@ -1,0 +1,13 @@
+
+
+# perf:cache-policy
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=604800
+/*.jpg
+  Cache-Control: public, max-age=604800
+/*.ico
+  Cache-Control: public, max-age=604800
+/*.webmanifest
+  Cache-Control: public, max-age=604800
