@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- LC-LIGHT-INIT:BEGIN -->
+<script>
+(function () {
+  var FOLLOW_OS = false; /* dark stays the default; set true to auto-match visitor OS */
+  var t = null;
+  try { t = localStorage.getItem('lc-theme'); } catch (e) {}
+  if (t !== 'dark' && t !== 'light') {
+    t = (FOLLOW_OS && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<!-- LC-LIGHT-INIT:END -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- perf:critical-css:start -->
@@ -84,6 +97,143 @@
   <meta name="twitter:title" content="Personal Injury Lawsuits | Lawsuit Center">
   <meta name="twitter:description" content="Explore personal injury lawsuits involving car accidents, truck accidents, slip and falls, wrongful death, dog bites, and other injury-related claims.">
   <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
+<!-- LC-LIGHT-CSS:BEGIN -->
+<style id="lc-theme">
+/* Lawsuit Center light mode.
+   Day values for the site's own tokens, plus pins for conversion surfaces:
+   amber CTA family keeps its bright fill (the token darkens for text uses),
+   form fields go white instead of translucent black, header goes paper.
+   All text pairs measured >= 4.8:1 (WCAG AA; body text AAA). */
+
+:root { color-scheme: dark; }
+
+:root[data-theme="light"] {
+  --bg: #faf9f7;            /* warm paper */
+  --surface: #ffffff;
+  --surface-2: #f2f0ea;
+  --border: #e5e2da;
+  --border-strong: #c9c5bb;
+
+  --ink: #1c1a17;           /* 16.5:1 on --bg */
+  --ink-muted: #565049;     /* 7.6:1 */
+  --ink-soft: #6b655d;      /* 5.5:1 */
+
+  /* Amber darkens for text/border roles; button fills are pinned below */
+  --amber: #8a6512;         /* 5.1:1 on --bg, 5.3:1 on white */
+  --amber-bright: #8f6c10;  /* 4.9:1 on white */
+  --amber-deep: #6f5210;    /* 7.3:1 */
+
+  --slate: #54657a;         /* 6.0:1 on white */
+  --slate-soft: rgba(84, 101, 122, .10);
+  --slate-border: rgba(84, 101, 122, .35);
+
+  color-scheme: light;
+}
+
+/* Masthead: translucent paper instead of translucent black */
+:root[data-theme="light"] .site-header,
+:root[data-theme="light"] header.site-header,
+:root[data-theme="light"] .landing-header {
+  background: rgba(250, 249, 247, .88);
+}
+
+/* Amber CTA family keeps the bright brand fill (dark text holds 8:1 on it) */
+:root[data-theme="light"] .nav__search-btn,
+:root[data-theme="light"] .btn--amber,
+:root[data-theme="light"] .btn-primary,
+:root[data-theme="light"] button.button,
+:root[data-theme="light"] .button,
+:root[data-theme="light"] .btn--dark,
+:root[data-theme="light"] .form button[type="submit"],
+:root[data-theme="light"] .form-card button[type="submit"],
+:root[data-theme="light"] .hero-search__btn,
+:root[data-theme="light"] .skip-link {
+  background: #d4a24e;
+  border-color: #d4a24e;
+  color: #1a1306;
+}
+:root[data-theme="light"] .nav__search-btn:hover,
+:root[data-theme="light"] .btn--amber:hover,
+:root[data-theme="light"] .btn-primary:hover,
+:root[data-theme="light"] button.button:hover,
+:root[data-theme="light"] .button:hover,
+:root[data-theme="light"] .btn--dark:hover,
+:root[data-theme="light"] .form button[type="submit"]:hover,
+:root[data-theme="light"] .form-card button[type="submit"]:hover,
+:root[data-theme="light"] .hero-search__btn:hover {
+  background: #e7b961;
+  border-color: #e7b961;
+  color: #1a1306;
+}
+:root[data-theme="light"] ::selection { background: #d4a24e; color: #111; }
+
+/* Intake fields: white instead of translucent black */
+:root[data-theme="light"] input,
+:root[data-theme="light"] select,
+:root[data-theme="light"] textarea,
+:root[data-theme="light"] .form-card input,
+:root[data-theme="light"] .form-card select,
+:root[data-theme="light"] .form-card textarea,
+:root[data-theme="light"] .contact-form input,
+:root[data-theme="light"] .contact-form select,
+:root[data-theme="light"] .contact-form textarea {
+  background: #ffffff;
+}
+:root[data-theme="light"] input:focus,
+:root[data-theme="light"] select:focus,
+:root[data-theme="light"] textarea:focus {
+  background: #fffdf6;
+  border-color: #b8863a;
+}
+:root[data-theme="light"] .nav__search input[type="search"],
+:root[data-theme="light"] .hero-search__bar input[type="search"],
+:root[data-theme="light"] .search-page__form input[type="search"],
+:root[data-theme="light"] .nav__search input:focus,
+:root[data-theme="light"] .hero-search__bar input:focus,
+:root[data-theme="light"] .search-page__form input:focus {
+  background: transparent;
+  border: 0;
+}
+
+/* Logo: light marks on transparency -> ink variant, amber accents intact */
+:root[data-theme="light"] .brand img { content: url("/logo-center-light.png"); }
+
+/* ---------- Theme toggle (masthead, matches .nav__toggle chrome) ---------- */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; padding: 0; flex-shrink: 0;
+  background: transparent; border: 1px solid var(--border-strong); border-radius: 10px;
+  color: var(--ink); cursor: pointer;
+  transition: background .2s var(--ease), border-color .2s var(--ease);
+}
+.theme-toggle:hover { background: var(--surface-2); }
+.theme-toggle:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.theme-toggle svg { width: 18px; height: 18px; display: block; }
+
+/* Dark (default) shows the sun; light shows the moon */
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+/* Switch transition: only after first user toggle; honors reduced motion */
+html.theme-anim body { transition: background-color .15s ease, color .15s ease; }
+@media (prefers-reduced-motion: reduce) {
+  html.theme-anim body { transition: none; }
+}
+
+/* Print: ink-safe light regardless of theme; hide the control */
+@media print {
+  :root, :root[data-theme="light"] {
+    --bg: #fff; --surface: #fff; --surface-2: #fff;
+    --border: #ccc; --border-strong: #999;
+    --ink: #000; --ink-muted: #333; --ink-soft: #555;
+    --amber: #6f5210; --amber-bright: #6f5210; --amber-deep: #6f5210;
+    --slate: #333;
+  }
+  .theme-toggle { display: none; }
+}
+</style>
+<!-- LC-LIGHT-CSS:END -->
 </head>
 
 <body>
@@ -105,7 +255,27 @@
         <a href="contact">Contact</a>
       </div>
       <a href="case-review" class="btn btn--amber">Start Case Review</a>
-      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+      <!-- LC-LIGHT-BTN:BEGIN -->
+<!-- Bar-mounted, before the hamburger: visible on all viewports.
+     `hidden` is removed by the toggle script - no JS, no dead button. -->
+<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode" hidden>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <circle cx="12" cy="12" r="5"/>
+    <line x1="12" y1="1" x2="12" y2="3"/>
+    <line x1="12" y1="21" x2="12" y2="23"/>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="1" y1="12" x2="3" y2="12"/>
+    <line x1="21" y1="12" x2="23" y2="12"/>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+  </svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+</button>
+<!-- LC-LIGHT-BTN:END -->
+<button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
       </button>
     </nav>
@@ -366,5 +536,56 @@
   });
 </script>
 
+<!-- LC-LIGHT-JS:BEGIN -->
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.theme-toggle'));
+  if (!btns.length) return;
+
+  var FOLLOW_OS = false; /* keep in sync with the init script */
+  var root = document.documentElement;
+  var LIGHT_BAR = '#faf9f7';   /* keep in sync with light --bg */
+  var DARK_BAR  = '#0b1118';   /* existing theme-color meta value */
+
+  function current() {
+    return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+
+  function paint(t) {
+    root.setAttribute('data-theme', t);
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', String(t === 'light'));
+      btns[i].setAttribute('aria-label', t === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+    }
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'light' ? LIGHT_BAR : DARK_BAR);
+  }
+
+  function onToggle() {
+    root.classList.add('theme-anim');
+    var next = current() === 'light' ? 'dark' : 'light';
+    paint(next);
+    try { localStorage.setItem('lc-theme', next); } catch (e) {}
+  }
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].hidden = false;
+    btns[i].addEventListener('click', onToggle);
+  }
+  paint(current());
+
+  /* Track OS changes until a manual choice - only when FOLLOW_OS is on */
+  if (FOLLOW_OS && window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: light)');
+    var onChange = function (e) {
+      var stored = null;
+      try { stored = localStorage.getItem('lc-theme'); } catch (err) {}
+      if (stored !== 'dark' && stored !== 'light') paint(e.matches ? 'light' : 'dark');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
+})();
+</script>
+<!-- LC-LIGHT-JS:END -->
 </body>
 </html>
