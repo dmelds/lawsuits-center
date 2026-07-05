@@ -5,8 +5,21 @@
 <script>
 (function () {
   var FOLLOW_OS = false; /* dark stays the default; set true to auto-match visitor OS */
-  var t = null;
-  try { t = localStorage.getItem('lc-theme'); } catch (e) {}
+  var t = null, qp = null;
+  /* Cross-property handoff: ?theme= from lawsuitinformer.com wins, then vanishes */
+  try { qp = new URLSearchParams(location.search).get('theme'); } catch (e) {}
+  if (qp === 'dark' || qp === 'light') {
+    t = qp;
+    try { localStorage.setItem('lc-theme', t); } catch (e) {}
+    try {
+      var sp = new URLSearchParams(location.search); sp.delete('theme');
+      var q = sp.toString();
+      history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
+    } catch (e) {}
+  }
+  if (t !== 'dark' && t !== 'light') {
+    try { t = localStorage.getItem('lc-theme'); } catch (e) {}
+  }
   if (t !== 'dark' && t !== 'light') {
     t = (FOLLOW_OS && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
   }
@@ -864,12 +877,35 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     var next = current() === 'light' ? 'dark' : 'light';
     paint(next);
     try { localStorage.setItem('lc-theme', next); } catch (e) {}
+    decorate();
   }
   for (var i = 0; i < btns.length; i++) {
     btns[i].hidden = false;
     btns[i].addEventListener('click', onToggle);
   }
   paint(current());
+
+  /* Carry the live theme onto lawsuitinformer.com links (decorate + just-in-time) */
+  var PARTNER = /(^|\.)lawsuitinformer\.com$/i;
+  function stamp(a) {
+    try {
+      var u = new URL(a.href, location.href);
+      if (!PARTNER.test(u.hostname)) return;
+      u.searchParams.set('theme', current());
+      a.href = u.toString();
+    } catch (e) {}
+  }
+  function decorate() {
+    var links = document.querySelectorAll('a[href*="lawsuitinformer.com"]');
+    for (var i = 0; i < links.length; i++) stamp(links[i]);
+  }
+  function freshen(e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lawsuitinformer.com"]') : null;
+    if (a) stamp(a);
+  }
+  document.addEventListener('click', freshen, true);
+  document.addEventListener('auxclick', freshen, true);
+  decorate();
 
   /* Track OS changes until a manual choice - only when FOLLOW_OS is on */
   if (FOLLOW_OS && window.matchMedia) {
