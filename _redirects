@@ -138,3 +138,7 @@ https://www.lawsuits.center/*  https://lawsuit.center/:splat      301!
 /asbestos-exposure-in-power-plants-and-refineries       /asbestos-lawsuits  301
 /asbestos-exposure-in-shipyards-and-naval-service.html  /asbestos-lawsuits  301!
 /asbestos-exposure-in-shipyards-and-naval-service       /asbestos-lawsuits  301
+
+# Consolidated as chemical-exposure-lawsuits duplicate (July 6, 2026) -> redirect to chemical exposure hub
+/who-may-qualify-for-a-chemical-exposure-lawsuit.html  /chemical-exposure-lawsuits  301!
+/who-may-qualify-for-a-chemical-exposure-lawsuit       /chemical-exposure-lawsuits  301
