@@ -400,6 +400,18 @@
 .theme-toggle:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
 .theme-toggle svg { width: 18px; height: 18px; display: block; }
 
+/* --- Language toggle (masthead, matches .theme-toggle chrome) ---------- */
+.lang-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 40px; padding: 0 12px; border-radius: 10px;
+  border: 1px solid var(--border-strong); background: transparent;
+  color: var(--ink); font: 600 12px/1 var(--body); letter-spacing: .08em;
+  text-decoration: none;
+  transition: background .2s var(--ease), border-color .2s var(--ease);
+}
+.lang-toggle:hover { background: var(--surface-2); }
+.lang-toggle:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
 /* Dark (default) shows the sun; light shows the moon */
 .theme-toggle .icon-moon { display: none; }
 :root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
@@ -493,7 +505,10 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
         <a href="/es/pesticide-case-review" lang="es">Español</a>
       </div>
       <a href="#case-review-form" class="btn btn--amber">Skip to Form</a>
-      <!-- LC-LIGHT-BTN:BEGIN -->
+      <!-- LC-LANG-BTN:BEGIN -->
+<a class="lang-toggle" href="/es/pesticide-case-review" lang="es" hreflang="es" aria-label="Ver esta página en español">ES</a>
+<!-- LC-LANG-BTN:END -->
+<!-- LC-LIGHT-BTN:BEGIN -->
 <!-- Bar-mounted, before the hamburger: visible on all viewports.
      `hidden` is removed by the toggle script - no JS, no dead button. -->
 <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode" hidden>
@@ -828,7 +843,8 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <a href="https://davidmeldofsky.com/">David Meldofsky</a>&nbsp;·
     <a href="for-law-firms">For Law Firms</a>&nbsp;·
     <a href="about">About</a>&nbsp;·
-    <a href="contact">Contact</a>
+    <a href="contact">Contact</a>&nbsp;·
+    <a href="/es/pesticide-case-review" lang="es">Español</a>
   </div>
   <div class="site-footer__copy">© 2026 Lawsuit Center. All rights reserved.</div>
 </div>
