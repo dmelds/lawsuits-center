@@ -34,6 +34,9 @@
   <meta name="description" content="Long-term paraquat exposure has been linked to Parkinson's disease. How the paraquat lawsuit (MDL 3004) works, who may qualify, and how to get a review." />
 
   <link rel="canonical" href="https://lawsuit.center/paraquat-lawsuit" />
+<link rel="alternate" hreflang="en" href="https://lawsuit.center/paraquat-lawsuit" />
+<link rel="alternate" hreflang="es" href="https://lawsuit.center/es/paraquat-lawsuit" />
+<link rel="alternate" hreflang="x-default" href="https://lawsuit.center/paraquat-lawsuit" />
   <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -560,6 +563,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
         <a href="how-case-review-works">How It Works</a>
         <a href="about">About</a>
         <a href="contact">Contact</a>
+        <a href="/es/paraquat-lawsuit" lang="es">Español</a>
       </div>
       <a href="pesticide-case-review" class="btn btn--amber">Request Case Review</a>
       <!-- LC-LIGHT-BTN:BEGIN -->
@@ -834,13 +838,34 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 </main>
 
 <footer class="site-footer">
-  <div id="footer-placeholder"></div>
+<div class="container">
+  <div class="site-footer__brand">Lawsuit Center</div>
+  <p class="site-footer__tag">Attorney-Built lawsuit research and case review platform.</p>
+  <div class="site-footer__legal">
+    Educational information only. Not legal advice. No attorney-client relationship is formed
+    by using this website. Some pages may include attorney advertising or sponsored law firm visibility.
+    Lawsuit Center is not a law firm and does not provide legal advice. Use of this site does not
+    create an attorney-client relationship. Information submitted through this site may be reviewed
+    by participating law firms, legal advertisers, or third-party intake providers, depending on the
+    claim category and availability.
+  </div>
+  <div class="site-footer__links">
+    <a href="privacy-policy">Privacy Policy</a>&nbsp;·
+    <a href="disclaimer">Disclaimer</a>&nbsp;·
+    <a href="advertising-disclosure">Advertising Disclosure</a>&nbsp;·
+    <a href="editorial-policy">Editorial Policy</a>&nbsp;·
+    <a href="how-case-review-works">How Case Review Works</a>&nbsp;·
+    <a href="resources">Resources</a>&nbsp;·
+    <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>&nbsp;·
+    <a href="https://lawsuitintelligencer.com/">Lawsuit Intelligencer</a>&nbsp;·
+    <a href="https://davidmeldofsky.com/">David Meldofsky</a>&nbsp;·
+    <a href="for-law-firms">For Law Firms</a>&nbsp;·
+    <a href="about">About</a>&nbsp;·
+    <a href="contact">Contact</a>
+  </div>
+  <div class="site-footer__copy">© 2026 Lawsuit Center. All rights reserved.</div>
+</div>
 </footer>
-<script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {

@@ -1,6 +1,7 @@
 /**
- * form-validation.js
- * Drop-in client-side validation for Lawsuit Center case review forms.
+ * form-validation.js (Spanish / es)
+ * Drop-in client-side validation for Lawsuit Center /es/ case review forms.
+ * Spanish copy of /form-validation.js - keep logic in sync with the English original.
  *
  * Behavior:
  *   - Targets any <form class="form"> on the page
@@ -65,36 +66,36 @@
   function validateName(value) {
     var v = (value || "").trim();
     if (v.length < 4) {
-      return "Please enter your full name.";
+      return "Por favor ingrese su nombre completo.";
     }
     if (v.indexOf(" ") === -1) {
-      return "Please enter both a first and last name.";
+      return "Por favor ingrese nombre y apellido.";
     }
     return null;
   }
 
   function validateEmail(value) {
     var v = (value || "").trim().toLowerCase();
-    if (!v) return "Please enter your email address.";
+    if (!v) return "Por favor ingrese su correo electrónico.";
     if (!EMAIL_REGEX.test(v)) {
-      return "Please enter a valid email address (e.g. name@example.com).";
+      return "Por favor ingrese un correo electrónico válido (p. ej. nombre@ejemplo.com).";
     }
     var parts = v.split("@");
     var local = parts[0];
     var domain = parts[1];
     if (JUNK_EMAIL_DOMAINS.indexOf(domain) !== -1) {
-      return "Please enter a real email address.";
+      return "Por favor ingrese un correo electrónico real.";
     }
     if (COMMON_EMAIL_TYPOS[domain]) {
-      return "Did you mean " + local + "@" + COMMON_EMAIL_TYPOS[domain] + "?";
+      return "¿Quiso decir " + local + "@" + COMMON_EMAIL_TYPOS[domain] + "?";
     }
     return null;
   }
 
   function validatePhone(value) {
     var digits = (value || "").replace(/\D/g, "");
-    if (digits.length === 0) return "Please enter your phone number.";
-    if (digits.length !== 10) return "Please enter a valid 10-digit US phone number.";
+    if (digits.length === 0) return "Por favor ingrese su número de teléfono.";
+    if (digits.length !== 10) return "Por favor ingrese un número de teléfono válido de EE. UU. de 10 dígitos.";
     return null;
   }
 
@@ -216,10 +217,10 @@
             return f.input.getAttribute("aria-invalid") === "true";
           }).length;
           liveRegion.textContent =
-            "The form could not be submitted. " +
+            "El formulario no se pudo enviar. " +
             invalidCount +
-            (invalidCount === 1 ? " field needs" : " fields need") +
-            " attention. Please review the highlighted fields.";
+            (invalidCount === 1 ? " campo necesita" : " campos necesitan") +
+            " atención. Por favor revise los campos resaltados.";
           if (firstInvalid) firstInvalid.focus();
         } else {
           liveRegion.textContent = "";
