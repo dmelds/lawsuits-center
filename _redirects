@@ -1,3 +1,6 @@
+https://lawsuits.center/*      https://lawsuit.center/:splat      301!
+https://www.lawsuits.center/*  https://lawsuit.center/:splat      301!
+
 # ============================================================
 # Forced .html -> extensionless 301s (June 11, 2026)
 # GSC showed pages double-indexed under both URL forms with
