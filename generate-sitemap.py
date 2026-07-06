@@ -2,6 +2,7 @@
 """
 Generate sitemap.xml for lawsuit.center.
 - Extensionless URLs to match canonicals (homepage = "/").
+- Includes the /es/ Spanish directory (es/thank-you excluded via basename + noindex).
 - Excludes the JS-fetched footer fragment, noindex pages, thank-you/utility pages,
   and any URL that 301-redirects to a different slug.
 - lastmod from each file's last git commit date (falls back to file mtime, then today).
@@ -81,11 +82,11 @@ def git_lastmod(path):
 def main():
     away = redirected_away()
     urls = []
-    for path in sorted(glob.glob("*.html")):
+    for path in sorted(glob.glob("*.html") + glob.glob("es/*.html")):
         fn = os.path.basename(path)
         if fn in EXCLUDE_FILES or is_noindex(path):
             continue
-        slug = slug_for(fn)
+        slug = slug_for(path)
         if slug in away:
             continue
         loc = f"{BASE}/{slug}" if slug else f"{BASE}/"
