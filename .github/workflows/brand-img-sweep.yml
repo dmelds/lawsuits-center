@@ -1,0 +1,79 @@
+name: Brand img sweep
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch inline brand-img rules (self-contained pages)
+        run: |
+          python3 - << 'PYEOF'
+          import glob
+
+          PAIRS = [
+              ('.brand img { height: 60px; width: auto; }',
+               '.brand img { height: 44px; width: auto; max-width: 220px; object-fit: contain; }'),
+              ('.brand img { height: 52px; }',
+               '.brand img { height: 38px; max-width: 180px; }'),
+              ('.brand img { height: 46px; }',
+               '.brand img { height: 34px; max-width: 160px; }'),
+              ('.brand img{height:60px;width:auto;}',
+               '.brand img{height:44px;width:auto;max-width:220px;object-fit:contain;}'),
+              ('.brand img{height:52px;}',
+               '.brand img{height:38px;max-width:180px;}'),
+              ('.brand img{height:46px;}',
+               '.brand img{height:34px;max-width:160px;}'),
+          ]
+
+          changed = 0
+          for f in sorted(glob.glob('*.html') + glob.glob('es/*.html')):
+              h = open(f, encoding='utf-8').read()
+              o = h
+              for a, b in PAIRS:
+                  h = h.replace(a, b)
+              if h != o:
+                  open(f, 'w', encoding='utf-8').write(h)
+                  changed += 1
+          print(f"patched {changed} files")
+          PYEOF
+
+      - name: Verify no unguarded rules remain
+        run: |
+          python3 - << 'PYEOF'
+          import glob, sys
+          BAD = [
+              '.brand img { height: 60px; width: auto; }',
+              '.brand img { height: 52px; }',
+              '.brand img { height: 46px; }',
+              '.brand img{height:60px;width:auto;}',
+              '.brand img{height:52px;}',
+              '.brand img{height:46px;}',
+          ]
+          hits = []
+          for f in sorted(glob.glob('*.html') + glob.glob('es/*.html')):
+              h = open(f, encoding='utf-8', errors='ignore').read()
+              for b in BAD:
+                  if b in h:
+                      hits.append((f, b))
+          if hits:
+              for f, b in hits:
+                  print(f"LEFTOVER in {f}: {b}")
+              sys.exit(1)
+          print("clean")
+          PYEOF
+
+      - name: Commit and self-delete
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git rm -q .github/workflows/brand-img-sweep.yml
+          git add -A
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -m "Cap brand logo rendering on self-contained pages (44/38/34px + max-width, object-fit)"
+          git push
