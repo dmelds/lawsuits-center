@@ -51,6 +51,7 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Ozempic and GLP-1 Medication Lawsuits",
+    "dateModified": "2026-07-16",
     "description": "Learn about Ozempic and GLP-1 lawsuits, reported complications, who may qualify for review, and what steps people often consider next.",
     "author": {
       "@type": "Person",
@@ -305,6 +306,70 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 :root[data-theme="light"] .site-nav.open a { color: var(--ink); }
 </style>
 <!-- LC-LIGHT-CSS:END -->
+<style>
+  details.faq{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:border-color .2s var(--ease);}
+  details.faq[open]{border-color:var(--border-strong);}
+  details.faq summary{list-style:none;padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:var(--display);font-weight:500;font-size:17.5px;color:var(--ink);letter-spacing:-.005em;}
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::after{content:"+";color:var(--amber);font-size:22px;font-weight:400;line-height:1;flex-shrink:0;transition:transform .2s var(--ease);}
+  details.faq[open] summary::after{content:"\2212";}
+  details.faq[open] summary{border-bottom:1px solid var(--border);}
+  details.faq .faq__body{padding:18px 24px 22px;}
+  details.faq .faq__body p{color:var(--ink-muted);font-size:15.5px;line-height:1.65;margin:0;}
+  .lit-timeline{list-style:none;margin:24px 0 0;padding:0;border-left:1px solid var(--border-strong);}
+  .lit-timeline li{position:relative;padding:0 0 22px 26px;color:var(--ink-muted);font-size:15.5px;line-height:1.65;}
+  .lit-timeline li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:999px;background:var(--amber);}
+  .lit-timeline li:last-child{padding-bottom:0;}
+  .lit-timeline strong{color:var(--ink);font-weight:600;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do Ozempic lawsuits allege?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These lawsuits allege that manufacturers of GLP-1 medications failed to adequately warn that use can lead to severe and persistent gastrointestinal injuries, including gastroparesis, ileus, and intestinal obstruction. A separate set of cases alleges a form of sudden vision loss called NAION."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which medications are involved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The litigation involves brand-name GLP-1 medications, including Ozempic, Wegovy, Mounjaro, Zepbound, Trulicity, and Saxenda. Compounded semaglutide products raise separate issues and are outside the coordinated federal litigation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who may qualify for a case review?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, individuals who used a GLP-1 medication and experienced a serious gastrointestinal complication requiring medical treatment may potentially qualify. Gastroparesis claims generally require objective diagnostic support, such as a gastric emptying study. Vision loss claims are reviewed under the separate NAION track."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Has there been an Ozempic settlement or trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. As of July 2026, no case has gone to trial and no settlement has been reached in either the gastrointestinal or the vision loss litigation. Expert admissibility and summary judgment rulings come first and will shape the trial schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a deadline to file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Statutes of limitations vary by state and often run from the date of injury or from when a person reasonably connected the injury to the medication. Timing is one of the first things evaluated in a review."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -404,6 +469,43 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 
   <section class="section alt">
     <div class="container narrow">
+      <h2>Where the Litigation Stands</h2>
+
+      <p>
+        The federal gastrointestinal injury cases are consolidated as MDL 3094 in the Eastern
+        District of Pennsylvania before Judge Karen Spencer Marston. An MDL is not a class action:
+        each plaintiff keeps an individual case while pretrial proceedings are coordinated.
+      </p>
+
+      <p>
+        <strong>Updated July 16, 2026:</strong> Roughly 3,800 cases are pending in the
+        gastrointestinal MDL. Expert discovery has largely concluded, and the parties are preparing
+        for expert admissibility and summary judgment hearings, the rulings that will shape whether
+        and when the first trials are scheduled. No trial has been held and no settlement has been
+        reached. Vision loss claims alleging a condition called NAION proceed separately in
+        MDL 3163, created in December 2025 and also assigned to Judge Marston, alongside state
+        court proceedings in New Jersey and Indiana. That track is at an early stage.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <h2>How the Litigation Developed</h2>
+
+      <ol class="lit-timeline">
+        <li><strong>August 2023:</strong> The first gastroparesis failure-to-warn lawsuit is filed against GLP-1 manufacturers.</li>
+        <li><strong>February 2024:</strong> The Judicial Panel on Multidistrict Litigation consolidates the gastrointestinal cases as MDL 3094 in the Eastern District of Pennsylvania.</li>
+        <li><strong>Late 2024:</strong> Plaintiffs file a master complaint detailing gastroparesis, intestinal obstruction, and related injuries, and the panel adds Saxenda cases while keeping blood clot claims separate.</li>
+        <li><strong>2025:</strong> The court requires objective diagnostic support, such as a gastric emptying study, for gastroparesis claims and narrows portions of the expert lineup. Filings roughly double over the year.</li>
+        <li><strong>December 2025:</strong> A separate MDL is created for NAION vision loss claims, MDL 3163, also before Judge Marston.</li>
+        <li><strong>Mid-2026:</strong> The court declines to exclude testimony from a former FDA commissioner, and the parties plan expert admissibility and summary judgment hearings. Roughly 3,800 gastrointestinal cases are pending.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container narrow">
       <h2>Who May Qualify for Review</h2>
 
       <ul>
@@ -465,6 +567,50 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
       </p>
     </div>
   </section>
+
+  <section class="section alt">
+  <div class="container narrow">
+      <h2>Ozempic Lawsuit FAQ</h2>
+
+<div style="margin-top:24px;">
+  <details class="faq">
+    <summary>What do Ozempic lawsuits allege?</summary>
+    <div class="faq__body">
+      <p>These lawsuits allege that manufacturers of GLP-1 medications failed to adequately warn that use can lead to severe and persistent gastrointestinal injuries, including gastroparesis, ileus, and intestinal obstruction. A separate set of cases alleges a form of sudden vision loss called NAION.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Which medications are involved?</summary>
+    <div class="faq__body">
+      <p>The litigation involves brand-name GLP-1 medications, including Ozempic, Wegovy, Mounjaro, Zepbound, Trulicity, and Saxenda. Compounded semaglutide products raise separate issues and are outside the coordinated federal litigation.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Who may qualify for a case review?</summary>
+    <div class="faq__body">
+      <p>Generally, individuals who used a GLP-1 medication and experienced a serious gastrointestinal complication requiring medical treatment may potentially qualify. Gastroparesis claims generally require objective diagnostic support, such as a gastric emptying study. Vision loss claims are reviewed under the separate NAION track.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Has there been an Ozempic settlement or trial?</summary>
+    <div class="faq__body">
+      <p>No. As of July 2026, no case has gone to trial and no settlement has been reached in either the gastrointestinal or the vision loss litigation. Expert admissibility and summary judgment rulings come first and will shape the trial schedule.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Is there a deadline to file?</summary>
+    <div class="faq__body">
+      <p>Yes. Statutes of limitations vary by state and often run from the date of injury or from when a person reasonably connected the injury to the medication. Timing is one of the first things evaluated in a review.</p>
+    </div>
+  </details>
+</div>
+
+  </div>
+</section>
 
   <section class="section cta">
     <div class="container narrow">

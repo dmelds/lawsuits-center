@@ -453,6 +453,70 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 :root[data-theme="light"] .site-nav.open a { color: var(--ink); }
 </style>
 <!-- LC-LIGHT-CSS:END -->
+<style>
+  details.faq{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:border-color .2s var(--ease);}
+  details.faq[open]{border-color:var(--border-strong);}
+  details.faq summary{list-style:none;padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:var(--display);font-weight:500;font-size:17.5px;color:var(--ink);letter-spacing:-.005em;}
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::after{content:"+";color:var(--amber);font-size:22px;font-weight:400;line-height:1;flex-shrink:0;transition:transform .2s var(--ease);}
+  details.faq[open] summary::after{content:"\2212";}
+  details.faq[open] summary{border-bottom:1px solid var(--border);}
+  details.faq .faq__body{padding:18px 24px 22px;}
+  details.faq .faq__body p{color:var(--ink-muted);font-size:15.5px;line-height:1.65;margin:0;}
+  .lit-timeline{list-style:none;margin:24px 0 0;padding:0;border-left:1px solid var(--border-strong);}
+  .lit-timeline li{position:relative;padding:0 0 22px 26px;color:var(--ink-muted);font-size:15.5px;line-height:1.65;}
+  .lit-timeline li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:999px;background:var(--amber);}
+  .lit-timeline li:last-child{padding-bottom:0;}
+  .lit-timeline strong{color:var(--ink);font-weight:600;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do social media harm lawsuits allege?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These cases allege that platforms were designed with features intended to maximize engagement by minors, and that the companies failed to warn about mental health risks. Claims center on design choices rather than on any particular content, with alleged harms including depression, anxiety, eating disorders, and self-harm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who may qualify for a social media harm claim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, individuals who used the platforms heavily as minors and were later diagnosed with a related mental health condition may potentially qualify. School districts and public entities have brought separate claims over institutional costs. Eligibility depends on the platforms used, age during use, diagnosis, and timing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a social media settlement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No global settlement exists. Bellwether cases have settled confidentially, and figures reported from those cases do not set values for other claims. No outcome is guaranteed in any individual case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between MDL 3047 and the California state coordination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MDL 3047 coordinates the federal cases in the Northern District of California, while a parallel coordination in California state court handles similar claims under state law. The two tracks move on their own schedules, and some firms handle both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do I have to file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deadlines vary by state. Claims involving minors are often paused until adulthood under state tolling rules, but the details differ and are evaluated case by case, which is why timing is one of the first questions reviewed."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -581,10 +645,29 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <span class="eyebrow section__eyebrow">Litigation Status</span>
     <h2>How the cases are being handled.</h2>
     <p>The federal cases are consolidated as a multidistrict litigation, MDL 3047, in the U.S. District Court for the Northern District of California. A multidistrict litigation is not a class action. Each plaintiff keeps an individual case, but pretrial proceedings are coordinated before a single judge. Separately, many school districts and a number of state attorneys general have brought their own cases over youth mental health harms. A parallel coordination in California state court covers <a href="video-game-lawyers">video game addiction claims</a>, and some firms handle both.</p>
-    <p>The litigation matured significantly in 2026. The first state bellwether produced a 6 million dollar jury verdict against Meta and Google in March 2026 after Snap and TikTok settled confidentially, a New Mexico jury returned a 375 million dollar child safety verdict against Meta, and Snap, YouTube, and TikTok settled the first federal school district bellwether in May 2026 while Meta proceeds to trial in June. A firm familiar with MDL 3047 and the state coordination can explain what these outcomes mean for pending and new claims.</p>
+    <p><strong>Updated July 16, 2026:</strong> The litigation matured significantly in 2026. The first state bellwether produced a 6 million dollar jury verdict against Meta and Google in March 2026 after Snap and TikTok settled confidentially, and a New Mexico jury returned a 375 million dollar child safety verdict against Meta. In the federal MDL, Snap, YouTube, and TikTok settled the first school district bellwether in May 2026, and Meta settled on the eve of trial, at a combined value reported near 27 million dollars, so no federal jury was seated. Roughly 2,900 cases are now pending. A second California state bellwether against Meta and Google is set for July 27, 2026, and the state attorneys general track is reported to reach trial around August 2026. A firm familiar with MDL 3047 and the state coordination can explain what these outcomes mean for pending and new claims.</p>
     <p>No global settlement has been established. Reporting that suggests a fixed settlement figure should be treated with caution, since case values depend on individual facts and no outcome is guaranteed.</p>
   </div>
 </section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Litigation Timeline</span>
+    <h2>How the litigation developed.</h2>
+    <ol class="lit-timeline">
+      <li><strong>October 2022:</strong> The Judicial Panel on Multidistrict Litigation consolidates the federal cases as MDL 3047 in the Northern District of California before Judge Yvonne Gonzalez Rogers.</li>
+      <li><strong>October 2023:</strong> More than 40 state attorneys general sue Meta over youth mental health harms, joining the coordinated proceedings.</li>
+      <li><strong>November 2023:</strong> The court largely rejects the platforms' Section 230 and First Amendment defenses at the pleading stage, allowing design-defect and failure-to-warn theories to proceed.</li>
+      <li><strong>June 2025:</strong> The court selects six school district cases from Kentucky, Arizona, South Carolina, Maryland, Georgia, and New Jersey as the first federal bellwethers.</li>
+      <li><strong>January 2026:</strong> Snap and TikTok settle confidentially on the eve of the first California state bellwether.</li>
+      <li><strong>March 2026:</strong> A Los Angeles jury returns a 6 million dollar verdict against Meta and Google in that bellwether, the first verdict of its kind, with appeals expected.</li>
+      <li><strong>May 2026:</strong> Snap, YouTube, and TikTok settle the first federal school district bellwether, and Meta settles on the eve of trial, at a combined value reported near 27 million dollars.</li>
+      <li><strong>Summer 2026:</strong> A second California state bellwether against Meta and Google is set for July 27, and the state attorneys general track is reported to reach trial around August.</li>
+    </ol>
+  </div>
+</section>
+
+
 
 <section class="section section--surface">
   <div class="container container--narrow">
@@ -616,6 +699,51 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <h2>How to choose a social media lawyer.</h2>
     <p>Readers often look for a firm with real experience in product liability and coordinated mass litigation, not general personal injury marketing. Because these cases involve establishing usage history, serious medical issues, and coordination within a multidistrict litigation, many readers want a firm that seems organized, informed, and able to explain the process clearly.</p>
     <p>It also helps to choose a firm familiar with MDL 3047 and with your state's courts and deadlines.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Frequently Asked Questions</span>
+    <h2>Social media lawsuit FAQ.</h2>
+
+<div style="margin-top:24px;">
+  <details class="faq">
+    <summary>What do social media harm lawsuits allege?</summary>
+    <div class="faq__body">
+      <p>These cases allege that platforms were designed with features intended to maximize engagement by minors, and that the companies failed to warn about mental health risks. Claims center on design choices rather than on any particular content, with alleged harms including depression, anxiety, eating disorders, and self-harm.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Who may qualify for a social media harm claim?</summary>
+    <div class="faq__body">
+      <p>Generally, individuals who used the platforms heavily as minors and were later diagnosed with a related mental health condition may potentially qualify. School districts and public entities have brought separate claims over institutional costs. Eligibility depends on the platforms used, age during use, diagnosis, and timing.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Is there a social media settlement?</summary>
+    <div class="faq__body">
+      <p>No global settlement exists. Bellwether cases have settled confidentially, and figures reported from those cases do not set values for other claims. No outcome is guaranteed in any individual case.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What is the difference between MDL 3047 and the California state coordination?</summary>
+    <div class="faq__body">
+      <p>MDL 3047 coordinates the federal cases in the Northern District of California, while a parallel coordination in California state court handles similar claims under state law. The two tracks move on their own schedules, and some firms handle both.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>How long do I have to file?</summary>
+    <div class="faq__body">
+      <p>Deadlines vary by state. Claims involving minors are often paused until adulthood under state tolling rules, but the details differ and are evaluated case by case, which is why timing is one of the first questions reviewed.</p>
+    </div>
+  </details>
+</div>
+
   </div>
 </section>
 

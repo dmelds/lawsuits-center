@@ -469,6 +469,57 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 :root[data-theme="light"] .site-nav.open a { color: var(--ink); }
 </style>
 <!-- LC-LIGHT-CSS:END -->
+<style>
+  details.faq{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:border-color .2s var(--ease);}
+  details.faq[open]{border-color:var(--border-strong);}
+  details.faq summary{list-style:none;padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:var(--display);font-weight:500;font-size:17.5px;color:var(--ink);letter-spacing:-.005em;}
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::after{content:"+";color:var(--amber);font-size:22px;font-weight:400;line-height:1;flex-shrink:0;transition:transform .2s var(--ease);}
+  details.faq[open] summary::after{content:"\2212";}
+  details.faq[open] summary{border-bottom:1px solid var(--border);}
+  details.faq .faq__body{padding:18px 24px 22px;}
+  details.faq .faq__body p{color:var(--ink-muted);font-size:15.5px;line-height:1.65;margin:0;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the multibillion dollar PFAS water settlement include individuals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Those settlements compensated public water systems for treatment and infrastructure costs. Personal injury claims brought by individuals are separate and remain in active litigation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What diagnoses come up most in contaminated water claims?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The federal bellwether process is currently focused on kidney cancer, testicular cancer, thyroid disease, and ulcerative colitis, though other conditions are reviewed case by case depending on the contaminant and the exposure history."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need water testing results before submitting information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Where you lived, what water system served the home, the exposure window, and any related diagnosis are enough to start. Contamination records for many water systems and military sites are already public."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a deadline to bring a contaminated water claim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Statutes of limitations vary by state and often run from the date of diagnosis or from when the contamination became known. Timing is one of the first things evaluated in a review."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -576,6 +627,66 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
       <li>Workers exposed through job-related water contamination</li>
       <li>Diagnosis of cancer, thyroid disease, kidney problems, ulcerative colitis, or other condition with possible contaminated-water exposure history</li>
     </ul>
+  </div>
+</section>
+
+<section class="section section--surface">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Current Litigation</span>
+    <h2>Where the underlying litigation stands.</h2>
+    <p>
+      Many contaminated drinking water claims involving PFAS trace back to aqueous film-forming
+      foam, and those federal cases are consolidated as MDL 2873 in the District of South Carolina
+      before Judge Richard M. Gergel, the largest water-contamination docket in the country. Other
+      contamination claims proceed in state courts or separate federal cases depending on the source.
+    </p>
+    <p>
+      <strong>Updated July 16, 2026:</strong> Settlements with 3M, DuPont, and other manufacturers
+      totaling more than 12 billion dollars were finalized in 2024, but they resolved claims by
+      public water suppliers only and did not pay individuals. The personal injury side remains
+      active, with roughly 15,200 claims pending. A first injury trial set for October 2025 was
+      taken off the calendar and a new date is being negotiated, while a second bellwether pool of
+      28 water-exposure cases involving kidney cancer, testicular cancer, thyroid disease, and
+      ulcerative colitis moves through discovery. No personal injury settlement has been reached.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Frequently Asked Questions</span>
+    <h2>Toxic water claim FAQ.</h2>
+
+<div style="margin-top:24px;">
+  <details class="faq">
+    <summary>Does the multibillion dollar PFAS water settlement include individuals?</summary>
+    <div class="faq__body">
+      <p>No. Those settlements compensated public water systems for treatment and infrastructure costs. Personal injury claims brought by individuals are separate and remain in active litigation.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>What diagnoses come up most in contaminated water claims?</summary>
+    <div class="faq__body">
+      <p>The federal bellwether process is currently focused on kidney cancer, testicular cancer, thyroid disease, and ulcerative colitis, though other conditions are reviewed case by case depending on the contaminant and the exposure history.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Do I need water testing results before submitting information?</summary>
+    <div class="faq__body">
+      <p>No. Where you lived, what water system served the home, the exposure window, and any related diagnosis are enough to start. Contamination records for many water systems and military sites are already public.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Is there a deadline to bring a contaminated water claim?</summary>
+    <div class="faq__body">
+      <p>Yes. Statutes of limitations vary by state and often run from the date of diagnosis or from when the contamination became known. Timing is one of the first things evaluated in a review.</p>
+    </div>
+  </details>
+</div>
+
   </div>
 </section>
 

@@ -479,6 +479,13 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 :root[data-theme="light"] .site-nav.open a { color: var(--ink); }
 </style>
 <!-- LC-LIGHT-CSS:END -->
+<style>
+  .lit-timeline{list-style:none;margin:24px 0 0;padding:0;border-left:1px solid var(--border-strong);}
+  .lit-timeline li{position:relative;padding:0 0 22px 26px;color:var(--ink-muted);font-size:15.5px;line-height:1.65;}
+  .lit-timeline li::before{content:"";position:absolute;left:-5px;top:8px;width:9px;height:9px;border-radius:999px;background:var(--amber);}
+  .lit-timeline li:last-child{padding-bottom:0;}
+  .lit-timeline strong{color:var(--ink);font-weight:600;}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -584,7 +591,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     </p>
     <div class="stat-row">
       <div class="stat">
-        <div class="stat__num">67,000+</div>
+        <div class="stat__num">68,000+</div>
         <div class="stat__label">Pending cases in the federal MDL, among the largest active mass tort dockets</div>
       </div>
       <div class="stat">
@@ -598,6 +605,36 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Current Litigation</span>
+    <h2>Where these cases stand.</h2>
+    <p>
+      <strong>Updated July 16, 2026:</strong> MDL 2738, before Chief Judge Michael A. Shipp in the
+      District of New Jersey, has grown past 68,000 pending cases, the largest active MDL in the
+      country. After a Houston bankruptcy court rejected Johnson & Johnson's third attempt to
+      resolve the claims through a subsidiary bankruptcy in 2025, every claim is proceeding in
+      court. A court-appointed mediator has been convening settlement sessions with
+      full-authority representatives on both sides, while the company publicly maintains it does
+      not intend to offer a global settlement. The first federal bellwether trial, an ovarian
+      cancer case, is on track for later in 2026, and state-court trials continue independently,
+      including several substantial plaintiff verdicts in late 2025 and 2026.
+    </p>
+    <ol class="lit-timeline">
+      <li><strong>2018:</strong> A Missouri jury awards 4.69 billion dollars to 22 women alleging ovarian cancer from talc products, later reduced to 2.12 billion dollars on appeal.</li>
+      <li><strong>2020:</strong> Johnson & Johnson ends United States sales of talc-based baby powder, moving fully to cornstarch worldwide in 2023.</li>
+      <li><strong>October 2021:</strong> The company places its talc liabilities into a new subsidiary, LTL Management, which files for bankruptcy and pauses the litigation.</li>
+      <li><strong>2023:</strong> Courts dismiss the first bankruptcy and a second attempt, and the MDL resumes active case management mid-year.</li>
+      <li><strong>2024:</strong> The International Agency for Research on Cancer classifies talc as probably carcinogenic to humans. Johnson & Johnson reaches a 700 million dollar consumer-marketing settlement with more than 40 states that does not resolve injury claims, and a new subsidiary, Red River Talc, files a third bankruptcy built around a proposed settlement near 8 billion dollars.</li>
+      <li><strong>March 2025:</strong> The bankruptcy court in Houston rejects the Red River plan, returning all claims to the courts.</li>
+      <li><strong>December 2025:</strong> A Baltimore jury returns the largest individual talc verdict to date in a mesothelioma case.</li>
+      <li><strong>2026:</strong> A court-appointed mediator begins formal settlement sessions, the first federal bellwether is set for trial later in the year, and pending MDL cases pass 68,000.</li>
+    </ol>
+  </div>
+</section>
+
+
 
 <section class="section section--surface">
   <div class="container container--narrow">
