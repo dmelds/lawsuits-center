@@ -92,7 +92,7 @@
   .site-header { position: sticky; top: 0; z-index: 50; background: rgba(17,17,17,.85); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid var(--border); }
   .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; }
   .brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
-  .brand img { height: 60px; width: auto; }
+  .brand img { height: 44px; width: auto; max-width: 220px; object-fit: contain; }
   .brand__tag { font-size: 12.5px; color: var(--ink-muted); letter-spacing: .04em; white-space: nowrap; }
   .nav { display: flex; align-items: center; gap: 28px; }
   .nav__links { display: flex; gap: 26px; }
@@ -148,7 +148,7 @@
   @media (max-width: 1024px) { .card-grid { grid-template-columns: repeat(2, 1fr); } .trust-strip { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 760px) {
     .site-header__inner { height: 76px; }
-    .brand img { height: 52px; }
+    .brand img { height: 38px; max-width: 180px; }
     .brand { gap: 12px; }
     .nav__links, .nav .btn--amber { display: none; }
     .nav__toggle { display: inline-flex; }
@@ -159,7 +159,7 @@
     .actions .btn, .hero-actions .btn { width: 100%; }
   }
   @media (max-width: 480px) {
-    .brand img { height: 46px; }
+    .brand img { height: 34px; max-width: 160px; }
     .brand__tag { display: none; }
   }
 
@@ -461,6 +461,65 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 :root[data-theme="light"] .site-nav.open a { color: var(--ink); }
 </style>
 <!-- LC-LIGHT-CSS:END -->
+<style>
+  details.faq{background:var(--surface-2);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:12px;overflow:hidden;transition:border-color .2s var(--ease);}
+  details.faq[open]{border-color:var(--border-strong);}
+  details.faq summary{list-style:none;padding:20px 24px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;font-family:var(--display);font-weight:500;font-size:17.5px;color:var(--ink);letter-spacing:-.005em;}
+  details.faq summary::-webkit-details-marker{display:none;}
+  details.faq summary::after{content:"+";color:var(--amber);font-size:22px;font-weight:400;line-height:1;flex-shrink:0;transition:transform .2s var(--ease);}
+  details.faq[open] summary::after{content:"\2212";}
+  details.faq[open] summary{border-bottom:1px solid var(--border);}
+  details.faq .faq__body{padding:18px 24px 22px;}
+  details.faq .faq__body p{color:var(--ink-muted);font-size:15.5px;line-height:1.65;margin:0;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long do I have to file an asbestos claim in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a general rule, four years from the date of diagnosis for a personal injury claim and two years from the date of death for a wrongful death claim. Individual facts can shift the analysis, which is why timing is evaluated first in any review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to know which products or job sites exposed me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A work, residence, and service history is enough to start. Attorneys reconstruct exposure through employment records, ship and site records, union records, and product identification developed in earlier cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pursue asbestos trust claims and a lawsuit at the same time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes. Trust claims are filed with funds set up by bankrupt manufacturers and are separate from lawsuits against solvent companies, and coordinating the two is a normal part of how these cases are handled."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do veterans have different options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Veterans can pursue civil claims and trust claims like anyone else, and VA benefits claims for asbestos-related disease have no filing deadline. Claims are brought against manufacturers, not against the military."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does lung cancer qualify, or only mesothelioma?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mesothelioma, asbestos-related lung cancer, and asbestosis claims are all reviewed. Lung cancer cases typically require a documented exposure history and address smoking history as part of the evaluation."
+      }
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -597,6 +656,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <span class="eyebrow section__eyebrow">Time Limits</span>
     <h2>Acting within Florida's time limits.</h2>
     <p>Florida sets its own deadlines for asbestos-related claims. As in other states, the time to file often depends on when an illness was diagnosed or connected to asbestos rather than on when the exposure occurred, which may have been decades earlier. Claims following an asbestos-related death follow their own separate timing.</p>
+    <p>As a general rule, Florida allows four years from the date of diagnosis for asbestos-related personal injury claims and two years from the date of death for wrongful death claims. Florida also requires an early medical showing in asbestos cases under its Asbestos and Silica Compensation Fairness Act, which shapes the records a claim needs from the start.</p>
     <p>Because these deadlines are specific to Florida and depend on the facts of each case, they are best confirmed with a Florida-licensed attorney rather than estimated on your own.</p>
   </div>
 </section>
@@ -636,6 +696,51 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
       <li>How are fees typically structured?</li>
       <li>How often should I expect updates?</li>
     </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <span class="eyebrow section__eyebrow">Frequently Asked Questions</span>
+    <h2>Florida asbestos claim FAQ.</h2>
+
+<div style="margin-top:24px;">
+  <details class="faq">
+    <summary>How long do I have to file an asbestos claim in Florida?</summary>
+    <div class="faq__body">
+      <p>As a general rule, four years from the date of diagnosis for a personal injury claim and two years from the date of death for a wrongful death claim. Individual facts can shift the analysis, which is why timing is evaluated first in any review.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Do I need to know which products or job sites exposed me?</summary>
+    <div class="faq__body">
+      <p>No. A work, residence, and service history is enough to start. Attorneys reconstruct exposure through employment records, ship and site records, union records, and product identification developed in earlier cases.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Can I pursue asbestos trust claims and a lawsuit at the same time?</summary>
+    <div class="faq__body">
+      <p>Often yes. Trust claims are filed with funds set up by bankrupt manufacturers and are separate from lawsuits against solvent companies, and coordinating the two is a normal part of how these cases are handled.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Do veterans have different options?</summary>
+    <div class="faq__body">
+      <p>Veterans can pursue civil claims and trust claims like anyone else, and VA benefits claims for asbestos-related disease have no filing deadline. Claims are brought against manufacturers, not against the military.</p>
+    </div>
+  </details>
+
+  <details class="faq">
+    <summary>Does lung cancer qualify, or only mesothelioma?</summary>
+    <div class="faq__body">
+      <p>Mesothelioma, asbestos-related lung cancer, and asbestosis claims are all reviewed. Lung cancer cases typically require a documented exposure history and address smoking history as part of the evaluation.</p>
+    </div>
+  </details>
+</div>
+
   </div>
 </section>
 
