@@ -5,7 +5,8 @@ Generate sitemap.xml for lawsuit.center.
 - Includes the /es/ Spanish directory (es/thank-you excluded via basename + noindex).
 - Excludes the JS-fetched footer fragment, noindex pages, thank-you/utility pages,
   and any URL that 301-redirects to a different slug.
-- lastmod from each file's last git commit date (falls back to file mtime, then today).
+- lastmod from each file's last git commit date, ignoring commits marked
+  SKIP_TOKEN (falls back to file mtime, then today).
 Runs in CI (GitHub Actions), where full git history is available.
 """
 
@@ -16,6 +17,11 @@ import subprocess
 from datetime import date, datetime, timezone
 
 BASE = "https://lawsuit.center"
+
+# Commits whose message contains this token are ignored when computing
+# <lastmod>, so mechanical site-wide sweeps don't flatten every date to the
+# same day. Usage: git commit -m "Add GA4 snippet [skip lastmod] [skip actions]"
+SKIP_TOKEN = "[skip lastmod]"
 
 # Never list these: footer is a fetch() fragment; the rest are noindex/utility.
 EXCLUDE_FILES = {
@@ -65,12 +71,13 @@ def redirected_away():
 
 def git_lastmod(path):
     try:
-        out = subprocess.run(
-            ["git", "log", "-1", "--format=%cs", "--", path],
-            capture_output=True, text=True, check=True,
-        ).stdout.strip()
-        if out:
-            return out
+        for extra in (["-F", f"--grep={SKIP_TOKEN}", "--invert-grep"], []):
+            out = subprocess.run(
+                ["git", "log", "-1", "--format=%cs", *extra, "--", path],
+                capture_output=True, text=True, check=True,
+            ).stdout.strip()
+            if out:
+                return out
     except (subprocess.CalledProcessError, FileNotFoundError):
         pass
     try:
