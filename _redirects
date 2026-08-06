@@ -8,6 +8,9 @@ https://www.lawsuits.center/*  https://lawsuit.center/:splat      301!
 # /lawsuits.html, etc). Forced rules (trailing !) override
 # Netlify physical-file shadowing; Pretty URLs still serves
 # the extensionless path. One rule per file, generated from
+# Consolidated duplicate PFAS intake page (Aug 2026)
+/pfas-water-contamination-lawsuits  /pfas-case-review  301!
+
 # BEGIN AUTO-GENERATED HTML REDIRECTS (managed by generate_redirects.py - do not edit)
 /about.html  /about  301!
 /advertising-disclosure.html  /advertising-disclosure  301!
@@ -88,7 +91,6 @@ https://www.lawsuits.center/*  https://lawsuit.center/:splat      301!
 /pfas-exposure-checker.html  /pfas-exposure-checker  301!
 /pfas-lawsuit.html  /pfas-lawsuit  301!
 /pfas-lawyers.html  /pfas-lawyers  301!
-/pfas-water-contamination-lawsuits.html  /pfas-water-contamination-lawsuits  301!
 /privacy-data-breach-lawsuits.html  /privacy-data-breach-lawsuits  301!
 /privacy-policy.html  /privacy-policy  301!
 /processed-food-case-review.html  /processed-food-case-review  301!
@@ -124,7 +126,6 @@ https://www.lawsuits.center/*  https://lawsuit.center/:splat      301!
 /video-game-lawyers.html  /video-game-lawyers  301!
 /water-contamination-lawsuits.html  /water-contamination-lawsuits  301!
 /what-to-do-after-being-sued.html  /what-to-do-after-being-sued  301!
-/who-may-qualify-for-a-chemical-exposure-lawsuit.html  /who-may-qualify-for-a-chemical-exposure-lawsuit  301!
 /wrongful-death-lawsuits.html  /wrongful-death-lawsuits  301!
 # END AUTO-GENERATED HTML REDIRECTS
 #
