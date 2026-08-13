@@ -23,11 +23,25 @@
  *
  * Fires nothing when the page is reached directly with no stored payload, so
  * a bookmarked or crawled thank-you URL does not inflate the count.
+ *
+ * Not every named form on this site is a claim. The contact form, the law firm
+ * sponsorship inquiry, and the retainer review all post to the same thank-you
+ * page as the intake forms. Counting those as generate_lead would fold inbound
+ * sponsorship mail into the headline conversion number, so they are skipped by
+ * name in NOT_A_LEAD below. Add to that list, do not remove from it, when a new
+ * non-claimant form ships.
  */
 (function () {
   "use strict";
 
   var KEY = "lc_lead";
+
+  /* Named forms that post to a thank-you page but are not claimant intakes. */
+  var NOT_A_LEAD = {
+    "site-contact": 1,        /* contact.html - general enquiries */
+    "law-firm-inquiry": 1,    /* law-firm-inquiry.html - sponsorship, inbound sales */
+    "retainer-review": 1      /* educational-review.html - retainer agreement review */
+  };
 
   function read(key) {
     try { return sessionStorage.getItem(key); } catch (e) { return null; }
@@ -56,6 +70,9 @@
 
     for (var i = 0; i < forms.length; i++) {
       (function (form) {
+        var name = form.getAttribute("name") || "unknown";
+        if (NOT_A_LEAD[name]) return;
+
         form.addEventListener("submit", function () {
           /* The situation select is the first select in the form on every
              intake page. Its raw option value is stored rather than the
@@ -63,7 +80,7 @@
              edits while the values are stable keys. */
           var select = form.querySelector("select");
           var payload = {
-            form: form.getAttribute("name") || "unknown",
+            form: name,
             category: (select && select.value) || "none",
             slot: param("utm_content") || "direct",
             source: location.pathname
