@@ -1,0 +1,77 @@
+name: Lead Events
+
+# Loads lead-events.js on every intake form page and every thank-you page.
+# Dispatch only: run it from the Actions tab, read the dry-run summary in the
+# log, then run again with apply = true. Nothing to type in the run dialog
+# except the toggle.
+#
+# The script is idempotent, so a rerun on an already-swept tree is a no-op and
+# reports zero pages tagged.
+#
+# The commit message carries [skip lastmod] and [skip ci] so the sitemap
+# generator does not flatten every lastmod date onto the sweep day. This adds
+# one script tag and changes no content, so lastmod should not move.
+#
+# It also runs a dry run on the 1st of each month against staging. That run
+# never writes anything; it fails on purpose when it finds an untagged page,
+# which is how a newly built intake page gets caught. A clean month passes
+# silently.
+
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Write changes and commit (leave false for a dry run)'
+        type: boolean
+        default: false
+      branch:
+        description: 'Branch to commit to'
+        type: string
+        default: staging
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Scheduled runs carry no inputs, so fall back to the same default.
+          ref: ${{ inputs.branch || 'staging' }}
+
+      - name: Dry run
+        run: python3 add_lead_events.py | tee /tmp/lead.log
+
+      - name: Fail the monthly check if a page is missing the script
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          if grep -q '^  0 pages tagged' /tmp/lead.log; then
+            echo "Every form and thank-you page loads the script."
+            exit 0
+          fi
+          echo "::error::Intake pages are missing lead-events.js. Run this workflow with apply = true on staging."
+          sed -n '1,6p' /tmp/lead.log
+          exit 1
+
+      - name: Apply
+        if: ${{ inputs.apply }}
+        run: python3 add_lead_events.py --apply
+
+      - name: Commit
+        if: ${{ inputs.apply }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git add '*.html'
+          git commit -m "Load lead-events.js on intake and thank-you pages [skip lastmod] [skip ci]"
+          git pull --rebase
+          git push
