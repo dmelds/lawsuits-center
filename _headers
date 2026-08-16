@@ -1,5 +1,3 @@
-
-
 # perf:cache-policy
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
@@ -11,3 +9,9 @@
   Cache-Control: public, max-age=604800
 /*.webmanifest
   Cache-Control: public, max-age=604800
+
+# The footer partial is a build-time source for inline_footer.py, not a page.
+# It stays a 200 fragment (generate-sitemap.py expects that) but must never be
+# indexed as a thin duplicate of every footer on the site.
+/footer.html
+  X-Robots-Tag: noindex
