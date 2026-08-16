@@ -1,0 +1,95 @@
+name: Inline Footer
+
+# Replaces the client-side footer fetch with the footer markup itself, so the
+# footer links and the attorney-advertising disclosures live in the served HTML
+# instead of only appearing after JS runs.
+#
+# Dispatch only for the sweep: run it from the Actions tab, read the dry-run
+# summary in the log, then run again with apply = true. Nothing to type in the
+# run dialog except the toggle.
+#
+# BRANCH DEFAULTS TO main, NOT staging. This repo's staging is a long way behind
+# main and is missing the brand-image fix, so sweeping staging and merging it
+# forward would revert live work. Change the input only if staging has been
+# brought back in line first.
+#
+# The script is idempotent, so a rerun on an already-swept tree is a no-op and
+# reports zero pages inlined. Pages that already carry an inline footer are left
+# alone even when it differs from footer.html: the /es/ pages carry a translated
+# footer, five English pages carry an Espanol toggle, and index.html carries a
+# longer sponsored-visibility disclosure. The dry run lists that drift so it
+# stays visible.
+#
+# The commit message carries [skip lastmod] and [skip ci] so the sitemap
+# generator does not flatten every lastmod date onto the sweep day. This moves
+# existing markup into the page and changes no content, so lastmod should not
+# move. Note that merging a swept branch forward creates a fresh merge commit
+# that does not carry those flags, which is a second reason to run against main.
+#
+# footer.html stays in the repo as the single source of truth and stays a 200
+# fragment, which is what generate-sitemap.py expects. _headers keeps it out of
+# the search index.
+#
+# It also runs a dry run on the 1st of each month. That run never writes
+# anything; it fails on purpose when it finds a page still fetching the footer,
+# which is how a new page built from a pre-sweep donor gets caught. A clean
+# month passes silently.
+
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Write changes and commit (leave false for a dry run)'
+        type: boolean
+        default: false
+      branch:
+        description: 'Branch to commit to'
+        type: string
+        default: main
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Scheduled runs carry no inputs, so fall back to the same default.
+          ref: ${{ inputs.branch || 'main' }}
+
+      - name: Dry run
+        run: python3 inline_footer.py | tee /tmp/footer.log
+
+      - name: Fail the monthly check if a page still fetches the footer
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          if grep -q '^  0 pages inlined' /tmp/footer.log; then
+            echo "Every page carries its footer in the served HTML."
+            exit 0
+          fi
+          echo "::error::Pages are still fetching the footer client side. Run this workflow with apply = true."
+          sed -n '1,6p' /tmp/footer.log
+          exit 1
+
+      - name: Apply
+        if: ${{ inputs.apply }}
+        run: python3 inline_footer.py --apply
+
+      - name: Commit
+        if: ${{ inputs.apply }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git add '*.html'
+          git commit -m "Inline the site footer instead of fetching it [skip lastmod] [skip ci]"
+          git pull --rebase
+          git push
