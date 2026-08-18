@@ -17,7 +17,7 @@ jobs:
       HOST: lawsuit.center
       KEY: 51ab7ae9b671c843427b75e0764e8012
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
