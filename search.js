@@ -63,6 +63,14 @@
       desc: "PFAS contamination, AFFF firefighting foam, military base or airport exposure, kidney/testicular cancer, thyroid disease, or ulcerative colitis.",
       keywords: "pfas pfoa pfos forever chemicals afff firefighting foam military base airport kidney testicular cancer thyroid ulcerative colitis" },
 
+    { url: "afff-case-review", title: "AFFF Firefighting Foam Case Review", tag: "Case Review", category: "Water & Environment",
+      desc: "Occupational, military, or community water exposure to AFFF firefighting foam. Submit exposure history for case review.",
+      keywords: "afff aqueous film forming foam firefighting foam fire fighting firefighter military base navy air force airport training site pfas pfoa pfos forever chemicals kidney testicular cancer thyroid water contamination mdl 2873" },
+
+    { url: "chemical-exposure-case-review", title: "Chemical Exposure Case Review", tag: "Case Review", category: "Water & Environment",
+      desc: "Contaminated water, pesticides, PFAS, or workplace chemical exposure with a related diagnosis.",
+      keywords: "chemical exposure toxic chemicals workplace occupational industrial solvent benzene pesticide herbicide pfas contaminated water fumes inhalation spill release" },
+
     { url: "toxic-water-case-review", title: "Toxic Water Case Review", tag: "Case Review", category: "Water & Environment",
       desc: "Contaminated drinking water, well water contamination, or industrial chemical releases.",
       keywords: "toxic water drinking well contamination industrial release" },
@@ -103,6 +111,10 @@
       desc: "Uterine or ovarian cancer, fertility complications, or reproductive harm tied to long-term product use.",
       keywords: "reproductive uterine ovarian cancer fertility hair relaxer talc talcum prenatal" },
 
+    { url: "hair-relaxer-case-review", title: "Hair Relaxer Case Review", tag: "Case Review", category: "Products & Food",
+      desc: "Uterine cancer, ovarian cancer, or fibroids after long-term chemical hair relaxer or straightener use.",
+      keywords: "hair relaxer straightener perm chemical uterine cancer endometrial ovarian cancer fibroids just for me dark and lovely optimum olive oil mdl 3060" },
+
     { url: "talcum-powder-case-review", title: "Talcum Powder Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Long-term talc or baby powder use (Johnson's Baby Powder, Shower to Shower) followed by an ovarian cancer diagnosis.",
       keywords: "talcum powder talc lawsuit ovarian cancer johnson and johnson j&j baby powder shower to shower gold bond attorney lawyer settlement payout who qualifies eligibility deadline mdl 2738" },
@@ -111,6 +123,10 @@
       desc: "Overview of the talcum powder ovarian cancer litigation (MDL 2738): what the lawsuit is about, who qualifies, settlements, and FAQs.",
       keywords: "talcum powder lawsuit litigation ovarian cancer johnson and johnson j&j talc settlement attorneys lawyers mdl 2738 shower to shower who qualifies average settlement payout deadline class action" },
 
+    { url: "hernia-mesh-case-review", title: "Hernia Mesh Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
+      desc: "Hernia mesh repair surgery followed by revision surgery, chronic pain, infection, adhesion, or mesh failure.",
+      keywords: "hernia mesh implant repair surgery revision removal explant chronic pain infection adhesion bowel obstruction migration bard covidien ethicon atrium mdl 2846" },
+
     { url: "depo-provera-case-review", title: "Depo-Provera Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
       desc: "Long-term Depo-Provera use (or generic medroxyprogesterone acetate) followed by a meningioma brain tumor diagnosis.",
       keywords: "depo-provera depo provera medroxyprogesterone meningioma brain tumor birth control injection MDL 3140" },
@@ -118,6 +134,10 @@
     { url: "case-review", title: "General Case Review", tag: "Case Review", category: "General",
       desc: "Not sure where you fit? Describe the situation and we'll review which category may apply.",
       keywords: "general case review intake start" },
+
+    { url: "truck-accident-case-review", title: "Truck Accident Case Review", tag: "Case Review", category: "Personal Injury",
+      desc: "Commercial truck, semi, or 18-wheeler crash with injuries. Share the crash, injuries, and recovery for review.",
+      keywords: "truck accident crash commercial semi 18 wheeler tractor trailer big rig delivery van trucking company driver fatigue injury wrongful death" },
 
     // ----- Overviews -----
     { url: "asbestos-lawsuits", title: "Asbestos Lawsuits", tag: "Overview", category: "Asbestos",
@@ -187,10 +207,6 @@
     { url: "pfas-lawsuit", title: "PFAS Lawsuits", tag: "Overview", category: "Water & Environment",
       desc: "Overview of PFAS forever chemicals litigation, including water contamination, AFFF firefighting foam, related illnesses, lawyer guides, and case review.",
       keywords: "pfas lawsuit lawsuits forever chemicals afff firefighting foam water contamination kidney testicular cancer thyroid claim settlement case review" },
-    { url: "pfas-water-contamination-lawsuits", title: "PFAS Water Contamination", tag: "Overview", category: "Water & Environment",
-      desc: "Forever chemicals near military bases, airports, and industrial facilities.",
-      keywords: "pfas pfoa pfos water contamination military airport industrial" },
-
     { url: "environmental-contamination-lawsuits", title: "Environmental Contamination Lawsuits", tag: "Overview", category: "Water & Environment",
       desc: "Background on exposure through air, soil, groundwater, or community conditions.",
       keywords: "environmental contamination air soil groundwater community" },
@@ -198,10 +214,6 @@
     { url: "chemical-exposure-lawsuits", title: "Chemical Exposure Lawsuits", tag: "Overview", category: "Chemicals & Pesticides",
       desc: "Toxic substances, repeated exposure, contaminated property, and workplace exposure.",
       keywords: "chemical exposure toxic workplace occupational" },
-
-    { url: "who-may-qualify-for-a-chemical-exposure-lawsuit", title: "Who May Qualify for a Chemical Exposure Lawsuit", tag: "Overview", category: "Chemicals & Pesticides",
-      desc: "Common qualification factors, exposure patterns, and information people gather before pursuing a claim.",
-      keywords: "qualify chemical exposure lawsuit eligibility" },
 
     { url: "paraquat-lawsuit", title: "Paraquat Parkinson's Lawsuit", tag: "Overview", category: "Chemicals & Pesticides",
       desc: "Long-term paraquat or Gramoxone exposure linked to Parkinson's disease, consolidated in MDL 3004 — who may qualify and how case review works.",
