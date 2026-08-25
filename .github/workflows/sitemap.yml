@@ -7,6 +7,9 @@ on:
       - 'sitemap.xml'
   workflow_dispatch:
 
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
 permissions:
   contents: write
 
@@ -34,7 +37,18 @@ jobs:
           if ! git diff --quiet sitemap.xml; then
             git add sitemap.xml
             git commit -m "Auto-update sitemap.xml [skip ci]"
-            git push
+            BRANCH="$(git branch --show-current)"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) - rebasing onto remote and retrying"
+            git pull --rebase origin "$BRANCH" || exit 1
+            sleep $((attempt * 3))
+          done
+          echo "Push still failing after 5 attempts"
+          exit 1
           else
             echo "No sitemap changes."
           fi
