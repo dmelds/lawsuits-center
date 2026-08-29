@@ -49,7 +49,7 @@
 
     { url: "openai-case-review", title: "OpenAI / ChatGPT Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
-      keywords: "openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
+      keywords: "ai artificial intelligence openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
 
     { url: "deepfake-case-review", title: "Deepfake Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Non-consensual AI-generated intimate images of an adult or minor, distribution and removal failures, threats, and resulting harm.",
@@ -139,6 +139,71 @@
       desc: "Commercial truck, semi, or 18-wheeler crash with injuries. Share the crash, injuries, and recovery for review.",
       keywords: "truck accident crash commercial semi 18 wheeler tractor trailer big rig delivery van trucking company driver fatigue injury wrongful death" },
 
+
+    // ----- Case filings -----
+    { url: "winters-v-openai-lawsuit", title: "Winters v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "A pastor relied on ChatGPT for medical guidance for a year and suffered blood clots in both lungs. The first ChatGPT case brought by a plaintiff who survived, with the complaint posted in full.",
+      keywords: "winters v openai winters lawsuit chatgpt medical advice pulmonary embolism blood clots dvt ai artificial intelligence chatbot complaint pdf court filing san francisco cgc-26-639579 survived plaintiff" },
+
+    { url: "gourley-v-openai-lawsuit", title: "Gourley v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "A student shot at Florida State University is suing OpenAI over the shooter's year of ChatGPT conversations. The first AI case brought by someone injured who never used the product, with the complaint posted in full.",
+      keywords: "gourley v openai gourley lawsuit reese gourley fsu florida state shooting chatgpt ai artificial intelligence aiding and abetting negligent entrustment negligent undertaking sycophancy complaint pdf court filing tallahassee northern district florida 4:26-cv-00416 bystander non-user" },
+
+    // ----- Personal injury overviews -----
+    { url: "truck-accident-lawsuits", title: "Truck Accident Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How truck accident lawsuits work, what evidence may matter, who may be responsible, and what can affect a claim after a serious crash.",
+      keywords: "truck accident lawsuit semi 18 wheeler tractor trailer big rig commercial vehicle trucking company driver fatigue crash injury" },
+
+    { url: "car-accident-lawsuits", title: "Car Accident Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How car accident lawsuits work, what evidence may matter, who may be responsible, and what factors can affect an injury claim.",
+      keywords: "car accident lawsuit auto crash collision rear end fault insurance injury claim vehicle" },
+
+    { url: "motorcycle-accident-lawsuits", title: "Motorcycle Accident Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How motorcycle accident lawsuits work, what factors may affect a claim, and what evidence may matter after a serious crash.",
+      keywords: "motorcycle accident lawsuit bike crash rider helmet injury collision" },
+
+    { url: "pedestrian-accident-lawsuits", title: "Pedestrian Accident Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How pedestrian accident lawsuits work, what factors may affect a claim, and what evidence may matter after a serious collision.",
+      keywords: "pedestrian accident lawsuit struck by car crosswalk hit and run walking injury" },
+
+    { url: "slip-and-fall-lawsuits", title: "Slip and Fall Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How slip and fall lawsuits work, what factors may affect a claim, who may be responsible, and what evidence may matter after a fall.",
+      keywords: "slip and fall lawsuit trip premises liability property owner wet floor negligence fall injury" },
+
+    { url: "dog-bite-lawsuits", title: "Dog Bite Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How dog bite lawsuits work, what factors may affect a claim, who may be responsible, and what evidence may matter after an animal attack.",
+      keywords: "dog bite lawsuit animal attack owner liability leash law scarring injury" },
+
+    { url: "catastrophic-injury-lawsuits", title: "Catastrophic Injury Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How catastrophic injury lawsuits work, what factors may affect a claim, and what evidence may matter after a life-changing injury.",
+      keywords: "catastrophic injury lawsuit traumatic brain injury spinal cord paralysis amputation burn permanent disability" },
+
+    { url: "wrongful-death-lawsuits", title: "Wrongful Death Lawsuits", tag: "Overview", category: "Personal Injury",
+      desc: "How wrongful death lawsuits work, who may bring a claim, what factors may affect it, and what evidence may matter after a fatal injury.",
+      keywords: "wrongful death lawsuit fatal survival action estate personal representative surviving family funeral loss of support" },
+
+    // ----- Financial -----
+    { url: "stock-market-fraud-lawsuits", title: "Stock Market Fraud Lawsuits", tag: "Overview", category: "Consumer & Financial",
+      desc: "Securities fraud, broker misconduct, pump-and-dump schemes, insider trading, Ponzi schemes, and shareholder claims.",
+      keywords: "stock market fraud lawsuit securities broker misconduct pump and dump insider trading ponzi shareholder investment loss finra arbitration" },
+
+    // ----- Resources -----
+    { url: "lawsuits", title: "Browse Lawsuits", tag: "Directory", category: "General",
+      desc: "Every litigation category tracked on Lawsuit Center, with case review options for each.",
+      keywords: "browse lawsuits all lawsuits categories directory list index find case type" },
+
+    { url: "resources", title: "Legal Resources", tag: "Directory", category: "General",
+      desc: "Legal resources on lawsuit research, case review, funding, claim categories, and practical next steps.",
+      keywords: "legal resources research guides help next steps directory" },
+
+    { url: "lawsuit-funding-options", title: "Lawsuit Funding Options", tag: "Guide", category: "General",
+      desc: "How lawsuit funding works, what to ask before applying, possible risks and alternatives, and how to compare legal funding companies.",
+      keywords: "lawsuit funding pre-settlement advance legal funding company loan cash advance while case pending risks alternatives compare" },
+
+    { url: "educational-review", title: "Legal Fee Agreement Review", tag: "Free Tool", category: "Free Tools",
+      desc: "Request an educational review of an attorney retainer or fee agreement to identify terms you may want to ask about before signing.",
+      keywords: "fee agreement retainer contingency contract review attorney fees costs lien what to ask before signing educational" },
+
     // ----- Overviews -----
     { url: "asbestos-lawsuits", title: "Asbestos Lawsuits", tag: "Overview", category: "Asbestos",
       desc: "Main asbestos hub: exposure history, illnesses tied to asbestos, and how case review works.",
@@ -182,19 +247,19 @@
 
     { url: "https://lawsuitinformer.com/openai-lawsuits", title: "OpenAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The central hub for OpenAI litigation coverage — ChatGPT wrongful death, self-harm, mass shooting claims, and the product-versus-content framing question.",
-      keywords: "openai chatgpt lawsuits wrongful death self harm overdose school shooting product liability section 230" },
+      keywords: "ai artificial intelligence openai chatgpt lawsuits wrongful death self harm overdose school shooting product liability section 230" },
 
     { url: "https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability", title: "OpenAI School Shooting Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "Federal lawsuits against OpenAI tied to mass shootings and the product-vs-content framing question.",
-      keywords: "openai chatgpt school shooting product liability section 230" },
+      keywords: "ai artificial intelligence openai chatgpt school shooting product liability section 230" },
 
     { url: "https://lawsuitinformer.com/chatgpt-fsu-shooting-lawsuit", title: "FSU Shooting Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The Chabba complaint: an eight-count federal lawsuit with a novel negligent entrustment theory for AI access.",
-      keywords: "fsu florida state shooting chatgpt openai negligent entrustment chabba" },
+      keywords: "ai artificial intelligence fsu florida state shooting chatgpt openai negligent entrustment chabba" },
 
     { url: "https://lawsuitinformer.com/chatgpt-overdose-lawsuit-scott", title: "Scott Overdose Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
       desc: "First major AI-as-unauthorized-medical-advisor wrongful death case (kratom + Xanax interaction).",
-      keywords: "scott chatgpt overdose kratom xanax wrongful death drug interaction" },
+      keywords: "ai artificial intelligence scott chatgpt overdose kratom xanax wrongful death drug interaction" },
 
     { url: "https://lawsuitinformer.com/cancers-linked-to-lawsuits", title: "Cancers Linked to Lawsuits", tag: "Overview", category: "Cancer",
       desc: "Guide on cancers most often involved in toxic exposure, product liability, and environmental claims.",
@@ -401,17 +466,37 @@
   ];
 
   // ---------- search logic ----------
+  /* Short terms match on a word boundary, longer ones on substring. Without this,
+     every field test below is a bare indexOf, so "ai" pulls in Air Pollution, Hair
+     Relaxer and Claim Checker, and "tor" pulls in attorney, history and victim.
+     The tradeoff is that a bounded "ai" no longer reaches inside "openai", so the
+     AI entries carry "ai artificial intelligence" in their keywords explicitly. */
+  function has(hay, q) {
+    if (q.length > 3) return hay.indexOf(q) !== -1;
+    var esc = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    return new RegExp("\\b" + esc + "\\b").test(hay);
+  }
+
+  /* The title-prefix bonus needs the same guard. A bare indexOf(q) === 0 scores
+     "Air Pollution Case Review" 80 for the query "ai", which outranks every real
+     AI page. For a short term the prefix only counts if it ends on a boundary. */
+  function startsWord(hay, q) {
+    if (hay.indexOf(q) !== 0) return false;
+    if (q.length > 3) return true;
+    return hay.length === q.length || !/[a-z0-9]/.test(hay.charAt(q.length));
+  }
+
   function score(item, q) {
     var t = item.title.toLowerCase();
     var c = (item.category || "").toLowerCase();
     var k = (item.keywords || "").toLowerCase();
     var d = (item.desc || "").toLowerCase();
     if (t === q) return 100;
-    if (t.indexOf(q) === 0) return 80;
-    if (t.indexOf(q) !== -1) return 60;
-    if (k.indexOf(q) !== -1) return 45;
-    if (c.indexOf(q) !== -1) return 35;
-    if (d.indexOf(q) !== -1) return 20;
+    if (startsWord(t, q)) return 80;
+    if (has(t, q)) return 60;
+    if (has(k, q)) return 45;
+    if (has(c, q)) return 35;
+    if (has(d, q)) return 20;
     return 0;
   }
 
