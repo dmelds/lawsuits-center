@@ -525,6 +525,12 @@
     return 0;
   }
 
+  var TAG_ORDER = ["Case Review", "Free Tool", "Overview", "Lawsuit", "Guide", "Case Filing", "Lawyers", "State Page", "Directory"];
+  function tagRank(tag) {
+    var i = TAG_ORDER.indexOf(tag || "");
+    return i === -1 ? TAG_ORDER.length : i;
+  }
+
   function search(query) {
     var q = query.trim().toLowerCase();
     if (!q) return [];
@@ -540,7 +546,14 @@
         return { item: item, score: s };
       })
       .filter(function (r) { return r.score > 0; })
-      .sort(function (a, b) { return b.score - a.score; })
+      /* Group before ranking. Lawsuit Center is the intake property, so a
+         matching case review comes before background, and background before
+         individual filings. Relevance still decides the order inside a group. */
+      .sort(function (a, b) {
+        var ga = tagRank(a.item.tag), gb = tagRank(b.item.tag);
+        if (ga !== gb) return ga - gb;
+        return b.score - a.score;
+      })
       .map(function (r) { return r.item; });
   }
 
