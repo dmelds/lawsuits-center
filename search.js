@@ -245,39 +245,39 @@
       desc: "What the TikTok lawsuits are about, who may be affected, MDL 3047, what to gather, and time limits.",
       keywords: "tiktok lawsuit bytedance tiktok addiction teen mental health youth harm mdl 3047 recommendation algorithm social media social media lawsuit social media addiction" },
 
-    { url: "https://lawsuitinformer.com/ai-lawsuits", title: "AI Lawsuits Overview", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/ai-lawsuits?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "AI Lawsuits Overview", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The top-level guide to AI litigation: who is being sued, the legal theories involved, and how the OpenAI, Grok, and Character.AI cases differ.",
       keywords: "ai lawsuits artificial intelligence litigation overview hub openai grok character ai deepfake chatbot product liability" },
 
-    { url: "https://lawsuitinformer.com/take-it-down-act", title: "The TAKE IT DOWN Act Explained", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/take-it-down-act?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "The TAKE IT DOWN Act Explained", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The federal law on nonconsensual intimate images and AI deepfakes — what it covers, the 48-hour platform removal duty, and victims' rights.",
       keywords: "take it down act nonconsensual intimate images ncii deepfake law platform removal 48 hours ftc victim rights deepfake laws" },
 
-    { url: "https://lawsuitinformer.com/grok-lawsuits", title: "Grok and xAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/grok-lawsuits?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "Grok and xAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The deepfake-image litigation against xAI — nonconsensual AI-generated images, the class actions, and the city and state actions.",
       keywords: "grok lawsuit xai deepfake nonconsensual ai generated images class action st clair baltimore privacy likeness" },
 
-    { url: "https://lawsuitinformer.com/character-ai-lawsuit", title: "Character.AI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/character-ai-lawsuit?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "Character.AI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "Teen-safety and wrongful death cases, the January 2026 settlements, and the state action alleging a chatbot posed as a licensed doctor.",
       keywords: "character ai lawsuit companion chatbot teen safety wrongful death settlement google medical impersonation doctor psychiatrist kentucky pennsylvania" },
 
-    { url: "https://lawsuitinformer.com/openai-lawsuits", title: "OpenAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/openai-lawsuits?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "OpenAI Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The central hub for OpenAI litigation coverage — ChatGPT wrongful death, self-harm, mass shooting claims, and the product-versus-content framing question.",
       keywords: "ai artificial intelligence openai chatgpt lawsuits wrongful death self harm overdose school shooting product liability section 230" },
 
-    { url: "https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability", title: "OpenAI School Shooting Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/openai-school-shooting-lawsuits-ai-product-liability?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "OpenAI School Shooting Lawsuits", tag: "Overview", category: "AI Chatbot Harm",
       desc: "Federal lawsuits against OpenAI tied to mass shootings and the product-vs-content framing question.",
       keywords: "ai artificial intelligence openai chatgpt school shooting product liability section 230" },
 
-    { url: "https://lawsuitinformer.com/chatgpt-fsu-shooting-lawsuit", title: "FSU Shooting Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/chatgpt-fsu-shooting-lawsuit?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "FSU Shooting Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
       desc: "The Chabba complaint: an eight-count federal lawsuit with a novel negligent entrustment theory for AI access.",
       keywords: "ai artificial intelligence fsu florida state shooting chatgpt openai negligent entrustment chabba" },
 
-    { url: "https://lawsuitinformer.com/chatgpt-overdose-lawsuit-scott", title: "Scott Overdose Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
+    { url: "https://lawsuitinformer.com/chatgpt-overdose-lawsuit-scott?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "Scott Overdose Lawsuit", tag: "Overview", category: "AI Chatbot Harm",
       desc: "First major AI-as-unauthorized-medical-advisor wrongful death case (kratom + Xanax interaction).",
       keywords: "ai artificial intelligence scott chatgpt overdose kratom xanax wrongful death drug interaction" },
 
-    { url: "https://lawsuitinformer.com/cancers-linked-to-lawsuits", title: "Cancers Linked to Lawsuits", tag: "Overview", category: "Cancer",
+    { url: "https://lawsuitinformer.com/cancers-linked-to-lawsuits?utm_source=lawsuitcenter&utm_medium=referral&utm_campaign=cross_property&utm_content=search", title: "Cancers Linked to Lawsuits", tag: "Overview", category: "Cancer",
       desc: "Guide on cancers most often involved in toxic exposure, product liability, and environmental claims.",
       keywords: "cancer lawsuits toxic exposure product liability environmental" },
 
@@ -578,6 +578,7 @@
             '<div class="search-result__top">' +
               '<span class="search-result__tag">' + escapeHtml(r.tag) + '</span>' +
               '<span class="search-result__category">' + escapeHtml(r.category) + '</span>' +
+              (/^https?:\/\//.test(r.url) ? '<span class="search-result__offsite">Lawsuit Informer</span>' : '') +
             '</div>' +
             '<h3 class="search-result__title">' + escapeHtml(r.title) + '</h3>' +
             '<p class="search-result__desc">' + escapeHtml(r.desc) + '</p>' +
