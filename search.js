@@ -145,6 +145,10 @@
       desc: "A grade 7 teacher who survived the Tumbler Ridge school shooting is suing OpenAI and Sam Altman, saying the company was told the attacker was dangerous eight months earlier and chose not to call police. Complaint posted in full.",
       keywords: "rushlow v altman rushlow lawsuit tumbler ridge school shooting british columbia canada teacher survivor openai sam altman chatgpt rcmp referral complaint pdf court filing 3:26-cv-09344 northern district california" },
 
+    { url: "case-filings/grant-v-openai-complaint.pdf", title: "Grant v. OpenAI \u2014 Complaint", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "An FSU student shot three times in the April 2025 campus attack is suing OpenAI and Sam Altman in Florida state court. The full 34-page complaint, straight from the court file.",
+      keywords: "grant v openai alianna grant lawsuit fsu florida state university shooting survivor shot three times leon county circuit court tallahassee openai sam altman chatgpt complaint pdf court filing 2026 ca 001352 aiding abetting product liability" },
+
     { url: "morales-v-openai-lawsuit", title: "Morales v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
       desc: "The widow of a Florida State University dining administrator killed in the April 2025 campus shooting is suing OpenAI and, for the first time in an FSU case, Sam Altman personally. Complaint posted in full.",
       keywords: "morales v openai morales lawsuit fsu florida state university shooting roberto morales betty morales wrongful death openai sam altman chatgpt complaint pdf court filing 4:26-cv-00425 northern district florida tallahassee" },
