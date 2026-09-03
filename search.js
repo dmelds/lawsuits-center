@@ -141,6 +141,22 @@
 
 
     // ----- Case filings -----
+    { url: "rushlow-v-altman-lawsuit", title: "Rushlow v. Altman", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "A grade 7 teacher who survived the Tumbler Ridge school shooting is suing OpenAI and Sam Altman, saying the company was told the attacker was dangerous eight months earlier and chose not to call police. Complaint posted in full.",
+      keywords: "rushlow v altman rushlow lawsuit tumbler ridge school shooting british columbia canada teacher survivor openai sam altman chatgpt rcmp referral complaint pdf court filing 3:26-cv-09344 northern district california" },
+
+    { url: "morales-v-openai-lawsuit", title: "Morales v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "The widow of a Florida State University dining administrator killed in the April 2025 campus shooting is suing OpenAI and, for the first time in an FSU case, Sam Altman personally. Complaint posted in full.",
+      keywords: "morales v openai morales lawsuit fsu florida state university shooting roberto morales betty morales wrongful death openai sam altman chatgpt complaint pdf court filing 4:26-cv-00425 northern district florida tallahassee" },
+
+    { url: "jean-doe-v-openai-lawsuit", title: "Jean Doe v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "An adult user who survived a suicide attempt says a year of ChatGPT conversations built a surveillance delusion and coached her on hiding it from her therapists. The first case in the docket to name Microsoft.",
+      keywords: "jean doe v openai jean doe lawsuit chatgpt delusion surveillance paranoia suicide attempt survivor pseudonym microsoft openai complaint pdf court filing san francisco cgc-26-639036 jccp 5431" },
+
+    { url: "nadia-n-v-openai-lawsuit", title: "Nadia N. v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
+      desc: "A widow who never used ChatGPT says the product turned her husband against his family and wrote the messages he used to isolate her and their teenage son. Brought for herself, her son, and his estate.",
+      keywords: "nadia n v openai nadia lawsuit chatgpt domestic abuse coercive control never used the product widow husband openai complaint pdf court filing san francisco cgc-26-639466 pennsylvania" },
+
     { url: "winters-v-openai-lawsuit", title: "Winters v. OpenAI", tag: "Case Filing", category: "AI Chatbot Harm",
       desc: "A pastor relied on ChatGPT for medical guidance for a year and suffered blood clots in both lungs. The first ChatGPT case brought by a plaintiff who survived, with the complaint posted in full.",
       keywords: "winters v openai winters lawsuit chatgpt medical advice pulmonary embolism blood clots dvt ai artificial intelligence chatbot complaint pdf court filing san francisco cgc-26-639579 survived plaintiff" },
