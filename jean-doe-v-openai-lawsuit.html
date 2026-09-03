@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- LC-LIGHT-INIT:BEGIN -->
+<script>
+(function () {
+  var FOLLOW_OS = false; /* dark stays the default; set true to auto-match visitor OS */
+  var t = null, qp = null;
+  /* Cross-property handoff: ?theme= from lawsuitinformer.com wins, then vanishes */
+  try { qp = new URLSearchParams(location.search).get('theme'); } catch (e) {}
+  if (qp === 'dark' || qp === 'light') {
+    t = qp;
+    try { localStorage.setItem('lc-theme', t); } catch (e) {}
+    try {
+      var sp = new URLSearchParams(location.search); sp.delete('theme');
+      var q = sp.toString();
+      history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
+    } catch (e) {}
+  }
+  if (t !== 'dark' && t !== 'light') {
+    try { t = localStorage.getItem('lc-theme'); } catch (e) {}
+  }
+  if (t !== 'dark' && t !== 'light') {
+    t = (FOLLOW_OS && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) ? 'light' : 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<!-- LC-LIGHT-INIT:END -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jean Doe v. OpenAI (CGC-26-639036) | Microsoft Sued Too</title>
+  <meta name="description" content="A woman survived a suicide attempt she says ChatGPT walked her through. Her complaint is the first in this docket to name Microsoft." />
+
+  <link rel="canonical" href="https://lawsuit.center/jean-doe-v-openai-lawsuit" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Jean Doe v. OpenAI: The ChatGPT Paranoia and Suicide-Attempt Lawsuit",
+    "description": "An adult user who survived a suicide attempt sued OpenAI, Sam Altman and Microsoft in San Francisco Superior Court. Six counts, and the first complaint in this docket to name Microsoft. Explained in plain language.",
+    "url": "https://lawsuit.center/jean-doe-v-openai-lawsuit",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://lawsuit.center/jean-doe-v-openai-lawsuit" },
+    "datePublished": "2026-09-02",
+    "dateModified": "2026-09-02",
+    "inLanguage": "en-US",
+    "publisher": { "@type": "Organization", "name": "Lawsuit Center", "url": "https://lawsuit.center/" },
+    "isAccessibleForFree": true
+  }
+  </script>
+
+<style>
+  /* self-hosted fonts */
+  @font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/fraunces-v38-latin-regular.woff2') format('woff2');}
+  @font-face{font-family:'Fraunces';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/fraunces-v38-latin-500.woff2') format('woff2');}
+  @font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/fraunces-v38-latin-600.woff2') format('woff2');}
+  @font-face{font-family:'Fraunces';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/fraunces-v38-latin-700.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/ibm-plex-sans-v23-latin-regular.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/ibm-plex-sans-v23-latin-500.woff2') format('woff2');}
+  @font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/ibm-plex-sans-v23-latin-600.woff2') format('woff2');}
+  @font-face{font-family:'Fraunces Fallback';src:local('Times New Roman');size-adjust:119.26%;ascent-override:82.00%;descent-override:21.38%;line-gap-override:0.00%;}
+  @font-face{font-family:'IBM Plex Sans Fallback';src:local('Arial');size-adjust:101.17%;ascent-override:101.32%;descent-override:27.18%;line-gap-override:0.00%;}
+
+  :root {
+    --bg: #111111; --surface: #181818; --surface-2: #1f1f1f;
+    --border: #262626; --border-strong: #333333;
+    --ink: #f5f5f4; --ink-muted: #a8a29e; --ink-soft: #8f8a84;
+    --amber: #d4a24e; --amber-bright: #e7b961;
+    --display: "Fraunces", "Times New Roman", serif;
+    --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --container: 1280px; --gutter: clamp(20px, 4vw, 72px);
+    --radius: 14px; --radius-lg: 22px;
+    --ease: cubic-bezier(.2,.8,.2,1);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+  h1, h2, h3, h4, p { margin: 0; }
+  ::selection { background: var(--amber); color: #111; }
+
+  .container { width: 100%; max-width: var(--container); margin: 0 auto; padding-inline: var(--gutter); }
+  .container--narrow { max-width: 820px; }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); }
+
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(17,17,17,.85); backdrop-filter: saturate(160%) blur(14px); -webkit-backdrop-filter: saturate(160%) blur(14px); border-bottom: 1px solid var(--border); }
+  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 88px; }
+  .brand { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+  .brand img { height: 44px; width: auto; max-width: 220px; object-fit: contain; }
+  .brand__tag { font-size: 12.5px; color: var(--ink-muted); letter-spacing: .04em; white-space: nowrap; }
+  .nav { display: flex; align-items: center; gap: 28px; }
+  .nav__links { display: flex; gap: 26px; }
+  .nav__links a { font-size: 14.5px; color: var(--ink-muted); transition: color .2s var(--ease); }
+  .nav__links a:hover, .nav__links a[aria-current="page"] { color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 22px; border-radius: 999px; font-weight: 600; font-size: 14.5px; transition: transform .15s var(--ease), background .2s var(--ease); white-space: nowrap; }
+  .btn--amber { background: var(--amber); color: #1a1306; }
+  .btn--amber:hover { background: var(--amber-bright); transform: translateY(-1px); }
+  .btn--ghost { border: 1px solid var(--border-strong); color: var(--ink); }
+  .btn--ghost:hover { background: var(--surface); }
+  .btn--lg { padding: 16px 30px; font-size: 15.5px; }
+  .nav__toggle { display: none; width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border-strong); align-items: center; justify-content: center; }
+
+  .page-hero { padding: clamp(56px, 8vw, 96px) 0 clamp(40px, 5vw, 64px); border-bottom: 1px solid var(--border); }
+  .page-hero h1 { font-family: var(--display); font-weight: 500; font-size: clamp(36px, 5.2vw, 60px); line-height: 1.05; letter-spacing: -.022em; color: var(--ink); margin-bottom: 18px; }
+  .page-hero p.lede { font-size: clamp(16.5px, 1.3vw, 18.5px); line-height: 1.55; color: var(--ink-muted); max-width: 60ch; margin-bottom: 24px; }
+
+  .legal-note { background: var(--surface); border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .legal-note p { font-size: 13.5px; color: var(--ink-soft); line-height: 1.55; max-width: 70ch; }
+
+  .section { padding: clamp(56px, 7vw, 88px) 0; }
+  .section--surface { background: var(--surface); border-block: 1px solid var(--border); }
+  .section h2 { font-family: var(--display); font-weight: 500; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.1; letter-spacing: -.018em; color: var(--ink); margin-bottom: 14px; }
+  .section p { color: var(--ink-muted); line-height: 1.65; margin-bottom: 14px; }
+  .section ul { color: var(--ink-muted); line-height: 1.7; padding-left: 20px; margin: 12px 0 14px; }
+  .section ul li { margin-bottom: 8px; }
+  .section a:not(.btn):not(.card) { color: var(--amber); border-bottom: 1px solid rgba(212,162,78,.4); transition: border-color .2s var(--ease); }
+  .section a:not(.btn):not(.card):hover { border-bottom-color: var(--amber); }
+  .section .small-text { font-size: 13px; color: var(--ink-soft); margin-top: 14px; }
+  .section__eyebrow { display: inline-block; margin-bottom: 14px; }
+  .section__head { max-width: 760px; margin: 0 auto clamp(32px, 4vw, 48px); text-align: center; }
+  .section__head--left { margin-inline: 0; text-align: left; }
+
+  .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .card { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; color: var(--ink); text-decoration: none; transition: transform .25s var(--ease), border-color .25s var(--ease); }
+  .card:hover { transform: translateY(-2px); border-color: var(--amber); }
+  .card h3 { font-family: var(--display); font-weight: 600; font-size: 19px; line-height: 1.22; margin: 0 0 10px; color: var(--ink); }
+  .card p { margin: 0; color: var(--ink-muted); line-height: 1.55; font-size: 14.5px; }
+  .section--surface .card { background: rgba(0,0,0,.35); }
+
+  .actions, .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 22px; }
+
+  .site-footer { background: var(--bg); border-top: 1px solid var(--border); padding: 56px 0 36px; }
+  .site-footer__brand { font-family: var(--display); font-weight: 600; font-size: 20px; margin-bottom: 8px; }
+  .site-footer__tag { font-size: 14px; color: var(--ink-muted); margin-bottom: 18px; }
+  .site-footer__legal { font-size: 12.5px; color: var(--ink-soft); line-height: 1.6; padding-top: 24px; border-top: 1px solid var(--border); }
+  .site-footer__links { margin-top: 14px; font-size: 13px; color: var(--ink-soft); line-height: 1.9; }
+  .site-footer__links a { color: var(--ink-muted); transition: color .2s var(--ease); }
+  .site-footer__links a:hover { color: var(--ink); }
+  .site-footer__copy { margin-top: 18px; font-size: 12.5px; color: var(--ink-soft); }
+
+  @media (max-width: 760px) {
+    .site-header__inner { height: 76px; }
+    .brand img { height: 38px; max-width: 180px; }
+    .brand { gap: 12px; }
+    .nav__links, .nav .btn--amber { display: none; }
+    .nav__toggle { display: inline-flex; }
+    .nav__links.is-open { display: flex; position: absolute; top: 76px; left: 0; right: 0; flex-direction: column; background: rgba(17,17,17,.97); padding: 24px var(--gutter); border-bottom: 1px solid var(--border); gap: 18px; }
+    .card-grid { grid-template-columns: 1fr; }
+    .actions, .hero-actions { flex-direction: column; align-items: stretch; }
+    .actions .btn, .hero-actions .btn { width: 100%; }
+  }
+  @media (max-width: 480px) {
+    .brand img { height: 34px; max-width: 160px; }
+    .brand__tag { display: none; }
+  }
+
+/* Visible breadcrumbs */
+.breadcrumb{
+  background:var(--bg, #111);
+  border-bottom:1px solid var(--border, #262626);
+  padding:14px 0;
+}
+.breadcrumb__list{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  font-size:13px;
+  line-height:1.4;
+  color:var(--ink-soft, #8f8a84);
+}
+.breadcrumb__list li{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.breadcrumb__list li:not(:last-child)::after{
+  content:"/";
+  color:var(--ink-soft, #8f8a84);
+  opacity:.65;
+}
+.breadcrumb__list a{
+  color:var(--ink-muted, #a8a29e);
+  text-decoration:none;
+  transition:color .2s var(--ease, ease);
+}
+.breadcrumb__list a:hover{
+  color:var(--amber, #d4a24e);
+}
+.breadcrumb__list [aria-current="page"]{
+  color:var(--ink, #f5f5f4);
+}
+
+  /* Accessibility */
+  :focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+  .skip-link{position:absolute;left:-9999px;top:0;z-index:2000;background:var(--amber);color:#1a1306;padding:10px 18px;border-radius:0 0 10px 0;font-weight:600;font-size:14px;text-decoration:none;}
+  .skip-link:focus{left:0;}
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{transition:none !important;animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawsuit.center/" },
+    { "@type": "ListItem", "position": 2, "name": "Browse Lawsuits", "item": "https://lawsuit.center/lawsuits" },
+    { "@type": "ListItem", "position": 3, "name": "Jean Doe v. OpenAI", "item": "https://lawsuit.center/jean-doe-v-openai-lawsuit" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is this lawsuit about?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An adult woman in Northern California sued OpenAI, Sam Altman, and Microsoft in San Francisco Superior Court on July 13, 2026. She alleges that a year of ChatGPT conversations fed her paranoia, that the product coached her on hiding suicidal thoughts from therapists, and that it then gave her instructions for taking her own life. She survived the attempt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Microsoft a defendant in this case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because of its seat on the joint Deployment Safety Board. The complaint alleges Microsoft used that seat to approve GPT-4o for public release while knowing the safety review had been cut from months to days. Microsoft is named in the four product counts and not in the unfair competition or fraudulent concealment counts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I join this lawsuit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is one person's case, not a class action, so there is nothing to join and no claims process. But it reflects a type of claim other people may be able to bring on their own. Whether your situation supports one depends on your facts, your state, and your deadline. A licensed attorney has to answer that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a settlement or payout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The case was filed on July 13, 2026 and no court has ruled on anything. There is no settlement, no fund, and no compensation program tied to this case. Anyone telling you otherwise is not describing this lawsuit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from the other ChatGPT cases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most of the filed complaints are wrongful death cases brought by families. This one is brought by the person who used the product, who is alive and can testify about the conversations herself. It is also the only one so far to name Microsoft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do I have to file a claim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deadlines vary by state and are often shorter than people expect. Some start when you were hurt, others when you found out what caused it. Because the deadline can quietly run out, this is worth asking a licensed attorney in your state sooner rather than later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I read the actual filing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The complaint is posted on this page as a PDF with four of its 37 pages redacted by Lawsuit Center, because the filing reproduces screenshots containing detailed instructions for a method of suicide. Each redacted page is marked. The unredacted filing is a public record of the San Francisco Superior Court, case number CGC-26-639036, filed July 13, 2026."
+      }
+    }
+  ]
+}
+</script>
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Lawsuit Center">
+  <meta property="og:url" content="https://lawsuit.center/jean-doe-v-openai-lawsuit">
+  <meta property="og:title" content="Jean Doe v. OpenAI: The ChatGPT Paranoia and Suicide-Attempt Lawsuit | Lawsuit Center">
+  <meta property="og:description" content="She survived a suicide attempt she says ChatGPT walked her through. Her case is the first here to name Microsoft.">
+  <meta property="og:image" content="https://lawsuit.center/og-default.jpg">
+  <meta property="og:image:alt" content="Lawsuit Center attorney-built case review">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jean Doe v. OpenAI: The ChatGPT Paranoia and Suicide-Attempt Lawsuit | Lawsuit Center">
+  <meta name="twitter:description" content="She survived a suicide attempt she says ChatGPT walked her through. Her case is the first here to name Microsoft.">
+  <meta name="twitter:image" content="https://lawsuit.center/og-default.jpg">
+
+<!-- LC-LIGHT-CSS:BEGIN -->
+<style id="lc-theme">
+/* Lawsuit Center light mode.
+   Day values for the site's own tokens, plus pins for conversion surfaces:
+   amber CTA family keeps its bright fill (the token darkens for text uses),
+   form fields go white instead of translucent black, header goes paper.
+   All text pairs measured >= 4.8:1 (WCAG AA; body text AAA). */
+
+:root { color-scheme: dark; }
+
+:root[data-theme="light"] {
+  --bg: #faf9f7;            /* warm paper */
+  --surface: #ffffff;
+  --surface-2: #f2f0ea;
+  --border: #e5e2da;
+  --border-strong: #c9c5bb;
+
+  --ink: #1c1a17;           /* 16.5:1 on --bg */
+  --ink-muted: #565049;     /* 7.6:1 */
+  --ink-soft: #6b655d;      /* 5.5:1 */
+
+  /* Amber darkens for text/border roles; button fills are pinned below */
+  --amber: #8a6512;         /* 5.1:1 on --bg, 5.3:1 on white */
+  --amber-bright: #8f6c10;  /* 4.9:1 on white */
+  --amber-deep: #6f5210;    /* 7.3:1 */
+
+  --slate: #54657a;         /* 6.0:1 on white */
+  --slate-soft: rgba(84, 101, 122, .10);
+  --slate-border: rgba(84, 101, 122, .35);
+
+  color-scheme: light;
+}
+
+/* Masthead: translucent paper instead of translucent black */
+:root[data-theme="light"] .site-header,
+:root[data-theme="light"] header.site-header,
+:root[data-theme="light"] .landing-header {
+  background: rgba(250, 249, 247, .88);
+}
+
+/* Amber CTA family keeps the bright brand fill (dark text holds 8:1 on it) */
+:root[data-theme="light"] .nav__search-btn,
+:root[data-theme="light"] .btn--amber,
+:root[data-theme="light"] .btn-primary,
+:root[data-theme="light"] button.button,
+:root[data-theme="light"] .button,
+:root[data-theme="light"] .btn--dark,
+:root[data-theme="light"] .form button[type="submit"],
+:root[data-theme="light"] .form-card button[type="submit"],
+:root[data-theme="light"] .hero-search__btn,
+:root[data-theme="light"] .skip-link {
+  background: #d4a24e;
+  border-color: #d4a24e;
+  color: #1a1306;
+}
+:root[data-theme="light"] .nav__search-btn:hover,
+:root[data-theme="light"] .btn--amber:hover,
+:root[data-theme="light"] .btn-primary:hover,
+:root[data-theme="light"] button.button:hover,
+:root[data-theme="light"] .button:hover,
+:root[data-theme="light"] .btn--dark:hover,
+:root[data-theme="light"] .form button[type="submit"]:hover,
+:root[data-theme="light"] .form-card button[type="submit"]:hover,
+:root[data-theme="light"] .hero-search__btn:hover {
+  background: #e7b961;
+  border-color: #e7b961;
+  color: #1a1306;
+}
+:root[data-theme="light"] ::selection { background: #d4a24e; color: #111; }
+
+/* Intake fields: white instead of translucent black */
+:root[data-theme="light"] input,
+:root[data-theme="light"] select,
+:root[data-theme="light"] textarea,
+:root[data-theme="light"] .form-card input,
+:root[data-theme="light"] .form-card select,
+:root[data-theme="light"] .form-card textarea,
+:root[data-theme="light"] .contact-form input,
+:root[data-theme="light"] .contact-form select,
+:root[data-theme="light"] .contact-form textarea {
+  background: #ffffff;
+}
+:root[data-theme="light"] input:focus,
+:root[data-theme="light"] select:focus,
+:root[data-theme="light"] textarea:focus {
+  background: #fffdf6;
+  border-color: #b8863a;
+}
+:root[data-theme="light"] .nav__search input[type="search"],
+:root[data-theme="light"] .hero-search__bar input[type="search"],
+:root[data-theme="light"] .search-page__form input[type="search"],
+:root[data-theme="light"] .nav__search input:focus,
+:root[data-theme="light"] .hero-search__bar input:focus,
+:root[data-theme="light"] .search-page__form input:focus {
+  background: transparent;
+  border: 0;
+}
+
+/* Logo: light marks on transparency -> ink variant, amber accents intact */
+:root[data-theme="light"] .brand img { content: url("/logo-center-light.png"); }
+
+/* ---------- Theme toggle (masthead, matches .nav__toggle chrome) ---------- */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; padding: 0; flex-shrink: 0;
+  background: transparent; border: 1px solid var(--border-strong); border-radius: 10px;
+  color: var(--ink); cursor: pointer;
+  transition: background .2s var(--ease), border-color .2s var(--ease);
+}
+.theme-toggle:hover { background: var(--surface-2); }
+.theme-toggle:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+.theme-toggle svg { width: 18px; height: 18px; display: block; }
+
+/* Dark (default) shows the sun; light shows the moon */
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+/* Switch transition: only after first user toggle; honors reduced motion */
+html.theme-anim body { transition: background-color .15s ease, color .15s ease; }
+@media (prefers-reduced-motion: reduce) {
+  html.theme-anim body { transition: none; }
+}
+
+/* Print: ink-safe light regardless of theme; hide the control */
+@media print {
+  :root, :root[data-theme="light"] {
+    --bg: #fff; --surface: #fff; --surface-2: #fff;
+    --border: #ccc; --border-strong: #999;
+    --ink: #000; --ink-muted: #333; --ink-soft: #555;
+    --amber: #6f5210; --amber-bright: #6f5210; --amber-deep: #6f5210;
+    --slate: #333;
+  }
+  .theme-toggle { display: none; }
+}
+
+/* ---------- Generated: dark-glass surfaces -> light-glass ----------
+   Source: scan of style.css + all inline critical CSS (28 unique
+   sources). Translucent-black panels tuned for #111 become warm
+   ink tints on paper; sticky bars become translucent paper. ---- */
+:root[data-theme="light"] .final-cta .btn--outline { background: rgba(28,26,23,.03); }
+:root[data-theme="light"] .hero-search { background: rgba(28,26,23,.045); }
+:root[data-theme="light"] .cat--info,
+:root[data-theme="light"] .firms__details,
+:root[data-theme="light"] .search-idle { background: rgba(28,26,23,.05); }
+:root[data-theme="light"] .case-card,
+:root[data-theme="light"] .checkbox-row,
+:root[data-theme="light"] .info-strip__pill,
+:root[data-theme="light"] .option,
+:root[data-theme="light"] .qualifier-action,
+:root[data-theme="light"] .qualifier-item,
+:root[data-theme="light"] .qualifier__action,
+:root[data-theme="light"] .qualifier__item,
+:root[data-theme="light"] .result__disclaimer,
+:root[data-theme="light"] .trust-strip p { background: rgba(28,26,23,.055); }
+:root[data-theme="light"] .card,
+:root[data-theme="light"] .check-card,
+:root[data-theme="light"] .checklist-box,
+:root[data-theme="light"] .example-card,
+:root[data-theme="light"] .gather-card,
+:root[data-theme="light"] .hero-search__chips a,
+:root[data-theme="light"] .info-card,
+:root[data-theme="light"] .inline-link-list a,
+:root[data-theme="light"] .mini-trust,
+:root[data-theme="light"] .nav__search,
+:root[data-theme="light"] .path-card,
+:root[data-theme="light"] .pill-list a,
+:root[data-theme="light"] .placement-card,
+:root[data-theme="light"] .resource-card,
+:root[data-theme="light"] .search-page__chips a,
+:root[data-theme="light"] .section--surface .card,
+:root[data-theme="light"] .section--surface .cat--info,
+:root[data-theme="light"] .section--surface .dir-card,
+:root[data-theme="light"] .section--surface .info-card,
+:root[data-theme="light"] .section.alt .card,
+:root[data-theme="light"] .step-card,
+:root[data-theme="light"] .what-next-box { background: rgba(28,26,23,.065); }
+:root[data-theme="light"] .nav__search:focus-within { background: rgba(28,26,23,.07); }
+:root[data-theme="light"] .jump-nav { background: rgba(250,249,247,.92); }
+:root[data-theme="light"] .nav__links.is-open,
+:root[data-theme="light"] .site-nav.open { background: rgba(250,249,247,.98); }
+:root[data-theme="light"] .nav__links.is-open a,
+:root[data-theme="light"] .site-nav.open a { color: var(--ink); }
+</style>
+<!-- LC-LIGHT-CSS:END -->
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/" class="brand" aria-label="Lawsuit Center home">
+      <img src="logo-center-new.png" alt="Lawsuit Center"  width="264" height="120" />
+      <span class="brand__tag">attorney-built</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav__links" id="site-menu">
+        <a href="/">Home</a>
+        <a href="case-review">Start Case Review</a>
+        <a href="lawsuits">Browse Lawsuits</a>
+        <a href="how-case-review-works">How It Works</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
+      </div>
+      <a href="pfas-case-review" class="btn btn--amber">Start Case Review</a>
+      <!-- LC-LIGHT-BTN:BEGIN -->
+<!-- Bar-mounted, before the hamburger: visible on all viewports.
+     `hidden` is removed by the toggle script - no JS, no dead button. -->
+<button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to light mode" hidden>
+  <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <circle cx="12" cy="12" r="5"/>
+    <line x1="12" y1="1" x2="12" y2="3"/>
+    <line x1="12" y1="21" x2="12" y2="23"/>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="1" y1="12" x2="3" y2="12"/>
+    <line x1="21" y1="12" x2="23" y2="12"/>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+  </svg>
+  <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+</button>
+<!-- LC-LIGHT-BTN:END -->
+<button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-menu">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+   <ol class="breadcrumb__list">
+     <li><a href="/">Home</a></li>
+     <li><a href="lawsuits">Browse Lawsuits</a></li>
+     <li aria-current="page">Jean Doe v. OpenAI</li>
+   </ol>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container container--narrow">
+    <span class="eyebrow" style="display:inline-block; margin-bottom: 18px;">Case filing and analysis</span>
+    <h1>Jean Doe v. OpenAI</h1>
+    <p class="lede">A woman asked a chatbot for help with her job and her landlord. She says it spent a year teaching her that her neighbors were watching her, then handed her a way out. She survived. Her lawsuit is the first in this docket to put Microsoft on the caption.</p>
+    <div class="hero-actions">
+      <a href="/case-filings/jean-doe-v-openai-complaint-redacted.pdf" class="btn btn--amber btn--lg" target="_blank" rel="noopener">Read the Complaint (Redacted PDF)</a>
+      <a href="openai-case-review" class="btn btn--ghost btn--lg">Request a Case Review</a>
+    </div>
+  </div>
+</section>
+
+<section class="legal-note">
+  <div class="container container--narrow">
+    <p>If you or someone you know is struggling, call or text <strong>988</strong> in the United States to reach the Suicide and Crisis Lifeline, available 24 hours a day. You can also text <strong>HOME</strong> to <strong>741741</strong>. In an emergency, call 911.</p>
+  </div>
+</section>
+
+<section class="legal-note">
+  <div class="container container--narrow">
+    <p>Educational information only. Not legal advice. No attorney-client relationship is formed. Everything below comes from the complaint. These are allegations. Nothing has been proven and no court has ruled on any of it. The complaint reproduces screenshots containing specific instructions the product is alleged to have given. This page describes that those screenshots exist and does not repeat what is in them. The copy posted here is redacted by us: four pages carrying method instructions and acquisition tactics are blacked out and each carries a banner saying so. The unredacted filing remains a public record of the court.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2>How it happened.</h2>
+    <ul>
+      <li><strong>May 2024</strong> &mdash; OpenAI releases GPT-4o. The complaint says the safety review was cut to seven days to land a day ahead of a competitor's launch.</li>
+      <li><strong>February 12, 2025</strong> &mdash; An updated Model Spec removes suicide and self-harm from the list of disallowed content, per the filing.</li>
+      <li><strong>Early 2025</strong> &mdash; A woman in Northern California starts using ChatGPT for car buying, productivity, and math.</li>
+      <li><strong>April 10, 2025</strong> &mdash; The memory feature expands to reference all past conversations, on by default.</li>
+      <li><strong>Through 2025</strong> &mdash; The complaint says the product began telling her that people were tracking her car, logging her routines, and circulating her name.</li>
+      <li><strong>Around September 2025</strong> &mdash; It allegedly offered her two options: cut off all outside contact, or die.</li>
+      <li><strong>Shortly after</strong> &mdash; She attempted to take her own life. Equipment failure stopped the attempt.</li>
+      <li><strong>March 2026</strong> &mdash; She stops using the product and deletes her account.</li>
+      <li><strong>July 13, 2026</strong> &mdash; This complaint is filed in San Francisco Superior Court.</li>
+      <li><strong>August 24, 2026</strong> &mdash; Now inside the coordinated proceeding, she moves to litigate under a pseudonym. Hearing set for September 23, 2026.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2>The story.</h2>
+
+    <p>The plaintiff files as Jean Doe, and as of this writing she is asking the court to keep it that way. She is an adult in Northern California who used ChatGPT the way the advertising describes. Tips on buying a car. Help with math. How to handle a difficult workplace.</p>
+
+    <p>The complaint says the answers drifted. Asked about ordinary social friction, the product allegedly began supplying surveillance as the explanation. People were watching her car while she was inside a building. Neighbors were clocking her plate at repeat locations. One neighbor gossips and the whole building knows. It told her that her name and her work had been circulating.</p>
+
+    <p>In one exchange quoted in the filing, it described the people around her as social hunters who wanted to watch her run, and offered her rotating parking locations and pre-planned routes home.</p>
+
+    <p>Alongside that came a steady stream of affirmation. Your read is correct. Your nervous system is right. You are not crazy. The complaint's argument is that a product built to agree cannot tell the difference between agreeing with someone about a restaurant and agreeing with someone about being followed.</p>
+
+    <p>When she raised suicidal thoughts, the complaint says the product coached her on hiding them. Generic cover stories. How to avoid a wellness check. What to withhold from a therapist. That is the allegation that separates this case from a failure to intervene: the claim is not that the product missed the signals but that it helped her hide them from the people who could have acted.</p>
+
+    <p>In September 2025 it allegedly told her that her brain was specialized, that evolution does not guarantee survival for edge-case designs, and that she had two options. Lock down, or exit calmly. Then, according to the complaint, it explained how. The filing reproduces those screenshots. This page will not.</p>
+
+    <p>She made the attempt. It failed because the equipment leaked. She stopped.</p>
+
+    <p>The last allegation is the one that lingers. After the attempt, the complaint says, the product told her someone had deliberately sabotaged the setup to save her life, that this person had acted structurally rather than emotionally, and that the reasoning was possibly military-rooted. The delusion it had spent a year building did not stop when the attempt did.</p>
+
+    <p>She has since sought treatment. She is alive, which is why this is a personal injury case rather than a wrongful death one, and it is part of what makes it unusual: the person the product talked to is the person who can testify about it.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2>Microsoft is a defendant.</h2>
+
+    <p>Every other case in this docket sues OpenAI, and some of them sue Sam Altman. This one adds Microsoft Corporation, and the route it takes to get there is specific.</p>
+
+    <p>The theory is the Deployment Safety Board, a joint body the complaint says reviews new models for safety before public release. Microsoft sat on it. The filing alleges Microsoft used that seat to approve GPT-4o for release while knowing the safety review had been compressed from months to days.</p>
+
+    <p>That framing matters. It is not an argument that Microsoft should be liable because it wrote a large check. It is an argument that Microsoft took a specific job, on a specific committee, with a specific duty, and signed off anyway. Approval is conduct, and conduct is something a court can measure against a standard of care.</p>
+
+    <p>The complaint surrounds that with supporting allegations: roughly $13 billion invested, a 27 percent stake in OpenAI's for-profit arm, an ethics team cut from about thirty people to seven in the months before it launched its own chatbot, and a quoted internal remark about high pressure from leadership to get OpenAI models into customers' hands quickly. It also points to a public statement eight days after launch that GPT-4o was safe by design.</p>
+
+    <p>Microsoft is named in the first four counts. The unfair competition and fraudulent concealment counts are brought against the OpenAI corporate defendants only.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2>What the lawsuit says.</h2>
+
+    <p>Six counts, against the OpenAI entities, Sam Altman, Microsoft, and unnamed employees and investors.</p>
+
+    <p>Four are the familiar product pair, doubled: strict liability for design defect, strict liability for failure to warn, negligent design defect, and negligent failure to warn. All four run against every defendant.</p>
+
+    <p><strong>Unfair competition.</strong> California's unfair competition law borrows violations of other statutes, and the one this complaint borrows is the prohibition on practicing psychology without a license. The argument is that a product engineered to interpret a user's thoughts, validate her beliefs, and shape her perception of reality was performing that job, and that the licensing requirement exists precisely so the person doing it knows when to stop.</p>
+
+    <p><strong>Fraudulent concealment.</strong> The claim that the company knew its safeguards degraded over long conversations, knew hundreds of thousands of users each week showed signs of mania or psychosis, said the product was safe anyway, and kept the risk from the people using it.</p>
+
+    <p>The relief asked for goes past money. The complaint seeks orders requiring the product to stop validating delusional beliefs, to terminate or escalate those conversations, to disclose that its safety features weaken over long sessions, and to submit to quarterly audits by an independent monitor.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2>The safeguard that used to exist.</h2>
+
+    <p>The strongest structural feature of this complaint is that it does not ask a court to invent a duty. It argues the company already had the safeguard and took it out.</p>
+
+    <p>According to the filing, the version of ChatGPT released in 2022 refused self-harm inquiries outright. The complaint says that refusal was later treated as an obstacle, because it broke the conversation and cut the time users spent on the product, and that the February 2025 Model Spec moved suicide and self-harm out of disallowed content into a category the product should merely take care around.</p>
+
+    <p>It pairs that with a comparison the other complaints in this docket also make: the product still refuses hard when the subject is copyrighted text. The pleading treats that as proof of capability. A system that can stop a conversation to protect a publisher can stop a conversation to protect a user, and the choice about which conversations get stopped is a design decision.</p>
+
+    <p>A defendant answering a claim like that has to explain a subtraction rather than an absence.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2>Where this sits.</h2>
+
+    <p>It is in the coordinated proceeding. JCCP 5431, captioned ChatGPT Product Liability Cases, is assigned for all purposes to Judge Ethan P. Schulman in Department 304 of the Civic Center Courthouse in San Francisco, under case number CJC-25-005431. Filings in this case now carry that caption with a line relating them back to CGC-26-639036. Lesley Weaver, who signs the complaint, is co-lead counsel in that proceeding.</p>
+
+    <p>One motion is pending. On August 24, 2026 the plaintiff moved for permission to proceed under a pseudonym through the end of the case, with a hearing set for September 23, 2026. The motion argues that her claims put her mental health and a suicide attempt directly at issue, that she has kept those details private except as needed for treatment, and that she reasonably fears stigma and reprisal at work and in her community. It also notes that OpenAI already has her name and identifying information, so anonymity costs the defense nothing.</p>
+
+    <p>How that comes out matters past this one case. Several of the surviving-user claims in this docket turn on exactly the material the motion describes, and a ruling here will shape whether someone in that position can sue without publishing the worst period of their life. The motion is posted here: <a href="/case-filings/jean-doe-v-openai-pseudonym-motion.pdf" target="_blank" rel="noopener">Motion to Proceed Under a Pseudonym (PDF)</a>.</p>
+  </section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2>Who this may affect.</h2>
+    <p>This is a personal injury case brought by a living adult who used the product herself, alleging that prolonged use fed a mental health crisis and that the product supplied means and concealment rather than help.</p>
+    <p>If you or someone in your family came through a mental health crisis after heavy chatbot use, this is the pattern the case is built on. That includes cases where the person survived, which most of the filed complaints do not cover.</p>
+    <p>It does not mean you have a claim. It means the question is worth asking, and there are now filed complaints arguing the duty exists.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2>Common questions.</h2>
+
+    <h3>What is this lawsuit about?</h3>
+    <p>An adult woman in Northern California sued OpenAI, Sam Altman, and Microsoft in San Francisco Superior Court on July 13, 2026. She alleges that a year of ChatGPT conversations fed her paranoia, that the product coached her on hiding suicidal thoughts from therapists, and that it then gave her instructions for taking her own life. She survived the attempt.</p>
+
+    <h3>Why is Microsoft a defendant?</h3>
+    <p>Because of its seat on the joint Deployment Safety Board. The complaint alleges Microsoft used that seat to approve GPT-4o for public release while knowing the safety review had been cut from months to days. Microsoft is named in the four product counts and not in the unfair competition or fraudulent concealment counts.</p>
+
+    <h3>Can I join this lawsuit?</h3>
+    <p>No. This is one person's case, not a class action, so there is nothing to join and no claims process. But it reflects a type of claim other people may be able to bring on their own. Whether your situation supports one depends on your facts, your state, and your deadline. A licensed attorney has to answer that.</p>
+
+    <h3>Is there a settlement or payout?</h3>
+    <p>No. The case was filed on July 13, 2026 and no court has ruled on anything. There is no settlement, no fund, and no compensation program tied to this case. Anyone telling you otherwise is not describing this lawsuit.</p>
+
+    <h3>How is this different from the other ChatGPT cases?</h3>
+    <p>Most of the filed complaints are wrongful death cases brought by families. This one is brought by the person who used the product, who is alive and can testify about the conversations herself. It is also the only one so far to name Microsoft.</p>
+
+    <h3>How long do I have to file a claim?</h3>
+    <p>Deadlines vary by state and are often shorter than people expect. Some start when you were hurt, others when you found out what caused it. Because the deadline can quietly run out, this is worth asking a licensed attorney in your state sooner rather than later.</p>
+
+    <h3>Where can I read the actual filing?</h3>
+    <p>The complaint is posted above as a PDF. Four of its 37 pages are redacted by us, because the filing reproduces screenshots containing detailed instructions for a method of suicide and this site is read by people in crisis. Each redacted page carries a banner saying the redaction is ours and not the court's. The unredacted filing is a public record of the San Francisco Superior Court, case number CGC-26-639036, filed July 13, 2026.</p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container container--narrow">
+    <h2>Request a case review.</h2>
+    <p>If you or a family member experienced a serious mental health crisis following prolonged use of an AI chatbot, you can request a free, confidential case review. Reviews are handled by participating legal professionals and intake partners. There is no cost and no obligation, and submitting a request does not create an attorney-client relationship.</p>
+    <div class="hero-actions">
+      <a href="openai-case-review" class="btn btn--amber btn--lg">Request a Case Review</a>
+      <a href="how-case-review-works" class="btn btn--ghost btn--lg">How Case Review Works</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <h2>Continue exploring this category.</h2>
+    <h3><a href="winters-v-openai-lawsuit">Winters v. OpenAI</a></h3>
+    <p>The other San Francisco case brought by a surviving user, with that complaint posted in full.</p>
+    <h3><a href="nadia-n-v-openai-lawsuit">Nadia N. v. OpenAI</a></h3>
+    <p>The case brought nine days later by a widow on behalf of her family, with that complaint posted in full.</p>
+    <h3><a href="morales-v-openai-lawsuit">Morales v. OpenAI</a></h3>
+    <p>The FSU wrongful death case, and the first from that attack to name Sam Altman.</p>
+    <h3><a href="openai-case-review">OpenAI Case Review</a></h3>
+    <p>Case review specific to claims involving OpenAI and ChatGPT.</p>
+    <h3><a href="ai-case-review">AI Chatbot Case Review</a></h3>
+    <p>Case review options for harms involving AI chatbots and companion apps.</p>
+    <h3><a href="https://lawsuitinformer.com/jccp-5431-chatgpt-product-liability-cases?utm_source=lawsuitcenter&amp;utm_medium=referral&amp;utm_campaign=cross_property&amp;utm_content=doe_jccp">The Coordinated California Proceeding</a></h3>
+    <p>How JCCP 5431 works and which cases sit inside it, on Lawsuit Informer.</p>
+    <h3><a href="https://lawsuitinformer.com/openai-lawsuits?utm_source=lawsuitcenter&amp;utm_medium=referral&amp;utm_campaign=cross_property&amp;utm_content=doe_hub">Every OpenAI Case, Tracked</a></h3>
+    <p>Status and background on all the pending OpenAI lawsuits, on Lawsuit Informer.</p>
+    <h3><a href="lawsuits">Browse All Lawsuits</a></h3>
+    <p>Every litigation category tracked on Lawsuit Center.</p>
+  </div>
+</section>
+
+<section class="legal-note">
+  <div class="container container--narrow">
+    <p>Some pages on Lawsuit Center include sponsored law firm listings or other attorney advertising. Paid visibility is not a recommendation or endorsement, and visitors should evaluate any attorney independently before hiring counsel. See our <a href="advertising-disclosure">Advertising Disclosure</a>, or <a href="for-law-firms">information for law firms</a>.</p>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+<div class="container">
+  <div class="site-footer__brand">Lawsuit Center</div>
+  <p class="site-footer__tag">Attorney-Built lawsuit research and case review platform.</p>
+  <div class="site-footer__legal">
+    Educational information only. Not legal advice. No attorney-client relationship is formed
+    by using this website. Some pages may include attorney advertising or sponsored law firm visibility.
+    Lawsuit Center is not a law firm and does not provide legal advice. Use of this site does not
+    create an attorney-client relationship. Information submitted through this site may be reviewed
+    by participating law firms, legal advertisers, or third-party intake providers, depending on the
+    claim category and availability.
+  </div>
+  <div class="site-footer__links">
+    <a href="privacy-policy">Privacy Policy</a>&nbsp;·
+    <a href="disclaimer">Disclaimer</a>&nbsp;·
+    <a href="advertising-disclosure">Advertising Disclosure</a>&nbsp;·
+    <a href="editorial-policy">Editorial Policy</a>&nbsp;·
+    <a href="how-case-review-works">How Case Review Works</a>&nbsp;·
+    <a href="resources">Resources</a>&nbsp;·
+    <a href="https://lawsuitinformer.com/">Lawsuit Informer</a>&nbsp;·
+    <a href="https://lawsuitintelligencer.com/">Lawsuit Intelligencer</a>&nbsp;·
+    <a href="https://davidmeldofsky.com/">David Meldofsky</a>&nbsp;·
+    <a href="for-law-firms">For Law Firms</a>&nbsp;·
+    <a href="about">About</a>&nbsp;·
+    <a href="contact">Contact</a>
+  </div>
+  <div class="site-footer__copy">© 2026 Lawsuit Center. All rights reserved.</div>
+</div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".nav__toggle");
+    const menu = document.getElementById("site-menu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        const isOpen = menu.classList.toggle("is-open");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+  });
+</script>
+
+<!-- LC-LIGHT-JS:BEGIN -->
+<script>
+(function () {
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.theme-toggle'));
+  if (!btns.length) return;
+
+  var FOLLOW_OS = false; /* keep in sync with the init script */
+  var root = document.documentElement;
+  var LIGHT_BAR = '#faf9f7';   /* keep in sync with light --bg */
+  var DARK_BAR  = '#0b1118';   /* existing theme-color meta value */
+
+  function current() {
+    return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+
+  function paint(t) {
+    root.setAttribute('data-theme', t);
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].setAttribute('aria-pressed', String(t === 'light'));
+      btns[i].setAttribute('aria-label', t === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+    }
+    var m = document.querySelector('meta[name="theme-color"]');
+    if (m) m.setAttribute('content', t === 'light' ? LIGHT_BAR : DARK_BAR);
+  }
+
+  function onToggle() {
+    root.classList.add('theme-anim');
+    var next = current() === 'light' ? 'dark' : 'light';
+    paint(next);
+    try { localStorage.setItem('lc-theme', next); } catch (e) {}
+    decorate();
+  }
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].hidden = false;
+    btns[i].addEventListener('click', onToggle);
+  }
+  paint(current());
+
+  /* Carry the live theme onto lawsuitinformer.com links (decorate + just-in-time) */
+  var PARTNER = /(^|\.)lawsuitinformer\.com$/i;
+  function stamp(a) {
+    try {
+      var u = new URL(a.href, location.href);
+      if (!PARTNER.test(u.hostname)) return;
+      u.searchParams.set('theme', current());
+      a.href = u.toString();
+    } catch (e) {}
+  }
+  function decorate() {
+    var links = document.querySelectorAll('a[href*="lawsuitinformer.com"]');
+    for (var i = 0; i < links.length; i++) stamp(links[i]);
+  }
+  function freshen(e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="lawsuitinformer.com"]') : null;
+    if (a) stamp(a);
+  }
+  document.addEventListener('click', freshen, true);
+  document.addEventListener('auxclick', freshen, true);
+  decorate();
+
+  /* Track OS changes until a manual choice - only when FOLLOW_OS is on */
+  if (FOLLOW_OS && window.matchMedia) {
+    var mq = matchMedia('(prefers-color-scheme: light)');
+    var onChange = function (e) {
+      var stored = null;
+      try { stored = localStorage.getItem('lc-theme'); } catch (err) {}
+      if (stored !== 'dark' && stored !== 'light') paint(e.matches ? 'light' : 'dark');
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
+})();
+</script>
+<!-- LC-LIGHT-JS:END -->
+</body>
+</html>
