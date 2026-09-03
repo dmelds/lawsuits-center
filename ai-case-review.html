@@ -640,6 +640,16 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     </div>
 
     <div class="field">
+      <label for="minor" class="field-label">Was the affected person under 18?</label>
+      <select id="minor" name="minor" required>
+        <option value="">Select one</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not sure">Not sure</option>
+      </select>
+    </div>
+
+    <div class="field">
       <label for="ai-product" class="field-label">Which AI product or company was involved</label>
       <select id="ai-product" name="ai-product" aria-describedby="product-note">
         <option value="">Select what applies</option>
@@ -686,13 +696,26 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
       <p id="evidence-note" class="form-note">
         Records often matter in these cases. You do not need to gather anything to submit, and you should not collect or send any images &mdash; this is just so reviewers know the starting point.
       </p>
+      <p class="form-note" style="color:var(--ink); border-left:3px solid var(--amber); padding-left:10px; margin-top:10px;">
+        <strong>If chat records still exist, do not delete them.</strong> On ChatGPT, OpenAI says a deleted conversation is removed from its systems within 30 days and cannot be recovered afterward through the app or through support. Archiving is not the same as deleting. Other chatbot services have their own retention rules, but the same principle applies: once it is gone it is usually gone.
+      </p>
     </div>
 
     <div class="field">
-      <label for="state" class="field-label">State</label>
+      <label for="country" class="field-label">Country</label>
+      <select id="country" name="country" required>
+        <option value="">Select one</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="Other">Somewhere else</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="state" class="field-label">State or province</label>
       <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
       <p id="state-note" class="form-note">
-        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply.
+        Where you are helps identify which deadlines and rules may apply.
       </p>
     </div>
 

@@ -627,9 +627,18 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
         <option value="Wrongful Death - Other">Loved one died from other harm linked to ChatGPT use</option>
         <option value="Self-Harm or Mental Health Crisis">Self-harm, hospitalization, or serious mental health crisis following sustained ChatGPT use</option>
         <option value="Physical Injury from Bad Information">Physical injury or illness after relying on ChatGPT advice (drug interaction, medical, safety)</option>
-        <option value="Minor Involved">Harm involving a minor or teenager</option>
         <option value="Other Harm">Other serious harm linked to ChatGPT use</option>
         <option value="Not Sure">Not sure / still investigating</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="minor" class="field-label">Was the affected person under 18?</label>
+      <select id="minor" name="minor" required>
+        <option value="">Select one</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+        <option value="Not sure">Not sure</option>
       </select>
     </div>
 
@@ -653,6 +662,19 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     </div>
 
     <div class="field">
+      <label for="who-used" class="field-label">Who used it</label>
+      <select id="who-used" name="who-used" required>
+        <option value="">Select what fits</option>
+        <option value="Affected person used it">The person who was harmed used it themselves</option>
+        <option value="Someone else used it">Someone else used it and the harm came through them</option>
+        <option value="Not sure">Not sure</option>
+      </select>
+      <p class="form-note">
+        Some of the filed cases were brought by people who never used the product, including families and survivors of the two school shootings.
+      </p>
+    </div>
+
+<div class="field">
       <label for="usage-period" class="field-label">Approximate period of ChatGPT use</label>
       <input type="text" id="usage-period" name="usage-period" placeholder="e.g. several months in 2024-2025" aria-describedby="usage-note" />
       <p id="usage-note" class="form-note">
@@ -681,13 +703,26 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
       <p id="evidence-note" class="form-note">
         Chat records are often central to these cases. You do not need to gather anything to submit; this is just so reviewers know the starting point.
       </p>
+      <p class="form-note" style="color:var(--ink); border-left:3px solid var(--amber); padding-left:10px; margin-top:10px;">
+        <strong>If those records still exist, do not delete them.</strong> OpenAI says a deleted conversation is removed from its systems within 30 days and cannot be recovered afterward through the app or through support. Archiving is not the same as deleting, and archived conversations stay in the account. Closing the account can take everything at once.
+      </p>
     </div>
 
     <div class="field">
-      <label for="state" class="field-label">State</label>
+      <label for="country" class="field-label">Country</label>
+      <select id="country" name="country" required>
+        <option value="">Select one</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="Other">Somewhere else</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="state" class="field-label">State or province</label>
       <input type="text" id="state" name="state" autocomplete="address-level1" aria-describedby="state-note" required />
       <p id="state-note" class="form-note">
-        Your state helps identify whether location-specific deadlines, claim rules, or review options may apply. Most filed cases against OpenAI to date have been brought in California state and federal courts.
+        Where you are helps identify which deadlines and rules may apply. Most filed cases against OpenAI so far have been brought in California, including cases brought by people living in Canada.
       </p>
     </div>
 
