@@ -21,23 +21,23 @@
     // ----- Case Review -----
     { url: "cancer-case-review", title: "Cancer Case Review", tag: "Case Review", category: "Cancer",
       desc: "Cancer diagnoses possibly tied to consumer products, workplace exposure, or contaminated water.",
-      keywords: "cancer mesothelioma kidney ovarian lung lymphoma leukemia bladder uterine talc roundup zantac asbestos benzene afff camp lejeune" },
+      keywords: "cancer mesothelioma kidney ovarian lung lymphoma leukemia bladder uterine talc roundup zantac asbestos benzene afff camp lejeune lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "asbestos-case-review", title: "Asbestos Case Review", tag: "Case Review", category: "Asbestos",
       desc: "Mesothelioma, asbestos-related lung cancer, asbestosis, military or shipyard exposure, or secondhand exposure.",
-      keywords: "asbestos mesothelioma lung cancer asbestosis shipyard navy military secondhand" },
+      keywords: "asbestos mesothelioma lung cancer asbestosis shipyard navy military secondhand lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "lung-cancer-asbestos-review", title: "Lung Cancer Asbestos Review", tag: "Case Review", category: "Asbestos",
       desc: "Submit basic information about asbestos exposure history and a lung cancer diagnosis for case review.",
-      keywords: "lung cancer asbestos exposure occupational" },
+      keywords: "lung cancer asbestos exposure occupational lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "social-media-case-review", title: "Social Media Case Review", tag: "Case Review", category: "Digital Platforms",
       desc: "Children or teens with mental health harm tied to Instagram, TikTok, Snapchat, Facebook, YouTube.",
-      keywords: "social media instagram tiktok snapchat facebook youtube meta minors teen anxiety depression eating disorder self-harm MDL 3047" },
+      keywords: "social media instagram tiktok snapchat facebook youtube meta minors teen anxiety depression eating disorder self-harm MDL 3047 lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "video-game-case-review", title: "Video Game Case Review", tag: "Case Review", category: "Digital Platforms",
       desc: "Compulsive gaming, academic decline, mental health impact, or unauthorized in-game spending involving minors.",
-      keywords: "video game gaming addiction minors fortnite roblox in-game purchases" },
+      keywords: "video game gaming addiction minors fortnite roblox in-game purchases lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "video-game-lawsuit", title: "Video Game Lawsuit", tag: "Lawsuit", category: "Digital Platforms",
       desc: "Claims alleging games like Roblox and Fortnite were designed to encourage compulsive play in minors. Coordinated in California, no settlement yet.",
@@ -49,55 +49,55 @@
 
     { url: "openai-case-review", title: "OpenAI / ChatGPT Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Wrongful death, self-harm, fatal drug interaction, or harm involving sustained ChatGPT use.",
-      keywords: "ai artificial intelligence openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability" },
+      keywords: "ai artificial intelligence openai chatgpt ai chatbot wrongful death suicide overdose violence school shooting product liability lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "deepfake-case-review", title: "Deepfake Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Non-consensual AI-generated intimate images of an adult or minor, distribution and removal failures, threats, and resulting harm.",
-      keywords: "deepfake nonconsensual intimate images ai generated nudify grok xai take it down act removal 48 hours sextortion extortion likeness privacy minor" },
+      keywords: "deepfake nonconsensual intimate images ai generated nudify grok xai take it down act removal 48 hours sextortion extortion likeness privacy minor lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "ai-case-review", title: "AI Case Review", tag: "Case Review", category: "AI Chatbot Harm",
       desc: "Harm involving an AI chatbot, AI-generated deepfake images, or another AI product — chatbot harm, deepfakes, or professional impersonation.",
-      keywords: "ai artificial intelligence chatbot lawsuit deepfake nonconsensual images grok xai character ai openai chatgpt wrongful death self-harm medical impersonation take it down act" },
+      keywords: "ai artificial intelligence chatbot lawsuit deepfake nonconsensual images grok xai character ai openai chatgpt wrongful death self-harm medical impersonation take it down act lawsuits claim claims case review free case review sue" },
 
     { url: "pfas-case-review", title: "PFAS Case Review", tag: "Case Review", category: "Water & Environment",
       desc: "PFAS contamination, AFFF firefighting foam, military base or airport exposure, kidney/testicular cancer, thyroid disease, or ulcerative colitis.",
-      keywords: "pfas pfoa pfos forever chemicals afff firefighting foam military base airport kidney testicular cancer thyroid ulcerative colitis" },
+      keywords: "pfas pfoa pfos forever chemicals afff firefighting foam military base airport kidney testicular cancer thyroid ulcerative colitis lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "afff-case-review", title: "AFFF Firefighting Foam Case Review", tag: "Case Review", category: "Water & Environment",
       desc: "Occupational, military, or community water exposure to AFFF firefighting foam. Submit exposure history for case review.",
-      keywords: "afff aqueous film forming foam firefighting foam fire fighting firefighter military base navy air force airport training site pfas pfoa pfos forever chemicals kidney testicular cancer thyroid water contamination mdl 2873" },
+      keywords: "afff aqueous film forming foam firefighting foam fire fighting firefighter military base navy air force airport training site pfas pfoa pfos forever chemicals kidney testicular cancer thyroid water contamination mdl 2873 lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "chemical-exposure-case-review", title: "Chemical Exposure Case Review", tag: "Case Review", category: "Water & Environment",
       desc: "Contaminated water, pesticides, PFAS, or workplace chemical exposure with a related diagnosis.",
-      keywords: "chemical exposure toxic chemicals workplace occupational industrial solvent benzene pesticide herbicide pfas contaminated water fumes inhalation spill release" },
+      keywords: "chemical exposure toxic chemicals workplace occupational industrial solvent benzene pesticide herbicide pfas contaminated water fumes inhalation spill release lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "toxic-water-case-review", title: "Toxic Water Case Review", tag: "Case Review", category: "Water & Environment",
       desc: "Contaminated drinking water, well water contamination, or industrial chemical releases.",
-      keywords: "toxic water drinking well contamination industrial release" },
+      keywords: "toxic water drinking well contamination industrial release lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "environmental-contamination-case-review", title: "Environmental Contamination Review", tag: "Case Review", category: "Water & Environment",
       desc: "Exposure through soil, groundwater, industrial sites, landfills, or community conditions.",
-      keywords: "environmental contamination soil groundwater landfill industrial superfund" },
+      keywords: "environmental contamination soil groundwater landfill industrial superfund lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "air-pollution-case-review", title: "Air Pollution Case Review", tag: "Case Review", category: "Water & Environment",
       desc: "Long-term air pollution, industrial emissions, refinery or plant proximity, and respiratory conditions.",
-      keywords: "air pollution emissions refinery plant respiratory asthma" },
+      keywords: "air pollution emissions refinery plant respiratory asthma lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "pesticide-case-review", title: "Pesticide Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
       desc: "Glyphosate (Roundup), paraquat, chlorpyrifos, and other pesticide or herbicide exposure.",
-      keywords: "pesticide herbicide roundup glyphosate paraquat chlorpyrifos non-hodgkin lymphoma parkinson farmer applicator" },
+      keywords: "pesticide herbicide roundup glyphosate paraquat chlorpyrifos non-hodgkin lymphoma parkinson farmer applicator lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "neurological-case-review", title: "Neurological Case Review", tag: "Case Review", category: "Chemicals & Pesticides",
       desc: "Parkinson's, neuropathy, cognitive decline, or movement disorders with exposure history.",
-      keywords: "neurological parkinson neuropathy cognitive decline movement disorder pesticide heavy metals" },
+      keywords: "neurological parkinson neuropathy cognitive decline movement disorder pesticide heavy metals lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "consumer-product-case-review", title: "Consumer Product Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Allegedly defective, mislabeled, contaminated, or unsafe consumer products and recalls.",
-      keywords: "consumer product defective recall mislabeled unsafe" },
+      keywords: "consumer product defective recall mislabeled unsafe lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "processed-food-case-review", title: "Processed Food Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Childhood-onset Type 2 diabetes, NAFLD, or metabolic conditions from ultra-processed food.",
-      keywords: "processed food ultra-processed type 2 diabetes nafld fatty liver childhood obesity sugar" },
+      keywords: "processed food ultra-processed type 2 diabetes nafld fatty liver childhood obesity sugar lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "processed-food-lawsuit", title: "Processed Food Lawsuit", tag: "Lawsuit", category: "Products & Food",
       desc: "Claims alleging ultra processed foods were engineered for overconsumption, tied to childhood Type 2 diabetes and NAFLD. Early-stage litigation, test case dismissed, no settlement.",
@@ -109,15 +109,15 @@
 
     { url: "reproductive-case-review", title: "Reproductive Injury Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Uterine or ovarian cancer, fertility complications, or reproductive harm tied to long-term product use.",
-      keywords: "reproductive uterine ovarian cancer fertility hair relaxer talc talcum prenatal" },
+      keywords: "reproductive uterine ovarian cancer fertility hair relaxer talc talcum prenatal lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "hair-relaxer-case-review", title: "Hair Relaxer Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Uterine cancer, ovarian cancer, or fibroids after long-term chemical hair relaxer or straightener use.",
-      keywords: "hair relaxer straightener perm chemical uterine cancer endometrial ovarian cancer fibroids just for me dark and lovely optimum olive oil mdl 3060" },
+      keywords: "hair relaxer straightener perm chemical uterine cancer endometrial ovarian cancer fibroids just for me dark and lovely optimum olive oil mdl 3060 lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "talcum-powder-case-review", title: "Talcum Powder Case Review", tag: "Case Review", category: "Products & Food",
       desc: "Long-term talc or baby powder use (Johnson's Baby Powder, Shower to Shower) followed by an ovarian cancer diagnosis.",
-      keywords: "talcum powder talc lawsuit ovarian cancer johnson and johnson j&j baby powder shower to shower gold bond attorney lawyer settlement payout who qualifies eligibility deadline mdl 2738" },
+      keywords: "talcum powder talc lawsuit ovarian cancer johnson and johnson j&j baby powder shower to shower gold bond attorney lawyer settlement payout who qualifies eligibility deadline mdl 2738 lawsuits claim claims case review free case review sue" },
 
     { url: "talcum-powder-lawsuits", title: "Talcum Powder Lawsuit", tag: "Overview", category: "Products & Food",
       desc: "Overview of the talcum powder ovarian cancer litigation (MDL 2738): what the lawsuit is about, who qualifies, settlements, and FAQs.",
@@ -125,19 +125,19 @@
 
     { url: "hernia-mesh-case-review", title: "Hernia Mesh Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
       desc: "Hernia mesh repair surgery followed by revision surgery, chronic pain, infection, adhesion, or mesh failure.",
-      keywords: "hernia mesh implant repair surgery revision removal explant chronic pain infection adhesion bowel obstruction migration bard covidien ethicon atrium mdl 2846" },
+      keywords: "hernia mesh implant repair surgery revision removal explant chronic pain infection adhesion bowel obstruction migration bard covidien ethicon atrium mdl 2846 lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "depo-provera-case-review", title: "Depo-Provera Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
       desc: "Long-term Depo-Provera use (or generic medroxyprogesterone acetate) followed by a meningioma brain tumor diagnosis.",
-      keywords: "depo-provera depo provera medroxyprogesterone meningioma brain tumor birth control injection MDL 3140" },
+      keywords: "depo-provera depo provera medroxyprogesterone meningioma brain tumor birth control injection MDL 3140 lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "case-review", title: "General Case Review", tag: "Case Review", category: "General",
       desc: "Not sure where you fit? Describe the situation and we'll review which category may apply.",
-      keywords: "general case review intake start" },
+      keywords: "general case review intake start lawsuit lawsuits claim claims free case review sue" },
 
     { url: "truck-accident-case-review", title: "Truck Accident Case Review", tag: "Case Review", category: "Personal Injury",
       desc: "Commercial truck, semi, or 18-wheeler crash with injuries. Share the crash, injuries, and recovery for review.",
-      keywords: "truck accident crash commercial semi 18 wheeler tractor trailer big rig delivery van trucking company driver fatigue injury wrongful death" },
+      keywords: "truck accident crash commercial semi 18 wheeler tractor trailer big rig delivery van trucking company driver fatigue injury wrongful death lawsuit lawsuits claim claims case review free case review sue" },
 
 
     // ----- Case filings -----
@@ -488,7 +488,16 @@
      The tradeoff is that a bounded "ai" no longer reaches inside "openai", so the
      AI entries carry "ai artificial intelligence" in their keywords explicitly. */
   function has(hay, q) {
-    if (q.length > 3) return hay.indexOf(q) !== -1;
+    if (q.length > 3) {
+      if (hay.indexOf(q) !== -1) return true;
+      /* "lawsuits" should still find an entry that only says "lawsuit".
+         indexOf is one-directional: the singular matches inside the plural,
+         but not the other way round. */
+      if (q.length > 4 && q.charAt(q.length - 1) === "s") {
+        return hay.indexOf(q.slice(0, -1)) !== -1;
+      }
+      return false;
+    }
     var esc = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     return new RegExp("\\b" + esc + "\\b").test(hay);
   }
