@@ -6,9 +6,13 @@
  * Behavior:
  *   - Targets any <form class="form"> on the page
  *   - Validates name (full name with a space, min 4 chars), email (format,
- *     rejects junk domains, catches common typos), and phone (10 US digits)
+ *     rejects junk domains, catches common typos), and phone (exactly 10 US
+ *     digits, with NANP structure checks). Phone input is never reshaped to
+ *     make it fit - too many or too few digits is an error the visitor fixes
  *   - Inline error messages appear on blur and on submit
- *   - Auto-formats phone as (XXX) XXX-XXXX on blur
+ *   - Auto-formats phone as (XXX) XXX-XXXX on blur. Every digit typed is
+ *     kept: nothing is trimmed, dropped, or guessed at, so a wrong number
+ *     always surfaces as an error rather than a plausible-looking record
  *   - Sets aria-invalid on failing fields and announces a screen-reader\n *     summary via an aria-live region on blocked submits\n *   - Blocks submit if any field is invalid; valid submissions pass through
  *     untouched (Netlify forms keep working)
  *
@@ -92,16 +96,44 @@
     return null;
   }
 
+  function phoneDigits(value) {
+    return (value || "").replace(/\D/g, "");
+  }
+
+  function digitCount(n) {
+    return n === 1 ? "1 dígito" : n + " dígitos";
+  }
+
   function validatePhone(value) {
-    var digits = (value || "").replace(/\D/g, "");
+    var digits = phoneDigits(value);
     if (digits.length === 0) return "Por favor ingrese su número de teléfono.";
-    if (digits.length !== 10) return "Por favor ingrese un número de teléfono válido de EE. UU. de 10 dígitos.";
+    if (digits.length === 11 && digits.charAt(0) === "1") {
+      return "Por favor ingrese 10 dígitos, sin el 1 inicial.";
+    }
+    if (digits.length > 10) {
+      return "Ingresó " + digitCount(digits.length) + ". Por favor ingrese un número de teléfono de EE. UU. de 10 dígitos.";
+    }
+    if (digits.length < 10) {
+      return "Ingresó solo " + digitCount(digits.length) + ". Por favor ingrese un número de teléfono de EE. UU. de 10 dígitos.";
+    }
+    var npa = digits.slice(0, 3);
+    var nxx = digits.slice(3, 6);
+    if (npa.charAt(0) === "0" || npa.charAt(0) === "1") {
+      return "Los códigos de área no comienzan con 0 ni 1. Por favor verifique el número.";
+    }
+    if (npa.charAt(1) === "1" && npa.charAt(2) === "1") {
+      return "Por favor ingrese un número de teléfono válido de EE. UU. de 10 dígitos.";
+    }
+    if (nxx.charAt(0) === "0" || nxx.charAt(0) === "1") {
+      return "Por favor verifique los tres dígitos después del código de área.";
+    }
     return null;
   }
 
   function formatPhone(value) {
-    var digits = (value || "").replace(/\D/g, "").slice(0, 10);
+    var digits = phoneDigits(value);
     if (digits.length === 0) return "";
+    if (digits.length > 10) return value;
     if (digits.length < 4) return "(" + digits;
     if (digits.length < 7) return "(" + digits.slice(0, 3) + ") " + digits.slice(3);
     return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
