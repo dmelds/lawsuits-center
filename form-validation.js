@@ -5,7 +5,8 @@
  * Behavior:
  *   - Targets any <form class="form"> on the page
  *   - Validates name (full name with a space, min 4 chars), email (format,
- *     rejects junk domains, catches common typos), and phone (10 US digits)
+ *     rejects junk domains, catches common typos), and phone (10 US digits,
+ *     with NANP structure checks so a leading 1 cannot pass as an area code)
  *   - Inline error messages appear on blur and on submit
  *   - Auto-formats phone as (XXX) XXX-XXXX on blur; a leading US country
  *     code 1 is stripped, and a number too long to format is left as
@@ -105,6 +106,17 @@
     var digits = phoneDigits(value);
     if (digits.length === 0) return "Please enter your phone number.";
     if (digits.length !== 10) return "Please enter a valid 10-digit US phone number.";
+    var npa = digits.slice(0, 3);
+    var nxx = digits.slice(3, 6);
+    if (npa.charAt(0) === "0" || npa.charAt(0) === "1") {
+      return "Area codes do not start with 0 or 1. Please check the number.";
+    }
+    if (npa.charAt(1) === "1" && npa.charAt(2) === "1") {
+      return "Please enter a valid 10-digit US phone number.";
+    }
+    if (nxx.charAt(0) === "0" || nxx.charAt(0) === "1") {
+      return "Please check the three digits after the area code.";
+    }
     return null;
   }
 
