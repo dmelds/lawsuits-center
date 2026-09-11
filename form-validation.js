@@ -7,7 +7,9 @@
  *   - Validates name (full name with a space, min 4 chars), email (format,
  *     rejects junk domains, catches common typos), and phone (10 US digits)
  *   - Inline error messages appear on blur and on submit
- *   - Auto-formats phone as (XXX) XXX-XXXX on blur
+ *   - Auto-formats phone as (XXX) XXX-XXXX on blur; a leading US country
+ *     code 1 is stripped, and a number too long to format is left as
+ *     typed so the error shows instead of digits being silently cut
  *   - Sets aria-invalid on failing fields and announces a screen-reader\n *     summary via an aria-live region on blocked submits\n *   - Blocks submit if any field is invalid; valid submissions pass through
  *     untouched (Netlify forms keep working)
  *
@@ -91,16 +93,25 @@
     return null;
   }
 
-  function validatePhone(value) {
+  function phoneDigits(value) {
     var digits = (value || "").replace(/\D/g, "");
+    if (digits.length === 11 && digits.charAt(0) === "1") {
+      digits = digits.slice(1);
+    }
+    return digits;
+  }
+
+  function validatePhone(value) {
+    var digits = phoneDigits(value);
     if (digits.length === 0) return "Please enter your phone number.";
     if (digits.length !== 10) return "Please enter a valid 10-digit US phone number.";
     return null;
   }
 
   function formatPhone(value) {
-    var digits = (value || "").replace(/\D/g, "").slice(0, 10);
+    var digits = phoneDigits(value);
     if (digits.length === 0) return "";
+    if (digits.length > 10) return value;
     if (digits.length < 4) return "(" + digits;
     if (digits.length < 7) return "(" + digits.slice(0, 3) + ") " + digits.slice(3);
     return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
