@@ -5,13 +5,13 @@
  * Behavior:
  *   - Targets any <form class="form"> on the page
  *   - Validates name (full name with a space, min 4 chars), email (format,
- *     rejects junk domains, catches common typos), and phone (exactly 10 US
- *     digits, with NANP structure checks). Phone input is never reshaped to
- *     make it fit - too many or too few digits is an error the visitor fixes
+ *     rejects junk domains, catches common typos), and phone (10 US digits,
+ *     NANP structure checked; a leading 1 on an 11-digit entry is the
+ *     country code and is dropped, nothing else is ever trimmed)
  *   - Inline error messages appear on blur and on submit
- *   - Auto-formats phone as (XXX) XXX-XXXX on blur. Every digit typed is
- *     kept: nothing is trimmed, dropped, or guessed at, so a wrong number
- *     always surfaces as an error rather than a plausible-looking record
+ *   - Auto-formats phone as (XXX) XXX-XXXX on blur. A number that will be
+ *     rejected is left exactly as typed, so the visitor sees their own
+ *     digits beside the error instead of a plausible-looking record
  *   - Sets aria-invalid on failing fields and announces a screen-reader\n *     summary via an aria-live region on blocked submits\n *   - Blocks submit if any field is invalid; valid submissions pass through
  *     untouched (Netlify forms keep working)
  *
@@ -95,44 +95,56 @@
     return null;
   }
 
-  function phoneDigits(value) {
+  function rawDigits(value) {
     return (value || "").replace(/\D/g, "");
+  }
+
+  /* A leading 1 on an 11-digit entry is the US country code and the only
+     unambiguous case: the remaining 10 digits are the whole number, so it is
+     dropped. Nothing else is ever trimmed - a wrong length is an error. */
+  function phoneDigits(value) {
+    var digits = rawDigits(value);
+    if (digits.length === 11 && digits.charAt(0) === "1") {
+      digits = digits.slice(1);
+    }
+    return digits;
   }
 
   function digitCount(n) {
     return n === 1 ? "1 digit" : n + " digits";
   }
 
-  function validatePhone(value) {
-    var digits = phoneDigits(value);
-    if (digits.length === 0) return "Please enter your phone number.";
-    if (digits.length === 11 && digits.charAt(0) === "1") {
-      return "Please enter 10 digits, without the 1 at the front.";
-    }
-    if (digits.length > 10) {
-      return "That is " + digitCount(digits.length) + ". Please enter a 10-digit US phone number.";
-    }
-    if (digits.length < 10) {
-      return "That is only " + digitCount(digits.length) + ". Please enter a 10-digit US phone number.";
-    }
+  /* NANP numbers are NXX-NXX-XXXX, where N is 2-9. An area code or an
+     exchange starting with 0 or 1 cannot be dialed. */
+  function nanpError(digits, rawLength) {
     var npa = digits.slice(0, 3);
     var nxx = digits.slice(3, 6);
-    if (npa.charAt(0) === "0" || npa.charAt(0) === "1") {
+    if (npa.charAt(0) === "1") {
+      if (rawLength === 10) return "That is a 1 followed by 9 digits. Please check the number for a missing digit.";
       return "Area codes do not start with 0 or 1. Please check the number.";
     }
-    if (npa.charAt(1) === "1" && npa.charAt(2) === "1") {
-      return "Please enter a valid 10-digit US phone number.";
-    }
-    if (nxx.charAt(0) === "0" || nxx.charAt(0) === "1") {
-      return "Please check the three digits after the area code.";
-    }
+    if (npa.charAt(0) === "0") return "Area codes do not start with 0 or 1. Please check the number.";
+    if (npa.charAt(1) === "1" && npa.charAt(2) === "1") return "Please enter a valid 10-digit US phone number.";
+    if (nxx.charAt(0) === "0" || nxx.charAt(0) === "1") return "Please check the three digits after the area code.";
     return null;
+  }
+
+  function validatePhone(value) {
+    var raw = rawDigits(value);
+    var digits = phoneDigits(value);
+    if (digits.length === 0) return "Please enter your phone number.";
+    if (digits.length > 10) return "That is " + digitCount(digits.length) + ". Please enter a 10-digit US phone number.";
+    if (digits.length < 10) return "That is only " + digitCount(digits.length) + ". Please enter a 10-digit US phone number.";
+    return nanpError(digits, raw.length);
   }
 
   function formatPhone(value) {
     var digits = phoneDigits(value);
     if (digits.length === 0) return "";
     if (digits.length > 10) return value;
+    if (digits.length === 10 && nanpError(digits, rawDigits(value).length)) {
+      return value;
+    }
     if (digits.length < 4) return "(" + digits;
     if (digits.length < 7) return "(" + digits.slice(0, 3) + ") " + digits.slice(3);
     return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
