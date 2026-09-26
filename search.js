@@ -443,6 +443,9 @@
     { url: "tylenol-autism-lawsuit", title: "Tylenol Autism Lawsuit", tag: "Lawsuit", category: "Consumer Products",
       desc: "Claims alleging failure to warn about a possible association between prenatal acetaminophen exposure and autism or ADHD. Litigation active but unsettled, federal appeal pending.",
       keywords: "tylenol autism lawsuit tylenol lawsuit acetaminophen autism adhd class action sign up age limit settlement update pregnancy johnson and johnson kenvue mdl daubert appeal who qualifies" },
+    { url: "tylenol-case-review", title: "Tylenol Case Review", tag: "Case Review", category: "Consumer Products",
+      desc: "Tylenol or acetaminophen used during pregnancy, followed by a child's autism or ADHD diagnosis.",
+      keywords: "tylenol case review acetaminophen pregnancy prenatal autism adhd child diagnosis lawsuit claim free case review kenvue johnson and johnson store brand walmart cvs walgreens sign up qualify mdl 3043" },
 
     { url: "baby-food-lawsuit", title: "Baby Food Lawsuit", tag: "Lawsuit", category: "Consumer Products",
       desc: "Claims alleging heavy metals in baby foods from Gerber, Beech-Nut, and others, linked in litigation to autism and ADHD diagnoses. MDL 3101, no settlement yet.",
