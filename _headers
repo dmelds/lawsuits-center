@@ -1,3 +1,14 @@
+# Security headers for every path. Netlify already sends
+# Strict-Transport-Security at the edge, so it is not repeated here.
+# No Content-Security-Policy yet: the case-review forms load Google
+# reCAPTCHA and Netlify injects its own form handling, so a policy needs
+# to be tested against a live submission before it ships.
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
 # perf:cache-policy
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
