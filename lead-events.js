@@ -1,4 +1,4 @@
-/* Lawsuit Center lead events. lead_events v2.
+/* Lawsuit Center lead events. lead_events v3.
  *
  * The intake form lives here, so a completed submission is the only true
  * conversion in the two-site funnel. This script records it as generate_lead
@@ -41,6 +41,16 @@
  * The inline block on each thank-you page removes lc_category as soon as it
  * rewrites the heading, so reading that key would make this script depend on
  * which handler happens to run first.
+ *
+ * v3 changes how intake forms are found. v1 and v2 selected
+ * form[data-netlify][name], but Netlify's form processing strips the
+ * data-netlify attribute from the deployed HTML. The repo source carries it,
+ * the live page does not, so on production the selector matched nothing:
+ * no prefill ran, no payload was captured, and no generate_lead was ever
+ * sent. v3 selects any named form that posts (method="POST"), which is how
+ * every intake form on this site is built and which Netlify leaves in place.
+ * add_lead_events.py still keys on data-netlify, and that is correct there,
+ * because it reads the repo source, not the deployed page.
  *
  * Fires nothing when the page is reached directly with no stored payload, so
  * a bookmarked or crawled thank-you URL does not inflate the count.
@@ -88,11 +98,13 @@
   }
 
   function intakeForms() {
-    var all = document.querySelectorAll("form[data-netlify][name]");
+    /* Not form[data-netlify]: Netlify strips that attribute on deploy. */
+    var all = document.querySelectorAll("form[name][method]");
     var out = [];
     for (var i = 0; i < all.length; i++) {
       var name = all[i].getAttribute("name") || "";
-      if (!NOT_A_LEAD[name]) out.push(all[i]);
+      var method = (all[i].getAttribute("method") || "").toUpperCase();
+      if (method === "POST" && !NOT_A_LEAD[name]) out.push(all[i]);
     }
     return out;
   }
@@ -127,7 +139,7 @@
     }
   }
 
-  /* ---- capture: runs on any page carrying a named Netlify intake form ---- */
+  /* ---- capture: runs on any page carrying a named intake form that posts ---- */
   function capture(forms) {
     for (var i = 0; i < forms.length; i++) {
       (function (form) {
