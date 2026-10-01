@@ -1,0 +1,83 @@
+name: Attribution
+
+# Gives every Netlify form the hidden attribution inputs the Lead Desk reads
+# (UTMs, referrer, landing page, consent fingerprint) and loads
+# lead-attribution.js on every page. Dispatch only: run from the Actions tab,
+# read the dry-run summary, then run again with apply = true.
+#
+# Idempotent. A rerun on a swept tree reports zero changes.
+#
+# The commit carries [skip lastmod] and [skip ci]: hidden inputs and a script
+# tag are not content, so lastmod must not move.
+#
+# Monthly dry run against main (the branch that serves lawsuit.center; staging
+# is far behind it). It never writes. It fails on DRIFT, which means a form's
+# consent wording changed and the consent_version in the HTML no longer
+# matches, so the desk would record the wrong version for new leads until the
+# sweep is applied again. It also fails on a form page lacking the LC-LIGHT-JS
+# anchor, which is a page built from a pre-sweep donor.
+
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Write changes and commit (leave false for a dry run)'
+        type: boolean
+        default: false
+      branch:
+        description: 'Branch to commit to'
+        type: string
+        default: main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repo-writes
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || 'main' }}
+
+      - name: Dry run
+        run: python3 add_attribution.py | tee /tmp/attr.log || true
+
+      - name: Fail the monthly check on drift or a missing anchor
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          if grep -q 'DRIFT (consent wording changed' /tmp/attr.log || grep -q 'No LC-LIGHT-JS anchor' /tmp/attr.log || ! grep -q '^  0 forms given hidden inputs' /tmp/attr.log; then
+            echo "::error::Attribution sweep is out of date. Run this workflow with apply = true on main."
+            sed -n '1,12p' /tmp/attr.log
+            exit 1
+          fi
+          echo "Every form carries current attribution inputs."
+
+      - name: Apply
+        if: ${{ inputs.apply }}
+        run: python3 add_attribution.py --apply
+
+      - name: Commit
+        if: ${{ inputs.apply }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git add '*.html'
+          git commit -m "Add attribution inputs and lead-attribution.js to intake forms [skip lastmod] [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase && git push && exit 0
+            echo "push attempt $i failed; retrying"
+            sleep $((i * 5))
+          done
+          exit 1
