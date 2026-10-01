@@ -1,0 +1,5 @@
+# Lawsuit Center. Functions only. The publish directory stays as set in the Netlify UI (site root),
+# so this file changes nothing about how the HTML deploys.
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
