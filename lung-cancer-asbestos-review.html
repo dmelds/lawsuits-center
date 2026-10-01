@@ -488,6 +488,17 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 :root[data-theme="light"] .site-nav.open a { color: var(--ink); }
 </style>
 <!-- LC-LIGHT-CSS:END -->
+<style id="lc-consent-css">
+  .checkbox-row{display:flex;align-items:flex-start;gap:14px;padding:16px 18px;margin-top:14px;background:rgba(0,0,0,.3);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:border-color .2s var(--ease),background .2s var(--ease);}
+  .checkbox-row:hover{border-color:var(--border-strong);}
+  .checkbox-row input[type="checkbox"]{width:20px;height:20px;min-width:20px;margin:2px 0 0;accent-color:var(--amber);cursor:pointer;}
+  .checkbox-row span{font-size:14.5px;line-height:1.55;color:var(--ink);}
+  .checkbox-row:has(input:checked){background:rgba(212,162,78,.08);border-color:var(--amber);}
+  .checkbox-row + .checkbox-row{margin-top:10px;}
+  .checkbox-row + button,.checkbox-row + .btn{margin-top:18px;}
+  .form-fineprint{font-size:12.5px;color:var(--ink-soft);line-height:1.6;margin-top:8px;}
+  .form-fineprint a{color:var(--amber-bright);}
+</style>
 </head>
 
 <body>
@@ -588,9 +599,30 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
           <label for="email">Email (optional)</label>
           <input type="email" id="email" name="email" />
 
+          <label class="checkbox-row">
+            <input type="checkbox" name="legal-understanding" value="yes" required />
+            <span>
+              I understand that Lawsuit Center is not a law firm and that submitting this form
+              does not create an attorney-client relationship.
+            </span>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="contact-consent" value="yes" required />
+            <span>
+              I consent to being contacted by Lawsuit Center, participating law firms, legal
+              advertisers, or intake partners by phone, including autodialed calls and prerecorded
+              voice messages, email, or text message about my case review request. Consent is not
+              a condition of any service. Message and data rates may apply. Reply STOP to opt out.
+            </span>
+          </label>
+
           <button type="submit" class="btn btn--amber btn--block">Start My Free Review</button>
 
           <p class="form-note">General legal information only. Submitting does not create an attorney-client relationship.</p>
+          <p class="form-fineprint">
+            By submitting, you consent to contact by Lawsuit Center and participating law firms, legal advertisers, or intake partners — including by autodialed calls, prerecorded messages, and text messages. Your case review request may be shared with more than one participating firm. Reply STOP at any time to opt out. Lawsuit Center may receive a referral or marketing fee from a participating firm if your case review is connected to them — paid by the firm, never deducted from any recovery. A submission does not guarantee eligibility, compensation, contact, or representation. See our <a href="privacy-policy">Privacy Policy</a> and <a href="advertising-disclosure">Advertising Disclosure</a>.
+          </p>
         </form>
 
         <div class="what-next-box">
