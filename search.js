@@ -27,6 +27,10 @@
       desc: "Mesothelioma, asbestos-related lung cancer, asbestosis, military or shipyard exposure, or secondhand exposure.",
       keywords: "asbestos mesothelioma lung cancer asbestosis shipyard navy military secondhand lawsuit lawsuits claim claims case review free case review sue" },
 
+    { url: "peritoneal-mesothelioma-case-review", title: "Peritoneal Mesothelioma Case Review", tag: "Case Review", category: "Asbestos",
+      desc: "Peritoneal mesothelioma from work, military, household, or talc powder exposure, including claims after a death.",
+      keywords: "peritoneal mesothelioma abdominal abdomen asbestos talc talcum baby powder wrongful death lawsuit lawsuits claim claims case review free case review sue" },
+
     { url: "lung-cancer-asbestos-review", title: "Lung Cancer Asbestos Review", tag: "Case Review", category: "Asbestos",
       desc: "Submit basic information about asbestos exposure history and a lung cancer diagnosis for case review.",
       keywords: "lung cancer asbestos exposure occupational lawsuit lawsuits claim claims case review free case review sue" },
