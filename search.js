@@ -79,6 +79,10 @@
       desc: "Contaminated drinking water, well water contamination, or industrial chemical releases.",
       keywords: "toxic water drinking well contamination industrial release lawsuit lawsuits claim claims case review free case review sue" },
 
+    { url: "camp-lejeune-case-review", title: "Camp Lejeune Case Review", tag: "Case Review", category: "Water & Environment",
+      desc: "For people whose Camp Lejeune claim reached the Navy by August 10, 2024 and who are waiting, were denied, or hold an Elective Option offer.",
+      keywords: "camp lejeune marine corps base north carolina contaminated water justice act clja navy administrative claim denied elective option offer settlement waiting no response deficiency records muster rolls kidney cancer bladder leukemia non-hodgkin lymphoma parkinsons veteran marine family lawsuit lawsuits claim claims case review free case review sue" },
+
     { url: "environmental-contamination-case-review", title: "Environmental Contamination Review", tag: "Case Review", category: "Water & Environment",
       desc: "Exposure through soil, groundwater, industrial sites, landfills, or community conditions.",
       keywords: "environmental contamination soil groundwater landfill industrial superfund lawsuit lawsuits claim claims case review free case review sue" },
