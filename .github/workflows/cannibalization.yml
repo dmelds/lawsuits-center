@@ -1,0 +1,65 @@
+name: Check Cannibalization
+
+# Added 10/6/26. Informer's check_cannibalization.py compares this site's pages
+# against each other and against Lawsuit Informer and Lawsuit Intelligencer on
+# the torts they share: shared body text, status promises, live counts carried
+# on more than one page or site, matching titles and descriptions. Until now
+# that comparison ran only from the Informer repo, on Informer pull requests
+# and a monthly cron, so a page added here was not checked until the next
+# Informer run and the finding never left the log. Now it runs on the pull
+# request that adds the page, before it ships. Intelligencer got the same step
+# in its content-checks workflow the same day.
+#
+# The script lives in the Informer repo and is run from the Informer checkout,
+# so there is one copy of it. Both other repos are public, so the checkouts
+# need no token. If either is ever made private, add a repo secret with read
+# access and pass it as `token:` on that step. The script reads only the top
+# level of each folder it is given, so the sibling checkouts do not leak into
+# this site's page set.
+#
+# The PR run is a gate: a pull request that adds a pair over the error line,
+# here or against another site, fails. Warnings print without failing. The
+# baseline on 10/6/26 was zero errors across all three pairs; the warnings
+# that print are the state asbestos-lawyer pages sharing template text and
+# near-duplicate descriptions, which the Informer run has reported since 10/4.
+# The monthly run and the manual run report and exit 0.
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['**.html']
+  schedule:
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-cannibalization:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Lawsuit Center
+        uses: actions/checkout@v7
+
+      - name: Checkout Lawsuit Informer
+        uses: actions/checkout@v7
+        with:
+          repository: dmelds/Lawsuitinformer
+          ref: main
+          path: _informer
+
+      - name: Checkout Lawsuit Intelligencer
+        uses: actions/checkout@v7
+        with:
+          repository: dmelds/lawsuitintelligencer
+          ref: main
+          path: _intelligencer
+
+      - name: Check cannibalization, this site and against Informer and Intelligencer (gate)
+        if: ${{ github.event_name == 'pull_request' }}
+        run: python3 _informer/check_cannibalization.py --path . --site center --with _informer --with _intelligencer --strict
+
+      - name: Check cannibalization, this site and against Informer and Intelligencer (report)
+        if: ${{ github.event_name != 'pull_request' }}
+        run: python3 _informer/check_cannibalization.py --path . --site center --with _informer --with _intelligencer
