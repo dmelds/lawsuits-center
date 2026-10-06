@@ -138,6 +138,9 @@
     { url: "depo-provera-case-review", title: "Depo-Provera Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
       desc: "Long-term Depo-Provera use (or generic medroxyprogesterone acetate) followed by a meningioma brain tumor diagnosis.",
       keywords: "depo-provera depo provera medroxyprogesterone meningioma brain tumor birth control injection MDL 3140 lawsuit lawsuits claim claims case review free case review sue" },
+    { url: "suboxone-case-review", title: "Suboxone Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
+      desc: "Suboxone film used to treat opioid use disorder, followed by tooth decay, broken teeth, or extractions.",
+      keywords: "suboxone case review suboxone lawsuit tooth decay teeth rot cavities broken teeth extraction dentures crowns implants buprenorphine naloxone film sublingual indivior aquestive mdl 3092 claim free case review qualify sue" },
 
     { url: "case-review", title: "General Case Review", tag: "Case Review", category: "General",
       desc: "Not sure where you fit? Describe the situation and we'll review which category may apply.",
