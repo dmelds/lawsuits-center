@@ -141,6 +141,9 @@
     { url: "suboxone-case-review", title: "Suboxone Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
       desc: "Suboxone film used to treat opioid use disorder, followed by tooth decay, broken teeth, or extractions.",
       keywords: "suboxone case review suboxone lawsuit tooth decay teeth rot cavities broken teeth extraction dentures crowns implants buprenorphine naloxone film sublingual indivior aquestive mdl 3092 claim free case review qualify sue" },
+    { url: "suboxone-lawsuit", title: "Suboxone Dental Injury Lawsuits", tag: "Overview", category: "Drugs & Medical Devices",
+      desc: "Suboxone film and reported tooth decay, broken teeth, and tooth loss.",
+      keywords: "suboxone lawsuit suboxone teeth tooth decay dental injury buprenorphine naloxone film indivior aquestive mdl 3092 who qualifies" },
 
     { url: "case-review", title: "General Case Review", tag: "Case Review", category: "General",
       desc: "Not sure where you fit? Describe the situation and we'll review which category may apply.",
