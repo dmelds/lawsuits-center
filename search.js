@@ -35,6 +35,10 @@
       desc: "Submit basic information about asbestos exposure history and a lung cancer diagnosis for case review.",
       keywords: "lung cancer asbestos exposure occupational lawsuit lawsuits claim claims case review free case review sue" },
 
+    { url: "ozempic-vision-loss-case-review", title: "Ozempic Vision Loss Case Review", tag: "Case Review", category: "Drugs & Medical Devices",
+      desc: "Sudden vision loss in one eye (NAION) after Ozempic, Wegovy, Trulicity or another GLP-1 drug.",
+      keywords: "ozempic wegovy trulicity mounjaro zepbound rybelsus saxenda semaglutide glp-1 naion vision loss blindness blind eye stroke optic nerve lawsuit lawsuits claim claims case review free case review sue" },
+
     { url: "social-media-case-review", title: "Social Media Case Review", tag: "Case Review", category: "Digital Platforms",
       desc: "Children or teens with mental health harm tied to Instagram, TikTok, Snapchat, Facebook, YouTube.",
       keywords: "social media instagram tiktok snapchat facebook youtube meta minors teen anxiety depression eating disorder self-harm MDL 3047 lawsuit lawsuits claim claims case review free case review sue" },
