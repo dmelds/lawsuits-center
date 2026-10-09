@@ -61,7 +61,14 @@ def is_spanish(rel, html):
     return rel.startswith("es" + os.sep) or "Todos los derechos reservados" in html
 
 
+# text-review.html is the form texted callers land on after a missed call. The number they just
+# failed to reach stays off that page, footer included, so the sweep never adds it there.
+SKIP = {"text-review.html"}
+
+
 def sweep(rel, html):
+    if os.path.basename(rel) in SKIP:
+        return html, []
     if 'site-footer__phone' in html:
         new = PHONE_RE.sub(TEL, html)
         return new, (["number updated"] if new != html else [])
