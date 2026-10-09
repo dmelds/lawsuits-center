@@ -48,7 +48,9 @@ import sys
 PHONE_DISPLAY = "(800) 956-9876"
 PHONE_TEL = "+18009569876"
 
-SKIP = {"contact.html", "law-firm-inquiry.html", "educational-review.html"}
+# text-review.html is the form texted callers land on after a missed call. A phone line there
+# sends them back to the number they just failed to reach, so it is left out on purpose.
+SKIP = {"contact.html", "law-firm-inquiry.html", "educational-review.html", "text-review.html"}
 
 TEL = (
     '<a href="tel:' + PHONE_TEL + '" class="form-phone">' + PHONE_DISPLAY + "</a>"
