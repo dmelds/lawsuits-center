@@ -66,4 +66,26 @@
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fill);
   else fill();
+
+  /* phone_click: a tap on any tel: link. Every page shows the same number, so
+     the call itself cannot say which page it came from; this event can. It
+     carries where on the page the link sat (form or footer), the first-touch
+     slot and source, and GA4 adds page_location on its own. Desktop readers
+     who dial by hand stay unattributed. gtag arrives through Netlify snippet
+     injection; a click lands long after load, so if gtag is still absent the
+     reader is blocking it and the event is simply not sent. */
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (!a || typeof window.gtag !== "function") return;
+    var place = a.closest("form") ? "form" : (a.closest("footer") ? "footer" : "body");
+    var form = a.closest("form");
+    var formName = form && form.getAttribute("name") ? form.getAttribute("name") : "none";
+    window.gtag("event", "phone_click", {
+      phone_number: (a.getAttribute("href") || "").replace(/^tel:/, ""),
+      phone_placement: place,
+      lead_form: formName,
+      lead_slot: (first.utm && first.utm.utm_content) || (now.utm && now.utm.utm_content) || "direct",
+      lead_source: (first.utm && first.utm.utm_source) || (now.utm && now.utm.utm_source) || "unknown"
+    });
+  }, true);
 })();
