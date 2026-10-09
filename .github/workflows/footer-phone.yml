@@ -1,0 +1,85 @@
+name: Footer Phone
+
+# Puts the intake phone line, (800) 956-9876, in the footer of every page,
+# directly above the copyright line. inline_footer.py does not re-sync pages
+# that already carry an inline footer, so footer.html alone reaches nothing;
+# this sweep edits each page.
+#
+# Dispatch only: run it from the Actions tab, read the dry-run summary in the
+# log, then run again with apply = true. Nothing to type in the run dialog
+# except the toggle.
+#
+# The script is idempotent, so a rerun on an already-swept tree is a no-op and
+# reports zero pages changed. If the number changes, edit PHONE_DISPLAY and
+# PHONE_TEL in add_footer_phone.py and run with apply = true again.
+#
+# A page whose footer has no copyright line is reported as a problem and left
+# alone. Fix that page's footer, then rerun.
+#
+# The commit does NOT carry [skip lastmod]. A phone number is visible content
+# the reader did not have before. It does carry [skip ci] so the push does not
+# fan out to the other sweeps; the sitemap job runs on the merge to main.
+#
+# It also runs a dry run on the 1st of each month against staging. That run
+# never writes anything; it fails on purpose when it finds a page without the
+# line, which is how a newly built page gets caught. A clean month passes
+# silently.
+
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Write changes and commit (leave false for a dry run)'
+        type: boolean
+        default: false
+      branch:
+        description: 'Branch to commit to'
+        type: string
+        default: staging
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          # Scheduled runs carry no inputs, so fall back to the same default.
+          ref: ${{ inputs.branch || 'staging' }}
+
+      - name: Dry run
+        run: python3 add_footer_phone.py | tee /tmp/footer.log
+
+      - name: Fail the monthly check if a page is missing the line
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          if grep -q '^  0 pages would change' /tmp/footer.log; then
+            echo "Every page carries the footer phone line."
+            exit 0
+          fi
+          echo "::error::Pages are missing the footer phone line. Run this workflow with apply = true on staging."
+          sed -n '1,6p' /tmp/footer.log
+          exit 1
+
+      - name: Apply
+        if: ${{ inputs.apply }}
+        run: python3 add_footer_phone.py --apply
+
+      - name: Commit
+        if: ${{ inputs.apply }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git add '*.html'
+          git commit -m "Add phone line to site footer [skip ci]"
+          git pull --rebase
+          git push
