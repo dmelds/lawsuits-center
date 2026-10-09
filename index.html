@@ -89,6 +89,7 @@
     "@id": "https://lawsuit.center/#organization",
     "name": "Lawsuit Center",
     "url": "https://lawsuit.center/",
+    "telephone": "+1-800-956-9876",
     "logo": "https://lawsuit.center/logo-center-new.png",
     "description": "Attorney-built lawsuit research and case review platform. Independent of any law firm.",
     "disambiguatingDescription": "Lawsuit Center is not a law firm and does not provide legal advice or representation. It connects people to law firms with active intake and discloses any paid placement or referral arrangement.",
@@ -659,6 +660,16 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 </section>
 
 <form name="depo-provera-case-review" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+  <!-- LC-ATTR:BEGIN -->
+  <input type="hidden" name="utm_source" value="" />
+  <input type="hidden" name="utm_medium" value="" />
+  <input type="hidden" name="utm_campaign" value="" />
+  <input type="hidden" name="utm_content" value="" />
+  <input type="hidden" name="utm_term" value="" />
+  <input type="hidden" name="page_referrer" value="" />
+  <input type="hidden" name="landing_page" value="" />
+  <input type="hidden" name="consent_version" value="cv1-none" />
+  <!-- LC-ATTR:END -->
   <input type="text" name="exposure-type" />
   <input type="text" name="summary" />
   <input type="text" name="exposure-period" />
@@ -673,6 +684,16 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 </form>
 
 <form name="ai-case-review" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true" hidden>
+  <!-- LC-ATTR:BEGIN -->
+  <input type="hidden" name="utm_source" value="" />
+  <input type="hidden" name="utm_medium" value="" />
+  <input type="hidden" name="utm_campaign" value="" />
+  <input type="hidden" name="utm_content" value="" />
+  <input type="hidden" name="utm_term" value="" />
+  <input type="hidden" name="page_referrer" value="" />
+  <input type="hidden" name="landing_page" value="" />
+  <input type="hidden" name="consent_version" value="cv1-none" />
+  <!-- LC-ATTR:END -->
   <input type="text" name="harm-type" />
   <input type="text" name="ai-product" />
   <input type="text" name="summary" />
@@ -744,6 +765,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
   });
 </script>
 <script src="/lead-events.js" defer></script>
+<script src="/lead-attribution.js" defer></script>
 <!-- LC-LIGHT-JS:BEGIN -->
 <script>
 (function () {
