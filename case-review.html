@@ -359,6 +359,16 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
        class="form"
      >
        <input type="hidden" name="form-name" value="case-review" />
+       <!-- LC-ATTR:BEGIN -->
+       <input type="hidden" name="utm_source" value="" />
+       <input type="hidden" name="utm_medium" value="" />
+       <input type="hidden" name="utm_campaign" value="" />
+       <input type="hidden" name="utm_content" value="" />
+       <input type="hidden" name="utm_term" value="" />
+       <input type="hidden" name="page_referrer" value="" />
+       <input type="hidden" name="landing_page" value="" />
+       <input type="hidden" name="consent_version" value="cv1-3f6d2a1f2e" />
+       <!-- LC-ATTR:END -->
        <input type="hidden" name="legal-understanding" value="yes" />
        <input type="hidden" name="contact-consent" value="yes" />
        <p style="display:none;">
@@ -434,7 +444,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
        <button type="submit">Submit Case Review Request</button>
 
        <p class="form-fineprint">
-         By submitting, you consent to contact by Lawsuit Center and participating law firms, legal advertisers, or intake partners — including by autodialed calls, prerecorded messages, and text messages. Your case review request may be shared with more than one participating firm. Reply STOP at any time to opt out. Lawsuit Center may receive a referral or marketing fee from a participating firm if your case review is connected to them — paid by the firm, never deducted from any recovery. A submission does not guarantee eligibility, compensation, contact, or representation. See our <a href="privacy-policy">Privacy Policy</a> and <a href="advertising-disclosure">Advertising Disclosure</a>.
+         By submitting, you consent to contact by Lawsuit Center and participating law firms, legal advertisers, or intake partners — including by autodialed calls, prerecorded messages, and text messages. Your case review request may be shared with more than one participating firm. Reply STOP at any time to opt out. A participating firm that takes your case may pay a referral fee to David Meldofsky, the California attorney who built Lawsuit Center. The firm pays it out of its own attorney fee under a written agreement you review and sign, and it is never deducted from any recovery. A submission does not guarantee eligibility, compensation, contact, or representation. See our <a href="privacy-policy">Privacy Policy</a> and <a href="advertising-disclosure">Advertising Disclosure</a>.
        </p>
 
      </form>
@@ -470,7 +480,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
      If there's a fit, the firm may contact you to discuss next steps. No attorney-client relationship is formed unless and until you sign an agreement directly with a law firm.
    </p>
    <p>
-     If a participating firm pays Lawsuit Center a referral or marketing fee for connecting your case review, that fee is paid by the firm — never deducted from any recovery you may receive.
+     If a participating firm takes your case, it may pay a referral fee to David Meldofsky, the California attorney who built Lawsuit Center. The firm pays that fee out of its own attorney fee under a written agreement you sign, and it is never deducted from any recovery you may receive.
    </p>
    <div class="hero-actions">
      <a href="how-case-review-works" class="btn btn--amber">How Case Review Works</a>
@@ -604,6 +614,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
 <script src="form-validation.js"></script>
 
 <script src="/lead-events.js" defer></script>
+<script src="/lead-attribution.js" defer></script>
 <!-- LC-LIGHT-JS:BEGIN -->
 <script>
 (function () {
