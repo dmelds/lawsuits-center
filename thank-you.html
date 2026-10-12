@@ -411,7 +411,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <div class="check"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 14l5 5L23 8"/></svg></div>
     <span class="eyebrow">Submission Received</span>
     <h1 id="thank-you-heading">Thank you — your case review request has been received.</h1>
-    <p class="lead" id="thank-you-lead">Your request now goes to participating law firms that handle your category in your state. A firm that takes it for review contacts you by phone, email, or text, usually within a few business days.</p>
+    <p class="lead" id="thank-you-lead">David Meldofsky, the California attorney behind Lawsuit Center, refers your request to a participating law firm that handles your category in your state. A firm that takes it for review contacts you by phone, email, or text, usually within a few business days.</p>
     <p class="small-text">If no firm takes your request, you hear nothing further from us. Silence after a week or two is the answer, and legal deadlines keep running, so speak with a licensed attorney on your own.</p>
   </div>
 </section>
@@ -428,7 +428,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <h2>What may happen next.</h2>
     <p>Each step is independent. Some may not apply to your situation.</p>
     <div class="vsteps">
-      <div class="vstep"><div class="vstep__num">01</div><div class="vstep__body"><h3>Your request goes to participating firms</h3><p>Your category and your state decide which firms see it. If the first firm passes, the next firm on the list may receive it. Some requests go to more than one firm at the same time.</p></div></div>
+      <div class="vstep"><div class="vstep__num">01</div><div class="vstep__body"><h3>David refers your request to a participating firm</h3><p>Your category and your state decide which firm receives it. If the first firm passes, David may refer it to the next firm on his list. Some requests go to more than one firm at the same time.</p></div></div>
       <div class="vstep"><div class="vstep__num">02</div><div class="vstep__body"><h3>A firm takes it for review and contacts you</h3><p>A firm that wants to look at your situation takes your request for review. Its intake team calls, emails, or texts you, usually within a few business days. If you gave an email address, a confirmation with a reference number may also arrive from Lawsuit Center.</p></div></div>
       <div class="vstep"><div class="vstep__num">03</div><div class="vstep__body"><h3>Watch for unfamiliar numbers</h3><p>Case review calls often come from a number you do not recognize. Answer or return them. A firm that cannot reach you may move on. Questions in the meantime go to <a href="tel:+18009569876">(800) 956-9876</a>; calls are recorded.</p></div></div>
       <div class="vstep"><div class="vstep__num">04</div><div class="vstep__body"><h3>The reviewing firm decides</h3><p>Whether you have a case depends on your facts, and the firm that reviews them decides. You become a firm's client only when you sign an agreement with that firm. A submission does not guarantee contact, representation, or compensation.</p></div></div>
@@ -522,7 +522,7 @@ document.addEventListener("DOMContentLoaded",function(){
   var lead=document.getElementById("thank-you-lead");
   if(category&&heading&&lead){
     heading.textContent="Thank you — your "+category+" case review request has been received.";
-    lead.textContent="Your "+category+" request now goes to participating law firms that handle that category in your state. A firm that takes it for review contacts you by phone, email, or text, usually within a few business days.";
+    lead.textContent="David Meldofsky, the California attorney behind Lawsuit Center, refers your "+category+" request to a participating law firm that handles that category in your state. A firm that takes it for review contacts you by phone, email, or text, usually within a few business days.";
     sessionStorage.removeItem("lc_category");
   }
 });
