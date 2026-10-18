@@ -1,0 +1,79 @@
+name: Page Dates
+
+# Gives every content page datePublished, dateModified, author and a visible
+# Published / Updated line, from git history (add_page_dates.py). Added
+# 2026-10-18 when 124 of 141 pages carried no dateModified and so sat outside
+# check_date_consistency.py entirely.
+#
+# Dispatch only for the apply. Run with apply = false first and read the log:
+# it lists every page with the dates it would write. Then run with apply =
+# true on main. The commit carries [skip lastmod] [skip ci]: this is a
+# mechanical sweep, and without the token generate-sitemap.py would stamp every
+# swept page with today's date, which is the false-freshness signal the dates
+# exist to end.
+#
+# The monthly dry run fails if any page has gone undated again, which happens
+# when a new page is built from a pre-sweep donor. Pages with no WebPage,
+# ContactPage or Article node (the thank-you pages, index, two intake forms)
+# are listed as problems and left alone; they are not a failure.
+#
+# fetch-depth: 0 is required: the dates come from each file's commit history.
+
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Write changes and commit (leave false for a dry run)'
+        type: boolean
+        default: false
+      branch:
+        description: 'Branch to commit to'
+        type: string
+        default: main
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.branch || 'main' }}
+          fetch-depth: 0
+
+      - name: Dry run
+        run: python3 add_page_dates.py | tee /tmp/dates.log
+
+      - name: Fail the monthly check if a page has no dates
+        if: ${{ github.event_name == 'schedule' }}
+        run: |
+          if grep -q '^  0 pages would change' /tmp/dates.log; then
+            echo "Every page with a main JSON-LD node carries dateModified."
+            exit 0
+          fi
+          echo "::error::Pages are missing dates. Run this workflow with apply = true on main."
+          sed -n '1,8p' /tmp/dates.log
+          exit 1
+
+      - name: Apply
+        if: ${{ inputs.apply }}
+        run: python3 add_page_dates.py --apply
+
+      - name: Commit
+        if: ${{ inputs.apply }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git add '*.html'
+          git commit -m "Add page dates and author from git history [skip lastmod] [skip ci]"
+          git pull --rebase
+          git push
