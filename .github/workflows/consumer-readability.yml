@@ -1,0 +1,66 @@
+name: Check Consumer Readability
+
+# Lawsuit Center copy of Informer's gate, added 2026-10-18. The checker is
+# check_consumer_readability.py at the repo root, ported from Informer. The
+# rules are Informer's; the Center-specific blocks (what counts as a CTA, which
+# pages are exempt, the FAQ markup, the case-page list) are marked CENTER in
+# the script.
+#
+# GATE: pull requests run with --strict, so any ERROR fails the PR. Errors are
+# reader-adjudicating language, FAQ schema that disagrees with the page,
+# doubled punctuation, and a case page over the grade ceiling. WARNINGS (CTA
+# set, sentence and paragraph length, jargon, title and description length)
+# print but never fail the run.
+#
+# BASELINE: 0 errors once the four FAQ-drift pages shipped with this workflow
+# (california-asbestos-lawyers, florida-asbestos-lawyers, hair-relaxer-lawsuit,
+# mesothelioma-lawyers were rebuilt from their visible Q&A on 2026-10-18), so
+# the gate blocks only new defects. Warnings on that day: 89, led by 29 pages
+# with fewer than 3 intake CTAs and 32 with no CTA before the second heading.
+#
+# The monthly and manual runs report and exit 0.
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['**.html', 'check_consumer_readability.py']
+  schedule:
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-consumer-readability:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      - name: Cache NLTK data
+        uses: actions/cache@v4
+        with:
+          path: ~/nltk_data
+          key: nltk-cmudict-v1
+
+      - name: Install textstat and cmudict
+        run: |
+          pip install --quiet textstat==0.7.13
+          for i in 1 2 3 4 5; do
+            python3 -c "import nltk; nltk.download('cmudict', quiet=True); from nltk.corpus import cmudict; cmudict.dict()" && break
+            echo "cmudict download failed (attempt $i), retrying"; sleep 10
+          done
+
+      - name: Check consumer readability (gate)
+        if: ${{ github.event_name == 'pull_request' }}
+        run: python3 check_consumer_readability.py --strict
+
+      - name: Check consumer readability (report)
+        if: ${{ github.event_name != 'pull_request' }}
+        run: python3 check_consumer_readability.py

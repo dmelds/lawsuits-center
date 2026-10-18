@@ -1,0 +1,54 @@
+name: Check Date Consistency
+
+# Lawsuit Center copy of Informer's gate, added 2026-10-18. The checker is
+# check_date_consistency.py at the repo root, ported from Informer with one
+# addition: a count of pages that carry no dateModified at all, since every
+# rule compares a page against its own dateModified and a page without one is
+# invisible to the check (124 of 141 pages on the day this was added).
+#
+# Rules: a <title>, <h1>, meta or visible stamp claiming a month newer than
+# dateModified is an ERROR; older is a WARN; a body date in the past that falls
+# after dateModified is an ERROR.
+#
+# STALE STAMP: on a pull request the checker also diffs each changed page's
+# body text against the base branch and fails when the text moved and
+# dateModified did not. Mechanical sweeps that are not edits to the page go in
+# a PR whose title contains [skip lastmod]; the rule is then off for that run.
+# That is the same token generate-sitemap.py reads from commit messages, so a
+# sweep needs it in both places: the commit message and the PR title.
+#
+# The monthly and manual runs report and exit 0.
+
+on:
+  pull_request:
+    branches: [main]
+    paths: ['**.html']
+  schedule:
+    - cron: '0 9 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-date-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Fetch the base branch for the stale-stamp diff
+        if: ${{ github.event_name == 'pull_request' && !contains(github.event.pull_request.title, '[skip lastmod]') }}
+        run: git fetch --no-tags --depth=1 origin ${{ github.event.pull_request.base.sha }}
+
+      - name: Check date consistency (gate)
+        if: ${{ github.event_name == 'pull_request' && !contains(github.event.pull_request.title, '[skip lastmod]') }}
+        run: python3 check_date_consistency.py --strict --base ${{ github.event.pull_request.base.sha }}
+
+      - name: Check date consistency (gate, stale-stamp rule off by PR title)
+        if: ${{ github.event_name == 'pull_request' && contains(github.event.pull_request.title, '[skip lastmod]') }}
+        run: python3 check_date_consistency.py --strict
+
+      - name: Check date consistency (report)
+        if: ${{ github.event_name != 'pull_request' }}
+        run: python3 check_date_consistency.py --list-undated
