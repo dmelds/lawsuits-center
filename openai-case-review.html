@@ -50,7 +50,7 @@
     "description": "Request a case review related to OpenAI and ChatGPT through Lawsuit Center.",
     "url": "https://lawsuit.center/openai-case-review",
     "datePublished": "2026-05-12",
-    "dateModified": "2026-10-18",
+    "dateModified": "2026-10-26",
     "author": { "@type": "Person", "name": "David Meldofsky", "jobTitle": "Attorney", "url": "https://lawsuit.center/david-meldofsky" },
     "publisher": {
       "@type": "Organization",
@@ -643,13 +643,18 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     </div>
 
     <div class="field">
-      <label for="minor" class="field-label">Was the affected person under 18?</label>
-      <select id="minor" name="minor" required>
-        <option value="">Select one</option>
-        <option value="Yes">Yes</option>
-        <option value="No">No</option>
+      <label for="age-band" class="field-label">Age of the affected person when the harm happened</label>
+      <select id="age-band" name="age-band" required aria-describedby="age-band-note">
+        <option value="">Select the closest age</option>
+        <option value="Under 13">Under 13</option>
+        <option value="13 to 17">13 to 17</option>
+        <option value="18 to 24">18 to 24</option>
+        <option value="25 or older">25 or older</option>
         <option value="Not sure">Not sure</option>
       </select>
+      <p id="age-band-note" class="form-note">
+        An approximate age is fine. Reviewing attorneys look closely at younger users, and they also review cases involving adults.
+      </p>
     </div>
 
     <div class="field">
@@ -668,6 +673,22 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
       <input type="text" id="harm-date" name="harm-date" placeholder="e.g. 2025 or March 2025" aria-describedby="harm-date-note" />
       <p id="harm-date-note" class="form-note">
         Approximate is fine. Timing matters because legal deadlines often run from the date a person knew or should have known of the connection to the alleged cause.
+      </p>
+    </div>
+
+    <div class="field">
+      <label for="diagnosis-treatment" class="field-label">Did the person receive medical or mental health treatment?</label>
+      <select id="diagnosis-treatment" name="diagnosis-treatment" aria-describedby="treatment-note">
+        <option value="">Select what best fits</option>
+        <option value="Yes Hospitalization">Yes — included hospitalization or residential treatment</option>
+        <option value="Yes Outpatient">Yes — outpatient diagnosis and treatment</option>
+        <option value="Yes Therapy">Yes — therapy or counseling</option>
+        <option value="In Progress">Currently in treatment</option>
+        <option value="No Formal">No treatment, but the harm was serious</option>
+        <option value="Not Sure">Not sure</option>
+      </select>
+      <p id="treatment-note" class="form-note">
+        Reviewing attorneys often look for the harm in medical records. You do not need to gather any records to submit this form.
       </p>
     </div>
 
