@@ -45,7 +45,11 @@
 
     { url: "video-game-case-review", title: "Video Game Case Review", tag: "Case Review", category: "Digital Platforms",
       desc: "Compulsive gaming, academic decline, mental health impact, or unauthorized in-game spending involving minors.",
-      keywords: "video game gaming addiction minors fortnite roblox in-game purchases lawsuit lawsuits claim claims case review free case review sue" },
+      keywords: "video game gaming addiction minors fortnite in-game purchases lawsuit lawsuits claim claims case review free case review sue" },
+
+    { url: "roblox-case-review", title: "Roblox Case Review", tag: "Case Review", category: "Digital Platforms",
+      desc: "Predator contact through Roblox, contact that moved to Discord, compulsive use, or unauthorized Robux spending involving minors.",
+      keywords: "roblox lawsuit robux discord predator grooming exploitation child safety minors addiction compulsive use MDL 3166 lawsuit lawsuits claim claims case review free case review sue" },
 
     { url: "video-game-lawsuit", title: "Video Game Lawsuit", tag: "Lawsuit", category: "Digital Platforms",
       desc: "Claims alleging games like Roblox and Fortnite were designed to encourage compulsive play in minors. Coordinated in California, no settlement yet.",
