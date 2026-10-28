@@ -51,7 +51,7 @@
     "description": "Request a PFAS case review through Lawsuit Center.",
     "url": "https://lawsuit.center/pfas-case-review",
     "datePublished": "2026-04-11",
-    "dateModified": "2026-10-12",
+    "dateModified": "2026-10-28",
     "author": { "@type": "Person", "name": "David Meldofsky", "jobTitle": "Attorney", "url": "https://lawsuit.center/david-meldofsky" },
     "publisher": {
       "@type": "Organization",
@@ -120,6 +120,7 @@
   .form{display:flex;flex-direction:column;gap:18px;}
   .form label.field-label{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);margin-bottom:4px;display:block;}
   .form .field{display:flex;flex-direction:column;gap:6px;}
+.field[hidden]{display:none;}
   .form input[type="text"],.form input[type="email"],.form input[type="tel"],.form select,.form textarea{
     width:100%;padding:14px 16px;background:rgba(0,0,0,.35);border:1px solid var(--border);border-radius:10px;
     color:var(--ink);font:inherit;font-size:16px;transition:border-color .2s var(--ease),background .2s var(--ease);
@@ -551,7 +552,7 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
     <div class="actions">
       <a href="#case-review-form" class="btn btn--amber btn--lg">Skip to Form ↓</a>
     </div>
-    <p class="meta">Published <time datetime="2026-04-11">April 11, 2026</time> &middot; Updated <time datetime="2026-10-12">October 12, 2026</time>.</p>
+    <p class="meta">Published <time datetime="2026-04-11">April 11, 2026</time> &middot; Updated <time datetime="2026-10-28">October 28, 2026</time>.</p>
     <p class="meta">
       Free initial review · No obligation · No attorney-client relationship is formed by submitting this form.
     </p>
@@ -640,6 +641,29 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
         <option value="Other PFAS Health Concern">Other PFAS-related health concern</option>
         <option value="Not Sure">Not sure / still investigating</option>
       </select>
+    </div>
+
+    <div class="field">
+      <label for="diagnosis" class="field-label">Diagnosis</label>
+      <select id="diagnosis" name="diagnosis" aria-describedby="diagnosis-note" required>
+        <option value="">Select a diagnosis</option>
+        <option value="Kidney cancer">Kidney cancer</option>
+        <option value="Testicular cancer">Testicular cancer</option>
+        <option value="Ulcerative colitis">Ulcerative colitis</option>
+        <option value="Thyroid disease">Thyroid disease</option>
+        <option value="Liver cancer">Liver cancer</option>
+        <option value="Other cancer">Other cancer</option>
+        <option value="Not diagnosed / other">Not diagnosed yet / other</option>
+      </select>
+      <p id="diagnosis-note" class="form-note">
+        Choose the diagnosis a doctor gave you. If you have no diagnosis yet, or yours is not listed, choose the last option.
+      </p>
+    </div>
+
+    <div class="field" id="diagnosis-year-field" hidden>
+      <label for="diagnosis-year" class="field-label">Year diagnosed</label>
+      <input type="text" id="diagnosis-year" name="diagnosis-year" inputmode="numeric" maxlength="4" placeholder="e.g. 2019" aria-describedby="diagnosis-year-note" />
+      <p id="diagnosis-year-note" class="form-note">Enter the year only. A close guess is fine.</p>
     </div>
 
     <div class="field">
@@ -1069,6 +1093,42 @@ html.theme-anim body { transition: background-color .15s ease, color .15s ease; 
   });
 </script>
 
+<script>
+  // Year diagnosed: shown and required only when a diagnosis is chosen.
+  // Without JavaScript the field stays hidden and optional, so it never blocks a submit.
+  (function () {
+    var diagnosis = document.getElementById("diagnosis");
+    var wrap = document.getElementById("diagnosis-year-field");
+    var year = document.getElementById("diagnosis-year");
+    if (!diagnosis || !wrap || !year) return;
+    var maxYear = new Date().getFullYear();
+
+    function checkYear() {
+      var v = year.value.trim();
+      var n = parseInt(v, 10);
+      if (year.required && !/^[0-9]{4}$/.test(v)) {
+        year.setCustomValidity("Enter the 4-digit year you were diagnosed.");
+      } else if (year.required && (n < 1970 || n > maxYear)) {
+        year.setCustomValidity("Enter a year from 1970 to " + maxYear + ".");
+      } else {
+        year.setCustomValidity("");
+      }
+    }
+
+    function sync() {
+      var show = diagnosis.value !== "" && diagnosis.value !== "Not diagnosed / other";
+      wrap.hidden = !show;
+      year.required = show;
+      year.disabled = !show;
+      if (!show) year.value = "";
+      checkYear();
+    }
+
+    diagnosis.addEventListener("change", sync);
+    year.addEventListener("input", checkYear);
+    sync();
+  })();
+</script>
 <script src="form-validation.js"></script>
 
 <script src="/lead-events.js" defer></script>
